@@ -6,10 +6,10 @@ import sys
 
 def update_scholar_stats():
     try:
-        # Enable proxy to avoid blocks
-        pg = ProxyGenerator()
-        pg.FreeProxies()
-        scholarly.use_proxy(pg)
+        
+        author = scholarly.search_author_id('MpKhKEUAAAAJ')
+        author = scholarly.fill(author, sections=["publications"])
+
 
         print("Fetching author data...")
         author = scholarly.search_author_id('MpKhKEUAAAAJ')
