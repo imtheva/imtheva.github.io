@@ -1,71 +1,71 @@
 {
   "citations": 10,
-  "h_index": 2,
+  "h_index": 0,
   "publications": 10,
-  "last_updated": "2025-03-10 04:16:42",
+  "last_updated": "2025-03-10 23:51:25",
   "recent_publications": [
     {
       "title": "Advancing Oyster Phenotype Segmentation with Multi-Network Ensemble and Multi-Scale mechanism",
       "year": 2025,
       "citation": "arXiv preprint arXiv:2501.11203, 2025",
-      "abstract": "Abstract not available",
-      "url": "#",
+      "abstract": "Phenotype segmentation is pivotal in analysing visual features of living organisms, enhancing our understanding of their characteristics. In the context of oysters, meat quality assessment is paramount, focusing on shell, meat, gonad, and muscle components. Traditional manual inspection methods are time-consuming and subjective, prompting the adoption of machine vision technology for efficient and objective evaluation. We explore machine vision's capacity for segmenting oyster components, leading to the development of a multi-network ensemble approach with a global-local hierarchical attention mechanism. This approach integrates predictions from diverse models and addresses challenges posed by varying scales, ensuring robust instance segmentation across components. Finally, we provide a comprehensive evaluation of the proposed method's performance using different real-world datasets, highlighting its efficacy and robustness in enhancing oyster phenotype segmentation.",
+      "url": "https://arxiv.org/abs/2501.11203",
       "authors": "Wenli Yang and Yanyu Chen and Andrew Trotter and Byeong Kang"
     },
     {
       "title": "Computer vision in livestock management and production",
       "year": 2024,
       "citation": "Engineering Applications in Livestock Production, 93-128, 2024",
-      "abstract": "Abstract not available",
-      "url": "#",
+      "abstract": "Intensification of livestock production systems is mainly driven by increasing population and subsequent increase in food demand. Major challenges of an intensified system are monitoring of a large number of animals, fast disease spread, frequent monitoring of health status, scarcity of labor, and optimizing the resources to maximize the profit. Different modern technologies are used to overcome these challenges; computer vision and image analysis techniques are the primary ones. The computer vision approach has gained prominence in contemporary livestock farming and has become an essential component of the farming system in many developed nations. This chapter provides insights into various applications of computer vision and image processing technologies (tracking of individual animals, health and disease monitoring, body size and weight measurement, and analysis of milk and meat quality …",
+      "url": "https://www.sciencedirect.com/science/article/pii/B9780323983853000025",
       "authors": "Abhiram Gunaratnam and Thevathayarajh Thayananthan and Kartheeswaran Thangathurai and Briyangari Abhiram"
     },
     {
       "title": "Engineering Applications in Livestock Production",
       "year": 2024,
       "citation": "Elsevier, 2024",
-      "abstract": "Abstract not available",
-      "url": "#",
+      "abstract": "Engineering Applications in Livestock Production covers the recent advancements and technological developments in the field of livestock production engineering in great detail. The major advances covered in this book include the use of artificial intelligence, image processing, Internet of Things, novel animal product processing technologies, farm automation systems, sensor technology, bioengineering practices and even engineered housing systems among others.-The book includes applications of emerging sensor based and intelligent techniques/systems in the field of livestock production and management-The book will have separate chapters dedicated to innovative approaches in the livestock sector such as artificial intelligence, micro and nano sensors, IoT, image processing and farm automation-Specialists contribution of chapters provide comprehensive details while assisting the understanding of the concepts",
+      "url": "https://books.google.com/books?hl=en&lr=&id=E9PKEAAAQBAJ&oi=fnd&pg=PP1&dq=info:149jvKwvtaYJ:scholar.google.com&ots=n8taVn9LzD&sig=2CF-9oC5BuOQgTsHynHDDshrTFk",
       "authors": "Ayon Tarafdar and Ashok Pandey and Gyanendra Kumar Gaur and Mukesh Singh and Hari Om Pandey"
     },
     {
       "title": "Traffic sign recognition and auditory alert system for sri lankan drivers using deep-learning",
       "year": 2024,
       "citation": "2024 International Research Conference on Smart Computing and Systems …, 2024",
-      "abstract": "Abstract not available",
-      "url": "#",
+      "abstract": "Traffic signs are essential for road safety, guiding and informing drivers about rules and conditions. Ignoring signs or traffic rules can lead to accidents, causing property damage, and even deaths. To ensure safety, drivers must remain aware of traffic signs, obey their instructions, and drive responsibly. Notably, Sri Lanka has unique traffic signs compared to other countries. This study aims to develop a deep learning-based traffic sign alert system with good accuracy and efficiency in traffic sign recognition and enhance driver awareness by integrating an auditory alert system. This alert system was implemented under two main sections: object detection system and auditory alert system. The traffic signs dataset images were labeled and pre-processed using the Roboflow software tool. The You Only Look Once version 5 (YOLOv5) model was used to train the system, which allowed it to understand complicated …",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10550615/",
       "authors": "Geerthana Vimalambikaipakan and Chinthaka Amarasinghe and Tharangani Rajapaksha and Thevathayarajh Thayananthan and Janotheepan Mariyathas"
     },
     {
       "title": "Multi-ripeness level blackberry detection using YOLOv7 for soft robotic harvesting",
       "year": 2023,
       "citation": "Autonomous Air and Ground Sensing Systems for Agricultural Optimization and …, 2023",
-      "abstract": "Abstract not available",
-      "url": "#",
+      "abstract": "Blackberry crop production is an essential sector of high-value specialty crops. Blackberries are delicate and easy to be damaged during harvest process. Besides, the blackberries in an orchard are not ripe at the same time so that multiple passes of harvesting are often needed. Therefore, the production is highly labor intensive and could be addressed using robotic solutions while maintaining the post-harvest berry quality for desired profitability. To further empower the developed tendon-driven soft robotic gripper specifically designed for berries, this study aims at investigating a state-of-the-art deep-learning YOLOv7 for accurately detecting the blackberries at multi-ripeness level in field conditions. In-field blackberry localization is a challenging task since blackberries are small objects and differ in color due to various levels of ripeness. Furthermore, the outdoor light condition varies depending on the time of day …",
+      "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12539/1253908/Multi-ripeness-level-blackberry-detection-using-YOLOv7-for-soft-robotic/10.1117/12.2663367.short",
       "authors": "Xin Zhang and Thevathayarajh Thayananthan and Muhammad Usman and Wenbo Liu and Yue Chen"
     },
     {
       "title": "Automating catfish cutting process using deep learning-based semantic segmentation",
       "year": 2023,
       "citation": "Sensing for Agriculture and Food Quality and Safety XV 12545, 103-116, 2023",
-      "abstract": "Abstract not available",
-      "url": "#",
+      "abstract": "Mississippi and Alabama are the top two states producing and processing catfish in the United States, with the annual production of $382 million in 2022. The catfish industry supplies protein-rich catfish products to the U.S. market and contributes considerably to the development of the local economy. However, the traditional catfish processing heavily relies on human labors leading to a high demand of workforce in the processing facilities. De-heading, gutting, portioning, filleting, skinning, and trimming are the main steps of the catfish processing, which normally require blade-based cutting device (e.g., metal blades) to handle. The blade-based manual catfish processing might lead to product contamination, considerable fish meat waste, and low yield of catfish fillet depending on the workers’ skill levels. Furthermore, operating the cutting devices may expose the human labors to undesired work accidents …",
+      "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12545/125450D/Automating-catfish-cutting-process-using-deep-learning-based-semantic-segmentation/10.1117/12.2663370.short",
       "authors": "Thevathayarajh Thayananthan and Xin Zhang and Wenbo Liu and Tianqi Yao and Yanbo Huang and Nuwan K Wijewardane and Yuzhen Lu"
     },
     {
       "title": "Leveraging Virtual Reality for Robot Manipulator Education",
       "year": 2023,
       "citation": "2023 Moratuwa Engineering Research Conference (MERCon), 544-549, 2023",
-      "abstract": "Abstract not available",
-      "url": "#",
+      "abstract": "Equipping students with hands-on experience and knowledge of robot manipulators is crucial as robotics becomes more applicable in Industry 4.0. However, the practical implementation of physical manipulators in educational settings is challenging due to high capital costs, operational expertise requirements, safety considerations, and remote accessibility. This paper introduces an approach to address these obstacles by implementing a Virtual Reality (VR) platform for studying robot manipulators. The paper details the conceptual methodology, containing five domains: 3D Modelling, Application of Mechanics, VR Development, VR Integration, and Application Development. The methodology shows the creation of three VR applications focusing on distinct learning scenarios. The first application offers an overview of manipulators, while the second illustrates a specific operation (pick-and-place), providing insights …",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10355455/",
       "authors": "Aroshi Yapa and Kushan Ratnayake and Chanaka Prasad Premarathna and Thevathayarajh Thayananthan"
     },
     {
       "title": "Development of Tracking over Speed System Using IoT Technology for Vehicles",
       "year": 2021,
       "citation": "Uva Wellassa University of Sri Lanka, 2021",
-      "abstract": "Abstract not available",
-      "url": "#",
+      "abstract": "Now, IoT technology is used for many applications. But they are certainly used for agriculture purpose in Sri Lanka. In the modern era, many accidents occur due to over speed. But accidents are controlled with the help of the police force and speed bumps in the past. IoT technology was used in this project to monitor the high speed. First, the velocity of the motorcycle was measured with the help of a Tachometer. When approaching the predefined maximum speed, the warning message was sent to the driver. When crossing the predefined maximum speed, all details including the reading of the Tachometer and location were sent to the mobile number of the motorcyclist and to the web application that was created for the police force at the same time using GPS/GPRS/GSM module. Finally, the output of the complete project shows 90% accuracy and the system showed the expected output with the available components. Keywords: IoT technology; over speed; Tachometer; Gps module; GPRS module; GSM module",
+      "url": "https://scholar.google.com/scholar?cluster=1947001892426221493&hl=en&oi=scholarr",
       "authors": "TJ Danijal and T Thevathayarajh"
     },
     {
@@ -80,8 +80,8 @@
       "title": "A Digital Device to Measure Distance on Multiple Surfaces",
       "year": 2019,
       "citation": "Uva Wellassa University of Sri Lanka, 2019",
-      "abstract": "Abstract not available",
-      "url": "#",
+      "abstract": "Measurements are one of the daily procedures to separate the needed length in apparel industries. Measuring tape is the only available method for this process now a days. Even shoulder measurements in tailor shop is taken by measuring tape too. This might consumes time and causes error while taking measurements quickly. So there is a need for the independent measuring system to solve this deficiency. A pen like structure of diameter 3.5cm cylindrical wooden bar was cut and further diameter of 2cm was drilled in that where the components were set. A Keyes KY-040, rotary encoder was used to count the rotation was attached to the end of the cylinder. Smooth surface and rough surface shaped disc were made using 3D printers and those models were designed using SolidWorks software. These discs can be attached to the encoder shaft according to the surface where the device is used. Arduino Nano was used as microcontroller for performing algorithmic work. Liquid crystal display was used to display the output measurement. This measurement can be displayed in Centimeter, Foot and Inch scales at the press of a button. Error corrections were done according to the measurements obtained from the Measuring device. 96% percentage accuracy was obtained on the random measurements",
+      "url": "https://scholar.google.com/scholar?cluster=9820146281106976511&hl=en&oi=scholarr",
       "authors": "T Thevathayarajh and ARPCCJ Amarasinghe and RMTCB Ekanayake"
     }
   ]
