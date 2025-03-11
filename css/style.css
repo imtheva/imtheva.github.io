@@ -722,3 +722,61 @@ iframe {
     }
 }
 
+.teaching-section {
+    padding: 80px 2rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.teaching-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-left: 3px solid #1d002b; /* Different color from education section */
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.teaching-item:hover {
+    transform: translateX(5px);
+}
+
+.course-info,
+.university-info,
+.year-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course-info {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #21025a;
+}
+
+.university-info {
+    font-size: 1.1rem;
+    color: #2c504a;
+}
+
+.year-info {
+    font-size: 1rem;
+    color: #7f8c8d;
+    text-align: right;
+}
+
+.teaching-item .course-info,
+.teaching-item .university-info,
+.teaching-item .year-info {
+    padding: 0.5rem;
+}
+
+
+
+
+
+
