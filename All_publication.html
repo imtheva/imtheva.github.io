@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,53 +32,12 @@
             </ul>
         </div>
     </nav>
+        
 
-    <header>
+
+      <section id="publications">
         <div class="container">
-            <div class="header-content">
-                <div class="profile-text" data-aos="fade-right">
-                    <h1>Thevathayarajh (Theva) Thayananthan</h1>
-                    <h2>Graduate Research Assistant</h2> 
-                    <h3>Department of Agricultural and Biological Engineering</h3>
-                    <h3>Mississippi State University</h3>
-                    <!-- <p></p> -->
-                    <a href="#contact" class="cv-button">Get in Touch</a>
-                </div>
-                <div class="profile-image-container" data-aos="fade-left">
-                    <img src="images/imtheva.jpg" alt="descriptor" class="profile-image">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="research">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Research Focus</h2>
-            <div class="research-grid">
-                <div class="research-item" data-aos="fade-up" data-aos-delay="100">
-                    <h3>AI in Agriculture</h3>
-                    <!-- <p>description</p> -->
-                </div>
-                <div class="research-item" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Agricultural Robotics</h3>
-                    <!-- <p>description</p> -->
-                </div>
-                <div class="research-item" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Computer Vision</h3>
-                    <!-- <p>description</p> -->
-                </div>
-
-                <div class="research-item" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Mechatronics Modeling</h3>
-                    <!-- <p>description</p> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="publications">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Recent Publications</h2>
+            <h2 class="section-title" data-aos="fade-up">Publication List</h2>
             <div class="scholar-stats">
                 <div class="stat-box">
                     <h3>Citations</h3>
@@ -94,12 +53,11 @@
                 </div>
                 <p class="update-time">Data sourced from Google Scholar. Last updated: <span id="last-updated">Loading...</span></p>
             </div>
-            <div class="publication-list" id="recent-publications">
+            <div class="publication-list" id="all-publications">
                 <!-- Publications will be inserted here by JavaScript -->
             </div>
             </div>
-            <center><a href="https://scholar.google.com/citations?user=MpKhKEUAAAAJ&hl=en" class="cv-button" target="_blank">Google Scholar</a>
-                <a href="All_publication.html" class="cv-button">All Publications</a></center>
+            <center><a href= "https://scholar.google.com/citations?user=MpKhKEUAAAAJ&hl=en" class="cv-button" target="_blank">Google Scholar</a>
            
         </div>
     </section>
@@ -125,9 +83,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
-
-
-
 
 
 <script>
@@ -156,7 +111,7 @@
     }
     
     // Call when page loads
-    document.addEventListener('DOMContentLoaded', updateScholarStats);
+    document.addEventListener('DOMContentLoaded', updateScholarStats, updatePublications_all());
     </script>
 </body>
 </html>
