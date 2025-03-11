@@ -131,15 +131,18 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Thevathayarajh Thayananthan. All rights reserved. Last updated on <span id="footer-last-updated">Loading...</span></p>
-        </div>
-    </footer>
+  
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Thevathayarajh Thayananthan. All rights reserved. Last updated on <span id="footer-last-updated">Loading...</span>.</p>
+        </div>
+    </footer>
 
 
 
@@ -169,32 +172,7 @@
             console.error('Error fetching scholar stats:', error);
         }
     }
-    async function updateFooter() {
-    try {
-        // Set the current year dynamically
-        const currentYear = new Date().getFullYear();
-        document.getElementById('year').textContent = currentYear;
-
-        // Fetch the last updated date from the JSON file
-        const response = await fetch('/assets/data/last_updated.json');
-        
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        // Parse the JSON response
-        const data = await response.json();
-        
-        // Update the "Last updated" date in the footer
-        document.getElementById('footer-last-updated').textContent = data.last_updated;
-    } catch (error) {
-        console.error('Error fetching last updated date:', error);
-        document.getElementById('footer-last-updated').textContent = "Error loading date";
-    }
-}
-
-// Trigger the function when the page loads
-document.addEventListener('DOMContentLoaded', updateFooter);
+    
     // Call when page loads
     document.addEventListener('DOMContentLoaded', updateScholarStats);
     </script>

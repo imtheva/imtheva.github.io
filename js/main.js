@@ -254,3 +254,20 @@ window.addEventListener('load', function() {
 });
 
 
+// Function to update the footer year and last updated date
+function updateFooterDate() {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear;
+
+    const lastUpdatedDate = new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    document.getElementById('footer-last-updated').textContent = lastUpdatedDate;
+}
+
+// Run the function when the page loads
+document.addEventListener('DOMContentLoaded', updateFooterDate);
+
+
