@@ -5,6 +5,7 @@
     --light-bg: #f8f9fa;
     --white: #ffffff;
     --gradient: linear-gradient(135deg, #6c63ff 0%, #3b82f6 100%);
+    --gradient2: linear-gradient(135deg, #fa9f75 0%, #ff0000 100%);
 }
 
 * {
@@ -221,6 +222,13 @@ section {
     position: relative;
 }
 
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
 .section-title::after {
     content: '';
     position: absolute;
@@ -231,6 +239,32 @@ section {
     height: 3px;
     background: var(--gradient);
 }
+
+.section-titler {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-titler {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-titler::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient2);
+}
+
 
 /* Research Grid */
 .research-grid {
@@ -775,6 +809,88 @@ iframe {
     padding: 0.5rem;
 }
 
+/* Ensure consistency with the first section */
+.pub-project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for MSc Project cards */
+.project1-card {
+    flex: 1 1 45%; /* Matches the first section layout */
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Match shadow effect */
+    border-left: 3px solid #a00601; /* Matches the left border style */
+    transition: transform 0.2s ease;
+}
+
+.project-card {
+    flex: 1 1 45%; /* Matches the first section layout */
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Match shadow effect */
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Title styling */
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #8d0000;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+/* Text styling */
+.project-card p, .project-card li {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Bullet points styling */
+.project-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-card li {
+    position: relative;
+    padding-left: 1.4rem;
+}
+
+.project-card li::before {
+    content: "•";
+    color: #8a0000;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .pub-project {
+        flex-direction: column;
+    }
+
+    .project-card {
+        flex: 1 1 100%;
+    }
+}
+
+  
 
 
 

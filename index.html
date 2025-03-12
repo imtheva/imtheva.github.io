@@ -1,5 +1,6 @@
 !DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
     <nav id="navbar">
         <div class="container">
@@ -19,10 +21,11 @@
             </div>
             <ul class="nav-links">
                 <li>
-                    <a href="#research">Research</a>
+                    <a href="research.html#research">Research</a>
                     <ul class="dropdown">
-                        <li><a href="index.html#research">Research Focus</a></li>
-                        <li><a href="index.html#publications">Recent Publications</a></li>
+                        <li><a href="#research">Research Focus</a></li>
+                        <li><a href="research.html#publications">Recent Publications</a></li>
+                        <li><a href="research.html#Pub-project">Projects</a></li>
                         <li><a href="All_publication.html">All Publications</a></li>
                     </ul>
                 </li>
@@ -47,7 +50,7 @@
             <div class="header-content">
                 <div class="profile-text" data-aos="fade-right">
                     <h1>Thevathayarajh (Theva) Thayananthan</h1>
-                    <h2>Graduate Research Assistant</h2> 
+                    <h2>Graduate Research Assistant</h2>
                     <h3>Department of Agricultural and Biological Engineering</h3>
                     <h3>Mississippi State University</h3>
                     <!-- <p></p> -->
@@ -91,25 +94,34 @@
             <div class="scholar-stats">
                 <div class="stat-box">
                     <h3>Citations</h3>
-                    <b><p id="citation-count">Loading...</p></b>
+                    <b>
+                        <p id="citation-count">Loading...</p>
+                    </b>
                 </div>
                 <div class="stat-box">
                     <h3>Publications</h3>
-                    <b><p id="publication-count">Loading...</p></b>
+                    <b>
+                        <p id="publication-count">Loading...</p>
+                    </b>
                 </div>
                 <div class="stat-box">
                     <h3>H-Index</h3>
-                    <b><p id="h-index">Loading...</p></b>
+                    <b>
+                        <p id="h-index">Loading...</p>
+                    </b>
                 </div>
-                <p class="update-time">Data sourced from Google Scholar. Last updated: <span id="last-updated">Loading...</span></p>
+                <p class="update-time">Data sourced from Google Scholar. Last updated: <span
+                        id="last-updated">Loading...</span></p>
             </div>
             <div class="publication-list" id="recent-publications">
                 <!-- Publications will be inserted here by JavaScript -->
             </div>
-            </div>
-            <center><a href="https://scholar.google.com/citations?user=MpKhKEUAAAAJ&hl=en" class="cv-button" target="_blank">Google Scholar</a>
-                <a href="All_publication.html" class="cv-button">All Publications</a></center>
-           
+        </div>
+        <center><a href="https://scholar.google.com/citations?user=MpKhKEUAAAAJ&hl=en" class="cv-button"
+                target="_blank">Google Scholar</a>
+            <a href="All_publication.html" class="cv-button">All Publications</a>
+        </center>
+
         </div>
     </section>
 
@@ -121,9 +133,11 @@
                     <h3>Get in Touch</h3>
                     <!-- <p>description</p> -->
                     <div class="contact-links">
-                        <a href="https://www.linkedin.com/in/imtheva/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/imtheva/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/imtheva" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.researchgate.net/profile/Thevathayarajh-Thayananthan?ev=hdr_xprf" target="_blank"><i class="fab fa-researchgate"></i></a>
+                        <a href="https://www.researchgate.net/profile/Thevathayarajh-Thayananthan?ev=hdr_xprf"
+                            target="_blank"><i class="fab fa-researchgate"></i></a>
                         <a href="mailto:tt1422@msstate.edu" target="_blank"><i class="fas fa-envelope"></i></a>
 
                     </div>
@@ -131,8 +145,8 @@
             </div>
         </div>
     </section>
-  
-    
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
@@ -140,7 +154,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="year"></span> Thevathayarajh Thayananthan. All rights reserved. Last updated on <span id="footer-last-updated">Loading...</span>.</p>
+            <p>&copy; <span id="year"></span> Thevathayarajh Thayananthan. All rights reserved. Last updated on <span
+                    id="footer-last-updated">Loading...</span>.</p>
         </div>
     </footer>
 
@@ -148,33 +163,34 @@
 
 
 
-<script>
-    async function updateScholarStats() {
-        try {
-            console.log('Attempting to fetch scholar stats...');
-            const response = await fetch('/assets/data/scholar_stats.json');
-            
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+    <script>
+        async function updateScholarStats() {
+            try {
+                console.log('Attempting to fetch scholar stats...');
+                const response = await fetch('/assets/data/scholar_stats.json');
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log('Fetched scholar stats:', data);
+
+                // Update your HTML elements
+                document.getElementById('citation-count').textContent = data.citations;
+                document.getElementById('publication-count').textContent = data.publications;
+                document.getElementById('h-index').textContent = data.h_index;
+                document.getElementById('last-updated').textContent = data.last_updated;
+
+                console.log('Updated DOM elements successfully');
+            } catch (error) {
+                console.error('Error fetching scholar stats:', error);
             }
-            
-            const data = await response.json();
-            console.log('Fetched scholar stats:', data);
-            
-            // Update your HTML elements
-            document.getElementById('citation-count').textContent = data.citations;
-            document.getElementById('publication-count').textContent = data.publications;
-            document.getElementById('h-index').textContent = data.h_index;
-            document.getElementById('last-updated').textContent = data.last_updated;
-            
-            console.log('Updated DOM elements successfully');
-        } catch (error) {
-            console.error('Error fetching scholar stats:', error);
         }
-    }
-    
-    // Call when page loads
-    document.addEventListener('DOMContentLoaded', updateScholarStats);
+
+        // Call when page loads
+        document.addEventListener('DOMContentLoaded', updateScholarStats);
     </script>
 </body>
+
 </html>

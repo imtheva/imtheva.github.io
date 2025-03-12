@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -46,10 +46,34 @@
     </nav>
 
 
+    <section id="research">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Research Focus</h2>
+            <div class="research-grid">
+                <div class="research-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>AI in Agriculture</h3>
+                    <!-- <p>description</p> -->
+                </div>
+                <div class="research-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Agricultural Robotics</h3>
+                    <!-- <p>description</p> -->
+                </div>
+                <div class="research-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Computer Vision</h3>
+                    <!-- <p>description</p> -->
+                </div>
+
+                <div class="research-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Mechatronics Modeling</h3>
+                    <!-- <p>description</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="publications">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Publication List</h2>
+            <h2 class="section-title" data-aos="fade-up">Recent Publications</h2>
             <div class="scholar-stats">
                 <div class="stat-box">
                     <h3>Citations</h3>
@@ -72,14 +96,95 @@
                 <p class="update-time">Data sourced from Google Scholar. Last updated: <span
                         id="last-updated">Loading...</span></p>
             </div>
-            <div class="publication-list" id="all-publications">
+            <div class="publication-list" id="recent-publications">
                 <!-- Publications will be inserted here by JavaScript -->
             </div>
         </div>
         <center><a href="https://scholar.google.com/citations?user=MpKhKEUAAAAJ&hl=en" class="cv-button"
                 target="_blank">Google Scholar</a>
+            <a href="All_publication.html" class="cv-button">All Publications</a>
+        </center>
 
+        </div>
+    </section>
+
+    <section id="Pub-project" class="pub-project">
+        <h2 class="sectionr-title" data-aos="fade-up">Project and Collaboration</h2>
+
+        <div class="project-card">
+            <div class="project1-card">
+                <h3>Ph.D. Research - Ongoing</h3>
+                <p>2023 - Present</p>
             </div>
+        </div>
+        <div class="project-card">
+            <ul>
+                <li>Enabling a Boll Orientation-Aware Cotton-Picking Robot in the Fields </li>
+                <li>Development of an Autonomous Cotton Picker Platform Using Computer Vision</li>
+                <li>Automating catfish cutting process using deep learning-based semantic segmentation</li>
+                <li>Multi-ripeness level blackberry detection using YOLO for soft robotic harvesting</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="project1-card">
+                <h3>MSc Project</h3>
+                <p>2021 - 2022</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <ul>
+
+                <li>IoT-based medical instrumentation</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <div class="project1-card">
+                <h3>Employment Projects and Research (Faculty - Uva Wellassa University)</h3>
+                <p>2018 - 2022</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <ul>
+                <li>Development of Automated Image Capturing for Zebrafish Embryo Toxicity Model</li>
+                <li>Traffic Sign Recognition and Auditory Alert System for Sri Lankan Drivers Using
+                    Deep-Learning</li>
+                <li>Automatic Billing System for Sri Lankan Pastry Shop using machine learning</li>
+                <li>Development of IoT-based automated colony counter</li>
+                <li>Leveraging Virtual Reality for Effective Learning in Robot Manipulator Education</li>
+                <li>Active and Passive Safety System for Differently Abled People and Adults</li>
+                <li>Development of Landslide early detection and forwarding system</li>
+                <li>Smart classroom attendance system using face recognitiont</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <div class="project1-card">
+                <h3>Undergraduate Research</h3>
+                <p>2016 - 2017 </p>
+            </div>
+        </div>
+        <div class="project-card">
+            <ul>
+
+                <li>Development of a monitoring device for the fermentation stage of black tea
+                    Manufacturing.</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <div class="project1-card">
+                <h3>Intern (Research & Innovation Department MAS Intimates (Pvt) Ltd) </h3>
+                <p>2017</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <ul>
+
+                <li>PLC-based finish good scanner project.</li>
+                <li>Arduino-based chiller off-alert system project.</li>
+            </ul>
+        </div>
+
+
     </section>
 
     <section id="contact" class="contact-section">
@@ -104,8 +209,10 @@
     </section>
 
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
+
 
     <footer>
         <div class="container">
@@ -113,6 +220,9 @@
                     id="footer-last-updated">Loading...</span>.</p>
         </div>
     </footer>
+
+
+
 
 
     <script>
@@ -141,7 +251,7 @@
         }
 
         // Call when page loads
-        document.addEventListener('DOMContentLoaded', updateScholarStats, updatePublications_all());
+        document.addEventListener('DOMContentLoaded', updateScholarStats);
     </script>
 </body>
 
