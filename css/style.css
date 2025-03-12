@@ -832,7 +832,7 @@ iframe {
 }
 
 /* Container to hold project cards */
-.container {
+.project-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
