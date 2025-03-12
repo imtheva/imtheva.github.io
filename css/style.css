@@ -239,22 +239,25 @@ section {
     height: 3px;
     background: var(--gradient);
 }
-
-.section-titler {
+sectionr {
+    padding: 8rem 0;
+    position: relative;
+}
+.sectionr-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
 }
 
-.section-titler {
+.sectionr-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
 }
 
-.section-titler::after {
+.sectionr-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -592,6 +595,13 @@ section {
 
 .job-title {
     font-size: 1.1rem;
+    color: #34495e;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.job-title2 {
+    font-size: 1.0rem;
     color: #34495e;
     font-weight: 500;
     margin-left: 40px;
