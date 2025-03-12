@@ -820,34 +820,41 @@ iframe {
 }
 
 /* Ensure consistency with the first section */
+./* Ensure consistency with the first section */
 .pub-project {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
-/* Styling for MSc Project cards */
-.project1-card {
-    flex: 1 1 45%; /* Matches the first section layout */
-    border-radius: 8px;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Match shadow effect */
-    border-left: 3px solid #a00601; /* Matches the left border style */
-    transition: transform 0.2s ease;
+/* Container to hold project cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
 }
 
+/* Styling for project cards */
 .project-card {
-    flex: 1 1 45%; /* Matches the first section layout */
+    flex: 1 1 calc(50% - 1rem); /* Ensures two cards per row with spacing */
     border-radius: 8px;
     padding: 1.5rem;
     background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Match shadow effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+}
+
+/* Special styling for project section headers */
+.project1-card {
+    border-left: 3px solid #a00601;
+    padding: 1.5rem;
+    background-color: #ffffff;
 }
 
 /* Hover effect */
@@ -864,13 +871,14 @@ iframe {
 }
 
 /* Text styling */
-.project-card p, .project-card li {
+.project-card p,
+.project-card li {
     color: #555;
     font-size: 1rem;
     line-height: 1.6;
 }
 
-/* Bullet points styling */
+/* List styling */
 .project-card ul {
     list-style-type: none;
     padding-left: 0;
@@ -899,10 +907,3 @@ iframe {
         flex: 1 1 100%;
     }
 }
-
-  
-
-
-
-
-
