@@ -911,10 +911,12 @@ iframe {
 .award-container {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center the content horizontally */
     gap: 40px; /* More spacing for better layout */
     margin-bottom: 40px;
     max-width: 1000px;
-    padding-left: 100px; /* Extra left padding */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
 }
 
 .award-image {
@@ -941,7 +943,6 @@ iframe {
     color: #222;
 }
 
-
 /* General Styles for Section */
 section {
     padding: 8rem 0;
@@ -966,6 +967,7 @@ section {
     height: 3px;
     background: var(--gradient);  /* Use your custom gradient */
 }
+
 
 /* Gallery Section */
 /* Gallery Section */
