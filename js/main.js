@@ -265,13 +265,57 @@ function updateFooterDate() {
   const currentYear = new Date().getFullYear()
   document.getElementById('year').textContent = currentYear
 
-  const lastUpdatedDate = new Date().toLocaleDateString('en-US', {
+  // Set a fixed "last updated" date (replace this with the date you pushed your changes)
+  const lastUpdatedDate = new Date('2025-03-13').toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   })
+
   document.getElementById('footer-last-updated').textContent = lastUpdatedDate
 }
 
 // Run the function when the page loads
 document.addEventListener('DOMContentLoaded', updateFooterDate)
+
+// JavaScript for carousel functionality
+let currentIndex = 0
+const images = document.querySelectorAll('.carousel-images img')
+const dots = document.querySelectorAll('.carousel-dots .dot')
+
+// Function to change the image
+function changeImage() {
+  // Move the images by the current index
+  const carouselImages = document.querySelector('.carousel-images')
+  carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`
+
+  // Update active dot
+  dots.forEach((dot) => dot.classList.remove('active'))
+  dots[currentIndex].classList.add('active')
+}
+
+// Function to move to the next image
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length
+  changeImage()
+}
+
+// Function to move to the previous image
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length
+  changeImage()
+}
+
+// Auto slide images every 3 seconds
+setInterval(nextImage, 3000)
+
+// Click on dot to navigate to that image
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index
+    changeImage()
+  })
+})
+
+// Initial call to set the first image
+changeImage()

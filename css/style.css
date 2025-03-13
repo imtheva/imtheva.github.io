@@ -557,7 +557,7 @@ sectionr {
 }
 
 .experience-section {
-    padding: 80px 2rem 0;
+    padding: 120px 2rem 0;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -907,3 +907,172 @@ iframe {
         flex: 1 1 100%;
     }
 }
+
+.award-container {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* More spacing for better layout */
+    margin-bottom: 40px;
+    max-width: 1000px;
+    padding-left: 100px; /* Extra left padding */
+}
+
+.award-image {
+    width: 400px; /* Bigger square image */
+    height: 300px;
+    object-fit: cover; /* Ensures image is nicely cropped */
+    border-radius: 15px; /* Rounded edges for a modern look */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.award-item {
+    flex: 1;
+    background: #ffffff; /* Clean white background */
+    padding: 25px;
+    border-left: 6px solid #007bff; /* Accent border */
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.award-item h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+
+
+/* General Styles for Section */
+section {
+    padding: 8rem 0;
+    position: relative;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Adding a gradient line under titles */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient);  /* Use your custom gradient */
+}
+
+/* Gallery Section */
+/* Gallery Section */
+.gallery-section {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 0 10%; /* Adds padding to left and right */
+}
+
+/* Container for the gallery */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Carousel setup */
+.carousel {
+    width: 100%; /* Full width of the screen */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Align images horizontally and make each one take up the full width */
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%; /* Ensure the carousel width covers the screen */
+}
+
+.carousel-images img {
+    width: 100%; /* Make the image expand to fill the full width of the container */
+    height: 400px; /* Fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio and fill the area */
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Dot navigation for the carousel */
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: white;
+}
+
+
+/* Fixed Gallery Highlight Section */
+.highlight-gallery {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.highlight-gallery-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Adding a gradient line under titles */
+.highlight-gallery-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient2);  /* Use your custom gradient */
+}
+
+/* Gallery Highlight Images */
+.highlight-images {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.highlight-images img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.highlight-images img:hover {
+    transform: scale(1.05);
+}
+
