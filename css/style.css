@@ -828,7 +828,7 @@ iframe {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 120px 2rem 0;
 }
 
 /* Container to hold project cards */
