@@ -732,6 +732,17 @@ sectionr {
     max-width: 1200px;
 }
 
+.news-panelf {
+    width: 98%; /* Each panel takes about half the width */
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 .news-panel {
     width: 48%; /* Each panel takes about half the width */
     border: 1px solid #ddd;
@@ -955,6 +966,25 @@ section {
     text-align: center;
     position: relative;
 }
+.section-title2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Adding a gradient line under titles */
+.section-title2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient2);  /* Use your custom gradient */
+}
+
 
 /* Adding a gradient line under titles */
 .section-title::after {
