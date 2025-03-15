@@ -600,6 +600,13 @@ sectionr {
     margin-left: 40px;
 }
 
+.job-title4 {
+    font-size: 0.8rem;
+    color: #34495e;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
 .job-title2 {
     font-size: 1.0rem;
     color: #34495e;
@@ -1216,18 +1223,36 @@ section {
 }
 
 .course-info2 {
-    font-size: 0.9rem; /* Slightly reduced font size */
-    font-weight: 600;
+    font-size: 0.8rem; /* Slightly reduced font size */
+    /* font-weight: 600; */
+    color: #21025a;
+}
+.course-id2 {
+    font-size: 0.7rem; /* Slightly reduced font size */
+    /* font-weight: 600; */
+    color: #21025a;
+}
+.university-name2 {
+    font-size: 0.8rem;
+    color: #2c3e50;
+    margin-bottom: 0;
+    text-align: center
+    
+}
+
+.course-info3 {
+    font-size: 1rem; /* Slightly reduced font size */
+    /* font-weight: 600; */
     color: #21025a;
 }
 
 .university-info2 {
-    font-size: 1rem; /* Slightly reduced font size */
+    font-size: 0.8rem; /* Slightly reduced font size */
     color: #2c504a;
 }
 
 .year-info2 {
-    font-size: 0.9rem; /* Slightly reduced font size */
+    font-size: 0.8rem; /* Slightly reduced font size */
     color: #7f8c8d;
     text-align: right;
 }
