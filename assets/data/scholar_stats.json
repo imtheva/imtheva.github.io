@@ -1,17 +1,9 @@
 {
   "citations": 10,
   "h_index": 0,
-  "publications": 10,
-  "last_updated": "2025-03-10 23:51:25",
+  "publications": 9,
+  "last_updated": "2025-03-17 00:02:54",
   "recent_publications": [
-    {
-      "title": "Advancing Oyster Phenotype Segmentation with Multi-Network Ensemble and Multi-Scale mechanism",
-      "year": 2025,
-      "citation": "arXiv preprint arXiv:2501.11203, 2025",
-      "abstract": "Phenotype segmentation is pivotal in analysing visual features of living organisms, enhancing our understanding of their characteristics. In the context of oysters, meat quality assessment is paramount, focusing on shell, meat, gonad, and muscle components. Traditional manual inspection methods are time-consuming and subjective, prompting the adoption of machine vision technology for efficient and objective evaluation. We explore machine vision's capacity for segmenting oyster components, leading to the development of a multi-network ensemble approach with a global-local hierarchical attention mechanism. This approach integrates predictions from diverse models and addresses challenges posed by varying scales, ensuring robust instance segmentation across components. Finally, we provide a comprehensive evaluation of the proposed method's performance using different real-world datasets, highlighting its efficacy and robustness in enhancing oyster phenotype segmentation.",
-      "url": "https://arxiv.org/abs/2501.11203",
-      "authors": "Wenli Yang and Yanyu Chen and Andrew Trotter and Byeong Kang"
-    },
     {
       "title": "Computer vision in livestock management and production",
       "year": 2024,
@@ -25,7 +17,7 @@
       "year": 2024,
       "citation": "Elsevier, 2024",
       "abstract": "Engineering Applications in Livestock Production covers the recent advancements and technological developments in the field of livestock production engineering in great detail. The major advances covered in this book include the use of artificial intelligence, image processing, Internet of Things, novel animal product processing technologies, farm automation systems, sensor technology, bioengineering practices and even engineered housing systems among others.-The book includes applications of emerging sensor based and intelligent techniques/systems in the field of livestock production and management-The book will have separate chapters dedicated to innovative approaches in the livestock sector such as artificial intelligence, micro and nano sensors, IoT, image processing and farm automation-Specialists contribution of chapters provide comprehensive details while assisting the understanding of the concepts",
-      "url": "https://books.google.com/books?hl=en&lr=&id=E9PKEAAAQBAJ&oi=fnd&pg=PP1&dq=info:149jvKwvtaYJ:scholar.google.com&ots=n8taVn9LzD&sig=2CF-9oC5BuOQgTsHynHDDshrTFk",
+      "url": "https://books.google.com/books?hl=en&lr=&id=E9PKEAAAQBAJ&oi=fnd&pg=PP1&dq=info:149jvKwvtaYJ:scholar.google.com&ots=n8tbQp8MxJ&sig=lejiPmo28WnEf7_J4mzihQWI2eM",
       "authors": "Ayon Tarafdar and Ashok Pandey and Gyanendra Kumar Gaur and Mukesh Singh and Hari Om Pandey"
     },
     {
