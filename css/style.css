@@ -106,28 +106,75 @@ nav .container {
   width: 100%;
 }
 
-/* Dropdown Styles */
+/* Ensure dropdowns are positioned correctly */
 .nav-links > li {
-  position: relative; /* Needed for positioning the dropdown */
+  position: relative; /* Needed for positioning the first-level dropdown */
 }
 
+/* First-level dropdown */
 .dropdown {
-  display: none; /* Hide dropdown by default */
-  position: absolute; /* Position it below the parent */
-  top: 100%; /* Align it directly below the parent item */
-  left: 0; /* Align to the left */
-  background: rgba(255, 255, 255, 0.9); /* Match the navbar background */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  z-index: 1000; /* Ensure it appears above other content */
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
   padding: 0;
   margin: 0;
-  border-radius: 4px; /* Optional: round the corners */
-  list-style: none; /* Remove bullet points */
+  border-radius: 4px;
+  list-style: none;
+  min-width: 200px; /* Ensure it has proper width */
+  max-width: calc(100vw - 40px); /* Prevent overflow */
 }
 
-/* Dropdown items */
+/* Show first-level dropdown on hover */
+.nav-links > li:hover > .dropdown {
+  display: block;
+}
+
+/* Styles for sub-dropdown (third-level menu) */
 .dropdown li {
-  width: 100%; /* Make dropdown items full width */
+  position: relative; /* Needed to position the sub-dropdown */
+}
+
+.dropdown .dropdown {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Aligns sub-menu to the right */
+  display: none;
+  min-width: 200px;
+  max-width: calc(100vw - 40px); /* Prevent overflow */
+}
+
+/* Show third-level dropdown on hover */
+.dropdown li:hover > .dropdown {
+  display: block; /* Show third-level dropdown on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dropdown {
+    left: 0; /* Keep dropdown on the left side in smaller screens */
+    min-width: 150px;
+  }
+
+  .dropdown .dropdown {
+    left: 0; /* Adjust sub-dropdowns to the left on smaller screens */
+  }
+}
+
+/* Prevent dropdowns from going off-screen */
+@media (min-width: 1024px) {
+  .dropdown {
+    left: auto;
+    right: 0;
+  }
+
+  .dropdown .dropdown {
+    left: auto;
+    right: 100%;
+  }
 }
 
 .dropdown a {
@@ -1116,6 +1163,36 @@ section {
   background-color: white;
 }
 
+/* Default: Space Evenly for Larger Screens */
+.highlight-images {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Smaller images on larger screens, still evenly spaced */
+.highlight-images img {
+  width: 250px; /* Smaller for larger screens */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Center the Images on Smaller Screens */
+@media (max-width: 768px) {
+  .highlight-images {
+    justify-content: center; /* Center the images on smaller screens */
+  }
+
+  .highlight-images img {
+    width: 200px; /* Adjust image size for mobile */
+    height: 130px;
+  }
+}
+
 /* Fixed Gallery Highlight Section */
 .highlight-gallery {
   text-align: center;
@@ -1142,21 +1219,21 @@ section {
 }
 
 /* Gallery Highlight Images */
-.highlight-images {
+/* .highlight-images {
   display: flex;
   justify-content: space-evenly;
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 20px;
-}
+} */
 
-.highlight-images img {
-  width: 300px;
-  height: 200px;
+/* .highlight-images img {
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-}
+} */
 
 .highlight-images img:hover {
   transform: scale(1.05);
