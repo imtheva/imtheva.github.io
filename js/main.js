@@ -266,7 +266,7 @@ function updateFooterDate() {
   document.getElementById('year').textContent = currentYear
 
   // Set a fixed "last updated" date (replace this with the date you pushed your changes)
-  const lastUpdatedDate = new Date('2025-03-13').toLocaleDateString('en-US', {
+  const lastUpdatedDate = new Date('2025-03-17').toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

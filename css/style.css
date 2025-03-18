@@ -968,6 +968,35 @@ iframe {
   color: #222;
 }
 
+@media (max-width: 600px) {
+  /* Target small screens */
+  .award-container {
+    flex-direction: column !important; /* Stack vertically */
+    align-items: center; /* Center content */
+    gap: 15px; /* Reduce spacing */
+    padding: 15px;
+  }
+
+  .award-container:nth-child(odd) {
+    flex-direction: column-reverse !important; /* Reverse order for odd items */
+  }
+
+  .award-image {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 300px; /* Set a max-width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .award-item {
+    text-align: center; /* Center text */
+    padding: 15px;
+  }
+
+  .award-item h3 {
+    font-size: 18px; /* Adjust font size */
+  }
+}
+
 /* General Styles for Section */
 section {
   padding: 8rem 0;
@@ -1019,7 +1048,21 @@ section {
   padding: 0 10%; /* Adds padding to left and right */
 }
 
-/* Container for the gallery */
+/* General styling */
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+} */
+
+/* Centering the gallery */
+.gallery-section {
+  text-align: center;
+  padding: 0;
+}
+
+/* Carousel container */
 .gallery-container {
   display: flex;
   justify-content: center;
@@ -1028,35 +1071,35 @@ section {
   width: 100%;
 }
 
-/* Carousel setup */
+/* Full-width carousel */
 .carousel {
-  width: 100%; /* Full width of the screen */
+  width: 100vw; /* Full width of the viewport */
   position: relative;
   overflow: hidden;
 }
 
-/* Align images horizontally and make each one take up the full width */
+/* Images inside the carousel */
 .carousel-images {
   display: flex;
-  transition: transform 1s ease-in-out;
-  width: 100%; /* Ensure the carousel width covers the screen */
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .carousel-images img {
-  width: 100%; /* Make the image expand to fill the full width of the container */
-  height: 400px; /* Fixed height for all images */
-  object-fit: cover; /* Maintain aspect ratio and fill the area */
-  flex-shrink: 0; /* Prevent images from shrinking */
+  width: 100vw; /* Full width of the viewport */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 80vh; /* Prevent images from being too tall */
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-/* Dot navigation for the carousel */
+/* Navigation dots */
 .carousel-dots {
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: center;
 }
 
 .carousel-dots .dot {
