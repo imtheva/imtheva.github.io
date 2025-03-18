@@ -76,11 +76,11 @@ nav .container {
   background: var(--primary-color);
   transition: all 0.3s ease;
 }
-
 .nav-links {
   display: flex;
   gap: 3rem;
   list-style: none;
+  padding: 0;
 }
 
 .nav-links a {
@@ -152,10 +152,25 @@ nav .container {
   display: block; /* Show third-level dropdown on hover */
 }
 
+/* Styles for dropdown items */
+.dropdown a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown a:hover {
+  background: var(--gradient); /* Change background on hover */
+  color: white; /* Change text color on hover */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .dropdown {
-    left: 0; /* Keep dropdown on the left side in smaller screens */
+    left: 0;
     min-width: 150px;
   }
 
@@ -175,26 +190,6 @@ nav .container {
     left: auto;
     right: 100%;
   }
-}
-
-.dropdown a {
-  display: block; /* Make links block elements */
-  padding: 0.75rem 1.5rem; /* Add padding for dropdown items */
-  color: var(--text-color); /* Use the same text color */
-  font-weight: 500; /* Match font weight */
-  text-decoration: none; /* Remove underline */
-  transition: background 0.3s ease; /* Smooth background transition */
-}
-
-/* Show dropdown on hover */
-.nav-links > li:hover .dropdown {
-  display: block; /* Show dropdown on hover */
-}
-
-/* Change background color on hover */
-.dropdown a:hover {
-  background: var(--gradient); /* Change background on hover */
-  color: white; /* Change text color on hover */
 }
 
 /* Header Styles */
