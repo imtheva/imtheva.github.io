@@ -116,7 +116,7 @@ nav .container {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 0; /* Ensures the first dropdown is aligned straight down */
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -124,7 +124,7 @@ nav .container {
   margin: 0;
   border-radius: 4px;
   list-style: none;
-  min-width: 200px; /* Ensure it has proper width */
+  min-width: 200px;
   max-width: calc(100vw - 40px); /* Prevent overflow */
 }
 
@@ -141,15 +141,16 @@ nav .container {
 .dropdown .dropdown {
   position: absolute;
   top: 0;
-  left: 100%; /* Aligns sub-menu to the right */
+  left: auto;
+  right: 100%; /* Moves the second dropdown to the left */
   display: none;
   min-width: 200px;
-  max-width: calc(100vw - 40px); /* Prevent overflow */
+  max-width: calc(100vw - 40px);
 }
 
 /* Show third-level dropdown on hover */
 .dropdown li:hover > .dropdown {
-  display: block; /* Show third-level dropdown on hover */
+  display: block;
 }
 
 /* Styles for dropdown items */
@@ -182,8 +183,8 @@ nav .container {
 /* Prevent dropdowns from going off-screen */
 @media (min-width: 1024px) {
   .dropdown {
-    left: auto;
-    right: 0;
+    left: 0;
+    right: auto;
   }
 
   .dropdown .dropdown {
