@@ -25,6 +25,48 @@ body {
   background-color: var(--white);
 }
 
+.error-container {
+  text-align: center;
+  max-width: 500px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(73, 10, 10, 0.1);
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Error icon style */
+.error-icon {
+  margin-bottom: 20px;
+}
+
+.error-icon svg {
+  color: rgb(255, 2, 2);
+  width: 60px;
+  height: 60px;
+}
+
+/* Button styling */
+.home-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  background: var(--gradient);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(108, 99, 255, 0.2);
+}
+
+.home-button:hover {
+  background: var(--gradient);
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
