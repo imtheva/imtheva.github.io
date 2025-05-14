@@ -85,86 +85,94 @@
             </ul>
         </div>
     </nav>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-text" data-aos="fade-right">
-                    <h1>Thevathayarajh (Theva) Thayananthan</h1>
-                    <h2>Graduate Research Assistant</h2>
-                    <h3>Department of Agricultural and Biological Engineering</h3>
-                    <h3>Mississippi State University</h3>
-                    <!-- <p></p> -->
-                    <a href="#contact" class="cv-button">Contact</a>
-                </div>
-                <div class="profile-image-container" data-aos="fade-left">
-                    <img src="images/imtheva.jpg" alt="descriptor" class="profile-image">
+    <div id="splash-screen"
+        style="position: fixed; inset: 0; background: #fff; display: flex; align-items: center; justify-content: center; z-index: 9999;">
+        <div class="loader-container">
+            <div class="spinner"></div>
+            <img src="./images/logo/apple-touch-icon.png" alt="Theva Logo" class="splash-logo">
+        </div>
+    </div>
+    <div id="main-content" style="display: none;">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="profile-text" data-aos="fade-right">
+                        <h1>Thevathayarajh (Theva) Thayananthan</h1>
+                        <h2>Graduate Research Assistant</h2>
+                        <h3>Department of Agricultural and Biological Engineering</h3>
+                        <h3>Mississippi State University</h3>
+                        <!-- <p></p> -->
+                        <a href="#contact" class="cv-button">Contact</a>
+                    </div>
+                    <div class="profile-image-container" data-aos="fade-left">
+                        <img src="images/imtheva.jpg" alt="descriptor" class="profile-image">
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section id="research">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Research Focus</h2>
+        <section id="research">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Research Focus</h2>
 
-            <div class="research-grid">
+                <div class="research-grid">
 
-                <div class="research-item" data-aos="fade-up" data-aos-delay="100">
-                    <h3>AI in Agriculture</h3>
-                    <!-- <p>description</p> -->
-                </div>
-                <div class="research-item" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Agricultural Robotics</h3>
-                    <!-- <p>description</p> -->
-                </div>
-                <div class="research-item" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Computer Vision</h3>
-                    <!-- <p>description</p> -->
-                </div>
+                    <div class="research-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3>AI in Agriculture</h3>
+                        <!-- <p>description</p> -->
+                    </div>
+                    <div class="research-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Agricultural Robotics</h3>
+                        <!-- <p>description</p> -->
+                    </div>
+                    <div class="research-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Computer Vision</h3>
+                        <!-- <p>description</p> -->
+                    </div>
 
-                <div class="research-item" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Mechatronics Modeling</h3>
-                    <!-- <p>description</p> -->
+                    <div class="research-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Mechatronics Modeling</h3>
+                        <!-- <p>description</p> -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="publications">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Recent Publications</h2>
-            <div class="scholar-stats">
-                <div class="stat-box">
-                    <h3>Citations</h3>
-                    <b>
-                        <p id="citation-count">Loading...</p>
-                    </b>
+        <section id="publications">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Recent Publications</h2>
+                <div class="scholar-stats">
+                    <div class="stat-box">
+                        <h3>Citations</h3>
+                        <b>
+                            <p id="citation-count">Loading...</p>
+                        </b>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Publications</h3>
+                        <b>
+                            <p id="publication-count">Loading...</p>
+                        </b>
+                    </div>
+                    <div class="stat-box">
+                        <h3>H-Index</h3>
+                        <b>
+                            <p id="h-index">Loading...</p>
+                        </b>
+                    </div>
+                    <p class="update-time">Data sourced from Google Scholar. Last updated: <span
+                            id="last-updated">Loading...</span></p>
                 </div>
-                <div class="stat-box">
-                    <h3>Publications</h3>
-                    <b>
-                        <p id="publication-count">Loading...</p>
-                    </b>
+                <div class="publication-list" id="recent-publications">
+                    <!-- Publications will be inserted here by JavaScript -->
                 </div>
-                <div class="stat-box">
-                    <h3>H-Index</h3>
-                    <b>
-                        <p id="h-index">Loading...</p>
-                    </b>
-                </div>
-                <p class="update-time">Data sourced from Google Scholar. Last updated: <span
-                        id="last-updated">Loading...</span></p>
             </div>
-            <div class="publication-list" id="recent-publications">
-                <!-- Publications will be inserted here by JavaScript -->
-            </div>
-        </div>
-        <center><a href="https://scholar.google.com/citations?user=MpKhKEUAAAAJ&hl=en" class="cv-button"
-                target="_blank">Google Scholar</a>
-            <a href="All_publication.html" class="cv-button">All Publications</a>
-        </center>
+            <center><a href="https://scholar.google.com/citations?user=MpKhKEUAAAAJ&hl=en" class="cv-button"
+                    target="_blank">Google Scholar</a>
+                <a href="All_publication.html" class="cv-button">All Publications</a>
+            </center>
 
-        </div>
+    </div>
     </section>
 
     <section id="contact" class="contact-section">
@@ -204,6 +212,8 @@
         </div>
     </footer>
 
+    </div>
+
 
 
 
@@ -236,6 +246,32 @@
         // Call when page loads
         document.addEventListener('DOMContentLoaded', updateScholarStats);
     </script>
+
+    <script>
+        window.onload = function () {
+            const splashShown = localStorage.getItem('splash_shown');
+
+            if (!splashShown) {
+                // First visit: show splash for 5 seconds
+                setTimeout(() => {
+                    const splash = document.getElementById('splash-screen');
+                    splash.style.transition = 'opacity 0.5s ease';
+                    splash.style.opacity = 0;
+
+                    setTimeout(() => {
+                        splash.style.display = 'none';
+                        document.getElementById('main-content').style.display = 'block';
+                    }, 500); // wait for fade-out
+                }, 5000);
+
+                localStorage.setItem('splash_shown', 'true');
+            } else {
+                document.getElementById('splash-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        };
+    </script>
+
 </body>
 
 </html>
