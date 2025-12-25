@@ -26,12 +26,15 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-Thevathayarajh (Theva) Thayananthan<
-                        Graduate Research Assistant
-                        Department of Agricultural and Biological Engineering
-                        Mississippi State University
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+I am a Graduate Research Assistant in the School of Environmental, Civil, Agricultural, and Mechanical Engineering at the University of Georgia, where I focus on advanced agricultural robotics, automation, and intelligent sensing technologies for sustainable farming. My research integrates machine vision, robotic manipulation, and field-scale experimentation to develop innovative solutions that enhance agricultural productivity and reduce labor dependency.
+
+Previously, I served as a Graduate Research Assistant in the Department of Agricultural and Biological Engineering at Mississippi State University, where I gained strong expertise in agricultural systems, precision agriculture, and applied engineering research. I am passionate about applying engineering innovation to solve real-world agricultural challenges and contributing to the future of smart, autonomous farming.
+
+
+<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->
+
+<!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
+
+<!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
