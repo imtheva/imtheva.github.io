@@ -311,6 +311,19 @@
               style="margin-bottom: 3px;"
             ></span>
           {% endif %}
+          {% if entry.plumx and entry.plumx != 'false' and entry.doi %}
+            <a class="plumx-plum-print-popup"
+              href="https://plu.mx/plum/a/?doi={{ entry.doi | uri_escape }}"
+              data-popup="right"
+              style="display: inline-block; margin-bottom: 3px;"
+              target="_blank" rel="noopener">
+              <img
+                src="https://img.shields.io/badge/PlumX-metrics-6c757d"
+                alt="PlumX metrics"
+              >
+            </a>
+          {% endif %}
+
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
             <a
               href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
@@ -386,5 +399,10 @@
         <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}</div>
       </div>
     {% endif %}
+
+
   </div>
 </div>
+
+
+
