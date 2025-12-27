@@ -23,3 +23,13 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+/* ---- Publication badges alignment (PlumX on right) ---- */
+.publications .badges {
+  display: flex;
+  align-items: center;
+}
+
+.publications .badges .plumx-plum-print-popup {
+  margin-left: auto;
+}

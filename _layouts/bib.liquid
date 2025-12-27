@@ -324,10 +324,11 @@
           {% endif %}
 
           {% if entry_has_plumx_badge %}
-            <a class="plumx-plum-print-popup"
+            <a class="plumx-plum-print-popup ml-auto"
               href="https://plu.mx/plum/a/?doi={{ entry.doi | uri_escape }}"
               target="_blank" rel="noopener"
-              aria-label="PlumX metrics"
+              aria-label="PlumX metrics">
+
               style="display:inline-flex; align-items:center; margin-left:6px;">
               <img src="https://img.shields.io/badge/PlumX-metrics-6c757d"
                   alt="PlumX metrics"
