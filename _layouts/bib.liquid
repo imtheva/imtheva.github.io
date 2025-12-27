@@ -199,14 +199,7 @@
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {% endif %}
 
-      {% if entry.plumx and entry.plumx != 'false' and entry.doi %}
-        <a class="btn btn-sm z-depth-0 plumx-plum-print-popup"
-          href="https://plu.mx/plum/a/?doi={{ entry.doi | uri_escape }}"
-          target="_blank" rel="noopener"
-          role="button">
-          PlumX
-        </a>
-      {% endif %}
+      
 
 
       {% if entry.arxiv %}
@@ -276,6 +269,12 @@
         {% assign entry_has_dimensions_badge = true %}
       {% endif %}
 
+      {% assign entry_has_plumx_badge = false %}
+      {% if entry.plumx and entry.plumx != 'false' and entry.doi %}
+        {% assign entry_has_plumx_badge = true %}
+      {% endif %}
+
+
       {% assign entry_has_google_scholar_badge = false %}
       {% if entry.google_scholar_id %}
         {% assign entry_has_google_scholar_badge = true %}
@@ -285,7 +284,8 @@
       {% if entry.inspirehep_id %}
         {% assign entry_has_inspirehep_badge = true %}
       {% endif %}
-      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge or entry_has_inspirehep_badge %}
+      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_plumx_badge or entry_has_google_scholar_badge or entry_has_inspirehep_badge %}
+
         <div class="badges">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
@@ -322,6 +322,19 @@
               style="margin-bottom: 3px;"
             ></span>
           {% endif %}
+
+          {% if entry_has_plumx_badge %}
+            <a class="plumx-plum-print-popup"
+              href="https://plu.mx/plum/a/?doi={{ entry.doi | uri_escape }}"
+              target="_blank" rel="noopener"
+              aria-label="PlumX metrics"
+              style="display:inline-flex; align-items:center; margin-left:6px;">
+              <img src="https://img.shields.io/badge/PlumX-metrics-6c757d"
+                  alt="PlumX metrics"
+                  style="height:18px; width:auto;">
+            </a>
+          {% endif %}
+
           
 
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
