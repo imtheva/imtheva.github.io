@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: description: Publications including journal articles, conference papers, and book chapters, organized by category in reverse chronological order.
+description: Publications including journal articles, conference papers, and book chapters, organized by category in reverse chronological order.
 
 nav: true
 nav_order: 2
