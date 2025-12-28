@@ -1,11 +1,15 @@
-"Robotics":
-  color: "#d9a1a1"
-
 "Agricultural Robotics":
-  color: "#e2c290"
+  color: "#FFEA00"
 
 "Computer Vision":
-  color: "#9bbfae"
+  color: "#009f36"
+  
 
-"IOT":
-  color: "#8faadc"
+"Robotics":
+  color: "#00369f"
+
+"IoT":
+  color: "#F5A28C"
+
+
+
