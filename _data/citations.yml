@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2025-12-26'
+  last_updated: '2025-12-27'
 papers:
   MpKhKEUAAAAJ:YsMSGLbcyi4C:
     citations: 9
@@ -19,7 +19,7 @@ papers:
 
   MpKhKEUAAAAJ:hqOjcs7Dif8C:
     citations: 1
-    title: CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation
+    title: CottonSim A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation
     year: 2025
 
 
