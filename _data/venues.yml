@@ -1,9 +1,11 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"Robotics":
+  color: "#d9a1a1"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"Agricultural Robotics":
+  color: "#e2c290"
 
-"Vision":
-  color: "#009f36"
+"Computer Vision":
+  color: "#9bbfae"
+
+"IOT":
+  color: "#8faadc"

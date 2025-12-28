@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <a href='https://sites.google.com/view/xin-zhang-lab/team'>Graduate Research Assistant</a>. Environmental, Civil, Agriculutral and Mechanical Engineering, College of Engineering, University of Georgia
 
