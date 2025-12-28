@@ -9,8 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>110 Rogers RD</p>
-    <p>Riverbend Research Lab North 001E</p>
+    <p>110 Riverbend RD</p>
+    <p>Riverbend Research Lab North, 001E</p>
     <p>Athens, GA 30605</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
