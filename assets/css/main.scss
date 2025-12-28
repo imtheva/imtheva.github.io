@@ -24,12 +24,13 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-outline.scss"
 ;
 
-/* ---- Publication badges alignment (PlumX on right) ---- */
+/* ---- Publications: Citations left, PlumX right ---- */
 .publications .badges {
   display: flex;
   align-items: center;
+  width: 100%;          /* THIS is the missing piece */
 }
 
 .publications .badges .plumx-plum-print-popup {
-  margin-left: auto;
+  margin-left: auto;   /* pushes PlumX to the right */
 }
