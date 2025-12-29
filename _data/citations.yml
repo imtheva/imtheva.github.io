@@ -1,60 +1,59 @@
 metadata:
-  last_updated: '2025-12-27'
+  last_updated: '2025-12-29'
 papers:
-  MpKhKEUAAAAJ:YsMSGLbcyi4C:
-    citations: 9
-    title: Computer vision in livestock management and production
-    year: 2024
-
-  MpKhKEUAAAAJ:_FxGoFyzp5QC:
-    citations: 4
-    title: Traffic sign recognition and auditory alert system for sri lankan drivers using deep-learning
-    year: 2024
-
-  MpKhKEUAAAAJ:WF5omc3nYNoC:
-    citations: 6
-    title: Engineering Applications in Livestock Production
-    year: 2024
-
-
-  MpKhKEUAAAAJ:hqOjcs7Dif8C:
-    citations: 1
-    title: CottonSim A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation
-    year: 2025
-
-  MpKhKEUAAAAJ:IjCSPb-OGe4C:
-    citations: 2
-    title: Automating catfish cutting process using deep learning-based semantic segmentation
-    year: 2023
-
-  MpKhKEUAAAAJ:zYLM7Y9cAGgC:
-    citations: 4
-    title: Multi-ripeness level blackberry detection using YOLOv7 for soft robotic harvesting
-    year: 2023
-
-
   MpKhKEUAAAAJ:0EnyYjriUFMC:
     citations: 1
     title: In-Field Multi-Ripeness Blackberry Detection for Soft Robotic Harvesting
-    year: 2025
-
-
-
-
-
-
-
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-    
+    year: '2025'
+  MpKhKEUAAAAJ:5nxA0vEk-isC:
+    citations: 0
+    title: Perception-enabled manipulator control for a robotic cotton picker with dual-side harvesting capability
+    year: '2025'
+  MpKhKEUAAAAJ:8k81kl-MbHgC:
+    citations: 0
+    title: Development of a monitoring device for fermentation stage of black tea manufacturing
+    year: '2018'
+  MpKhKEUAAAAJ:9yKSN-GCB0IC:
+    citations: 1
+    title: A Digital Device to Measure Distance on Multiple Surfaces
+    year: '2019'
+  MpKhKEUAAAAJ:IjCSPb-OGe4C:
+    citations: 2
+    title: Automating catfish cutting process using deep learning-based semantic segmentation
+    year: '2023'
+  MpKhKEUAAAAJ:Tyk-4Ss8FVUC:
+    citations: 0
+    title: Leveraging Virtual Reality for Robot Manipulator Education
+    year: '2023'
+  MpKhKEUAAAAJ:UeHWp8X0CEIC:
+    citations: 0
+    title: Development of Tracking over Speed System Using IoT Technology for Vehicles
+    year: '2021'
+  MpKhKEUAAAAJ:UebtZRa9Y70C:
+    citations: 0
+    title: 'CottonSim: Development of an autonomous visual-guided robotic cotton-picking system in the Gazebo'
+    year: '2025'
+  MpKhKEUAAAAJ:WF5omc3nYNoC:
+    citations: 6
+    title: Engineering Applications in Livestock Production
+    year: '2024'
+  MpKhKEUAAAAJ:YsMSGLbcyi4C:
+    citations: 9
+    title: Computer vision in livestock management and production
+    year: '2024'
+  MpKhKEUAAAAJ:_FxGoFyzp5QC:
+    citations: 4
+    title: Traffic sign recognition and auditory alert system for sri lankan drivers using deep-learning
+    year: '2024'
+  MpKhKEUAAAAJ:hqOjcs7Dif8C:
+    citations: 1
+    title: 'CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation'
+    year: '2025'
+  MpKhKEUAAAAJ:roLk4NBRz8UC:
+    citations: 0
+    title: A digital device to monitor the colour changes during fermentation stage of black tea processing
+    year: '2019'
+  MpKhKEUAAAAJ:zYLM7Y9cAGgC:
+    citations: 4
+    title: Multi-ripeness level blackberry detection using YOLOv7 for soft robotic harvesting
+    year: '2023'
