@@ -33,15 +33,12 @@ education:
     endDate: "2022"
     summary: "Control and Instrumentation"
 
-
   - institution: "Uva Wellassa University of Sri Lanka"
     studyType: "BTech"
     area: "Mechatronics"
     startDate: "2014"
     endDate: "2018"
     summary: "Science and Technology Specialized in Mechatronics"
-
-
 
 work:
   - name: "Sensing & Automation in Agri-System (SAAS) Lab, University of Georgia"
@@ -78,14 +75,12 @@ work:
     highlights:
       - Performed researches and conducted classes
 
-
   - name: "Faculty of Applied Sciences, Uva Wellassa University of Sri Lanka"
     position: "Demonstrator (Temporary)"
     startDate: "2018"
     endDate: "2019"
     highlights:
       - Performed researches and conducted lab classes
-
 
   - name: "Innovation Department, MAS Intimates (Pvt) Ltd"
     position: "Intern at Research and Development)"
@@ -129,8 +124,6 @@ awards:
     awarder: "Ramakrishna Mission, Sri Lanka"
     date: "2006"
     summary: "Third place at the Sri Lankan national level essay competition."
-
-
 
 projects:
   - name: "PhD Research in Robotics and Computer Vision"
@@ -279,8 +272,6 @@ professional:
     endDate: "2019"
     summary: "Completed formal training in higher education pedagogy."
 
-
-
 volunteer:
   - organization: "Mississippi State University"
     position: "Secretary, Softball Cricket Club"
@@ -341,9 +332,6 @@ volunteer:
     startDate: "2010"
     endDate: "2010"
     summary: "Served as secretary of the school English Union."
-
-
-
 
 languages:
   - language: "English"

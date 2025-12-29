@@ -7,7 +7,6 @@ related_posts: false
 
 <a href='https://farmflavor.com/mississippi/mississippi-technology/agriculture-technology-advancements-revolutionize-mississippi-ag-industry/'>Farm Flavor: Agriculture Technology Advancements Revolutionize Mississippi Ag Industry</a>
 
-
 <!-- ---
 layout: post
 title: A long announcement with details

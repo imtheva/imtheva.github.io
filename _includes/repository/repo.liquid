@@ -12,8 +12,8 @@
   {% assign tags = repo_item.tags %}
 {% else %}
   {% assign full_name = repo_item %}
-  {% assign description = nil %}
-  {% assign tags = nil %}
+  {% assign description = null %}
+  {% assign tags = null %}
 {% endif %}
 
 {% assign parts = full_name | split: '/' %}
@@ -36,9 +36,7 @@
       {% if description %}
         <p class="card-text mb-3">{{ description }}</p>
       {% else %}
-        <p class="card-text mb-3 text-muted">
-          Repository on GitHub.
-        </p>
+        <p class="card-text mb-3 text-muted">Repository on GitHub.</p>
       {% endif %}
 
       {% if tags and tags.size > 0 %}
@@ -49,9 +47,7 @@
         </div>
       {% endif %}
 
-      <a class="btn btn-sm btn-outline-primary" href="https://github.com/{{ full_name }}" target="_blank" rel="noopener">
-        View on GitHub
-      </a>
+      <a class="btn btn-sm btn-outline-primary" href="https://github.com/{{ full_name }}" target="_blank" rel="noopener"> View on GitHub </a>
     </div>
   </div>
 </div>

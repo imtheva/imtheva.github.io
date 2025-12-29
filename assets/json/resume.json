@@ -113,18 +113,15 @@
   ],
 
   "professional": [
-  {
-    "name": "University of Georgia",
-    "position": "Lab Manager",
-    "startDate": "2024",
-    "endDate": "Present",
-    "summary": "Sensing and Automation in Agri-System (SAAS) Lab, Department of Agricultural and Biological Engineering.",
-    "highlights": [
-      "Managed laboratory operations and research infrastructure",
-      "Supported sensing, automation, and robotics research activities"
-    ]
-  }
-],
+    {
+      "name": "University of Georgia",
+      "position": "Lab Manager",
+      "startDate": "2024",
+      "endDate": "Present",
+      "summary": "Sensing and Automation in Agri-System (SAAS) Lab, Department of Agricultural and Biological Engineering.",
+      "highlights": ["Managed laboratory operations and research infrastructure", "Supported sensing, automation, and robotics research activities"]
+    }
+  ],
   "publications": [
     {
       "name": "Zur Elektrody/namik bewegter Körper",

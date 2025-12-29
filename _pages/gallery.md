@@ -9,45 +9,47 @@ social: true
 ---
 
 {% comment %}
-Data source: _data/gallery.yml
+Data source: \_data/gallery.yml
 Each item:
+
 - year: 2025
   section: "Field test – Tifton"
   path: assets/img/gallery/2025/field_test_01.jpg
   caption: "UGA/Tifton field test – Husky + UR5e setup"
   alt: "Robot setup in field" (optional)
-{% endcomment %}
+  {% endcomment %}
 
 <div class="projects">
   <!-- <p class="text-muted">
     Browse images grouped by <b>year</b> and <b>section</b>. Click an image to open full size.
   </p> -->
 
-  {% assign years = site.data.gallery | map: "year" | uniq | sort | reverse %}
+{% assign years = site.data.gallery | map: "year" | uniq | sort | reverse %}
 
-  {%- if years.size == 0 -%}
-    <div class="alert alert-warning">
-      <b>No gallery data found.</b><br>
-      Create <code>_data/gallery.yml</code> and add entries.
-    </div>
-  {%- endif -%}
+{%- if years.size == 0 -%}
+<div class="alert alert-warning">
+<b>No gallery data found.</b><br>
+Create <code>\_data/gallery.yml</code> and add entries.
+</div>
+{%- endif -%}
 
   <!-- Jump links -->
-  {%- if years.size > 0 -%}
-    <div class="gallery-jump">
-      <span class="gallery-jump-label">Jump to:</span>
-      {%- for y in years -%}
-        <a href="#y{{ y }}" class="gallery-jump-link">{{ y }}</a>{% unless forloop.last %}&nbsp;&nbsp;•&nbsp;&nbsp;{% endunless %}
-      {%- endfor -%}
-    </div>
-  {%- endif -%}
 
+{%- if years.size > 0 -%}
+<div class="gallery-jump">
+<span class="gallery-jump-label">Jump to:</span>
+{%- for y in years -%}
+<a href="#y{{ y }}" class="gallery-jump-link">{{ y }}</a>{% unless forloop.last %}&nbsp;&nbsp;•&nbsp;&nbsp;{% endunless %}
+{%- endfor -%}
+</div>
+{%- endif -%}
 
   <!-- Year loop -->
-  {%- for y in years -%}
-    <a id="y{{ y }}" href=".#y{{ y }}">
-      <h2 class="category">{{ y }}</h2>
-    </a>
+
+{%- for y in years -%}
+<a id="y{{ y }}" href=".#y{{ y }}">
+<h2 class="category">{{ y }}</h2>
+</a>
 
     {% assign year_items = site.data.gallery | where: "year", y %}
 
@@ -95,5 +97,6 @@ Each item:
       {%- endif -%}
     {%- endfor -%}
 
-  {%- endfor -%}
+{%- endfor -%}
+
 </div>

@@ -38,7 +38,6 @@
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "AIinAG3"
 
-
 - year: 2025
   path: assets/img/gallery/2025/Fame1.JPG
   section: "Hall of Fame Awardee - 2025"
@@ -93,7 +92,6 @@
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "IFAC3"
 
-
 # - year: 2025
 #   path: assets/img/gallery/2025/zed_view_01.png
 #   caption: "ZED 2i view – cotton rows"
@@ -128,8 +126,6 @@
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Field test robot setup 4"
 
-
-
 - year: 2024
   path: assets/img/gallery/2024/ASABE1.JPG
   section: "ASABE - American Society of Agricultural and Biological Engineers - 2024 Annual International Meeting"
@@ -160,13 +156,11 @@
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "PFP1"
 
-
 - year: 2024
   path: assets/img/gallery/2024/PFP2.jpg
   section: "Preparing Future Faculty Program Awarding Ceremony 2023 - 2024"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "PFP2"
-
 
 - year: 2024
   path: assets/img/gallery/2024/UR5E1.JPG
@@ -186,12 +180,10 @@
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "UR5E3"
 
-
 # - year: 2023
 #   path: assets/img/gallery/2023/sim_gazebo_01.png
 #   caption: "CottonSim in Gazebo"
 #   alt: "Gazebo simulation"
-
 
 - year: 2023
   path: assets/img/gallery/2023/BestPaper.JPG

@@ -9,8 +9,6 @@ related_posts: false
 MSU AAI: Market Day Report talks MSU's Agricultural Autonomy Institute
 </a>
 
-
-
 <!-- ---
 layout: post
 date: 2016-01-15 07:59:00-0400

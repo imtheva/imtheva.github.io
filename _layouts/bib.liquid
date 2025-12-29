@@ -199,9 +199,6 @@
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {% endif %}
 
-      
-
-
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
       {% endif %}
@@ -274,7 +271,6 @@
         {% assign entry_has_plumx_badge = true %}
       {% endif %}
 
-
       {% assign entry_has_google_scholar_badge = false %}
       {% if entry.google_scholar_id %}
         {% assign entry_has_google_scholar_badge = true %}
@@ -284,8 +280,12 @@
       {% if entry.inspirehep_id %}
         {% assign entry_has_inspirehep_badge = true %}
       {% endif %}
-      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_plumx_badge or entry_has_google_scholar_badge or entry_has_inspirehep_badge %}
-
+      {% if entry_has_altmetric_badge
+        or entry_has_dimensions_badge
+        or entry_has_plumx_badge
+        or entry_has_google_scholar_badge
+        or entry_has_inspirehep_badge
+      %}
         <div class="badges">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
@@ -335,9 +335,6 @@
               <span class="badge bg-secondary">PlumX</span>
             </a>
           {% endif %}
-
-
-          
 
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
             <a
@@ -414,10 +411,5 @@
         <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}</div>
       </div>
     {% endif %}
-
-
   </div>
 </div>
-
-
-
