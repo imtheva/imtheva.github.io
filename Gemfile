@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 
+gem "tzinfo-data", platforms: [:mingw, :x64_mingw, :mswin]
+
+
 # Core plugins that directly affect site building
 group :jekyll_plugins do
     gem 'jekyll-archives-v2'

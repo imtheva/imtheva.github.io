@@ -125,6 +125,14 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
+  - name: Proposal
+    posts:
+      - url: https://www.academia.edu/32184335/Measuring_Pen_A_digital_device_to_measure_distance
+        published_date: 2025-12-20
+  - name: SolidWorks Tutorials
+    posts:
+      - url: https://www.academia.edu/29809896/Making_Threads_in_SolidWorks
+        published_date: 2025-12-21
   - name: medium.com
     rss_url: https://medium.com/@al-folio/feed
   - name: Google Blog

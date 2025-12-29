@@ -279,6 +279,8 @@ GEM
       date
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2025.3)
+      tzinfo (>= 1.0.0)
     unicode-display_width (2.6.0)
     uri (1.1.1)
     webrick (1.9.1)
@@ -323,6 +325,7 @@ DEPENDENCIES
   jemoji
   observer
   ostruct
+  tzinfo-data
 
 BUNDLED WITH
    2.7.2
