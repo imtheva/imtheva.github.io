@@ -1,7 +1,7 @@
+--- # -----------------------------------------------------------------------------
+
 # -----------------------------------------------------------------------------
 # Site settings
-# -----------------------------------------------------------------------------
-
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Thevathayarajh
 middle_name:
@@ -52,6 +52,8 @@ search_enabled: true
 socials_in_search: true
 posts_in_search: true
 bib_search: true
+
+timezone: America/New_York
 
 # Dimensions
 max_width: 930px
