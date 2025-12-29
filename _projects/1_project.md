@@ -1,81 +1,126 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Medical Instrumentation System
+description: A cost-effective remote health monitoring solution designed to continuously assess non-critical patients while reducing hospital congestion—especially during emergencies such as the COVID-19 pandemic.
+img: assets/img/projects/project_1/Medical_IoT_1.png
 importance: 1
-category: work
-related_publications: true
+category: Project
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Project Overview
+Several medical devices can directly analyze a patient’s medical condition; however, the physical presence of non-critical patients places a significant burden on hospital infrastructure, particularly bed availability. This issue becomes more critical during movement-restricted situations such as the COVID-19 pandemic.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project presents a **budget-friendly, IoT-based distanced health monitoring system** that enables continuous monitoring of non-critical patients without requiring physical hospital visits. The system provides real-time access to medical data for patients, caretakers, and doctors through a secure web application.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## System Architecture and Methodology
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/project_1/Methods.png" title="System Architecture of IoT-Based Health Monitoring System" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+Overall system architecture showing patient-side sensing, Raspberry Pi-based processing, Firebase Firestore cloud storage, and web application access for patients, caretakers, and doctors.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+The system collects physiological data from patients using sensors connected to a **Raspberry Pi**. The processed data are transmitted securely to **Firebase Firestore**, enabling near real-time synchronization with the Medical Instrumentation System (MIS) web application.
 
-{% raw %}
+The web interface allows:
+- Patients and caretakers to monitor real-time health parameters and danger levels  
+- Doctors to review medical history and provide prescriptions and feedback remotely  
 
-```html
+---
+
+## Scope and Objectives
+- Develop an **IoT-based system** for monitoring patient health  
+- Monitor **physiological parameters and lifestyle indicators**  
+- Design a **portable device** suitable for continuous patient use  
+- Enable scalability for **multiple patients and doctors**  
+
+---
+
+## Results and Discussion
+
+
 <div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/project_1/R2.jpg" title="R2" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+<div class="row">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/project_1/R1.png" title="R1" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/project_1/R4.png" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  IoT device for collecting physiological data and transmitting it to Firebase Firestore for real-time visualization.
+</div>
 
-{% endraw %}
+
+The developed Medical Instrumentation System (MIS) demonstrated that IoT-based distanced patient monitoring is feasible for non-critical cases.
+
+Key outcomes include:
+- End-to-end data synchronization (device → Firestore → MIS page) within **1–2 seconds**
+- Patients and caretakers can view medical data, danger levels, and follow doctor prescriptions
+- Secure storage of patient medical history enables informed clinical decision-making
+
+This study incorporates patient basic details to prioritize medical history, an aspect not widely explored in related works. Additionally, the system supports doctor prescriptions and feedback, which are absent in many existing solutions.
+
+Firestore allows up to **1 MB of data per document**, indicating the need for a dedicated database server during large-scale commercialization. An SMS gateway can be integrated for OTP-based authentication to enhance system security.
+
+
+
+<div class="row">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/project_1/D1.png" title="Doctor Dashboard" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/project_1/D2.png" title="Patient View" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="row justify-content-sm-center">
+  <div class="col-sm-10 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/project_1/D3.png" title="Medical History and Graphs" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Web application interface showing doctor dashboard, patient view, and medical history visualization.
+</div>
+
+
+
+
+
+
+
+---
+
+## Conclusion
+This project demonstrates a feasible and scalable approach to implementing an **IoT-based distanced health monitoring system**. The MIS web application successfully displays medical data received from distributed devices and supports interactions among multiple patients, caretakers, and doctors.
+
+---
+
+## Future Directions
+- Integrate additional medical devices and sensors based on specific health conditions  
+- Incorporate **Machine Learning/Deep Learning** models for early warning prediction  
+- Enhance security using **SMS-based OTP authentication**  
+
+---
+
+## Live Demo
+🔗 **Web Application:** [https://rasp-med.web.app/](https://rasp-med.web.app/)
+
+---
+
+## References
+1. V. Vippalapalli and S. Ananthula, “Internet of things (IoT) based smart health care system,” *SCOPES 2016*, 2017.  
+2. S. Pinto, J. Cabral, and T. Gomes, “We-Care: An IoT-based Health Care System for Elderly People.”  
+3. V. Tamilselvi et al., “IoT Based Health Monitoring System,” *ICACCS 2020*, 2020.  
+4. S. Rajkumar et al., “Health monitoring system using Raspberry Pi,” *BID 2017*, 2018.  
+5. M. Hamim et al., “IoT Based remote health monitoring system,” *ICREST 2019*, 2019.  
+6. V. Pardeshi et al., “Health monitoring systems using IoT and Raspberry Pi – A review,” *ICIMIA 2017*, 2017.

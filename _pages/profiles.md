@@ -3,7 +3,8 @@ layout: profiles
 permalink: /people/
 title: people
 description: members of the lab or group
-nav: true
+social: true # includes social icons at the bottom of the page
+nav: false
 nav_order: 7
 
 profiles:

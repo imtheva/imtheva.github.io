@@ -1,0 +1,361 @@
+basics:
+  name: "Thevathayarajh Thayananthan"
+  label: "PhD Student and Graduate Research Assistant"
+  summary: "Research in robotics and computer vision focused on autonomous systems and agricultural automation."
+  location:
+    city: "Athens"
+    region: "GA"
+    countryCode: "US"
+  profiles:
+    - network: "GitHub"
+      username: "imtheva"
+      url: "https://github.com/imtheva"
+
+education:
+  - institution: "University of Georgia"
+    studyType: "Reading - PhD"
+    area: "Agriclutural Engineering"
+    startDate: "2025"
+    endDate: "Present"
+    summary: "Autonomous robotic systems and computer vision for selective harvesting."
+
+  - institution: "Mississippi State University"
+    studyType: "Reading - PhD"
+    area: "Biosystems Engineering"
+    startDate: "2023"
+    endDate: "2025"
+    summary: "Autonomous robotic systems and computer vision for selective harvesting."
+
+  - institution: "University of Peradeniya"
+    studyType: "MSc"
+    area: "Electrical and Electronics Engineering"
+    startDate: "2019"
+    endDate: "2022"
+    summary: "Control and Instrumentation"
+
+
+  - institution: "Uva Wellassa University of Sri Lanka"
+    studyType: "BTech"
+    area: "Mechatronics"
+    startDate: "2014"
+    endDate: "2018"
+    summary: "Science and Technology Specialized in Mechatronics"
+
+
+
+work:
+  - name: "Sensing & Automation in Agri-System (SAAS) Lab, University of Georgia"
+    position: "Graduate Research Assistant"
+    startDate: "2025"
+    endDate: "Present"
+    highlights:
+      - "Vision guided autonomous cotton harvesting robot development"
+      - "YOLO based detection and segmentation pipelines"
+      - "UR5e manipulator and mobile robot integration"
+      - "Simulation and real world field testing"
+
+  - name: "Sensing & Automation in Agri-System (SAAS) Lab, Mississippi State University"
+    position: "Graduate Research Assistant"
+    startDate: "2023"
+    endDate: "2025"
+    highlights:
+      - "Vision guided autonomous cotton harvesting robot development"
+      - "YOLO based detection and segmentation pipelines"
+      - "UR5e manipulator and mobile robot integration"
+      - "Simulation and real world field testing"
+
+  - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
+    position: "Graduate Teaching Assistant"
+    startDate: "2024"
+    endDate: "2024"
+    highlights:
+      - Assisted Lab classes - ABE 4423 / ABE 6423 - Bioinstrumentation II
+
+  - name: "Faculty of Applied Sciences, Uva Wellassa University of Sri Lanka"
+    position: "Lecturer (Probationary)"
+    startDate: "2019"
+    endDate: "2023"
+    highlights:
+      - Performed researches and conducted classes
+
+
+  - name: "Faculty of Applied Sciences, Uva Wellassa University of Sri Lanka"
+    position: "Demonstrator (Temporary)"
+    startDate: "2018"
+    endDate: "2019"
+    highlights:
+      - Performed researches and conducted lab classes
+
+
+  - name: "Innovation Department, MAS Intimates (Pvt) Ltd"
+    position: "Intern at Research and Development)"
+    startDate: "2017"
+    endDate: "2018"
+    highlights:
+      - Performed researches and supported innovation at the textile manufacturing
+
+awards:
+  - title: "Hall of Fame Awardee"
+    awarder: "Graduate School, Mississippi State University"
+    date: "2025"
+    summary: "Honored as a Hall of Fame Awardee by the College of Engineering."
+
+  - title: "SEC Emerging Scholar"
+    awarder: "Mississippi State University"
+    date: "2023 to 2024"
+    summary: "Represented Mississippi State University in the SEC Emerging Scholar Program."
+
+  - title: "TAGGS Scholarship"
+    awarder: "Graduate School, Mississippi State University"
+    date: "2024"
+    summary: "Travel scholarship awarded for participation in the ASABE Annual International Meeting."
+
+  - title: "Best Paper Award"
+    awarder: "SPIE Conference"
+    date: "2023"
+    summary: "Best paper award at the Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping VIII session."
+
+  - title: "AG2PI Travel Award"
+    awarder: "Agricultural Genome to Phenome Initiative (AG2PI)"
+    date: "2024"
+    summary: "Travel award supporting participation in the ASABE Annual International Meeting."
+
+  - title: "Gold Medal in English Speech Competition"
+    awarder: "Higher School Level Competition, KHC"
+    date: "2008"
+    summary: "Awarded gold medal for excellence in English speech competition."
+
+  - title: "Third Place, National Level Essay Competition"
+    awarder: "Ramakrishna Mission, Sri Lanka"
+    date: "2006"
+    summary: "Third place at the Sri Lankan national level essay competition."
+
+
+
+projects:
+  - name: "PhD Research in Robotics and Computer Vision"
+    startDate: "2023"
+    endDate: "Present"
+    description: "Ongoing doctoral research focused on autonomous robotic systems and computer vision applications in agriculture and food processing."
+    highlights:
+      - "Boll orientation aware cotton picking robot for field environments"
+      - "Autonomous cotton harvesting platform using computer vision"
+      - "Deep learning based semantic segmentation for automating catfish cutting"
+      - "Multi ripeness level blackberry detection using YOLO for soft robotic harvesting"
+
+  - name: "MSc Project - IoT Based Medical Instrumentation"
+    startDate: "2019"
+    endDate: "2022"
+    description: "Design and development of an Internet of Things based medical instrumentation system."
+    highlights:
+      - "Sensor integration and data acquisition"
+      - "Embedded system based health monitoring"
+
+  - name: "Employment Projects and Applied Research"
+    startDate: "2017"
+    endDate: "2018"
+    description: "Industry and employment related projects applying machine learning, robotics, IoT, and automation."
+    highlights:
+      - "Automated image capture system for zebrafish embryo toxicity analysis"
+      - "Traffic sign recognition and auditory alert system using deep learning"
+      - "Automatic billing system for a pastry shop using machine learning"
+      - "IoT based automated colony counter system"
+      - "Virtual reality based learning system for robot manipulator education"
+      - "Active and passive safety systems for differently abled individuals and adults"
+      - "Landslide early detection and alert forwarding system"
+      - "Smart classroom attendance system using face recognition"
+      - "PLC based finished goods scanner system"
+      - "Arduino based chiller off alert system"
+
+  - name: "Undergraduate Research Project"
+    startDate: "2017"
+    endDate: "2018"
+    description: "Research project focused on monitoring and automation in food processing."
+    highlights:
+      - "Monitoring device for the fermentation stage of black tea manufacturing"
+
+publications:
+  - name: "Publications"
+    publisher: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=MpKhKEUAAAAJ"
+    summary: "Complete list of peer reviewed journal and conference publications."
+
+  - name: "Publications Webpage"
+    publisher: "Personal Website"
+    url: "/publications/"
+    summary: "Curated list of publications, preprints, and ongoing research work."
+
+professional:
+  - name: "Mississippi State University"
+    position: "Lab Manager"
+    startDate: "2024"
+    endDate: "Present"
+    summary: "Sensing and Automation in Agri-System (SAAS) Lab, Department of Agricultural and Biological Engineering."
+    highlights:
+      - "Managed laboratory operations and research infrastructure"
+      - "Supported sensing, automation, and robotics research activities"
+
+  - name: "Mississippi State University"
+    position: "Preparing Future Faculty Program Participant"
+    startDate: "2024"
+    endDate: "2024"
+    summary: "Completed professional development program for future academic faculty."
+
+  - name: "Mississippi State University"
+    position: "Certified Teaching Assistant (Level 2 of 3)"
+    startDate: "2024"
+    endDate: "2024"
+    summary: "Advanced teaching assistant certification for instructional excellence."
+
+  - name: "Uva Wellassa University"
+    position: "Psychological Counselor"
+    startDate: "2022"
+    endDate: "2023"
+    summary: "Faculty of Applied Sciences."
+    highlights:
+      - "Provided counseling support to undergraduate students"
+
+  - name: "Uva Wellassa University"
+    position: "Student Mentor"
+    startDate: "2019"
+    endDate: "2023"
+    summary: "Academic mentoring and student guidance."
+
+  - name: "Uva Wellassa University"
+    position: "Academic Sub Warden"
+    startDate: "2019"
+    endDate: "2023"
+    summary: "Administrative and student residential management responsibilities."
+
+  - name: "Uva Wellassa University"
+    position: "Coordinator, Short Course in Robotics and Arduino Programming"
+    startDate: "2019"
+    endDate: "2023"
+    summary: "Organized and coordinated short courses in robotics and embedded systems."
+
+  - name: "Uva Wellassa University"
+    position: "Track Coordinator"
+    startDate: "2022"
+    endDate: "2022"
+    summary: "Engineering and Technology track, International Research Conference."
+
+  - name: "Uva Wellassa University"
+    position: "Faculty Development Project Member (AHEAD Project)"
+    startDate: "2019"
+    endDate: "2022"
+    summary: "Member of Activity 02 under the AHEAD Faculty Development Project."
+
+  - name: "Uva Wellassa University"
+    position: "Program Review and SER Group Member"
+    startDate: "2022"
+    endDate: "2023"
+    summary: "Participated in academic program review and self evaluation report preparation."
+
+  - name: "Uva Wellassa University"
+    position: "Panel Member, Curriculum Revision Stakeholder Meeting"
+    startDate: "2020"
+    endDate: "2020"
+    summary: "Contributed to curriculum revision discussions."
+
+  - name: "Uva Wellassa University"
+    position: "Panel Member, International Research Conference"
+    startDate: "2020"
+    endDate: "2020"
+
+  - name: "Uva Wellassa University"
+    position: "Organizing Committee Member, International Research Conference"
+    startDate: "2019"
+    endDate: "2020"
+
+  - name: "Uva Wellassa University"
+    position: "Organizing Committee Member, Convocation"
+    startDate: "2020"
+    endDate: "2020"
+    summary: "Convocation 2019 organization activities."
+
+  - name: "Staff Development Centre"
+    position: "Certificate Course in Teaching in Higher Education"
+    startDate: "2019"
+    endDate: "2019"
+    summary: "Completed formal training in higher education pedagogy."
+
+
+
+volunteer:
+  - organization: "Mississippi State University"
+    position: "Secretary, Softball Cricket Club"
+    startDate: "2024"
+    endDate: "Present"
+    summary: "Administrative and organizational support for the Softball Cricket Club."
+
+  - organization: "Mississippi State University"
+    position: "Social Secretary, Softball Cricket Club"
+    startDate: "2023"
+    endDate: "2024"
+    summary: "Organized social activities and supported club operations."
+
+  - organization: "Sri Lankan Association, Mississippi State University"
+    position: "Webmaster"
+    startDate: "2023"
+    endDate: "2024"
+    summary: "Maintained and updated the association website and digital content."
+
+  - organization: "Uva Wellassa University"
+    position: "Faculty Advisor, IEEE Robotics and Automation Society Chapter"
+    startDate: "2021"
+    endDate: "2023"
+    summary: "Provided academic guidance and mentorship for IEEE RAS student activities."
+
+  - organization: "International Research Conference, Uva Wellassa University"
+    position: "Reviewer"
+    startDate: "2021"
+    endDate: "2022"
+    summary: "Reviewed research submissions for the annual international research conference."
+
+  - organization: "Sri Lanka Institute of Information Technology"
+    position: "Reviewer, International Conference on Advancements in Computing"
+    startDate: "2021"
+    endDate: "2021"
+    summary: "Reviewed research papers for the 2nd International Conference on Advancements in Computing."
+
+  - organization: "Uva Wellassa University"
+    position: "Resource Person"
+    startDate: "2018"
+    endDate: "2018"
+    summary: "Conducted workshops on engineering machinery for school children."
+
+  - organization: "Uva Wellassa University"
+    position: "Member, IEEE Student Branch"
+    startDate: "2016"
+    endDate: "2018"
+    summary: "Active member of the IEEE student branch."
+
+  - organization: "Uva Wellassa University Students Association"
+    position: "Resource Person"
+    startDate: "2014"
+    endDate: "2016"
+    summary: "Delivered seminars for school ordinary level students."
+
+  - organization: "Kokuvil Hindu College, Sri Lanka"
+    position: "Secretary, English Union"
+    startDate: "2010"
+    endDate: "2010"
+    summary: "Served as secretary of the school English Union."
+
+
+
+
+languages:
+  - language: "English"
+  - language: "Tamil"
+  - language: "Sinhala"
+
+interests:
+  - name: "Robotics"
+    keywords:
+      - "Mobile manipulation"
+      - "Field robotics"
+  - name: "Computer Vision"
+    keywords:
+      - "Object detection"
+      - "3D perception"

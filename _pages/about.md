@@ -28,9 +28,11 @@ latest_posts:
 ---
 
 
-I am a Graduate Research Assistant in the School of Environmental, Civil, Agricultural, and Mechanical Engineering at the University of Georgia, where I focus on advanced agricultural robotics, automation, and intelligent sensing technologies for sustainable farming. My research integrates machine vision, robotic manipulation, and field-scale experimentation to develop innovative solutions that enhance agricultural productivity and reduce labor dependency.
+I am a Graduate Research Assistant in the School of Environmental, Civil, Agricultural, and Mechanical Engineering at the University of Georgia, where I work on agricultural robotics, automation, and intelligent sensing technologies to support sustainable farming. My research combines machine vision, robotic manipulation, and real-world field experiments to create practical systems that improve farm efficiency and reduce manual labor.
 
-Previously, I served as a Graduate Research Assistant in the Department of Agricultural and Biological Engineering at Mississippi State University, where I gained strong expertise in agricultural systems, precision agriculture, and applied engineering research. I am passionate about applying engineering innovation to solve real-world agricultural challenges and contributing to the future of smart, autonomous farming.
+Previously, I worked as a Graduate Research Assistant in the Department of Agricultural and Biological Engineering at Mississippi State University. During this time, I developed a strong foundation in agricultural engineering, precision agriculture, and applied research methods. These experiences shaped my interest in building engineering solutions that can be tested and used in real agricultural environments.
+
+My research interests include autonomous field robots, computer vision, sensor-based decision systems, and robotic end-effectors for selective harvesting. I am especially interested in developing systems that are reliable in outdoor conditions and can be adopted by farmers to improve productivity and sustainability.
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->

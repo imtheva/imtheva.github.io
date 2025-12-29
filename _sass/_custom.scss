@@ -1,0 +1,51 @@
+.gallery-jump {
+  margin: 1rem 0 2rem 0;
+}
+
+.gallery-jump-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 0.9rem;
+}
+
+.gallery-jump-link {
+  display: inline-block;
+  padding: 0 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.gallery-jump-link:hover {
+  text-decoration: underline;
+}
+
+.gallery-tile {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-caption {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.92rem;
+  opacity: 0.85;
+  line-height: 1.35;
+}
+
+
+/* Gallery surgical overrides */
+.projects img.gallery-img {
+  width: 100% !important;
+  height: 240px !important;
+  object-fit: cover !important;
+  display: block !important;
+  max-width: 100% !important;
+}

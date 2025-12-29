@@ -2,6 +2,7 @@
 layout: book-shelf
 title: bookshelf
 permalink: /books/
+social: true # includes social icons at the bottom of the page
 nav: false
 collection: books
 ---

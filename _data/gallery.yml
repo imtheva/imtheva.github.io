@@ -1,0 +1,242 @@
+# _data/gallery.yml
+# path should be from site root (no leading slash is fine, but keep consistent)
+# Example image location: assets/img/gallery/2025/field_test_01.jpg
+
+- year: 2025
+  path: assets/img/gallery/2025/Field_test.JPG
+  section: "Field test – 2025 (Tifton)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup"
+
+- year: 2025
+  path: assets/img/gallery/2025/Field_test2.JPG
+  section: "Field test – 2025 (Tifton)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup 2"
+
+- year: 2025
+  path: assets/img/gallery/2025/Field_test3.JPG
+  section: "Field test – 2025 (Tifton)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup 3"
+
+- year: 2025
+  path: assets/img/gallery/2025/AIinAG1.JPG
+  section: "AI in Ag Conference - 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "AIinAG1"
+
+- year: 2025
+  path: assets/img/gallery/2025/AIinAG2.jpg
+  section: "AI in Ag Conference - 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "AIinAG2"
+
+- year: 2025
+  path: assets/img/gallery/2025/AIinAG3.jpg
+  section: "AI in Ag Conference - 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "AIinAG3"
+
+
+- year: 2025
+  path: assets/img/gallery/2025/Fame1.jpg
+  section: "Hall of Fame Awardee - 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Fame1"
+
+- year: 2025
+  path: assets/img/gallery/2025/Fame2.jpg
+  section: "Hall of Fame Awardee - 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Fame2"
+
+- year: 2025
+  path: assets/img/gallery/2025/Fame3.jpg
+  section: "Hall of Fame Awardee - 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Fame3"
+
+- year: 2025
+  path: assets/img/gallery/2025/Fame4.jpg
+  section: "Hall of Fame Awardee - 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Fame4"
+
+- year: 2025
+  path: assets/img/gallery/2025/Fame5.jpg
+  section: "Hall of Fame Awardee - 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Fame5"
+
+- year: 2025
+  path: assets/img/gallery/2025/Fame6.jpg
+  section: "Hall of Fame Awardee - 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Fame6"
+
+- year: 2025
+  path: assets/img/gallery/2025/IFAC1.jpeg
+  section: "IFAC AgriControl 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "IFAC1"
+
+- year: 2025
+  path: assets/img/gallery/2025/IFAC2.jpeg
+  section: "IFAC AgriControl 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "IFAC2"
+
+- year: 2025
+  path: assets/img/gallery/2025/IFAC3.jpeg
+  section: "IFAC AgriControl 2025"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "IFAC3"
+
+
+# - year: 2025
+#   path: assets/img/gallery/2025/zed_view_01.png
+#   caption: "ZED 2i view – cotton rows"
+#   alt: "ZED camera view"
+
+# - year: 2024
+#   path: assets/img/gallery/2024/end_effector_v7.jpg
+#   caption: "End-effector V7 prototype"
+#   alt: "End-effector prototype"
+
+- year: 2024
+  path: assets/img/gallery/2024/Field_test.JPG
+  section: "Field test – 2024 (MSU North Farm - Starkville)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup 1"
+
+- year: 2024
+  path: assets/img/gallery/2024/Field_test2.JPG
+  section: "Field test – 2024 (MSU North Farm - Starkville)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup 2"
+
+- year: 2024
+  path: assets/img/gallery/2024/Field_test3.JPG
+  section: "Field test – 2024 (MSU North Farm - Starkville)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup 3"
+
+- year: 2024
+  path: assets/img/gallery/2024/Field_test4.JPG
+  section: "Field test – 2024 (MSU North Farm - Starkville)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup 4"
+
+
+
+- year: 2024
+  path: assets/img/gallery/2024/ASABE1.JPG
+  section: "ASABE - American Society of Agricultural and Biological Engineers - 2024 Annual International Meeting"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "ASABE1"
+
+- year: 2024
+  path: assets/img/gallery/2024/ASABE2.JPG
+  section: "ASABE - American Society of Agricultural and Biological Engineers - 2024 Annual International Meeting"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "ASABE2"
+
+- year: 2024
+  path: assets/img/gallery/2024/ASABE3.JPG
+  section: "ASABE - American Society of Agricultural and Biological Engineers - 2024 Annual International Meeting"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "ASABE3"
+
+- year: 2024
+  path: assets/img/gallery/2024/ASABE4.JPG
+  section: "ASABE - American Society of Agricultural and Biological Engineers - 2024 Annual International Meeting"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "ASABE4"
+
+- year: 2024
+  path: assets/img/gallery/2024/PFP.JPG
+  section: "Preparing Future Faculty Program Awarding Ceremony 2023 - 2024"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "PFP1"
+
+
+- year: 2024
+  path: assets/img/gallery/2024/PFP2.JPG
+  section: "Preparing Future Faculty Program Awarding Ceremony 2023 - 2024"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "PFP2"
+
+
+- year: 2024
+  path: assets/img/gallery/2024/UR5E1.JPG
+  section: "Clearpath's Husky + UR5e Indoor test"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "UR5E1"
+
+- year: 2024
+  path: assets/img/gallery/2024/UR5E2.JPG
+  section: "Clearpath's Husky + UR5e Indoor test"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "UR5E2"
+
+- year: 2024
+  path: assets/img/gallery/2024/UR5E3.JPG
+  section: "Clearpath's Husky + UR5e Indoor test"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "UR5E3"
+
+
+# - year: 2023
+#   path: assets/img/gallery/2023/sim_gazebo_01.png
+#   caption: "CottonSim in Gazebo"
+#   alt: "Gazebo simulation"
+
+
+- year: 2023
+  path: assets/img/gallery/2023/BestPaper.JPG
+  section: "SPIE - Best Paper Award"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Bestpaper"
+
+- year: 2023
+  path: assets/img/gallery/2023/Field_test.JPG
+  section: "Field test – 2023 (MSU North Farm - Starkville)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup"
+
+- year: 2023
+  path: assets/img/gallery/2023/Field_test2.JPG
+  section: "Field test – 2023 (MSU North Farm - Starkville)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup 2"
+
+- year: 2023
+  path: assets/img/gallery/2023/Field_test3.JPG
+  section: "Field test – 2023 (MSU North Farm - Starkville)"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "Field test robot setup 3"
+
+- year: 2023
+  path: assets/img/gallery/2023/SPIE1.JPG
+  section: "SPIE Defence and Commercials Sensing 2023 - Conference"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "SPIE1"
+
+- year: 2023
+  path: assets/img/gallery/2023/SPIE2.JPG
+  section: "SPIE Defence and Commercials Sensing 2023 - Conference"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "SPIE2"
+
+- year: 2023
+  path: assets/img/gallery/2023/SPIE3.JPG
+  section: "SPIE Defence and Commercials Sensing 2023 - Conference"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "SPIE3"
+
+- year: 2023
+  path: assets/img/gallery/2023/SEC.JPG
+  section: "SEC Emerging Scholars from Mississippi State University 2023"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "SEC"

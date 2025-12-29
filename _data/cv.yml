@@ -2,96 +2,89 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Thevathayarajh Thayananthan
+    - name: Position
+      value: Ph.D. Student & Graduate Research Assistant
+    - name: Affiliation
+      value: University of Georgia (UGA)
+    - name: Research Areas
+      value: Robotics, Computer Vision, Autonomous Systems, Agricultural Engineering
     - name: Languages
-      value: English, German
+      value: Tamil,English, Sinhala
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD in Engineering
+      institution: University of Georgia, Athens, GA, USA
+      year: "2025 - Present"
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - "Autonomous robotic systems for selective cotton harvesting"
+        - "Deep learning based perception for agricultural robotics"
+        - "Mobile manipulation and stereo vision integration"
 
-- title: Experience
+    - title: Engineering Degree
+      institution: University of Jaffna, Sri Lanka
+      year: "2016 - 2021"
+      description:
+        - "Robotics, control systems, and automation fundamentals"
+        - "Undergraduate projects in sensing and automation"
+
+- title: work
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Graduate Research Assistant
+      institution: Xin Zhang Lab, University of Georgia
+      year: "2022 - Present"
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - "Vision guided autonomous cotton picking robot development"
+        - "YOLO based object detection and segmentation pipelines"
+        - "UR5e manipulator and mobile robot integration"
+        - "Simulation and real world field testing"
+
+    - title: Teaching Assistant
+      institution: University of Georgia
+      year: "2023 - Present"
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+        - "Assisted undergraduate and graduate engineering courses"
+        - "Lab support, grading, and student mentoring"
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: "<a href='https://github.com/imtheva'>Public Datasets and Robotics Code Collection</a>"
+      year: "2023 - Present"
+      description: "Publicly available datasets and open source code for computer vision, robotics, and engineering research"
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: "2024"
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - "Graduate Research Support, University of Georgia"
+        - "Conference Travel Support"
+    - year: "2023"
       items:
-        - Max Planck Medal
+        - "Departmental Academic Recognition"
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Robotics
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - "Mobile manipulation"
+        - "End effector design"
+        - "Field robotics"
+    - title: Computer Vision
       items:
-        - Description 1.
-        - Description 2.
+        - "Object detection and segmentation"
+        - "Stereo vision and 3D perception"
+    - title: Autonomous Systems
+      items:
+        - "Multi sensor fusion"
+        - "Simulation to real transfer"
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - "Hobbies: Technology blogging, photography, travel, fitness"

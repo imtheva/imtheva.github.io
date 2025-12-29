@@ -1,47 +1,57 @@
-{% assign repo_url = include.repository | split: '/' %}
-{% if site.data.repositories.github_users contains repo_url.first %}
-  {% assign show_owner = false %}
+{% assign repo_item = include.repository %}
+
+{%- comment -%}
+  Accept both formats:
+  1) "owner/name" (string)
+  2) { name: "owner/name", description: "...", tags: [...] } (object)
+{%- endcomment -%}
+
+{% if repo_item.name %}
+  {% assign full_name = repo_item.name %}
+  {% assign description = repo_item.description %}
+  {% assign tags = repo_item.tags %}
 {% else %}
-  {% assign show_owner = true %}
+  {% assign full_name = repo_item %}
+  {% assign description = nil %}
+  {% assign tags = nil %}
 {% endif %}
 
-{% assign lang = site.lang | split: '-' | first %}
+{% assign parts = full_name | split: '/' %}
+{% assign owner = parts[0] %}
+{% assign repo = parts[1] %}
 
-{% case lang %}
-  {% when 'pt' %}
-    {% assign lang = site.lang %}
+<div class="repo p-2" style="flex: 1 1 320px; max-width: 520px;">
+  <div class="card h-100 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title mb-1">
+        <a href="https://github.com/{{ full_name }}" target="_blank" rel="noopener">
+          {{ repo }}
+        </a>
+      </h5>
 
-  {% when 'zh' %}
-    {% assign lang_last = site.lang | split: '-' | last %}
-    {% case lang_last %}
-      {% when 'cn', 'sg', 'my', 'hans' %}
-        {% assign lang = 'cn' %}
-      {% when 'tw', 'hk', 'mo', 'hant' %}
-        {% assign lang = 'zh-tw' %}
-    {% endcase %}
+      <div class="text-muted small mb-2">
+        <span>@{{ owner }}</span>
+      </div>
 
-    {% comment %} Add a new language using when... if needed {% endcomment %}
-    {% comment %} If you still encounter language-display issues, check the available locale codes in github-readme-stats (different from ISO-639 standard used in your website) {% endcomment %}
-    {% comment %} https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#available-locales {% endcomment %}
-{% endcase %}
+      {% if description %}
+        <p class="card-text mb-3">{{ description }}</p>
+      {% else %}
+        <p class="card-text mb-3 text-muted">
+          Repository on GitHub.
+        </p>
+      {% endif %}
 
-{% if site.data.repositories.repo_description_lines_max %}
-  {% assign max_lines = site.data.repositories.repo_description_lines_max %}
-{% else %}
-  {% assign max_lines = 2 %}
-{% endif %}
+      {% if tags and tags.size > 0 %}
+        <div class="mb-3">
+          {% for t in tags %}
+            <span class="badge rounded-pill text-bg-light border me-1 mb-1">{{ t }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
 
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}">
-    <img
-      class="only-light w-100"
-      alt="{{ include.repository }}"
-      src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-    <img
-      class="only-dark w-100"
-      alt="{{ include.repository }}"
-      src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-  </a>
+      <a class="btn btn-sm btn-outline-primary" href="https://github.com/{{ full_name }}" target="_blank" rel="noopener">
+        View on GitHub
+      </a>
+    </div>
+  </div>
 </div>
