@@ -21,7 +21,7 @@
   alt: "Field test robot setup 3"
 
 - year: 2025
-  path: assets/img/gallery/2025/AIinAG1.JPG
+  path: assets/img/gallery/2025/AIinAG1.jpg
   section: "AI in Ag Conference - 2025"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "AIinAG1"
@@ -40,31 +40,31 @@
 
 
 - year: 2025
-  path: assets/img/gallery/2025/Fame1.jpg
+  path: assets/img/gallery/2025/Fame1.JPG
   section: "Hall of Fame Awardee - 2025"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Fame1"
 
 - year: 2025
-  path: assets/img/gallery/2025/Fame2.jpg
+  path: assets/img/gallery/2025/Fame2.JPG
   section: "Hall of Fame Awardee - 2025"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Fame2"
 
 - year: 2025
-  path: assets/img/gallery/2025/Fame3.jpg
+  path: assets/img/gallery/2025/Fame3.JPG
   section: "Hall of Fame Awardee - 2025"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Fame3"
 
 - year: 2025
-  path: assets/img/gallery/2025/Fame4.jpg
+  path: assets/img/gallery/2025/Fame4.JPG
   section: "Hall of Fame Awardee - 2025"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Fame4"
 
 - year: 2025
-  path: assets/img/gallery/2025/Fame5.jpg
+  path: assets/img/gallery/2025/Fame5.JPG
   section: "Hall of Fame Awardee - 2025"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Fame5"
@@ -105,25 +105,25 @@
 #   alt: "End-effector prototype"
 
 - year: 2024
-  path: assets/img/gallery/2024/Field_test.JPG
+  path: assets/img/gallery/2024/Field_test.jpg
   section: "Field test – 2024 (MSU North Farm - Starkville)"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Field test robot setup 1"
 
 - year: 2024
-  path: assets/img/gallery/2024/Field_test2.JPG
+  path: assets/img/gallery/2024/Field_test2.jpg
   section: "Field test – 2024 (MSU North Farm - Starkville)"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Field test robot setup 2"
 
 - year: 2024
-  path: assets/img/gallery/2024/Field_test3.JPG
+  path: assets/img/gallery/2024/Field_test3.jpg
   section: "Field test – 2024 (MSU North Farm - Starkville)"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Field test robot setup 3"
 
 - year: 2024
-  path: assets/img/gallery/2024/Field_test4.JPG
+  path: assets/img/gallery/2024/Field_test4.jpg
   section: "Field test – 2024 (MSU North Farm - Starkville)"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "Field test robot setup 4"
@@ -155,14 +155,14 @@
   alt: "ASABE4"
 
 - year: 2024
-  path: assets/img/gallery/2024/PFP.JPG
+  path: assets/img/gallery/2024/PFP.jpg
   section: "Preparing Future Faculty Program Awarding Ceremony 2023 - 2024"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "PFP1"
 
 
 - year: 2024
-  path: assets/img/gallery/2024/PFP2.JPG
+  path: assets/img/gallery/2024/PFP2.jpg
   section: "Preparing Future Faculty Program Awarding Ceremony 2023 - 2024"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "PFP2"
