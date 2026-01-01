@@ -7,12 +7,15 @@ dropdown: true
 children:
   # - title: bookshelf
   #   permalink: /books/
+  - title: News
+    permalink: /news/
+  - title: divider
   - title: Teaching
     permalink: /teaching/
   - title: divider
   - title: Gallery
     permalink: /gallery/
   - title: divider
-  - title: blog
+  - title: Blog
     permalink: /blog/
 ---
