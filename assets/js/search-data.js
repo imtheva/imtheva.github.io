@@ -44,7 +44,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "dropdown-teaching",
+        },{id: "dropdown-news",
+              title: "News",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/news/";
+              },
+            },{id: "dropdown-teaching",
               title: "Teaching",
               description: "",
               section: "Dropdown",
@@ -59,7 +66,7 @@ ninja.data = [{
                 window.location.href = "/gallery/";
               },
             },{id: "dropdown-blog",
-              title: "blog",
+              title: "Blog",
               description: "",
               section: "Dropdown",
               handler: () => {
@@ -486,6 +493,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-farm-flavor-agriculture-technology-advancements-revolutionize-mississippi-ag-industry",
           title: 'Farm Flavor: Agriculture Technology Advancements Revolutionize Mississippi Ag Industry',
+          description: "",
+          section: "News",},{id: "news-design-and-development-of-an-autonomous-vision-guided-cotton-picker-for-selective-and-targeted-robotic-picking-msu-otm",
+          title: 'Design and development of an autonomous vision-guided cotton picker for selective and targeted...',
+          description: "",
+          section: "News",},{id: "news-tech-tuesday-check-out-thevathayarajh-thayananthan-s-design-and-development-of-an-autonomous-vision-guided-cotton-picker-for-selective-and-targeted-robotic-picking-with-dr-xin-zhang",
+          title: 'TECH TUESDAY: Check out Thevathayarajh Thayananthan’s Design and development of an autonomous vision-guided...',
           description: "",
           section: "News",},{id: "projects-medical-instrumentation-system",
           title: 'Medical Instrumentation System',
