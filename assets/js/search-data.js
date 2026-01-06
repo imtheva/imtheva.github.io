@@ -541,6 +541,13 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/imtheva", "_blank");
         },
       },{
+        id: 'social-medium',
+        title: 'Medium',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://medium.com/@theva1993", "_blank");
+        },
+      },{
         id: 'social-orcid',
         title: 'ORCID',
         section: 'Socials',
