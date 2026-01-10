@@ -1,11 +1,23 @@
 "Agricultural Robotics":
-  color: "#FFEA00"
+  url:
+  color_light: "#FFF7CC"
+  color_dark: "#736100"
+  color: "#FFF7CC"
 
 "Computer Vision":
-  color: "#009f36"
+  url:
+  color_light: "#5CDB95"
+  color_dark: "#009f36"
+  color: "#5CDB95"
 
 "Robotics":
-  color: "#00369f"
+  url:
+  color_light: "#7AA2FF"
+  color_dark: "#00369f"
+  color: "#7AA2FF"
 
 "IoT":
-  color: "#F5A28C"
+  url:
+  color_light: "#FAD7CF"
+  color_dark: "#663127"
+  color: "#FAD7CF"

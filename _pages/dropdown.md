@@ -13,9 +13,9 @@ children:
   - title: Teaching
     permalink: /teaching/
   - title: divider
+  - title: Repositories
+    permalink: /blog/
+  - title: divider
   - title: Gallery
     permalink: /gallery/
-  - title: divider
-  - title: Blog
-    permalink: /blog/
 ---

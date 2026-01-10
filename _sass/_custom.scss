@@ -205,3 +205,37 @@
     margin-top: 4px;
   }
 }
+
+/* Publication venue badge: light/dark colors via CSS variables */
+.publications .venue-badge {
+  background-color: var(--venue-color-light) !important;
+  border: none;
+}
+
+/* Make the text readable when badge is bright (optional but recommended) */
+.publications .venue-badge,
+.publications .venue-badge a,
+.publications .venue-badge div {
+  color: #111 !important;
+  text-decoration: none;
+}
+
+/* Dark theme override (covers common al-folio theme toggles) */
+html[data-theme="dark"] .publications .venue-badge,
+body[data-theme="dark"] .publications .venue-badge,
+[data-theme="dark"] .publications .venue-badge {
+  background-color: var(--venue-color-dark) !important;
+}
+
+/* In dark mode, make text lighter if your dark colors are deep */
+html[data-theme="dark"] .publications .venue-badge,
+html[data-theme="dark"] .publications .venue-badge a,
+html[data-theme="dark"] .publications .venue-badge div,
+body[data-theme="dark"] .publications .venue-badge,
+body[data-theme="dark"] .publications .venue-badge a,
+body[data-theme="dark"] .publications .venue-badge div,
+[data-theme="dark"] .publications .venue-badge,
+[data-theme="dark"] .publications .venue-badge a,
+[data-theme="dark"] .publications .venue-badge div {
+  color: #fff !important;
+}

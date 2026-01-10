@@ -4,7 +4,7 @@ permalink: /repositories/
 title: Repositories
 social: true # includes social icons at the bottom of the page
 description: An open repository of datasets and reference implementations for computer vision, robotics, and engineering, designed for rapid prototyping, evaluation, and real-world deployment.
-nav: true
+nav: false
 nav_order: 4
 ---
 
