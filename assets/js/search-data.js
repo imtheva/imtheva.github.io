@@ -56,7 +56,7 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/blog/";
+                window.location.href = "/repositories/";
               },
             },{id: "dropdown-gallery",
               title: "Gallery",
