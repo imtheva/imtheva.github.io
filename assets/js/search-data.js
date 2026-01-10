@@ -30,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-repositories",
-          title: "Repositories",
-          description: "An open repository of datasets and reference implementations for computer vision, robotics, and engineering, designed for rapid prototyping, evaluation, and real-world deployment.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
-          },
         },{id: "nav-cv",
           title: "CV",
           description: "",
@@ -58,6 +51,13 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/teaching/";
               },
+            },{id: "dropdown-repositories",
+              title: "Repositories",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/blog/";
+              },
             },{id: "dropdown-gallery",
               title: "Gallery",
               description: "",
@@ -65,14 +65,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/gallery/";
               },
-            },{id: "dropdown-blog",
-              title: "Blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "post-mis",
+            },{id: "post-from-science-fiction-to-farmland-why-robotics-amp-ai-are-inevitable-in-agriculture",
+        
+          title: 'From Science Fiction to Farmland: Why Robotics &amp; AI Are Inevitable in Agriculture... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "My first Medium article on why robotics &amp; AI are becoming inevitable in agriculture.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@theva1993/from-science-fiction-to-farmland-why-robotics-and-ai-are-inevitable-in-agriculture-97c18d9d9956", "_blank");
+          
+        },
+      },{id: "post-mis",
         
           title: "MIS",
         
