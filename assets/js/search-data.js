@@ -65,7 +65,25 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/gallery/";
               },
-            },{id: "post-from-science-fiction-to-farmland-why-robotics-amp-ai-are-inevitable-in-agriculture",
+            },{id: "dropdown-useful-links",
+              title: "Useful Links",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/useful-links/";
+              },
+            },{id: "post-how-computer-vision-is-transforming-agricultural-engineering",
+        
+          title: 'How Computer Vision Is Transforming Agricultural Engineering <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "An accessible overview of how computer vision is transforming agricultural engineering through crop detection, robotics, and intelligent farm automation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@theva1993/computer-vision-in-agricultural-engineering-0513dc142326", "_blank");
+          
+        },
+      },{id: "post-from-science-fiction-to-farmland-why-robotics-amp-ai-are-inevitable-in-agriculture",
         
           title: 'From Science Fiction to Farmland: Why Robotics &amp; AI Are Inevitable in Agriculture... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
