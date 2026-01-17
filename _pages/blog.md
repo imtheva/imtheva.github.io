@@ -69,7 +69,10 @@ pagination:
 <div class="col mb-4 d-flex">
 
 {% assign post_href = post.redirect | default: post.external_url | default: post.url %}
-{% assign is_external = post_href contains '://' %}
+{% assign is_external = false %}
+{% if post_href contains '://' %}
+{% assign is_external = true %}
+{% endif %}
 
 <a href="{% if is_external %}{{ post_href }}{% else %}{{ post_href | relative_url }}{% endif %}"
 {% if is_external %}target="\_blank" rel="noopener"{% endif %}>
