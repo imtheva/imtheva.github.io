@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Tag: {{ page.title }}</h1>
+  </header>
+
+  <article class="post-content">
+    {% if page.posts and page.posts.size > 0 %}
+      <ul>
+        {% for post in page.posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="post-meta"> — {{ post.date | date: "%B %d, %Y" }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No posts found for this tag.</p>
+    {% endif %}
+  </article>
+</div>
