@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://imtheva.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://imtheva.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-01-16T22:16:20-05:00</updated><id>https://imtheva.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Thevathayarajh Thayananthan — research, projects, publications, and writing on science, engineering, and space. </subtitle><entry><title type="html">How Computer Vision Is Transforming Agricultural Engineering</title><link href="https://imtheva.github.io/blog/2026/CV/" rel="alternate" type="text/html" title="How Computer Vision Is Transforming Agricultural Engineering"/><published>2026-01-16T00:00:00-05:00</published><updated>2026-01-16T00:00:00-05:00</updated><id>https://imtheva.github.io/blog/2026/CV</id><content type="html" xml:base="https://imtheva.github.io/blog/2026/CV/"><![CDATA[]]></content><author><name></name></author><category term="external-services"/><summary type="html"><![CDATA[An accessible overview of how computer vision is transforming agricultural engineering through crop detection, robotics, and intelligent farm automation.]]></summary></entry><entry><title type="html">From Science Fiction to Farmland: Why Robotics &amp;amp; AI Are Inevitable in Agriculture</title><link href="https://imtheva.github.io/blog/2026/robotics-ai-agriculture-copy/" rel="alternate" type="text/html" title="From Science Fiction to Farmland: Why Robotics &amp;amp; AI Are Inevitable in Agriculture"/><published>2026-01-09T00:00:00-05:00</published><updated>2026-01-09T00:00:00-05:00</updated><id>https://imtheva.github.io/blog/2026/robotics-ai-agriculture%20copy</id><content type="html" xml:base="https://imtheva.github.io/blog/2026/robotics-ai-agriculture-copy/"><![CDATA[]]></content><author><name></name></author><category term="external-services"/><summary type="html"><![CDATA[My first Medium article on why robotics & AI are becoming inevitable in agriculture.]]></summary></entry><entry><title type="html">MIS</title><link href="https://imtheva.github.io/blog/2025/MSc/" rel="alternate" type="text/html" title="MIS"/><published>2025-12-27T19:00:00-05:00</published><updated>2025-12-27T19:00:00-05:00</updated><id>https://imtheva.github.io/blog/2025/MSc</id><content type="html" xml:base="https://imtheva.github.io/blog/2025/MSc/"><![CDATA[<h2 id="project-overview">Project Overview</h2> <p>Several medical devices can directly analyze a patient’s medical condition; however, the physical presence of non-critical patients places a significant burden on hospital infrastructure, particularly bed availability. This issue becomes more critical during movement-restricted situations such as the COVID-19 pandemic.</p> <p>This project presents a <strong>budget-friendly, IoT-based distanced health monitoring system</strong> that enables continuous monitoring of non-critical patients without requiring physical hospital visits. The system provides real-time access to medical data for patients, caretakers, and doctors through a secure web application.</p> <hr/> <h2 id="system-architecture-and-methodology">System Architecture and Methodology</h2> <div class="row justify-content-sm-center"> <div class="col-sm-10 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/Methods-480.webp 480w,/assets/img/projects/project_1/Methods-800.webp 800w,/assets/img/projects/project_1/Methods-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/Methods.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="System Architecture of IoT-Based Health Monitoring System" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="caption"> Overall system architecture showing patient-side sensing, Raspberry Pi-based processing, Firebase Firestore cloud storage, and web application access for patients, caretakers, and doctors. </div> <p>The system collects physiological data from patients using sensors connected to a <strong>Raspberry Pi</strong>. The processed data are transmitted securely to <strong>Firebase Firestore</strong>, enabling near real-time synchronization with the Medical Instrumentation System (MIS) web application.</p> <p>The web interface allows:</p> <ul> <li>Patients and caretakers to monitor real-time health parameters and danger levels</li> <li>Doctors to review medical history and provide prescriptions and feedback remotely</li> </ul> <hr/> <h2 id="scope-and-objectives">Scope and Objectives</h2> <ul> <li>Develop an <strong>IoT-based system</strong> for monitoring patient health</li> <li>Monitor <strong>physiological parameters and lifestyle indicators</strong></li> <li>Design a <strong>portable device</strong> suitable for continuous patient use</li> <li>Enable scalability for <strong>multiple patients and doctors</strong></li> </ul> <hr/> <h2 id="results-and-discussion">Results and Discussion</h2> <div class="row justify-content-sm-center"> <div class="col-sm-10 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/R2-480.webp 480w,/assets/img/projects/project_1/R2-800.webp 800w,/assets/img/projects/project_1/R2-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/R2.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="R2" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="row"> <div class="col-sm-6 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/R1-480.webp 480w,/assets/img/projects/project_1/R1-800.webp 800w,/assets/img/projects/project_1/R1-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/R1.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="R1" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <div class="col-sm-6 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/R4-480.webp 480w,/assets/img/projects/project_1/R4-800.webp 800w,/assets/img/projects/project_1/R4-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/R4.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="caption"> IoT device for collecting physiological data and transmitting it to Firebase Firestore for real-time visualization. </div> <p>The developed Medical Instrumentation System (MIS) demonstrated that IoT-based distanced patient monitoring is feasible for non-critical cases.</p> <p>Key outcomes include:</p> <ul> <li>End-to-end data synchronization (device → Firestore → MIS page) within <strong>1–2 seconds</strong></li> <li>Patients and caretakers can view medical data, danger levels, and follow doctor prescriptions</li> <li>Secure storage of patient medical history enables informed clinical decision-making</li> </ul> <p>This study incorporates patient basic details to prioritize medical history, an aspect not widely explored in related works. Additionally, the system supports doctor prescriptions and feedback, which are absent in many existing solutions.</p> <p>Firestore allows up to <strong>1 MB of data per document</strong>, indicating the need for a dedicated database server during large-scale commercialization. An SMS gateway can be integrated for OTP-based authentication to enhance system security.</p> <div class="row"> <div class="col-sm-6 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/D1-480.webp 480w,/assets/img/projects/project_1/D1-800.webp 800w,/assets/img/projects/project_1/D1-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/D1.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Doctor Dashboard" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <div class="col-sm-6 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/D2-480.webp 480w,/assets/img/projects/project_1/D2-800.webp 800w,/assets/img/projects/project_1/D2-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/D2.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Patient View" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="row justify-content-sm-center"> <div class="col-sm-10 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/D3-480.webp 480w,/assets/img/projects/project_1/D3-800.webp 800w,/assets/img/projects/project_1/D3-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/D3.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Medical History and Graphs" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="caption"> Web application interface showing doctor dashboard, patient view, and medical history visualization. </div> <hr/> <h2 id="conclusion">Conclusion</h2> <p>This project demonstrates a feasible and scalable approach to implementing an <strong>IoT-based distanced health monitoring system</strong>. The MIS web application successfully displays medical data received from distributed devices and supports interactions among multiple patients, caretakers, and doctors.</p> <hr/> <h2 id="future-directions">Future Directions</h2> <ul> <li>Integrate additional medical devices and sensors based on specific health conditions</li> <li>Incorporate <strong>Machine Learning/Deep Learning</strong> models for early warning prediction</li> <li>Enhance security using <strong>SMS-based OTP authentication</strong></li> </ul> <hr/> <h2 id="live-demo">Live Demo</h2> <p>🔗 <strong>Web Application:</strong> <a href="https://rasp-med.web.app/">https://rasp-med.web.app/</a></p> <hr/> <h2 id="references">References</h2> <ol> <li>V. Vippalapalli and S. Ananthula, “Internet of things (IoT) based smart health care system,” <em>SCOPES 2016</em>, 2017.</li> <li>S. Pinto, J. Cabral, and T. Gomes, “We-Care: An IoT-based Health Care System for Elderly People.”</li> <li>V. Tamilselvi et al., “IoT Based Health Monitoring System,” <em>ICACCS 2020</em>, 2020.</li> <li>S. Rajkumar et al., “Health monitoring system using Raspberry Pi,” <em>BID 2017</em>, 2018.</li> <li>M. Hamim et al., “IoT Based remote health monitoring system,” <em>ICREST 2019</em>, 2019.</li> <li>V. Pardeshi et al., “Health monitoring systems using IoT and Raspberry Pi – A review,” <em>ICIMIA 2017</em>, 2017.</li> </ol>]]></content><author><name></name></author><category term="sample-posts"/><category term="Project"/><summary type="html"><![CDATA[A cost-effective remote health monitoring solution designed to continuously assess non-critical patients while reducing hospital congestion—especially during emergencies such as the COVID-19 pandemic.]]></summary></entry><entry><title type="html">(PDF) Making Threads in SolidWorks</title><link href="https://imtheva.github.io/blog/2025/pdf-making-threads-in-solidworks/" rel="alternate" type="text/html" title="(PDF) Making Threads in SolidWorks"/><published>2025-12-21T00:00:00-05:00</published><updated>2025-12-21T00:00:00-05:00</updated><id>https://imtheva.github.io/blog/2025/pdf-making-threads-in-solidworks</id><content type="html" xml:base="https://imtheva.github.io/blog/2025/pdf-making-threads-in-solidworks/"><![CDATA[<p>OutlineDownload Free PDF…7 pagesComputer-Aided Design of Traditional Jigs and Fixtures, 2021Conventional design of jigs and fixtures has become unsuitable given the requirements of modern technology and complexity and diversity in the production with the rapid update of products. Computer-aided design (CAD) of jigs and fixtures is an effective solution in this direction. The current paper focuses on a computer-aided design of the traditional jigs and fixtures and developed a system containing tailor-made software, created using the Visual Basic programming language and installed on it the viewer screen to show the part. The developed system has been built by connecting Visual Basic programming language to the SolidWorks software on which the part is drawn and saved as STEP AP-203 file format, and the system reads and extracts the data from the STEP AP-203 file. Heuristic rules of feature recognition are pre-prepared for checking the extracted geometric data and deciding which data shape will represent the machining feature; then, the system provides the optimum design of the traditional jigs and fixtures for a group of hollow cylindrical parts that contain a group of cross-holes on the cylinder body, whether perpendicular or offset from the cylinder’s axis, (inclined or inclined offset, or blind or through, by applying pre-prepared heuristic rules for the design of traditional jigs and fixtures.2023 IEEE 17th International Symposium on Applied Computational Intelligence and Informatics (SACI), 2023In this paper, a carpenter software is designed and implemented that supports the daily management processes (customers, orders, inventory) and generates a pattern from the product descriptions based on the parameters specified. During the pattern generation process, a two-dimensional optimization is performed to generate a pattern that includes horizontal or vertical cuts, depending on the target machine, on which the position of the required parts is placed, generates the smallest material loss and uses leftover materials from the past. From the application, the pattern can be viewed and extracted online or in PDF format. This all is implemented in a layered web application with a modern approach.THREE DIMENSIONAL MODELING AND LOADING SIMULATION OF A STANDARD THREADED FASTENER IN CAD ENVIRONMENT (ТРИМЕРНО МОДЕЛИРАНЕ И СИМУЛАЦИОННО НАТОВАРВАНЕ В CAD-СРЕДА KНА СТАНДАРТНО РЕЗБОВО СЪЕДИНЕНИЕ ), 2006Abstract. The techniques of correct three dimensional modeling of geometry parameters of thread and of the body of standard threaded fasteners (bolt and nut) in CAD environment of software product SolidWoprks’2005 are presented. The model of joint are put under loading simulation and the zones of concentrations of stresses are determined. The values and distribution of stresses from loading simulation and from calculation and from experiments known from literature are compared. Key words: threaded fasteners, CAD, finite element method.This paper presents a mechanistic model for prediction of the thread milling forces. The mechanics of cutting for thread milling is analyzed similar to the end milling process but with modified cutting edge geometry. The chip thickness and cutting force models are developed considering the unique geometry of the tool. The model has been calibrated for 6061 Aluminum and validated. The effects of tool and thread geometry have been studied using the model. rZenodo (CERN European Organization for Nuclear Research), 2012Modular fixtures (MFs) are very important tools in manufacturing processes in terms of reduction the cost and the production time. This paper introduces an automated approach for assembling MFs elements by employing SolidWorks as a powerful 3D CAD software. Visual Basic (VB) programming language was applied integrating with SolidWorks API (Application programming interface) functions. This integration allowed creating plug-in file and generating new menus in the SolidWorks environment. The menus allow the user to select, insert, and assemble MFs elements.บทความวิจัย รายงานการวิจัยในชั้นเรียน การพัฒนาความสามารถในการแก้ปัญหาฟิสิกส์และการเรียนรู้ค าศัพท์ วิทยาศาสตร์ภาษาอังกฤษ เรื่อง ไฟฟ้าฟ้าสถิต ของนักเรียนชั้นมัธยมศึกษาปีที่ 5 โรงเรียนสตูลวิทยา ที่ได้รับการจัดการเรียนรู้ แบบสืบเสาะหาความรู้ 7E ร่วมกับกระบวนการคิดเชิงเมตาคอกนิชัน2011Background: Patients with non ST-segment elevation acute coronary syndrome (NSTEACS) present with diverse clinical, electrocardiographic, cardiac biomarker, echocardiographic and angiographic characteristics. We sought to determine whether there was any difference in the indices of left ventricular systolic and diastolic function among subgroups of patients with NSTEACS. Material and Method: We studied 121 consecutive patients (mean age 68.6 + 11.3 years, 45% male) with NSTEACS who underwent comprehensive echocardiography within 48 hours of admission. Two-dimensional and Doppler echocardiography was performed for the evaluation of left ventricular systolic and diastolic function. Results: Non ST-segment elevation myocardial infarction (NSTEMI) and unstable angina (UA) were reported in 59% and 41% of patients, respectively. Clinical characteristics (such as age, gender, cardiovascular risk factors, prior myocardial infarction and revascularization, medication) were not significantly …2018O processo de envelhecimento provoca no organismo modificacoes biologicas, psicologicas e sociais. O presente estudo teve como objetivo comparar a capacidade funcional, circunferencia abdominal e do quadril, indice massa corporal, nivel de atividade fisica e pressao arterial de acordo com a idade cronologica de idosas ativas. A amostra foi dividida em dois grupos, sendo G1 grupo menor de 70 anos (64,619 ± 2,854) e G2 grupo maior que 70 anos (74,904 ± 3,207). Os dados foram analisados utilizando o software (SISVAR 5.3). Tendo sido encontrada diferenca na autonomia Funcional entre os grupos. Os tempos obtidos nos testes em segundos: C10m (5,311 ± 0,810) para o G1 e (7,305 ± 1,777) para o G2, apresentando diferenca significativa entre os grupos (p=0,000093). No LPS o G1 obteve tempo medio de (10,09 ± 1,537) e o G2 (12,23 ± 3,69), apresentando diferenca significativa entre os grupos (p=0,0296). No teste LPDV o G1 teve o tempo medio de (3,618 ± 0,808) e o G2 (5,548 ± 3,108), apresentando…Academia Biology, 2024Cerebrovascular injuries, such as stroke and other vascular insults to the brain, present significant challenges to neurological function and recovery. Within the complex realm of epigenetic modifications, hydroxymethylation emerges as a crucial factor in orchestrating mechanisms for neuroprotection and repair following such injuries. This review consolidates current research on the multifaceted role of 5-hydroxymethylcytosine (5hmC) in regulating molecular and cellular processes vital for neuronal survival and regeneration after cerebrovascular injury. The discussion delves into the dynamic interaction between hydroxymethylation and important pathways in neuroprotection, such as the modulation of excitotoxicity and cellular metabolism, resolution of inflammation, and mitigation of oxidative stress. Additionally, it explores emerging evidence suggesting that 5hmC contributes to neurorepair by promoting neurogenesis, axonal regeneration, angiogenesis, and synaptic plasticity. Understanding the role of hydroxymethylation in cerebrovascular injury provides insights into potential therapeutic approaches for enhancing the brain’s innate mechanisms for protection and repair. By elucidating the intricate involvement of 5hmC in these injuries, this review establishes a basis for further research aimed at leveraging its therapeutic potential to alleviate neurological deficits and promote recovery in affected individuals.2014Procedia Manufacturing, 2015The modulated tool path (MTP) chip breaking process has been modified to improve chip management capabilities and to prevent large chip nest accumulations commonly encountered in threading operations. The use of MTP to create segmented chips requires a different approach for threading operations than for normal MTP turning operations, although the fundamental principal is the same. The primary difference between MTP for threading and for straight turning is that the part surface that the tool repeatedly engages and disengages, during the modulation process, is the thread root rather than the cut face. The threading MTP part program developed in this paper is capable of machining a thread with the desired lead, depth, undercut angle, and taper angle while also producing segmented chips.International Journal of …, 2006This paper presents a mechanistic model for prediction of the thread milling forces. The mechanics of cutting for thread milling is analyzed similar to the end milling process but with modified cutting edge geometry. The chip thickness and cutting force models are developed considering the unique geometry of the tool. The model has been calibrated for 6061 Aluminum and validated. The effects of tool and thread geometry have been studied using the model. rVariations in cutting forces were investigated experimentally depending on infeed angles and cutting areas in the external threading on a CNC turning centre. For this purpose, AISI 1050 workpiece material, 16ERM AG 60 IC 908 cutting tool, and SER 2525 M16 tool holder were used. External threading operations were performed using 0 • , 14.5 • , 15 • , 27.5 • , and 30 • infeed angles while the cutting speed was held constant at 100 m/min for the experiments. Experimental results showed that the infeed angle and cutting area had significant effects on the main cutting force and the radial force components were considerable in threading operations in terms of energy consumption. In addition, the optimum infeed angle was 30 • in the external threading operations in terms of cutting forces.Acta Polytechnica Hungarica, 2014Different tool geometries have been developed by leading companies in the tool industry to different aims of application. The fastest progress can be observed in the development of coatings, in spite of this it can be noticed that there are only few coating types, but they can be used in a wide range. For users it offers the great advantage to select appropriate tool easier. Coating types, developed specially to individual aim of application, offer much better solution, compared to the generally used coating types. Platit AG, dealing with the development of optimised coating types, has requested our specialised group to carry out tests on specialised coating types. Our present study is going to summarise the results of the tests, carried out with thread forming tools.The International Journal of Advanced Manufacturing Technology, 2014is an open access repository that collects the work of Arts et Métiers ParisTech researchers and makes it freely available over the web where possible. This is an author-deposited version published in: http://sam.ensam.eu Handle ID: .http://hdl.handle.net/10985/8565 To cite this version : Vishal SHARMA, Guillaume FROMENTIN, Gérard POULACHON, Romain BRENDLEN -Investigation of tool geometry effect and penetration strategies on cutting forces during thread millingPapers. Revista de Sociologia, 2015Physics According to a 17-Year-Old Trying to Understand Scientific Papers (PL), 2024Fizyka według 17 latka próbującego zrozumieć prace naukoweInvestigative Opthalmology &amp; Visual Science, 2010To test the reproducibility of spectral-domain optical coherence tomography (SD-OCT) total retinal thickness (TRT) measurements in mice. METHODS. C57Bl/6 mice were anesthetized, and three repeated volumetric images were acquired in both eyes with SD-OCT (250 A-scans ϫ 250 frames ϫ 1024 samplings), centered on the optic nerve head (ONH). The mice were repositioned between scans. TRT was automatically measured within a sampling band of retinal thickness with radii of 55 to 70 pixels, centered on the ONH by using custom segmentation software. The first volumetric image acquired in a given eye was used to register the remaining two SD-OCT images by manually aligning the en face images with respect to rotation and linear translation. Linear mixed-effects models were fitted to global and quadrant thicknesses, taking into account the clustering between eyes, to assess imprecision (measurement reproducibility). RESULTS. Twenty-six eyes of 13 adult mice (age 13 weeks) were imaged. The mean global TRT across all eyes was 298.21 m, with a mouse heterogeneity standard deviation (SD) of 4.88 m (coefficient of variation [CV] ϭ 0.016), an eye SD of 3.32 m (CV ϭ 0.011), and a device-related imprecision SD of 2.33 m (CV ϭ 0.008). The superior quadrant had the thickest mean TRT measurement (310.38 m) and the highest (worst) imprecision SD (3.13 m; CV ϭ 0.010), and the inferior quadrant had the thinnest mean TRT (291.55 m). The quadrant with the lowest (best) imprecision SD was in the nasal one (2.06 m; CV ϭ 0.007). CONCLUSIONS. Good reproducibility was observed for SD-OCT retinal thickness measurements in mice. SD-OCT may be useful for in vivo longitudinal studies in mice. (New Covenant Publications International Ltd. , 2020Figshare , 2025The Competency-Based Curriculum (CBC) represents a significant shift in Kenya’s education system, emphasizing learner-centered approaches and practical skill development. However, the success of its implementation greatly depends on the preparedness of school leaders. This article examines the current state of readiness among school heads, the challenges they face, and the support structures required for effective CBC rollout. It concludes that while awareness of CBC is widespread, many school leaders still lack adequate training, resources, and institutional support to lead this educational reform confidently.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Making Threads in SolidWorks]]></summary></entry><entry><title type="html">(PDF) Measuring Pen – A digital device to measure distance</title><link href="https://imtheva.github.io/blog/2025/pdf-measuring-pen-a-digital-device-to-measure-distance/" rel="alternate" type="text/html" title="(PDF) Measuring Pen – A digital device to measure distance"/><published>2025-12-20T00:00:00-05:00</published><updated>2025-12-20T00:00:00-05:00</updated><id>https://imtheva.github.io/blog/2025/pdf-measuring-pen--a-digital-device-to-measure-distance</id><content type="html" xml:base="https://imtheva.github.io/blog/2025/pdf-measuring-pen-a-digital-device-to-measure-distance/"><![CDATA[<p>OutlineDownload Free PDF…3 pagesThis is a new approach on the section of measurement. Today, most of the garment companies are producing lot of clothes. While producing clothes they have to face lot of problems. For an example time of delivery and accuracy in clothes size. A traditional way of measuring a cloth is using a tape. Due to that there may be errors in measuring length and it take times time to check the length using tape. Main aim of this mini project is to solve these problems using a microcontroller measuring system. This will reduce the time taken for the cutting and will measure accurately. For this project Arduino Nano is used as the microcontroller for performing the algorithmic work.Protein &amp; Peptide Letters, 2010In insects numerous physiological processes are regulated by neuropeptides. Two fluorescent analogues of the amino acids tryptophan and tyrosine were synthesized and incorporated in the diuretic neuropeptide helicokinin I from the moth Heliothis zea. By fluorescence emission measurements it was shown that both fluorescent helicokinin I analogues react sensitive on the dielectricity of their microenvironment. A helicokinin I analogue containing the fluorescent tryptophan mimic -[6’-(N,N-dimethyl)-amino-2’-naphthoyl]alanine (Ald) was shown to bind to dodecylphosphocholine (DPC) micelles by the Ald residue. A membrane binding model for helicokinin I is proposed based on data from related mammalian and insect-neuropeptides.2013Bibliografía recomendada para el Tema: 3.2.-Moléculas diatómicas. Aplicación a moléculas diatómicas homonucleares y heteronucleares. Configuración electrónica. Orden de enlace. Polaridad de enlace y electronegatividad.Journal of Coatings Technology and ResearchMoving from traditional batch production into in-line or continuous coatings production requires accurate on-line quality control instruments. The aim of the present work was to investigate the principle of non-Newtonian capillary rheometry for quality control purposes. In the investigation, three series of acrylic-based viscoelastic coating samples with different types and concentrations of pigments and thickening agents were used, and the rheological measurements were compared to results obtained with the so-called Stormer viscometer and an advanced off-line rheometer. A detailed analysis of the potential measurement implications was also conducted. For shear stresses from 15.0 to 350.0 Pa (the upper boundary), the novel capillary rheometer was found to provide results in good quantitative agreement with the advanced rheometer when sample holding time, and thereby shear history, was properly controlled. At a shear stress between 1.0 Pa (lower boundary) and 15.0 Pa, the agreement was less good, with a difference in results of the non-Newtonian capillary rheometer and the advanced rheometer between 15 and 74 %. The resolution of the capillary rheometer was sufficiently high to allow detection of the rheology changes associated with variations in coating formulations of pigment volume and rheology modifier concentrations. In summary, for fast on-line evaluation of coating rheology, the principle of capillarity has been demonstrated to be a varied and robust technique.Heavy -y- Metal. Vol. 1: A través del cristal. Nuevas perspectivas culturales, 2019Autenticidad. Concepto central para la cultura urbana, aunque al mismo tiempo uno de los más ambiguos y subjetivos de cuantos contribuyen a construir sus respectivos discursos musicales. Reclamada, exigida, defendida, pero también vilipendiada, la autenticidad es una de las grandes protagonistas del código subcultural del heavy metal, alrededor de la cual se establecen toda una serie de relaciones básicas entre creadores, seguidores, sociedad e industria que posibilitan el desarrollo de la escena. Ahora bien, ¿qué factores están implicados en su definición? ¿Cómo se articulan los procesos que ayudan a determinar qué y quién es más y/o menos auténtico? ¿Es la autenticidad un concepto estático, o dinámico? ¿Cómo ha influido en la evolución del heavy metal en tanto fenómeno sociocultural y comercial? ¿Qué problemática intrínseca tiene? Después de cuarenta años, e inmersos en pleno siglo XXI, se antoja necesaria una revisión profunda de sus parámetros, y abrir la puerta de esta manera a un debate que ayude a redefinir o reafirmar sus términos dentro de una sociedad y un mercado que han experimentado profundos y significativos cambios.Dental Press Journal of Orthodontics, 2017Objective: the objective of the study was to determine the relationship between dental calcification stages and skeletal maturation in a Peruvian sample. Methods: panoramic, cephalometric and carpal radiographs of 78 patients (34 girls and 44 boys) between 7 and 17 years old (9.90 ± 2.5 years) were evaluated. Stages of tooth calcification of the mandibular canine, first premolar, second premolar, and second molar and the skeletal maturation with a hand-wrist and a cervical vertebrae method were assessed. The relationships between the stages were assessed using Spearman’s correlation coefficient. Additionally, the associations of mandibular and pubertal growth peak stages with tooth calcification were evaluated by Fisher’s exact test. Results: all teeth showed positive and statistically significant correlations, the highest correlation was between the mandibular second molar calcification stages with hand-wrist maturation stages (r = 0.758, p &lt; 0.001) and with vertebrae cervical m…EFFECTS OF HYPERTENSION AND ANTI-HYPERTENSIVE MEDICATION ON MALE INFERTILITY- INTERGRATIVE REVIEW, 2023ABSTRACT Introduction It is estimated that 1.28 billion adults aged between 30 to 70 years worldwide have hypertension and two thirds of these live in the low and middle-income countries. Hypertension is a leading preventable risk factor for cardiovascular disease and premature deaths. Hypertension and anti-hypertensive have been associated with decreased semen volume, sperm count, motility, abnormal sperm morphology and erectile dysfunction. Consequently, hypertension and anti-hypertensives contribute to male infertility. Male infertility contributes over 50% of the cases of infertility amongst couples and studies have shown that male infertility increases with 0.3% annually. Methods This is an integrative literature review on published articles. Purposeful sampling was used. Relevant data from PubMed, Medline, Google scholar, Cochrane and ResearchGate was searched, evaluated for its relevance and reviewed. Further, grey literature was reviewed and the search was done in English. Owing to the scarcity of the research data in this field, the search went as far back as 20 years ago. Results The search strategy yielded a grand total of 99,434 electronic citations from the years 2003 to 2023, a period of 20 years. 112 study papers were included and scrutinized in the integrative literature review and thematic data analysis was done on effects of hypertension and the antihypertensive drugs on male fertility. Conclusion Men with hypertension have a higher risk of experiencing fertility problems than men without hypertension. Studies have also found that the use of certain antihypertensive medications negatively affects sperm quality, volume and motility and consequently, male fertility. Antihypertensive medication in hypertensive men should be based on the individual’s overall health and his reproductive health needs. Lifestyle modifications are beneficial for men with hypertension who are trying to conceive through medical interventions as compared to surgical interventions.Still studying.— This paper deals with the design and implementation of a simple HMC6352 2-axis digital compass. Most compasses have been of the analogue type with magnetic needles as pointers. Replacing the “ old “ magnetic needle compass or the gyrocompass by an electronic solution offers advantages like having a solid-state component without moving parts and the ease of interfacing with other electronic systems. In this work, the aim is to design and implement a digital compass. To realize this, we made use of HMC6352 which is a 2-axis MR (magneto-resistive) sensor from Honeywell, Arduino Uno board with an onboard ATmega328 microcontroller chip, and a 16x2 character Liquid Crystal Display (LCD).We adopted the magneto-resistive (MR) technology as compared to flux-gate sensors common in most electronic compasses which has the disadvantage of making the device bulky. The trial test carried out with the completed HMC6352 digital compass showed a reading of 232.8 degrees West indicating its effectiveness in direction finding.2013S83 Correspondence to: Uthaisang-Tanechpongtamb W, Department of Biochemistry, Faculty of Medicine, Srinakharinwirot University, 114 Sukhumvit 23, Wattana, Bangkok 10110, Thailand. Phone: 0-2649-5000 ext. 4609, Fax: 0-2649-5834 E-mail: wanlaya@swu.ac.th J Med Assoc Thai 2012; 95 (Suppl. 12): S83-S89 Full text. e-Journal: http://jmat.mat.or.th The Effect of Temperature of Eye Irrigation Solution to Reduce Corneal Endothelial Cell Loss during Phacoemulsification: An In Vitro Model StudyAcademia Biology, 2023This study analyzes the morphometric aspects of two populations of <italic>Echinometra lucunter</italic> (Linnaeus, 1758) on Pituba and Itapuã beaches (Salvador, Bahia). Linear and volumetric measurements were performed on 117 specimens (test diameter &gt; 40 mm) and the ratios between them were analyzed along with Aristotle’s lantern weight participation (AL index). The potential model was tested between AL wet weight and tooth height (log data), estimating the coefficients by linear regression. Echinoid specimens from Pituba (<italic>n</italic> = 57) manifested a higher average degree of sphericity and test thickness. Proportionally, this population also showed higher AL and tooth height, indicating that the dimensions of this structure exhibit particularities in the spatial arrangement along the oral-aboral axis of the echinoids. Negative allometric relationships (β &lt; 1) were observed in all specimens. The environments with distinct characteristics and wide food availability associated with a broad spectrum of the trophic niche occupied by the populations point out modulations and specializations of morphofunctional strategies and the expression of phenotypes.Academia Oncology, 2024Introduction: Endometrial adenocarcinoma is the most common gynecologic malignancy in the United States. Between 10% and 30% of endometrial adenocarcinomas exhibit microsatellite instability (MSI), a genetic hypermutability that results from an impaired DNA mismatch repair (MMR). MSI can be indirectly identified by immunohistochemical (IHC) staining for deficient MMR protein expression and may be associated with adverse clinical outcomes. The microcystic, elongated, and fragmented (MELF) pattern of invasion can be identified on histologic review and has also been associated with adverse clinical outcomes. It is unknown whether this phenotype of invasion is associated with MSI, and to date, no studies have correlated MMR status and MELF-pattern invasion in endometrial adenocarcinoma. In this study, we examine the correlation between these factors. Methods: We performed an IRB-approved, retrospective review of medical records and pathology slides of surgical cases of endometrioid endometrial adenocarcinoma between January 2016 and January 2020. Results: MMR mutations were present in 35%, MELF-pattern invasion was present in 29%, and both factors were present in 9.4% of specimens. We did not demonstrate a correlation between MMR mutation status and the presence of MELF-pattern invasion (<italic>p</italic> = 0.15). Conclusions: Our study did not demonstrate a relationship between MMR status and the presence of MELF-pattern invasion. MSI instability may not play a role in the pathogenesis of MELF-pattern invasion. Future study into the association between MELF-pattern invasion and other genetic mutations that arise within endometrial adenocarcinoma is warranted.International journal of Sociologies and Anthropologies Science reviews, 2024Background and Aims: Currently, in China nursing graduates of higher vocational colleges are restricted by many factors, particularly career development. Career development is an important indicator for measuring the quality of nursing graduates and the extent to which government and hospitals attach importance to the employment of nursing graduates in higher vocational colleges. Therefore, it is necessary to delve into the career development of nursing graduates in vocational colleges under the current employment situation. This study mainly aimed to investigate the current situation of nursing graduates’ career development and factors affecting the career development of nursing graduates. Materials and Methods: The sample was drawn from the 2019 nursing graduates in Weifang Nursing Vocational College using non-random sampling. These nursing graduates participated in the research voluntarily participation and accepted their participation in the research consent form. Data were collected using a questionnaire. The questions focused on many factors that affected their career development, including how hiring practices at government, hospitals, and colleges, factors affecting the recruitment process, and challenges facing career development. Results: The results show that nursing graduates have basic knowledge and skills in nursing. The results also showed that government employment policies, teaching program management, and employability development were the key factors influencing the career development of nursing graduates from higher vocational colleges are relatively successful. Additionally, results indicated that school-based classroom environments have a significant and positive impact on nursing graduates’ career development. The government should increase employment efficiency and change employment policies as necessary to achieve sustainable professional development. Educational institutions and nursing schools should improve their teaching and learning management systems to align with employment policies and needs. Conclusion: The results emphasize how crucial it is for the government to get involved in employment policy optimization to promote the nursing profession’s long-term growth. In addition, educational establishments need to modify their pedagogical approaches to better prepare nursing graduates for the skills required by changing job markets and facilitate a smooth entry into the workforce.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[This is a new approach on the section of measurement. Today, most of the garment companies are producing lot of clothes. While producing clothes they have to face lot of problems. For an example time of delivery and accuracy in clothes size. A]]></summary></entry><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://imtheva.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00-04:00</published><updated>2024-05-14T00:00:00-04:00</updated><id>https://imtheva.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://imtheva.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[<p>May 14, 2024 We’re introducing a series of updates across the Gemini family of models, including the new 1.5 Flash, our lightweight model for speed and efficiency, and Project Astra, our vision for the future of AI assistants. In December, we launched our first natively multimodal model Gemini 1.0 in three sizes: Ultra, Pro and Nano. Just a few months later we released 1.5 Pro, with enhanced performance and a breakthrough long context window of 1 million tokens.Developers and enterprise customers have been putting 1.5 Pro to use in incredible ways and finding its long context window, multimodal reasoning capabilities and impressive overall performance incredibly useful.We know from user feedback that some applications need lower latency and a lower cost to serve. This inspired us to keep innovating, so today, we’re introducing Gemini 1.5 Flash: a model that’s lighter-weight than 1.5 Pro, and designed to be fast and efficient to serve at scale.Both 1.5 Pro and 1.5 Flash are available in public preview with a 1 million token context window in Google AI Studio and Vertex AI. And now, 1.5 Pro is also available with a 2 million token context window via waitlist to developers using the API and to Google Cloud customers.We’re also introducing updates across the Gemini family of models, announcing our next generation of open models, Gemma 2, and sharing progress on the future of AI assistants, with Project Astra.Context lengths of leading foundation models compared with Gemini 1.5’s 2 million token capability1.5 Flash is the newest addition to the Gemini model family and the fastest Gemini model served in the API. It’s optimized for high-volume, high-frequency tasks at scale, is more cost-efficient to serve and features our breakthrough long context window.While it’s a lighter weight model than 1.5 Pro, it’s highly capable of multimodal reasoning across vast amounts of information and delivers impressive quality for its size.The new Gemini 1.5 Flash model is optimized for speed and efficiency, is highly capable of multimodal reasoning and features our breakthrough long context window.1.5 Flash excels at summarization, chat applications, image and video captioning, data extraction from long documents and tables, and more. This is because it’s been trained by 1.5 Pro through a process called “distillation,” where the most essential knowledge and skills from a larger model are transferred to a smaller, more efficient model.Read more about 1.5 Flash in our updated Gemini 1.5 technical report, on the Gemini technology page, and learn about 1.5 Flash’s availability and pricing.Over the last few months, we’ve significantly improved 1.5 Pro, our best model for general performance across a wide range of tasks.Beyond extending its context window to 2 million tokens, we’ve enhanced its code generation, logical reasoning and planning, multi-turn conversation, and audio and image understanding through data and algorithmic advances. We see strong improvements on public and internal benchmarks for each of these tasks.1.5 Pro can now follow increasingly complex and nuanced instructions, including ones that specify product-level behavior involving role, format and style. We’ve improved control over the model’s responses for specific use cases, like crafting the persona and response style of a chat agent or automating workflows through multiple function calls. And we’ve enabled users to steer model behavior by setting system instructions.We added audio understanding in the Gemini API and Google AI Studio, so 1.5 Pro can now reason across image and audio for videos uploaded in Google AI Studio. And we’re now integrating 1.5 Pro into Google products, including Gemini Advanced and in Workspace apps.Read more about 1.5 Pro in our updated Gemini 1.5 technical report and on the Gemini technology page.Gemini Nano is expanding beyond text-only inputs to include images as well. Starting with Pixel, applications using Gemini Nano with Multimodality will be able to understand the world the way people do — not just through text, but also through sight, sound and spoken language.Read more about Gemini 1.0 Nano on Android.Today, we’re also sharing a series of updates to Gemma, our family of open models built from the same research and technology used to create the Gemini models.We’re announcing Gemma 2, our next generation of open models for responsible AI innovation. Gemma 2 has a new architecture designed for breakthrough performance and efficiency, and will be available in new sizes.The Gemma family is also expanding with PaliGemma, our first vision-language model inspired by PaLI-3. And we’ve upgraded our Responsible Generative AI Toolkit with LLM Comparator for evaluating the quality of model responses.Read more on the Developer blog.As part of Google DeepMind’s mission to build AI responsibly to benefit humanity, we’ve always wanted to develop universal AI agents that can be helpful in everyday life. That’s why today, we’re sharing our progress in building the future of AI assistants with Project Astra (advanced seeing and talking responsive agent).To be truly useful, an agent needs to understand and respond to the complex and dynamic world just like people do — and take in and remember what it sees and hears to understand context and take action. It also needs to be proactive, teachable and personal, so users can talk to it naturally and without lag or delay.While we’ve made incredible progress developing AI systems that can understand multimodal information, getting response time down to something conversational is a difficult engineering challenge. Over the past few years, we’ve been working to improve how our models perceive, reason and converse to make the pace and quality of interaction feel more natural.Building on Gemini, we’ve developed prototype agents that can process information faster by continuously encoding video frames, combining the video and speech input into a timeline of events, and caching this information for efficient recall.By leveraging our leading speech models, we also enhanced how they sound, giving the agents a wider range of intonations. These agents can better understand the context they’re being used in, and respond quickly, in conversation.With technology like this, it’s easy to envision a future where people could have an expert AI assistant by their side, through a phone or glasses. And some of these capabilities are coming to Google products, like the Gemini app and web experience, later this year.We’ve made incredible progress so far with our family of Gemini models, and we’re always striving to advance the state-of-the-art even further. By investing in a relentless production line of innovation, we’re able to explore new ideas at the frontier, while also unlocking the possibility of new and exciting Gemini use cases.Learn more about Gemini and its capabilities. Your information will be used in accordance with Google’s privacy policy.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Done. Just one step more.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://imtheva.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://imtheva.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-01-19T21:32:17-05:00</updated><id>https://imtheva.github.io/feed.xml</id><title type="html">blank</title><subtitle>Personal website of Thevathayarajh Thayananthan — research, projects, publications, and writing on science, engineering, and space. </subtitle><entry><title type="html">How Computer Vision Is Transforming Agricultural Engineering</title><link href="https://imtheva.github.io/blog/2026/CV/" rel="alternate" type="text/html" title="How Computer Vision Is Transforming Agricultural Engineering"/><published>2026-01-16T00:00:00-05:00</published><updated>2026-01-16T00:00:00-05:00</updated><id>https://imtheva.github.io/blog/2026/CV</id><content type="html" xml:base="https://imtheva.github.io/blog/2026/CV/"><![CDATA[]]></content><author><name></name></author><category term="external-services"/><category term="Ag-Eng"/><category term="Agricultural-Engineering"/><category term="Robotics"/><category term="links"/><summary type="html"><![CDATA[An accessible overview of how computer vision is transforming agricultural engineering through crop detection, robotics, and intelligent farm automation.]]></summary></entry><entry><title type="html">From Science Fiction to Farmland: Why Robotics &amp;amp; AI Are Inevitable in Agriculture</title><link href="https://imtheva.github.io/blog/2026/robotics-ai-agriculture/" rel="alternate" type="text/html" title="From Science Fiction to Farmland: Why Robotics &amp;amp; AI Are Inevitable in Agriculture"/><published>2026-01-09T00:00:00-05:00</published><updated>2026-01-09T00:00:00-05:00</updated><id>https://imtheva.github.io/blog/2026/robotics-ai-agriculture</id><content type="html" xml:base="https://imtheva.github.io/blog/2026/robotics-ai-agriculture/"><![CDATA[]]></content><author><name></name></author><category term="external-services"/><category term="Ag-Eng"/><category term="Agricultural-Engineering"/><category term="Robotics"/><category term="links"/><summary type="html"><![CDATA[My first Medium article on why robotics & AI are becoming inevitable in agriculture.]]></summary></entry><entry><title type="html">MIS</title><link href="https://imtheva.github.io/blog/2025/MSc/" rel="alternate" type="text/html" title="MIS"/><published>2025-12-27T19:00:00-05:00</published><updated>2025-12-27T19:00:00-05:00</updated><id>https://imtheva.github.io/blog/2025/MSc</id><content type="html" xml:base="https://imtheva.github.io/blog/2025/MSc/"><![CDATA[<h2 id="project-overview">Project Overview</h2> <p>Several medical devices can directly analyze a patient’s medical condition; however, the physical presence of non-critical patients places a significant burden on hospital infrastructure, particularly bed availability. This issue becomes more critical during movement-restricted situations such as the COVID-19 pandemic.</p> <p>This project presents a <strong>budget-friendly, IoT-based distanced health monitoring system</strong> that enables continuous monitoring of non-critical patients without requiring physical hospital visits. The system provides real-time access to medical data for patients, caretakers, and doctors through a secure web application.</p> <hr/> <h2 id="system-architecture-and-methodology">System Architecture and Methodology</h2> <div class="row justify-content-sm-center"> <div class="col-sm-10 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/Methods-480.webp 480w,/assets/img/projects/project_1/Methods-800.webp 800w,/assets/img/projects/project_1/Methods-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/Methods.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="System Architecture of IoT-Based Health Monitoring System" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="caption"> Overall system architecture showing patient-side sensing, Raspberry Pi-based processing, Firebase Firestore cloud storage, and web application access for patients, caretakers, and doctors. </div> <p>The system collects physiological data from patients using sensors connected to a <strong>Raspberry Pi</strong>. The processed data are transmitted securely to <strong>Firebase Firestore</strong>, enabling near real-time synchronization with the Medical Instrumentation System (MIS) web application.</p> <p>The web interface allows:</p> <ul> <li>Patients and caretakers to monitor real-time health parameters and danger levels</li> <li>Doctors to review medical history and provide prescriptions and feedback remotely</li> </ul> <hr/> <h2 id="scope-and-objectives">Scope and Objectives</h2> <ul> <li>Develop an <strong>IoT-based system</strong> for monitoring patient health</li> <li>Monitor <strong>physiological parameters and lifestyle indicators</strong></li> <li>Design a <strong>portable device</strong> suitable for continuous patient use</li> <li>Enable scalability for <strong>multiple patients and doctors</strong></li> </ul> <hr/> <h2 id="results-and-discussion">Results and Discussion</h2> <div class="row justify-content-sm-center"> <div class="col-sm-10 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/R2-480.webp 480w,/assets/img/projects/project_1/R2-800.webp 800w,/assets/img/projects/project_1/R2-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/R2.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="R2" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="row"> <div class="col-sm-6 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/R1-480.webp 480w,/assets/img/projects/project_1/R1-800.webp 800w,/assets/img/projects/project_1/R1-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/R1.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="R1" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <div class="col-sm-6 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/R4-480.webp 480w,/assets/img/projects/project_1/R4-800.webp 800w,/assets/img/projects/project_1/R4-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/R4.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="caption"> IoT device for collecting physiological data and transmitting it to Firebase Firestore for real-time visualization. </div> <p>The developed Medical Instrumentation System (MIS) demonstrated that IoT-based distanced patient monitoring is feasible for non-critical cases.</p> <p>Key outcomes include:</p> <ul> <li>End-to-end data synchronization (device → Firestore → MIS page) within <strong>1–2 seconds</strong></li> <li>Patients and caretakers can view medical data, danger levels, and follow doctor prescriptions</li> <li>Secure storage of patient medical history enables informed clinical decision-making</li> </ul> <p>This study incorporates patient basic details to prioritize medical history, an aspect not widely explored in related works. Additionally, the system supports doctor prescriptions and feedback, which are absent in many existing solutions.</p> <p>Firestore allows up to <strong>1 MB of data per document</strong>, indicating the need for a dedicated database server during large-scale commercialization. An SMS gateway can be integrated for OTP-based authentication to enhance system security.</p> <div class="row"> <div class="col-sm-6 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/D1-480.webp 480w,/assets/img/projects/project_1/D1-800.webp 800w,/assets/img/projects/project_1/D1-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/D1.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Doctor Dashboard" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <div class="col-sm-6 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/D2-480.webp 480w,/assets/img/projects/project_1/D2-800.webp 800w,/assets/img/projects/project_1/D2-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/D2.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Patient View" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="row justify-content-sm-center"> <div class="col-sm-10 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/project_1/D3-480.webp 480w,/assets/img/projects/project_1/D3-800.webp 800w,/assets/img/projects/project_1/D3-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/projects/project_1/D3.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Medical History and Graphs" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <div class="caption"> Web application interface showing doctor dashboard, patient view, and medical history visualization. </div> <hr/> <h2 id="conclusion">Conclusion</h2> <p>This project demonstrates a feasible and scalable approach to implementing an <strong>IoT-based distanced health monitoring system</strong>. The MIS web application successfully displays medical data received from distributed devices and supports interactions among multiple patients, caretakers, and doctors.</p> <hr/> <h2 id="future-directions">Future Directions</h2> <ul> <li>Integrate additional medical devices and sensors based on specific health conditions</li> <li>Incorporate <strong>Machine Learning/Deep Learning</strong> models for early warning prediction</li> <li>Enhance security using <strong>SMS-based OTP authentication</strong></li> </ul> <hr/> <h2 id="live-demo">Live Demo</h2> <p>🔗 <strong>Web Application:</strong> <a href="https://rasp-med.web.app/">https://rasp-med.web.app/</a></p> <hr/> <h2 id="references">References</h2> <ol> <li>V. Vippalapalli and S. Ananthula, “Internet of things (IoT) based smart health care system,” <em>SCOPES 2016</em>, 2017.</li> <li>S. Pinto, J. Cabral, and T. Gomes, “We-Care: An IoT-based Health Care System for Elderly People.”</li> <li>V. Tamilselvi et al., “IoT Based Health Monitoring System,” <em>ICACCS 2020</em>, 2020.</li> <li>S. Rajkumar et al., “Health monitoring system using Raspberry Pi,” <em>BID 2017</em>, 2018.</li> <li>M. Hamim et al., “IoT Based remote health monitoring system,” <em>ICREST 2019</em>, 2019.</li> <li>V. Pardeshi et al., “Health monitoring systems using IoT and Raspberry Pi – A review,” <em>ICIMIA 2017</em>, 2017.</li> </ol>]]></content><author><name></name></author><category term="Biomedical-Engineering"/><category term="IoT"/><category term="code"/><category term="Project"/><summary type="html"><![CDATA[A cost-effective remote health monitoring solution designed to continuously assess non-critical patients while reducing hospital congestion—especially during emergencies such as the COVID-19 pandemic.]]></summary></entry><entry><title type="html">(PDF) Making Threads in SolidWorks</title><link href="https://imtheva.github.io/blog/2025/pdf-making-threads-in-solidworks/" rel="alternate" type="text/html" title="(PDF) Making Threads in SolidWorks"/><published>2025-12-21T00:00:00-05:00</published><updated>2025-12-21T00:00:00-05:00</updated><id>https://imtheva.github.io/blog/2025/pdf-making-threads-in-solidworks</id><content type="html" xml:base="https://imtheva.github.io/blog/2025/pdf-making-threads-in-solidworks/"><![CDATA[<p>OutlineDownload Free PDF…7 pagesComputer-Aided Design of Traditional Jigs and Fixtures, 2021Conventional design of jigs and fixtures has become unsuitable given the requirements of modern technology and complexity and diversity in the production with the rapid update of products. Computer-aided design (CAD) of jigs and fixtures is an effective solution in this direction. The current paper focuses on a computer-aided design of the traditional jigs and fixtures and developed a system containing tailor-made software, created using the Visual Basic programming language and installed on it the viewer screen to show the part. The developed system has been built by connecting Visual Basic programming language to the SolidWorks software on which the part is drawn and saved as STEP AP-203 file format, and the system reads and extracts the data from the STEP AP-203 file. Heuristic rules of feature recognition are pre-prepared for checking the extracted geometric data and deciding which data shape will represent the machining feature; then, the system provides the optimum design of the traditional jigs and fixtures for a group of hollow cylindrical parts that contain a group of cross-holes on the cylinder body, whether perpendicular or offset from the cylinder’s axis, (inclined or inclined offset, or blind or through, by applying pre-prepared heuristic rules for the design of traditional jigs and fixtures.2023 IEEE 17th International Symposium on Applied Computational Intelligence and Informatics (SACI), 2023In this paper, a carpenter software is designed and implemented that supports the daily management processes (customers, orders, inventory) and generates a pattern from the product descriptions based on the parameters specified. During the pattern generation process, a two-dimensional optimization is performed to generate a pattern that includes horizontal or vertical cuts, depending on the target machine, on which the position of the required parts is placed, generates the smallest material loss and uses leftover materials from the past. From the application, the pattern can be viewed and extracted online or in PDF format. This all is implemented in a layered web application with a modern approach.THREE DIMENSIONAL MODELING AND LOADING SIMULATION OF A STANDARD THREADED FASTENER IN CAD ENVIRONMENT (ТРИМЕРНО МОДЕЛИРАНЕ И СИМУЛАЦИОННО НАТОВАРВАНЕ В CAD-СРЕДА KНА СТАНДАРТНО РЕЗБОВО СЪЕДИНЕНИЕ ), 2006Abstract. The techniques of correct three dimensional modeling of geometry parameters of thread and of the body of standard threaded fasteners (bolt and nut) in CAD environment of software product SolidWoprks’2005 are presented. The model of joint are put under loading simulation and the zones of concentrations of stresses are determined. The values and distribution of stresses from loading simulation and from calculation and from experiments known from literature are compared. Key words: threaded fasteners, CAD, finite element method.This paper presents a mechanistic model for prediction of the thread milling forces. The mechanics of cutting for thread milling is analyzed similar to the end milling process but with modified cutting edge geometry. The chip thickness and cutting force models are developed considering the unique geometry of the tool. The model has been calibrated for 6061 Aluminum and validated. The effects of tool and thread geometry have been studied using the model. rZenodo (CERN European Organization for Nuclear Research), 2012Modular fixtures (MFs) are very important tools in manufacturing processes in terms of reduction the cost and the production time. This paper introduces an automated approach for assembling MFs elements by employing SolidWorks as a powerful 3D CAD software. Visual Basic (VB) programming language was applied integrating with SolidWorks API (Application programming interface) functions. This integration allowed creating plug-in file and generating new menus in the SolidWorks environment. The menus allow the user to select, insert, and assemble MFs elements.นักเรียนโรงเรียนคณะราษฎรบำรุง ๒ ส่วนใหญ่เมื่อเรียนจบการศึกษาระดับมัธยมศึกษาจะขาดแรงจูงใจที่จะเข้าศึกษาต่อในระดับมหาวิทยาลัย ดังนั้นนักเรียนจึงมีความสนใจในการเรียนวิชาวิทยาศาสตรน์ อ้ ยมาก และวิชาเคมีเปน็ วิชาหนึ่งที่นักเรียนมีผลสัมฤทธิ์ต่ำ การศึกษาวิจัยในครั้งนี้มุง่ พัฒนาทั้งความเข้าใจเรื่องกรด-เบส และวิธีการทางวิทยาศาสตร์ควบคู่กัน โดยการจัดการเรียนรู้แบบร่วมมือร่วมกับโครงงานวิทยาศาสตร์ เป็นเวลา 20 ชั่วโมง กลุ่มเป้าหมายเป็นนักเรียนชั้น ม.5/1 โรงเรียนคณะราษฎรบำรุง ๒ ปีการศึกษา 2553 จำนวน 18 คน เครื่องมือที่ใช้ในการรวบรวมข้อมูลประกอบด้วยแบบทดสอบวัดผลสัมฤทธิ์แบบ 4 ตัวเลือก เรื่อง กรด-เบส แบบประเมินวิธีการทางวิทยาศาสตร์ในระหว่างการทำโครงงานวิทยาศาสตร์ และแบบประเมินโครงงานวิทยาศาสตร์โดยรวม ผลการวิจัยพบว่า นักเรียนได้คะแนนผลสัมฤทธิ์หลังเรียน (ค่าเฉลี่ย 16.78 และส่วนเบี่ยงเบนมาตรฐาน 2.46 ) สูงกว่าก่อนเรียน (ค่าเฉลี่ย 7.56 และส่วนเบี่ยงเบนมาตรฐาน 1.12 ) แตกต่างกันอย่างมีนัยสำคัญทางสถิติที่ระดับค่า p น้อยกว่า 0.05 โดยมีคะแนนความก้าวหน้าเป็น 9.22 หรือคิดเป็น 28.82 % ส่วนคะแนนวิธีการทางวิทยาศาสตร์ระหว่างการทำโครงงานและคะแนนโครงงานวิทยาศาสตร์โดยรวมมีค่าเฉลี่ยเป็น 72.52 % และ 71.64 % ตามลำดับอยู่ในระดับดี แสดงว่า การจัดการเรียนรู้แบบร่วมมือร่วมกับโครงงานวิทยาศาสตร์เป็นปัจจัยสำคัญในการเพิ่มความเข้าใจและเสริมวิธีการทางวิทยาศาสตร์ของนักเรียนAcademia Letters, 20222013Background: Apolipoprotein E (ApoE) polymorphisms have been proposed as the risk factor for the development of diabetic nephropathy (DN). A number of studies have investigated the association between the ApoE isoforms and DN. However, the findings remain inconclusive. Objective: To determine the association between the ApoE polymorphisms and DN. Material and Method: Two hundred thirty patients with type 2 diabetes were divided into two groups, patients with clinically diagnosed DN and normoalbuminuric patients. ApoE genotypes were determined by RT-PCR analysis. Student’s t-test, ANOVA test, Chi-square test, odds ratio, and logistic regression was performed. Results: The frequency of ApoE4 genotype was significantly lower in DN patients (8.7%) than in normoalbuminuric patients (21.7%). Logistical regression analysis showed that subjects with ApoE4 genotype (adjusted OR = 0.43; 95% CI: 0.19-0.99) were less likely to have DN than subjects with ApoE3 genotype. Furthermore, when analyzed…2024Mit einem kurzen geschichtlichen und politischen Exkurs und der Herausarbeitung von den Möglichkeiten die Drogen jenseits gesellschaftlich anerkannter Nutzungsmöglichkeiten bieten, wird für eine legalisierung von Drogen argumentiert.Bérose, 2024The present article is part of a series of six papers originally delivered in the panel “Historicizing Anachronistic Motives” held during the First International Conference of the Histories of Anthropologies “Doing Histories, Imagining Futures” (4–7 December 2023, online). The conference was co-organized by the EASA’s History of Anthropology Network and the Università di Pisa with the support of Bérose and ten other history of anthropology stakeholders. The panel was convened by David Shankland (Royal Anthropological Institute; University College London, UK), Christine Laurière (CNRS/UMR9022 Héritages, France) and Frederico Delgado Rosa (Universidade Nova de Lisboa, CRIA Centre for Research in Anthropology, Portugal).Still studying.Procedia Manufacturing, 2015The modulated tool path (MTP) chip breaking process has been modified to improve chip management capabilities and to prevent large chip nest accumulations commonly encountered in threading operations. The use of MTP to create segmented chips requires a different approach for threading operations than for normal MTP turning operations, although the fundamental principal is the same. The primary difference between MTP for threading and for straight turning is that the part surface that the tool repeatedly engages and disengages, during the modulation process, is the thread root rather than the cut face. The threading MTP part program developed in this paper is capable of machining a thread with the desired lead, depth, undercut angle, and taper angle while also producing segmented chips.International Journal of …, 2006This paper presents a mechanistic model for prediction of the thread milling forces. The mechanics of cutting for thread milling is analyzed similar to the end milling process but with modified cutting edge geometry. The chip thickness and cutting force models are developed considering the unique geometry of the tool. The model has been calibrated for 6061 Aluminum and validated. The effects of tool and thread geometry have been studied using the model. rVariations in cutting forces were investigated experimentally depending on infeed angles and cutting areas in the external threading on a CNC turning centre. For this purpose, AISI 1050 workpiece material, 16ERM AG 60 IC 908 cutting tool, and SER 2525 M16 tool holder were used. External threading operations were performed using 0 • , 14.5 • , 15 • , 27.5 • , and 30 • infeed angles while the cutting speed was held constant at 100 m/min for the experiments. Experimental results showed that the infeed angle and cutting area had significant effects on the main cutting force and the radial force components were considerable in threading operations in terms of energy consumption. In addition, the optimum infeed angle was 30 • in the external threading operations in terms of cutting forces.Acta Polytechnica Hungarica, 2014Different tool geometries have been developed by leading companies in the tool industry to different aims of application. The fastest progress can be observed in the development of coatings, in spite of this it can be noticed that there are only few coating types, but they can be used in a wide range. For users it offers the great advantage to select appropriate tool easier. Coating types, developed specially to individual aim of application, offer much better solution, compared to the generally used coating types. Platit AG, dealing with the development of optimised coating types, has requested our specialised group to carry out tests on specialised coating types. Our present study is going to summarise the results of the tests, carried out with thread forming tools.The International Journal of Advanced Manufacturing Technology, 2014is an open access repository that collects the work of Arts et Métiers ParisTech researchers and makes it freely available over the web where possible. This is an author-deposited version published in: http://sam.ensam.eu Handle ID: .http://hdl.handle.net/10985/8565 To cite this version : Vishal SHARMA, Guillaume FROMENTIN, Gérard POULACHON, Romain BRENDLEN -Investigation of tool geometry effect and penetration strategies on cutting forces during thread millingInvestigative Opthalmology &amp; Visual Science, 2010To test the reproducibility of spectral-domain optical coherence tomography (SD-OCT) total retinal thickness (TRT) measurements in mice. METHODS. C57Bl/6 mice were anesthetized, and three repeated volumetric images were acquired in both eyes with SD-OCT (250 A-scans ϫ 250 frames ϫ 1024 samplings), centered on the optic nerve head (ONH). The mice were repositioned between scans. TRT was automatically measured within a sampling band of retinal thickness with radii of 55 to 70 pixels, centered on the ONH by using custom segmentation software. The first volumetric image acquired in a given eye was used to register the remaining two SD-OCT images by manually aligning the en face images with respect to rotation and linear translation. Linear mixed-effects models were fitted to global and quadrant thicknesses, taking into account the clustering between eyes, to assess imprecision (measurement reproducibility). RESULTS. Twenty-six eyes of 13 adult mice (age 13 weeks) were imaged. The mean global TRT across all eyes was 298.21 m, with a mouse heterogeneity standard deviation (SD) of 4.88 m (coefficient of variation [CV] ϭ 0.016), an eye SD of 3.32 m (CV ϭ 0.011), and a device-related imprecision SD of 2.33 m (CV ϭ 0.008). The superior quadrant had the thickest mean TRT measurement (310.38 m) and the highest (worst) imprecision SD (3.13 m; CV ϭ 0.010), and the inferior quadrant had the thinnest mean TRT (291.55 m). The quadrant with the lowest (best) imprecision SD was in the nasal one (2.06 m; CV ϭ 0.007). CONCLUSIONS. Good reproducibility was observed for SD-OCT retinal thickness measurements in mice. SD-OCT may be useful for in vivo longitudinal studies in mice. (Muhamad Zidan Adinugroho , 2025Azerbaijan Journal of Educational Studies, 2025Coğrafiya elminin müasir inkişaf istiqaməti məktəbdə tədris olunan coğrafiya fənninin məzmununa təsir edib. Coğrafiya elminin tədqiqat xarakterli olması fənnin tədrisində fəaliyyətyönlü istiqamətin üstün mövqeyə çıxmasına səbəb olub. Azərbaycanda məktəb coğrafiyası fənninin məzmununda dəyişikliklər hələ müstəqilliyin ilk illərindən başlasa da, əsaslı yeniliklər 2006-cı ildə qəbul edilən yeni təhsil proqramı (kurikulum) ilə həyata keçirilib. Bu proqramda coğrafiya fənninin məzmununda köklü dəyişikliklər edilərək, fiziki və iqtisadi-sosial coğrafiya ayrı-ayrı kurslar kimi deyil, birləşdirilmiş vahid fənn kimi təqdim olunub. Lakin bu dəyişiklik keçid xarakterli idi. Çünki qəbul edilən standartlarda bilik komponenti üstünlük təşkil edirdi. Təlim nəticələrində təhsilverən coğrafi biliklərin öyrədilməsini hədəfləyirdi. 2020-ci ildə qəbul edilən təkmilləşdirilmiş ən yeni təhsil proqramı (kurikulum) isə sadələşdirilməsi, daha sistemli şəkildə təqdim edilməsi, daha çox fəaliyyətyönlü olması ilə fərqlənir. Yeni təhsil proqramının üstün cəhətlərindən biri də təhsilalanlarda XXI əsr bacarıqlarını formalaşdırmaq məqsədinin aparıcı olmasıdır. The modern development direction of the science of geography has influenced the content of school geography. The research-oriented nature of geography has led to the activity-based approach gaining a prominent place in the teaching of the subject. Although changes to the content of the school geography subject in Azerbaijan began in the early years of independence, fundamental reforms were implemented with the adoption of the new educational program (curriculum) in 2006. In this program, fundamental changes were made to the content of the geography subject, and physical and economic-social geography were presented not as separate courses, but as a unified, integrated subject. However, this change was transitional. Because the knowledge component had priority in the accepted standards. In the learning outcomes, the educator aimed to teach geographical knowledge. The latest improved educational program (curriculum), adopted in 2020, is characterized by its simplification, more systematic structure, and stronger focus on activity-based learning. One of the key advantages of the new educational program is its primary focus on developing 21st-century skills in learners.New Covenant Publications International Ltd. , 2020Journal of the American Ceramic Society, 2017We report results from in-situ measurements of lattice expansion during flash sintering of 3mol% yttria stabilized tetragonal zirconia taken at the Advanced Photon Source, Argonne National Laboratory. The expansion is anisotropic, with the relative expansion of the a-lattice constant exceeding that of the c-lattice constant. The anisotropic expansion cannot be explained by thermal expansion and is consistent with predictions from ab-initio calculations based upon the generation of vacancy-interstitial pairs of zirconium and oxygen.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Making Threads in SolidWorks]]></summary></entry><entry><title type="html">(PDF) Measuring Pen – A digital device to measure distance</title><link href="https://imtheva.github.io/blog/2025/pdf-measuring-pen-a-digital-device-to-measure-distance/" rel="alternate" type="text/html" title="(PDF) Measuring Pen – A digital device to measure distance"/><published>2025-12-20T00:00:00-05:00</published><updated>2025-12-20T00:00:00-05:00</updated><id>https://imtheva.github.io/blog/2025/pdf-measuring-pen--a-digital-device-to-measure-distance</id><content type="html" xml:base="https://imtheva.github.io/blog/2025/pdf-measuring-pen-a-digital-device-to-measure-distance/"><![CDATA[<p>OutlineDownload Free PDF…3 pagesThis is a new approach on the section of measurement. Today, most of the garment companies are producing lot of clothes. While producing clothes they have to face lot of problems. For an example time of delivery and accuracy in clothes size. A traditional way of measuring a cloth is using a tape. Due to that there may be errors in measuring length and it take times time to check the length using tape. Main aim of this mini project is to solve these problems using a microcontroller measuring system. This will reduce the time taken for the cutting and will measure accurately. For this project Arduino Nano is used as the microcontroller for performing the algorithmic work.Proceedings of the 5th International Conference on Intelligent Human Systems Integration (IHSI 2022) Integrating People and Intelligent Systems, February 22–24, 2022, Venice, ItalyContextConditionally autonomous vehicles are studied for numerous reasons, due to the dual responsibility in the driving task, switching from the car to the driver depending on the situation. This transition of control, namely the takeover, is usually not a concern when initiated by the driver. However, when the car issues a takeover request (TOR), it does it without consideration for the driver state, or anything else. In such a situation, the driver can be out of the driving loop, unaware of the current environment or focusing on a non-driving-related task (NDRT), impacting the takeover quality.&gt;ObjectiveIn this study, the goal is to find out if a Machine Learning can take advantages of many different factors and how they interact together, to create a model able to predict the takeover quality. Factors highlighted by the literature were considered: the driver physiological state, the external environment, the driver current activity and the modality of the TOR. Some studies tr…Informație geografică , 2025Frontiers in Earth Science, 2014The participation of the general public in the research design, data collection and interpretation process together with scientists is often referred to as citizen science. While citizen science itself has existed since the start of scientific practice, developments in sensing technology, data processing and visualization, and communication of ideas and results, are creating a wide range of new opportunities for public participation in scientific research. This paper reviews the state of citizen science in a hydrological context and explores the potential of citizen science to complement more traditional ways of scientific data collection and knowledge generation for hydrological sciences and water resources management. Although hydrological data collection often involves advanced technology, the advent of robust, cheap, and low-maintenance sensing equipment provides unprecedented opportunities for data collection in a citizen science context. These data have a significant potential to create new hydrological knowledge, especially in relation to the characterization of process heterogeneity, remote regions, and human impacts on the water cycle. However, the nature and quality of data collected in citizen science experiments is potentially very different from those of traditional monitoring networks. This poses challenges in terms of their processing, interpretation, and use, especially with regard to assimilation of traditional knowledge, the quantification of uncertainties, and their role in decision support. It also requires care in designing citizen science projects such that the generated data complement optimally other available knowledge. Lastly, using 4 case studies from remote mountain regions we reflect on the challenges and opportunities in the integration of hydrologically-oriented citizen science in water resources management, the role of scientific knowledge in the decision-making process, and the potential contestation to established community institutions posed by co-generation of new knowledge.Australia and New Zealand Health Policy, 2008This article provides a conceptual framework for thinking about the role of law in responding to population weight gain in Australia. Part 1 focuses on two core questions. Firstly, in pursuing the aim of weight reduction at the population level, what should law be trying to influence? The challenge here is to identify a model of the determinants of obesity that is adequate for legal purposes and that illustrates the entry points where law could best be used as an instrument of public health policy. Secondly, what kinds of strategies and tools can law offer to obesity prevention? The challenge here is to identify a model of law that captures the variety of contributions law is capable of making, at different levels of government, and across different legal systems. In Part 1 of the article, I argue that although law can intervene at a number of levels, the most important opportunities lie in seeking to influence the social, economic and environmental influences that shape patterns of eating and nutrition across the population as a whole. Only policies that impact broadly across the population can be expected to influence the weight distribution curve that has shifted relentlessly to the right in recent decades. Part 2 of the article builds on this analysis by offering a critical review of selected legal strategies for healthier nutrition and obesity prevention.Figshare , 2025The Competency-Based Curriculum (CBC) represents a significant shift in Kenya’s education system, emphasizing learner-centered approaches and practical skill development. However, the success of its implementation greatly depends on the preparedness of school leaders. This article examines the current state of readiness among school heads, the challenges they face, and the support structures required for effective CBC rollout. It concludes that while awareness of CBC is widespread, many school leaders still lack adequate training, resources, and institutional support to lead this educational reform confidently.— This paper deals with the design and implementation of a simple HMC6352 2-axis digital compass. Most compasses have been of the analogue type with magnetic needles as pointers. Replacing the “ old “ magnetic needle compass or the gyrocompass by an electronic solution offers advantages like having a solid-state component without moving parts and the ease of interfacing with other electronic systems. In this work, the aim is to design and implement a digital compass. To realize this, we made use of HMC6352 which is a 2-axis MR (magneto-resistive) sensor from Honeywell, Arduino Uno board with an onboard ATmega328 microcontroller chip, and a 16x2 character Liquid Crystal Display (LCD).We adopted the magneto-resistive (MR) technology as compared to flux-gate sensors common in most electronic compasses which has the disadvantage of making the device bulky. The trial test carried out with the completed HMC6352 digital compass showed a reading of 232.8 degrees West indicating its effectiveness in direction finding.2015Background: An indwelling urinary catheter or urethral stent are standardly used following a urethroplasty to prevent post-operative urinary retention. There are both closed drainage system (CDS) and open drainage system (ODS) available. Objective: The study was designed to determine the outcomes between post-operative CDS and ODS. Material and Method: Fifty-seven hypospadias patients with 66 urethroplasties, performed by a single surgeon, were assessed. During the 40-month study period, the operative outcomes relative to the technique of both urinary catheter drainage systems were evaluated for length of hospital stay (LOS), cost of hospitalization, and post-operative complications. Results: CDS and ODS drainage systems were performed in 32 and 34 operations, respectively. The patient characteristics, the surgical profiles, and post-operative complications were not statistically significant. The CDS/ODS group had median LOS (range) of 9 (1 to 22)/2 (1 to 6) days, respectively, and …Abacus, 2020Penelitian ini bertujuan untuk menganalisis dan menguji kebenaran hipotesis mengenai hubungan langsung kecerdasan numerik dan kemandirian belajar terhadap kemampuan pemecahan masalah matematik. Metode penelitian yang digunakan dalam penelitian ini adalah metode survei. Teknik analisis data menggunakan teknik analisis jalur (path analysis). Besar sampel sebanyak 90 siswa yang diperoleh dengan teknik multi stage sampling. Instrumen yang digunakan adalah instrument tes dan non tes. Instrumen tes berbentuk tes pilihan ganda untuk mengukur kecerdasan numeric, instrumen non tes yang digunakan adalah angket untuk mengukur kemandirian belajar, dan kemampuan pemecahan masalah matematik diukur dengan tes bentuk uraian. Hasil uji hipotesisnya, yaitu (1) terdapat pengaruh langsung yang signifikan kecerdasan numerik terhadap kemampuan pemecahan masalah matematik (2) terdapat pengaruh langsung yang signifikan kemandirian belajar terhadap kemampuan pemecahan masalah matematik (3) terdapat pengaruh langsung yang signifikan kecerdasan numerik terhadap kemandirian belajar (4) terdapat pengaruh tidak langsung yang tidak signifikan kecerdasan numerik terhadap kemampuan pemecahan masalah matematik melalui kemandirian belajar. Kata kunci: kecerdasan numerik, kemandirian belajar, kemampuan pemecahan masalah matematik ABSTRACT The study aims to analyze and test the truth of the hypothesis about the direct correlation of numerical intelligence and learning independence to the ability of solving mathematical problems. The research method used in this research is survey method. Data analysis technique using path analysis technique (path analysis). A sample size of 90 students obtained with Multi Stage Sampling technique. The instrument used is a multiple-choice test for measuring numerical intelligence and questionnaires to measure learning independence, while the mathematical problem-solving ability is measured by a description test form. The result of the hypothesis test, that is (1) there is a significant direct effect ofAcademia Medicine, 2023The importance of adherence to treatment is very high. The main purpose of this study was to investigate the adherence of patients with diabetes mellitus to their treatment. For this purpose, a systematic review was carried out, where relevant studies were searched in the PubMed and Google Scholar databases with specific keywords, and, subsequently, the most appropriate studies were selected (based on specific inclusion/exclusion criteria) and analyzed. In total, from the literature search, 16 studies were identified. Based on these studies, patients with diabetes mellitus show quite low adherence to insulin therapy. The perceptions about the disease of diabetes, the availability of drugs, the diabetes education provided, perceptions of medication, current patients’ employment, younger age, educational level, nationality, HbA1c levels, abstinence from alcohol, presence of peripheral vascular disease, income, keeping their appointments in primary health care, and the religious beliefs about healing and healing practices are important factors influencing the compliance of patients with diabetes in their treatment. Adherence of patients with diabetes mellitus to treatment is an extremely important issue for them since the lack of it negatively affects not only the health of patients but also their quality of life.Physical Chemistry Chemical Physics, 2017</p>]]></content><author><name></name></author><summary type="html"><![CDATA[This is a new approach on the section of measurement. Today, most of the garment companies are producing lot of clothes. While producing clothes they have to face lot of problems. For an example time of delivery and accuracy in clothes size. A]]></summary></entry><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://imtheva.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00-04:00</published><updated>2024-05-14T00:00:00-04:00</updated><id>https://imtheva.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://imtheva.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[<p>May 14, 2024 We’re introducing a series of updates across the Gemini family of models, including the new 1.5 Flash, our lightweight model for speed and efficiency, and Project Astra, our vision for the future of AI assistants. In December, we launched our first natively multimodal model Gemini 1.0 in three sizes: Ultra, Pro and Nano. Just a few months later we released 1.5 Pro, with enhanced performance and a breakthrough long context window of 1 million tokens.Developers and enterprise customers have been putting 1.5 Pro to use in incredible ways and finding its long context window, multimodal reasoning capabilities and impressive overall performance incredibly useful.We know from user feedback that some applications need lower latency and a lower cost to serve. This inspired us to keep innovating, so today, we’re introducing Gemini 1.5 Flash: a model that’s lighter-weight than 1.5 Pro, and designed to be fast and efficient to serve at scale.Both 1.5 Pro and 1.5 Flash are available in public preview with a 1 million token context window in Google AI Studio and Vertex AI. And now, 1.5 Pro is also available with a 2 million token context window via waitlist to developers using the API and to Google Cloud customers.We’re also introducing updates across the Gemini family of models, announcing our next generation of open models, Gemma 2, and sharing progress on the future of AI assistants, with Project Astra.Context lengths of leading foundation models compared with Gemini 1.5’s 2 million token capability1.5 Flash is the newest addition to the Gemini model family and the fastest Gemini model served in the API. It’s optimized for high-volume, high-frequency tasks at scale, is more cost-efficient to serve and features our breakthrough long context window.While it’s a lighter weight model than 1.5 Pro, it’s highly capable of multimodal reasoning across vast amounts of information and delivers impressive quality for its size.The new Gemini 1.5 Flash model is optimized for speed and efficiency, is highly capable of multimodal reasoning and features our breakthrough long context window.1.5 Flash excels at summarization, chat applications, image and video captioning, data extraction from long documents and tables, and more. This is because it’s been trained by 1.5 Pro through a process called “distillation,” where the most essential knowledge and skills from a larger model are transferred to a smaller, more efficient model.Read more about 1.5 Flash in our updated Gemini 1.5 technical report, on the Gemini technology page, and learn about 1.5 Flash’s availability and pricing.Over the last few months, we’ve significantly improved 1.5 Pro, our best model for general performance across a wide range of tasks.Beyond extending its context window to 2 million tokens, we’ve enhanced its code generation, logical reasoning and planning, multi-turn conversation, and audio and image understanding through data and algorithmic advances. We see strong improvements on public and internal benchmarks for each of these tasks.1.5 Pro can now follow increasingly complex and nuanced instructions, including ones that specify product-level behavior involving role, format and style. We’ve improved control over the model’s responses for specific use cases, like crafting the persona and response style of a chat agent or automating workflows through multiple function calls. And we’ve enabled users to steer model behavior by setting system instructions.We added audio understanding in the Gemini API and Google AI Studio, so 1.5 Pro can now reason across image and audio for videos uploaded in Google AI Studio. And we’re now integrating 1.5 Pro into Google products, including Gemini Advanced and in Workspace apps.Read more about 1.5 Pro in our updated Gemini 1.5 technical report and on the Gemini technology page.Gemini Nano is expanding beyond text-only inputs to include images as well. Starting with Pixel, applications using Gemini Nano with Multimodality will be able to understand the world the way people do — not just through text, but also through sight, sound and spoken language.Read more about Gemini 1.0 Nano on Android.Today, we’re also sharing a series of updates to Gemma, our family of open models built from the same research and technology used to create the Gemini models.We’re announcing Gemma 2, our next generation of open models for responsible AI innovation. Gemma 2 has a new architecture designed for breakthrough performance and efficiency, and will be available in new sizes.The Gemma family is also expanding with PaliGemma, our first vision-language model inspired by PaLI-3. And we’ve upgraded our Responsible Generative AI Toolkit with LLM Comparator for evaluating the quality of model responses.Read more on the Developer blog.As part of Google DeepMind’s mission to build AI responsibly to benefit humanity, we’ve always wanted to develop universal AI agents that can be helpful in everyday life. That’s why today, we’re sharing our progress in building the future of AI assistants with Project Astra (advanced seeing and talking responsive agent).To be truly useful, an agent needs to understand and respond to the complex and dynamic world just like people do — and take in and remember what it sees and hears to understand context and take action. It also needs to be proactive, teachable and personal, so users can talk to it naturally and without lag or delay.While we’ve made incredible progress developing AI systems that can understand multimodal information, getting response time down to something conversational is a difficult engineering challenge. Over the past few years, we’ve been working to improve how our models perceive, reason and converse to make the pace and quality of interaction feel more natural.Building on Gemini, we’ve developed prototype agents that can process information faster by continuously encoding video frames, combining the video and speech input into a timeline of events, and caching this information for efficient recall.By leveraging our leading speech models, we also enhanced how they sound, giving the agents a wider range of intonations. These agents can better understand the context they’re being used in, and respond quickly, in conversation.With technology like this, it’s easy to envision a future where people could have an expert AI assistant by their side, through a phone or glasses. And some of these capabilities are coming to Google products, like the Gemini app and web experience, later this year.We’ve made incredible progress so far with our family of Gemini models, and we’re always striving to advance the state-of-the-art even further. By investing in a relentless production line of innovation, we’re able to explore new ideas at the frontier, while also unlocking the possibility of new and exciting Gemini use cases.Learn more about Gemini and its capabilities. Your information will be used in accordance with Google’s privacy policy.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Done. Just one step more.
     
       Check your inbox to confirm your subscription.
     You are already subscribed to our newsletter.
@@ -9,10 +9,859 @@
     
   Let’s stay in touch. Get the latest news from Google in your inbox.
           Follow Us
-</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.]]></summary></entry><entry><title type="html">Displaying External Posts on Your al-folio Blog</title><link href="https://imtheva.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/" rel="alternate" type="text/html" title="Displaying External Posts on Your al-folio Blog"/><published>2022-04-23T19:20:09-04:00</published><updated>2022-04-23T19:20:09-04:00</updated><id>https://imtheva.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog</id><content type="html" xml:base="https://imtheva.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/"><![CDATA[<h3>External Posts on Your al-folio Blog</h3> <p>If you prefer publishing blog posts on medium.com or other external sources, starting version v0.5.0, <a href="https://github.com/alshedivat/al-folio">al-folio</a> lets you to display your external posts in the blog feed of your website! 🎉🎉</p> <p>Configuring external sources of super simple. After upgrading to v0.5.0, just add the following section to your _config.yml:</p> <pre>external_sources:<br />  - name: medium.com  # name of the source (arbitrary string)<br />    rss_url: <a href="https://medium.com/@al-folio/feed">https://medium.com/@&lt;your-medium-username&gt;/feed</a></pre> <p>The example above adds your medium.com blog post feed as an external source. But you can add arbitrary RSS feeds as sources.</p> <p>Any questions or suggestions? 👉 Start <a href="https://github.com/alshedivat/al-folio/discussions">a discussion on GitHub</a>!</p> <p><img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=b60a1d241a0a" width="1" height="1" alt=""/></p>]]></content><author><name></name></author></entry><entry><title type="html">a post with TikZJax</title><link href="https://imtheva.github.io/blog/2010/tikzjax/" rel="alternate" type="text/html" title="a post with TikZJax"/><published>2010-12-12T17:25:00-05:00</published><updated>2010-12-12T17:25:00-05:00</updated><id>https://imtheva.github.io/blog/2010/tikzjax</id><content type="html" xml:base="https://imtheva.github.io/blog/2010/tikzjax/"><![CDATA[<p>This is an example post with TikZ code. TikZJax converts script tags (containing TikZ code) into SVGs.</p> <script type="text/tikz">
+</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.]]></summary></entry><entry><title type="html">Displaying External Posts on Your al-folio Blog</title><link href="https://imtheva.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/" rel="alternate" type="text/html" title="Displaying External Posts on Your al-folio Blog"/><published>2022-04-23T19:20:09-04:00</published><updated>2022-04-23T19:20:09-04:00</updated><id>https://imtheva.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog</id><content type="html" xml:base="https://imtheva.github.io/blog/2022/displaying-external-posts-on-your-al-folio-blog/"><![CDATA[<h3>External Posts on Your al-folio Blog</h3> <p>If you prefer publishing blog posts on medium.com or other external sources, starting version v0.5.0, <a href="https://github.com/alshedivat/al-folio">al-folio</a> lets you to display your external posts in the blog feed of your website! 🎉🎉</p> <p>Configuring external sources of super simple. After upgrading to v0.5.0, just add the following section to your _config.yml:</p> <pre>external_sources:<br />  - name: medium.com  # name of the source (arbitrary string)<br />    rss_url: <a href="https://medium.com/@al-folio/feed">https://medium.com/@&lt;your-medium-username&gt;/feed</a></pre> <p>The example above adds your medium.com blog post feed as an external source. But you can add arbitrary RSS feeds as sources.</p> <p>Any questions or suggestions? 👉 Start <a href="https://github.com/alshedivat/al-folio/discussions">a discussion on GitHub</a>!</p> <p><img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=b60a1d241a0a" width="1" height="1" alt=""/></p>]]></content><author><name></name></author></entry><entry><title type="html">a distill-style blog post</title><link href="https://imtheva.github.io/blog/2021/distill/" rel="alternate" type="text/html" title="a distill-style blog post"/><published>2021-05-22T00:00:00-04:00</published><updated>2021-05-22T00:00:00-04:00</updated><id>https://imtheva.github.io/blog/2021/distill</id><content type="html" xml:base="https://imtheva.github.io/blog/2021/distill/"><![CDATA[<h2 id="equations">Equations</h2> <p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine. You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>. If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p> <p>In fact, you can also use a single dollar sign <code class="language-plaintext highlighter-rouge">$</code> to create inline formulas, such as <code class="language-plaintext highlighter-rouge">$ E = mc^2 $</code>, which will render as $ E = mc^2 $. This approach provides the same effect during TeX-based compilation, but visually it appears slightly less bold compared to double-dollar signs <code class="language-plaintext highlighter-rouge">$$</code>, making it blend more naturally with surrounding text.</p> <p>To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph. Here is an example:</p> \[\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\] <p>Note that MathJax 3 is <a href="https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html">a major re-write of MathJax</a> that brought a significant improvement to the loading and rendering speed, which is now <a href="http://www.intmath.com/cg5/katex-mathjax-comparison.php">on par with KaTeX</a>.</p> <hr/> <h2 id="citations">Citations</h2> <p>Citations are then used in the article body with the <code class="language-plaintext highlighter-rouge">&lt;d-cite&gt;</code> tag. The key attribute is a reference to the id provided in the bibliography. The key attribute can take multiple ids, separated by commas.</p> <p>The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover). If you have an appendix, a bibliography is automatically created and populated in it.</p> <p>Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover. However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.</p> <hr/> <h2 id="footnotes">Footnotes</h2> <p>Just wrap the text you would like to show up in a footnote in a <code class="language-plaintext highlighter-rouge">&lt;d-footnote&gt;</code> tag. The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote></p> <hr/> <h2 id="code-blocks">Code Blocks</h2> <p>Syntax highlighting is provided within <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> tags. An example of inline code snippets: <code class="language-plaintext highlighter-rouge">&lt;d-code language="html"&gt;let x = 10;&lt;/d-code&gt;</code>. For larger blocks of code, add a <code class="language-plaintext highlighter-rouge">block</code> attribute:</p> <d-code block="" language="javascript"> var x = 25; function(x) { return x * x; } </d-code> <p><strong>Note:</strong> <code class="language-plaintext highlighter-rouge">&lt;d-code&gt;</code> blocks do not look good in the dark mode. You can instead use the standard Jekyll syntax highlight with the <code class="language-plaintext highlighter-rouge">highlight</code> liquid tag.</p> <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+<span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">return</span> <span class="nx">x</span> <span class="err">\</span><span class="o">*</span> <span class="nx">x</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure> <p>You can also write standard Markdown code blocks in triple ticks with a language tag, for instance:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">x</span>
+</code></pre></div></div> <hr/> <h2 id="interactive-plots">Interactive Plots</h2> <p>You can add interative plots using plotly + iframes :framed_picture:</p> <div class="l-page"> <iframe src="/assets/plotly/demo.html" frameborder="0" scrolling="no" height="500px" width="100%" style="border: 1px dashed grey;"></iframe> </div> <p>The plot must be generated separately and saved into an HTML file. To generate the plot that you see above, you can use the following code snippet:</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">plotly.express</span> <span class="k">as</span> <span class="n">px</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span>
+<span class="sh">'</span><span class="s">https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv</span><span class="sh">'</span>
+<span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="nf">density_mapbox</span><span class="p">(</span>
+<span class="n">df</span><span class="p">,</span>
+<span class="n">lat</span><span class="o">=</span><span class="sh">'</span><span class="s">Latitude</span><span class="sh">'</span><span class="p">,</span>
+<span class="n">lon</span><span class="o">=</span><span class="sh">'</span><span class="s">Longitude</span><span class="sh">'</span><span class="p">,</span>
+<span class="n">z</span><span class="o">=</span><span class="sh">'</span><span class="s">Magnitude</span><span class="sh">'</span><span class="p">,</span>
+<span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+<span class="n">center</span><span class="o">=</span><span class="nf">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">180</span><span class="p">),</span>
+<span class="n">zoom</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="n">mapbox_style</span><span class="o">=</span><span class="sh">"</span><span class="s">stamen-terrain</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">.</span><span class="nf">write_html</span><span class="p">(</span><span class="sh">'</span><span class="s">assets/plotly/demo.html</span><span class="sh">'</span><span class="p">)</span></code></pre></figure> <hr/> <h2 id="details-boxes">Details boxes</h2> <p>Details boxes are collapsible boxes which hide additional information from the user. They can be added with the <code class="language-plaintext highlighter-rouge">details</code> liquid tag:</p> <details><summary>Click here to know more</summary> <p>Additional details, where math \(2x - 1\) and <code class="language-plaintext highlighter-rouge">code</code> is rendered correctly.</p> </details> <hr/> <h2 id="mermaid">Mermaid</h2> <p>This theme supports creating diagrams directly in markdown using <a href="https://mermaid.js.org/">Mermaid</a>. Mermaid enables users to render flowcharts, sequence diagrams, class diagrams, Gantt charts, and more. Simply embed the diagram syntax within a mermaid code block.</p> <p>To create a Gantt chart, you can use the following syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">mermaid
+</span><span class="sb">gantt
+    dateFormat  YYYY-MM-DD
+    title A Gantt Diagram
+
+    section Section
+    Task A           :a1, 2025-01-01, 30d
+    Task B           :after a1, 20d
+    Task C           :2025-01-10, 12d</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>And here’s how it will be rendered:</p> <pre><code class="language-mermaid">gantt
+    dateFormat  YYYY-MM-DD
+    title A Gantt Diagram
+
+    section Section
+    Task A           :a1, 2025-01-01, 30d
+    Task B           :after a1, 20d
+    Task C           :2025-01-10, 12d
+</code></pre> <p>Similarly, you can also use it to create beautiful class diagrams:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```mermaid
+classDiagram
+direction LR
+    class Animal {
+        +String species
+        +int age
+        +makeSound()
+    }
+    class Dog {
+        +String breed
+        +bark()
+    }
+    class Cat {
+        +String color
+        +meow()
+    }
+    class Bird {
+        +String wingSpan
+        +fly()
+    }
+    class Owner {
+        +String name
+        +int age
+        +adoptAnimal(Animal animal)
+    }
+
+    Animal &lt;|-- Dog
+    Animal &lt;|-- Cat
+    Animal &lt;|-- Bird
+    Owner "1" --&gt; "0..*" Animal
+
+    Dog : +fetch()
+    Cat : +purr()
+    Bird : +sing()
+```
+</code></pre></div></div> <p>It will be presented as:</p> <pre><code class="language-mermaid">classDiagram
+direction LR
+    class Animal {
+        +String species
+        +int age
+        +makeSound()
+    }
+    class Dog {
+        +String breed
+        +bark()
+    }
+    class Cat {
+        +String color
+        +meow()
+    }
+    class Bird {
+        +String wingSpan
+        +fly()
+    }
+    class Owner {
+        +String name
+        +int age
+        +adoptAnimal(Animal animal)
+    }
+
+    Animal &lt;|-- Dog
+    Animal &lt;|-- Cat
+    Animal &lt;|-- Bird
+    Owner "1" --&gt; "0..*" Animal
+
+    Dog : +fetch()
+    Cat : +purr()
+    Bird : +sing()
+</code></pre> <p>With Mermaid, you can easily add clear and dynamic diagrams to enhance your blog content.</p> <hr/> <h2 id="diff2html">Diff2Html</h2> <p>This theme also supports integrating <a href="https://github.com/rtfpessoa/diff2html">Diff2Html</a>, a tool that beautifully renders code differences (diffs) directly in markdown. Diff2Html is ideal for showcasing code changes, allowing you to clearly present additions, deletions, and modifications. It’s perfect for code reviews, documentation, and tutorials where step-by-step code changes need to be highlighted—you can even introduce changes across multiple files at once.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff2html
+</span><span class="sb">diff --git a/utils/mathUtils.js b/utils/mathUtils.js
+index 3b5f3d1..c7f9b2e 100644
+--- a/utils/mathUtils.js
++++ b/utils/mathUtils.js
+@@ -1,8 +1,12 @@
+-// Basic math utilities
++// Extended math utilities with additional functions
+
+-export function calculateArea(radius) {
+-    const PI = 3.14159;
++export function calculateCircleMetrics(radius) {
++    const PI = Math.PI;
+     const area = PI * radius ** 2;
++    const circumference = 2 * PI * radius;
++
++    if (!isValidRadius(radius)) throw new Error("Invalid radius");
++
+     return { area, circumference };
+ }
+
+-export function validateRadius(radius) {
++export function isValidRadius(radius) {
+     return typeof radius === 'number' &amp;&amp; radius &gt; 0;
+ }
+
+diff --git a/main.js b/main.js
+index 5f6a9c3..b7d4e8f 100644
+--- a/main.js
++++ b/main.js
+@@ -2,9 +2,12 @@
+ import { calculateCircleMetrics } from './utils/mathUtils';
+
+-function displayCircleMetrics(radius) {
+-    const { area } = calculateCircleMetrics(radius);
++function displayCircleMetrics(radius) {
++    const { area, circumference } = calculateCircleMetrics(radius);
+     console.log(`Area: ${area}`);
++    console.log(`Circumference: ${circumference}`);
+ }
+
+-displayCircleMetrics(5);
++try {
++    displayCircleMetrics(5);
++} catch (error) {
++    console.error("Error:", error.message);
++}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>Here’s how it will look when rendered with Diff2Html:</p> <pre><code class="language-diff2html">diff --git a/utils/mathUtils.js b/utils/mathUtils.js
+index 3b5f3d1..c7f9b2e 100644
+--- a/utils/mathUtils.js
++++ b/utils/mathUtils.js
+@@ -1,8 +1,12 @@
+-// Basic math utilities
++// Extended math utilities with additional functions
+
+-export function calculateArea(radius) {
+-    const PI = 3.14159;
++export function calculateCircleMetrics(radius) {
++    const PI = Math.PI;
+     const area = PI * radius ** 2;
++    const circumference = 2 * PI * radius;
++
++    if (!isValidRadius(radius)) throw new Error("Invalid radius");
++
+     return { area, circumference };
+ }
+
+-export function validateRadius(radius) {
++export function isValidRadius(radius) {
+     return typeof radius === 'number' &amp;&amp; radius &gt; 0;
+ }
+
+diff --git a/main.js b/main.js
+index 5f6a9c3..b7d4e8f 100644
+--- a/main.js
++++ b/main.js
+@@ -2,9 +2,12 @@
+ import { calculateCircleMetrics } from './utils/mathUtils';
+
+-function displayCircleMetrics(radius) {
+-    const { area } = calculateCircleMetrics(radius);
++function displayCircleMetrics(radius) {
++    const { area, circumference } = calculateCircleMetrics(radius);
+     console.log(`Area: ${area}`);
++    console.log(`Circumference: ${circumference}`);
+ }
+
+-displayCircleMetrics(5);
++try {
++    displayCircleMetrics(5);
++} catch (error) {
++    console.error("Error:", error.message);
++}
+</code></pre> <hr/> <h2 id="leaflet">Leaflet</h2> <p><a href="https://leafletjs.com/">Leaflet</a> is created by Ukrainian software engineer <a href="https://agafonkin.com/">Volodymyr Agafonkin</a>, allowing interactive maps to be embedded in webpages. With support for <a href="https://geojson.org/">GeoJSON data</a>, Leaflet allows you to highlight specific regions, making it easy to visualize geographical information in detail.</p> <p>You can use the following code to load map information on <a href="https://www.openstreetmap.org/">OpenStreetMap</a>:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">geojson
+</span><span class="sb">{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Crimea",
+        "popupContent": "Occupied Crimea"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [33.9, 45.3],
+            [36.5, 45.3],
+            [36.5, 44.4],
+            [33.9, 44.4],
+            [33.9, 45.3]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Donetsk",
+        "popupContent": "Occupied Donetsk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [37.5, 48.5],
+            [39.5, 48.5],
+            [39.5, 47.5],
+            [37.5, 47.5],
+            [37.5, 48.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luhansk",
+        "popupContent": "Occupied Luhansk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [38.5, 49.5],
+            [40.5, 49.5],
+            [40.5, 48.5],
+            [38.5, 48.5],
+            [38.5, 49.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kherson",
+        "popupContent": "Occupied Kherson"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.3, 47.3],
+            [34.3, 47.3],
+            [34.3, 46.3],
+            [32.3, 46.3],
+            [32.3, 47.3]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zaporizhzhia",
+        "popupContent": "Occupied Zaporizhzhia"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [34.3, 48],
+            [36.3, 48],
+            [36.3, 47],
+            [34.3, 47],
+            [34.3, 48]
+          ]
+        ]
+      }
+    }
+  ]
+}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>The rendered map below highlights the regions of Ukraine that have been illegally occupied by Russia over the years, including Crimea and the four eastern regions:</p> <pre><code class="language-geojson">{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Crimea",
+        "popupContent": "Occupied Crimea"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [33.9, 45.3],
+            [36.5, 45.3],
+            [36.5, 44.4],
+            [33.9, 44.4],
+            [33.9, 45.3]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Donetsk",
+        "popupContent": "Occupied Donetsk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [37.5, 48.5],
+            [39.5, 48.5],
+            [39.5, 47.5],
+            [37.5, 47.5],
+            [37.5, 48.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luhansk",
+        "popupContent": "Occupied Luhansk"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [38.5, 49.5],
+            [40.5, 49.5],
+            [40.5, 48.5],
+            [38.5, 48.5],
+            [38.5, 49.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kherson",
+        "popupContent": "Occupied Kherson"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [32.3, 47.3],
+            [34.3, 47.3],
+            [34.3, 46.3],
+            [32.3, 46.3],
+            [32.3, 47.3]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zaporizhzhia",
+        "popupContent": "Occupied Zaporizhzhia"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [34.3, 48],
+            [36.3, 48],
+            [36.3, 47],
+            [34.3, 47],
+            [34.3, 48]
+          ]
+        ]
+      }
+    }
+  ]
+}
+</code></pre> <hr/> <h2 id="chartjs-echarts-and-vega-lite">Chartjs, Echarts and Vega-Lite</h2> <p><a href="https://www.chartjs.org/">Chart.js</a> is a versatile JavaScript library for creating responsive and interactive charts. Supporting multiple chart types like bar, line, pie, and radar, it’s an ideal tool for visualizing data directly in webpages.</p> <p>Here’s an example of a JSON-style configuration that creates a bar chart in Chart.js:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```chartjs
+{
+  "type": "bar",
+  "data": {
+    "labels": ["2017", "2018", "2019", "2020", "2021"],
+    "datasets": [
+      {
+        "label": "Population (millions)",
+        "data": [12, 15, 13, 14, 16],
+        "backgroundColor": "rgba(54, 162, 235, 0.6)",
+        "borderColor": "rgba(54, 162, 235, 1)",
+        "borderWidth": 1
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "y": {
+        "beginAtZero": true
+      }
+    }
+  }
+}
+```
+</code></pre></div></div> <p>The rendered bar chart illustrates population data from 2017 to 2021:</p> <pre><code class="language-chartjs">{
+  "type": "bar",
+  "data": {
+    "labels": ["2017", "2018", "2019", "2020", "2021"],
+    "datasets": [
+      {
+        "label": "Population (millions)",
+        "data": [12, 15, 13, 14, 16],
+        "backgroundColor": "rgba(54, 162, 235, 0.6)",
+        "borderColor": "rgba(54, 162, 235, 1)",
+        "borderWidth": 1
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "y": {
+        "beginAtZero": true
+      }
+    }
+  }
+}
+</code></pre> <hr/> <p><a href="https://echarts.apache.org/">ECharts</a> is a powerful visualization library from <a href="https://www.apache.org/">Apache</a> that supports a wide range of interactive charts, including more advanced types such as scatter plots, heatmaps, and geographic maps.</p> <p>The following JSON configuration creates a visually enhanced line chart that displays monthly sales data for two products.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```echarts
+{
+  "title": {
+    "text": "Monthly Sales Comparison",
+    "left": "center"
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "backgroundColor": "rgba(50, 50, 50, 0.7)",
+    "borderColor": "#777",
+    "borderWidth": 1,
+    "textStyle": {
+      "color": "#fff"
+    }
+  },
+  "legend": {
+    "data": ["Product A", "Product B"],
+    "top": "10%"
+  },
+  "xAxis": {
+    "type": "category",
+    "data": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "axisLine": {
+      "lineStyle": {
+        "color": "#888"
+      }
+    }
+  },
+  "yAxis": {
+    "type": "value",
+    "axisLine": {
+      "lineStyle": {
+        "color": "#888"
+      }
+    },
+    "splitLine": {
+      "lineStyle": {
+        "type": "dashed"
+      }
+    }
+  },
+  "series": [
+    {
+      "name": "Product A",
+      "type": "line",
+      "smooth": true,
+      "data": [820, 932, 901, 934, 1290, 1330, 1320, 1400, 1450, 1500, 1600, 1650],
+      "itemStyle": {
+        "color": "#5470C6"
+      },
+      "lineStyle": {
+        "width": 3
+      },
+      "areaStyle": {
+        "color": {
+          "type": "linear",
+          "x": 0,
+          "y": 0,
+          "x2": 0,
+          "y2": 1,
+          "colorStops": [
+            { "offset": 0, "color": "rgba(84, 112, 198, 0.5)" },
+            { "offset": 1, "color": "rgba(84, 112, 198, 0)" }
+          ]
+        }
+      },
+      "emphasis": {
+        "focus": "series"
+      }
+    },
+    {
+      "name": "Product B",
+      "type": "line",
+      "smooth": true,
+      "data": [620, 732, 701, 734, 1090, 1130, 1120, 1200, 1250, 1300, 1400, 1450],
+      "itemStyle": {
+        "color": "#91CC75"
+      },
+      "lineStyle": {
+        "width": 3
+      },
+      "areaStyle": {
+        "color": {
+          "type": "linear",
+          "x": 0,
+          "y": 0,
+          "x2": 0,
+          "y2": 1,
+          "colorStops": [
+            { "offset": 0, "color": "rgba(145, 204, 117, 0.5)" },
+            { "offset": 1, "color": "rgba(145, 204, 117, 0)" }
+          ]
+        }
+      },
+      "emphasis": {
+        "focus": "series"
+      }
+    }
+  ]
+}
+```
+</code></pre></div></div> <p>The rendered output is shown below, and you can also interact with it using your mouse:</p> <pre><code class="language-echarts">{
+  "title": {
+    "text": "Monthly Sales Comparison",
+    "left": "center"
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "backgroundColor": "rgba(50, 50, 50, 0.7)",
+    "borderColor": "#777",
+    "borderWidth": 1,
+    "textStyle": {
+      "color": "#fff"
+    }
+  },
+  "legend": {
+    "data": ["Product A", "Product B"],
+    "top": "10%"
+  },
+  "xAxis": {
+    "type": "category",
+    "data": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "axisLine": {
+      "lineStyle": {
+        "color": "#888"
+      }
+    }
+  },
+  "yAxis": {
+    "type": "value",
+    "axisLine": {
+      "lineStyle": {
+        "color": "#888"
+      }
+    },
+    "splitLine": {
+      "lineStyle": {
+        "type": "dashed"
+      }
+    }
+  },
+  "series": [
+    {
+      "name": "Product A",
+      "type": "line",
+      "smooth": true,
+      "data": [820, 932, 901, 934, 1290, 1330, 1320, 1400, 1450, 1500, 1600, 1650],
+      "itemStyle": {
+        "color": "#5470C6"
+      },
+      "lineStyle": {
+        "width": 3
+      },
+      "areaStyle": {
+        "color": {
+          "type": "linear",
+          "x": 0,
+          "y": 0,
+          "x2": 0,
+          "y2": 1,
+          "colorStops": [
+            { "offset": 0, "color": "rgba(84, 112, 198, 0.5)" },
+            { "offset": 1, "color": "rgba(84, 112, 198, 0)" }
+          ]
+        }
+      },
+      "emphasis": {
+        "focus": "series"
+      }
+    },
+    {
+      "name": "Product B",
+      "type": "line",
+      "smooth": true,
+      "data": [620, 732, 701, 734, 1090, 1130, 1120, 1200, 1250, 1300, 1400, 1450],
+      "itemStyle": {
+        "color": "#91CC75"
+      },
+      "lineStyle": {
+        "width": 3
+      },
+      "areaStyle": {
+        "color": {
+          "type": "linear",
+          "x": 0,
+          "y": 0,
+          "x2": 0,
+          "y2": 1,
+          "colorStops": [
+            { "offset": 0, "color": "rgba(145, 204, 117, 0.5)" },
+            { "offset": 1, "color": "rgba(145, 204, 117, 0)" }
+          ]
+        }
+      },
+      "emphasis": {
+        "focus": "series"
+      }
+    }
+  ]
+}
+</code></pre> <hr/> <p><a href="https://vega.github.io/vega-lite/">Vega-Lite</a> is a declarative visualization grammar that allows users to create, share, and customize a wide range of interactive data visualizations. The following JSON configuration generates a straightforward bar chart:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```vega_lite
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 400,
+  "height": 200,
+  "padding": 5,
+
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {"category": "A", "value": 28},
+        {"category": "B", "value": 55},
+        {"category": "C", "value": 43},
+        {"category": "D", "value": 91},
+        {"category": "E", "value": 81},
+        {"category": "F", "value": 53},
+        {"category": "G", "value": 19},
+        {"category": "H", "value": 87}
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "xscale",
+      "type": "band",
+      "domain": {"data": "table", "field": "category"},
+      "range": "width",
+      "padding": 0.1
+    },
+    {
+      "name": "yscale",
+      "type": "linear",
+      "domain": {"data": "table", "field": "value"},
+      "nice": true,
+      "range": "height"
+    }
+  ],
+
+  "axes": [
+    {"orient": "bottom", "scale": "xscale"},
+    {"orient": "left", "scale": "yscale"}
+  ],
+
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "x": {"scale": "xscale", "field": "category"},
+          "width": {"scale": "xscale", "band": 0.8},
+          "y": {"scale": "yscale", "field": "value"},
+          "y2": {"scale": "yscale", "value": 0},
+          "fill": {"value": "steelblue"}
+        },
+        "update": {
+          "fillOpacity": {"value": 1}
+        },
+        "hover": {
+          "fill": {"value": "orange"}
+        }
+      }
+    }
+  ]
+}
+```
+</code></pre></div></div> <p>The rendered output shows a clean and simple bar chart with a hover effect：</p> <pre><code class="language-vega_lite">{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 400,
+  "height": 200,
+  "padding": 5,
+
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {"category": "A", "value": 28},
+        {"category": "B", "value": 55},
+        {"category": "C", "value": 43},
+        {"category": "D", "value": 91},
+        {"category": "E", "value": 81},
+        {"category": "F", "value": 53},
+        {"category": "G", "value": 19},
+        {"category": "H", "value": 87}
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "xscale",
+      "type": "band",
+      "domain": {"data": "table", "field": "category"},
+      "range": "width",
+      "padding": 0.1
+    },
+    {
+      "name": "yscale",
+      "type": "linear",
+      "domain": {"data": "table", "field": "value"},
+      "nice": true,
+      "range": "height"
+    }
+  ],
+
+  "axes": [
+    {"orient": "bottom", "scale": "xscale"},
+    {"orient": "left", "scale": "yscale"}
+  ],
+
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "x": {"scale": "xscale", "field": "category"},
+          "width": {"scale": "xscale", "band": 0.8},
+          "y": {"scale": "yscale", "field": "value"},
+          "y2": {"scale": "yscale", "value": 0},
+          "fill": {"value": "steelblue"}
+        },
+        "update": {
+          "fillOpacity": {"value": 1}
+        },
+        "hover": {
+          "fill": {"value": "orange"}
+        }
+      }
+    }
+  ]
+}
+</code></pre> <hr/> <h2 id="tikz">TikZ</h2> <p><a href="https://tikz.net/">TikZ</a> is a powerful LaTeX-based drawing tool powered by <a href="https://tikzjax.com/">TikZJax</a>. You can easily port TikZ drawings from papers, posters, and notes. For example, we can use the following code to illustrate Euler’s formula $ e^{i \theta} = \cos \theta + i \sin \theta $:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/tikz"</span><span class="nt">&gt;</span>
+<span class="se">\b</span>egin{tikzpicture}
+    <span class="se">\f</span>illdraw[fill=cyan!10, draw=blue, thick] (0,0) circle (2cm);<span class="sb">
+
+    \draw[-&gt;, thick] (-2.5,0) -- (2.5,0) node[right] {Re};
+    \draw[-&gt;, thick] (0,-2.5) -- (0,2.5) node[above] {Im};
+
+    \draw[-&gt;, thick, color=purple] (0,0) -- (1.5,1.5);
+    \node[color=purple] at (1.1, 1.7) {$e^{i\theta}$};
+
+    \draw[thick] (0.7,0) arc (0:45:0.7);
+    \node at (0.9, 0.3) {$\theta$};
+
+    \draw[dashed, color=gray] (1.5,1.5) -- (1.5,0) node[below, black] {$\cos \theta$};
+    \draw[dashed, color=gray] (1.5,1.5) -- (0,1.5) node[left, black] {$\sin \theta$};
+    \node at (2.2, 0) [below] {1};
+    \node at (0, 2.2) [left] {$i$};
+    \node at (1.5,1.5) [above right, color=blue] {$(\cos \theta \, \sin \theta)$};
+</span><span class="se">\e</span>nd{tikzpicture}
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div> <p>The rendered output is shown below, displayed as a vector graphic：</p> <script type="text/tikz">
 \begin{tikzpicture}
-    \draw[red,fill=black!60!red] (0,0) circle [radius=1.5];
-    \draw[green,fill=black!60!green] (0,0) circle [x radius=1.5cm, y radius=10mm];
-    \draw[blue,fill=black!60!blue] (0,0) circle [x radius=1cm, y radius=5mm, rotate=30];
+    \filldraw[fill=cyan!10, draw=blue, thick] (0,0) circle (2cm);
+
+    \draw[->, thick] (-2.5,0) -- (2.5,0) node[right] {Re};
+    \draw[->, thick] (0,-2.5) -- (0,2.5) node[above] {Im};
+
+    \draw[->, thick, color=purple] (0,0) -- (1.5,1.5);
+    \node[color=purple] at (1.1, 1.7) {$e^{i\theta}$};
+
+    \draw[thick] (0.7,0) arc (0:45:0.7);
+    \node at (0.9, 0.3) {$\theta$};
+
+    \draw[dashed, color=gray] (1.5,1.5) -- (1.5,0) node[below, black] {$\cos \theta$};
+    \draw[dashed, color=gray] (1.5,1.5) -- (0,1.5) node[left, black] {$\sin \theta$};
+    \node at (2.2, 0) [below] {1};
+    \node at (0, 2.2) [left] {$i$};
+    \node at (1.5,1.5) [above right, color=blue] {$(\cos \theta \, \sin \theta)$};
 \end{tikzpicture}
-</script>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included TikZ code could look like]]></summary></entry><entry><title type="html">a post with giscus comments</title><link href="https://imtheva.github.io/blog/2010/giscus-comments/" rel="alternate" type="text/html" title="a post with giscus comments"/><published>2010-12-10T10:59:00-05:00</published><updated>2010-12-10T10:59:00-05:00</updated><id>https://imtheva.github.io/blog/2010/giscus-comments</id><content type="html" xml:base="https://imtheva.github.io/blog/2010/giscus-comments/"><![CDATA[<p>This post shows how to add GISCUS comments.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="external-services"/><category term="comments"/><summary type="html"><![CDATA[an example of a blog post with giscus comments]]></summary></entry><entry><title type="html">a post with disqus comments</title><link href="https://imtheva.github.io/blog/2010/disqus-comments/" rel="alternate" type="text/html" title="a post with disqus comments"/><published>2010-10-20T11:59:00-04:00</published><updated>2010-10-20T11:59:00-04:00</updated><id>https://imtheva.github.io/blog/2010/disqus-comments</id><content type="html" xml:base="https://imtheva.github.io/blog/2010/disqus-comments/"><![CDATA[<p>This post shows how to add DISQUS comments.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="external-services"/><category term="comments"/><summary type="html"><![CDATA[an example of a blog post with disqus comments]]></summary></entry></feed>
+</script> <hr/> <h2 id="typograms">Typograms</h2> <p><a href="https://google.github.io/typograms/">Typograms</a> are a way of combining text and graphics to convey information in a clear and visually engaging manner. Typograms are particularly effective for illustrating simple diagrams, charts, and concept visuals where text and graphics are closely integrated. The following example demonstrates a simple Typogram:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```typograms
+             ___________________
+            /                  /|
+           /__________________/ |
+          |                  |  |
+          |     Distill      |  |
+          |                  |  |
+          |                  | /
+          |__________________|/
+```
+</code></pre></div></div> <p>The rendered output is shown below：</p> <pre><code class="language-typograms">             ___________________
+            /                  /|
+           /__________________/ |
+          |                  |  |
+          |     Distill      |  |
+          |                  |  |
+          |                  | /
+          |__________________|/
+</code></pre> <hr/> <h2 id="layouts">Layouts</h2> <p>The main text column is referred to as the body. It is the assumed layout of any direct descendants of the <code class="language-plaintext highlighter-rouge">d-article</code> element.</p> <div class="fake-img l-body"> <p>.l-body</p> </div> <p>For images you want to display a little larger, try <code class="language-plaintext highlighter-rouge">.l-page</code>:</p> <div class="fake-img l-page"> <p>.l-page</p> </div> <p>All of these have an outset variant if you want to poke out from the body text a little bit. For instance:</p> <div class="fake-img l-body-outset"> <p>.l-body-outset</p> </div> <div class="fake-img l-page-outset"> <p>.l-page-outset</p> </div> <p>Occasionally you’ll want to use the full browser width. For this, use <code class="language-plaintext highlighter-rouge">.l-screen</code>. You can also inset the element a little from the edge of the browser by using the inset variant.</p> <div class="fake-img l-screen"> <p>.l-screen</p> </div> <div class="fake-img l-screen-inset"> <p>.l-screen-inset</p> </div> <p>The final layout is for marginalia, asides, and footnotes. It does not interrupt the normal flow of <code class="language-plaintext highlighter-rouge">.l-body</code> sized text except on mobile screen sizes.</p> <div class="fake-img l-gutter"> <p>.l-gutter</p> </div> <hr/> <h2 id="sidenotes">Sidenotes</h2> <p>Distill supports sidenotes, which are like footnotes but placed in the margin of the page. They are useful for providing additional context or references without interrupting the flow of the main text.</p> <p>There are two main ways to create a sidenote:</p> <p><strong>Using the <code class="language-plaintext highlighter-rouge">&lt;aside&gt;</code> tag:</strong></p> <p>The following code creates a sidenote with <strong><em>distill’s styling</em></strong> in the margin:</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;aside&gt;&lt;p&gt;</span>This is a sidenote using aside tag.<span class="nt">&lt;/p&gt;&lt;/aside&gt;</span>
+</code></pre></div></div> <aside><p> This is a sidenote using `&lt;aside&gt;` tag</p> </aside> <p>We can also add images to sidenotes (click on the image to zoom in for a larger version):</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;aside&gt;</span>
+  {% include figure.liquid loading="eager" path="assets/img/rhino.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  <span class="nt">&lt;p&gt;</span>
+    F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” Science, Medicine, and History: Essays on the Evolution of
+    Scientific Thought and Medical Practice (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s Visual Explanations.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/aside&gt;</span>
+</code></pre></div></div> <aside> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/rhino-480.webp 480w,/assets/img/rhino-800.webp 800w,/assets/img/rhino-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/rhino.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <p>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s Visual Explanations.</p> </aside> <p>Sidenotes can also contain equations and links:</p> <p>In physics, mass–energy equivalence is the relationship between mass and energy in a system’s rest frame. The two differ only by a multiplicative constant and the units of measurement.</p> <aside> <p>This principle is defined by Einstein's famous equation: $E = mc^2$ <a href="https://en.wikipedia.org/wiki/Mass%E2%80%93energy_equivalence" target="_blank">(Source: Wikipedia)</a></p> </aside> <p><strong>Using the <code class="language-plaintext highlighter-rouge">l-gutter</code> class:</strong></p> <p>The following code creates a sidenote with <strong><em>al-folio’s styling</em></strong> in the margin:</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"l-gutter"</span><span class="nt">&gt;&lt;p&gt;</span>This is a sidenote using l-gutter class.<span class="nt">&lt;/p&gt;&lt;/div&gt;</span>
+</code></pre></div></div> <div class="l-gutter"> <p> This is a sidenote using `l-gutter` class. </p> </div> <hr/> <h2 id="other-typography">Other Typography?</h2> <p>Emphasis, aka italics, with <em>asterisks</em> (<code class="language-plaintext highlighter-rouge">*asterisks*</code>) or <em>underscores</em> (<code class="language-plaintext highlighter-rouge">_underscores_</code>).</p> <p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p> <p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p> <p>Strikethrough uses two tildes. <del>Scratch this.</del></p> <ol> <li>First ordered list item</li> <li>Another item ⋅⋅* Unordered sub-list.</li> <li>Actual numbers don’t matter, just that it’s a number ⋅⋅1. Ordered sub-list</li> <li>And another item.</li> </ol> <p>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we’ll use three here to also align the raw Markdown).</p> <p>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅ ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅ ⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p> <ul> <li> <p>Unordered list can use asterisks</p> </li> <li> <p>Or minuses</p> </li> <li> <p>Or pluses</p> </li> </ul> <p><a href="https://www.google.com">I’m an inline-style link</a></p> <p><a href="https://www.google.com" title="Google's Homepage">I’m an inline-style link with title</a></p> <p><a href="https://www.mozilla.org">I’m a reference-style link</a></p> <p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p> <p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>.</p> <p>URLs and URLs in angle brackets will automatically get turned into links. http://www.example.com or <a href="http://www.example.com">http://www.example.com</a> and sometimes example.com (but not on Github, for example).</p> <p>Some text to show that the reference links can follow later.</p> <p>Here’s our logo (hover to see the title text):</p> <p>Inline-style: <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1"/></p> <p>Reference-style: <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 2"/></p> <p>Inline <code class="language-plaintext highlighter-rouge">code</code> has <code class="language-plaintext highlighter-rouge">back-ticks around</code> it.</p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">JavaScript syntax highlighting</span><span class="dl">"</span><span class="p">;</span>
+<span class="nf">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</code></pre></div></div> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Python syntax highlighting</span><span class="sh">"</span>
+<span class="k">print</span> <span class="n">s</span>
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No language indicated, so no syntax highlighting.
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre></div></div> <p>Colons can be used to align columns.</p> <table> <thead> <tr> <th>Tables</th> <th style="text-align: center">Are</th> <th style="text-align: right">Cool</th> </tr> </thead> <tbody> <tr> <td>col 3 is</td> <td style="text-align: center">right-aligned</td> <td style="text-align: right">$1600</td> </tr> <tr> <td>col 2 is</td> <td style="text-align: center">centered</td> <td style="text-align: right">$12</td> </tr> <tr> <td>zebra stripes</td> <td style="text-align: center">are neat</td> <td style="text-align: right">$1</td> </tr> </tbody> </table> <p>There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don’t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p> <table> <thead> <tr> <th>Markdown</th> <th>Less</th> <th>Pretty</th> </tr> </thead> <tbody> <tr> <td><em>Still</em></td> <td><code class="language-plaintext highlighter-rouge">renders</code></td> <td><strong>nicely</strong></td> </tr> <tr> <td>1</td> <td>2</td> <td>3</td> </tr> </tbody> </table> <blockquote> <p>Blockquotes are very handy in email to emulate reply text. This line is part of the same quote.</p> </blockquote> <p>Quote break.</p> <blockquote> <p>This is a very long line that will still be quoted properly when it wraps. Oh boy let’s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p> </blockquote> <p>Here’s a line for us to start with.</p> <p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p> <p>This line is also a separate paragraph, but… This line is only separated by a single newline, so it’s a separate line in the <em>same paragraph</em>.</p>]]></content><author><name>Albert Einstein</name></author><category term="distill"/><category term="formatting"/><summary type="html"><![CDATA[an example of a distill-style blog post and main elements]]></summary></entry></feed>
