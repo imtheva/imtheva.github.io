@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/useful-links/";
               },
-            },{id: "post-how-computer-vision-is-transforming-agricultural-engineering",
+            },{id: "post-winter-storms-how-they-form-why-they-re-dangerous-and-what-they-mean-for-agriculture",
+        
+          title: 'Winter Storms: How They Form, Why They’re Dangerous, and What They Mean for... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "An overview of winter storms—how they form, how they differ from normal snow events, and the often-overlooked impacts they have on agriculture, livestock, and farming systems.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@theva1993/winter-storms-how-they-form-why-theyre-dangerous-and-what-they-mean-for-agriculture-51dcf6c0ed30", "_blank");
+          
+        },
+      },{id: "post-how-computer-vision-is-transforming-agricultural-engineering",
         
           title: 'How Computer Vision Is Transforming Agricultural Engineering <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
