@@ -247,7 +247,7 @@ jekyll-archives:
   books:
     enabled: [year, tag, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["Ag-Eng", "Agricultural-Engineering", "Robotics", "links", "IoT", "code", "Space"] # these tags will be displayed on the front page of your blog
+display_tags: ["Agricultural-Engineering", "Robotics", "links", "IoT", "Agriculture", "Space"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
