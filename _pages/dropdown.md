@@ -19,6 +19,6 @@ children:
   - title: Gallery
     permalink: /gallery/
   - title: divider
-  - title: Useful Links
-    permalink: /useful-links/
+  # - title: Useful Links
+  #   permalink: /useful-links/
 ---

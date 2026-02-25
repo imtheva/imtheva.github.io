@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://sites.google.com/view/xin-zhang-lab/team'>Graduate Research Assistant</a>. Environmental, Civil, Agriculutral and Mechanical Engineering, College of Engineering, University of Georgia
+subtitle: <a href='https://sites.google.com/view/xin-zhang-lab/home?authuser=0'>Graduate Research Assistant</a>. <a href='https://engineering.uga.edu/schools/ecam/'>Environmental, Civil, Agriculutral and Mechanical Engineering</a>, <a href='https://engineering.uga.edu/>'College of Engineering</a>, <a href='https://www.uga.edu/>'University of Georgia</a>
 
 profile:
   align: right

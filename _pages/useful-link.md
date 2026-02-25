@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /useful-links/
+permalink: /links/
 title: Useful Links
 social: true # includes social icons at the bottom of the page
 description:
