@@ -179,7 +179,7 @@ publications:
     summary: "Curated list of publications, preprints, and ongoing research work."
 
 professional:
-  - name: "Mississippi State University"
+  - name: "Mississippi State University & University of Georgia"
     position: "Lab Manager"
     startDate: "2024"
     endDate: "Present"
@@ -187,6 +187,12 @@ professional:
     highlights:
       - "Managed laboratory operations and research infrastructure"
       - "Supported sensing, automation, and robotics research activities"
+
+  - name: "Mississippi State University & University of Georgia"
+    position: "Research Mentor"
+    startDate: "2024"
+    endDate: "2025"
+    summary: "Mentored undergraduate students and student workers in computer vision model development, data annotation workflows, prototype end-effector designs, and research project execution."
 
   - name: "Mississippi State University"
     position: "Preparing Future Faculty Program Participant"
@@ -310,7 +316,7 @@ volunteer:
     summary: "Reviewed research papers for the 2nd International Conference on Advancements in Computing."
 
   - organization: "Uva Wellassa University"
-    position: "Resource Person"
+    position: "Volunteer Workshop Instructor"
     startDate: "2018"
     endDate: "2018"
     summary: "Conducted workshops on engineering machinery for school children."
@@ -322,7 +328,7 @@ volunteer:
     summary: "Active member of the IEEE student branch."
 
   - organization: "Uva Wellassa University Students Association"
-    position: "Resource Person"
+    position: "Volunteer Teaching Instructor"
     startDate: "2014"
     endDate: "2016"
     summary: "Delivered seminars for school ordinary level students."
