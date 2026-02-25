@@ -12,7 +12,7 @@ basics:
       url: "https://github.com/imtheva"
 
 education:
-  - institution: "University of Georgia"
+  - institution: "University of Georgia (UGA)"
     studyType: "Reading - PhD"
     area: "Agriclutural Engineering"
     startDate: "2025"
@@ -20,7 +20,7 @@ education:
     summary: "Autonomous robotic systems and computer vision for selective harvesting."
 
   - institution: "Mississippi State University"
-    studyType: "Reading - PhD"
+    studyType: "Reading - PhD (Transferred to UGA)"
     area: "Biosystems Engineering"
     startDate: "2023"
     endDate: "2025"
@@ -115,8 +115,8 @@ awards:
     date: "2024"
     summary: "Travel award supporting participation in the ASABE Annual International Meeting."
 
-  - title: "Gold Medal in English Speech Competition"
-    awarder: "Higher School Level Competition, KHC"
+  - title: "Gold Medal in English Speech Competition at Higher School Level Competition"
+    awarder: "Kokuvil Hindu College, Jaffna, Sri Lanka"
     date: "2008"
     summary: "Awarded gold medal for excellence in English speech competition."
 
@@ -279,6 +279,11 @@ professional:
     summary: "Completed formal training in higher education pedagogy."
 
 volunteer:
+  - organization: "Computers and Electronics in Agriculture (Elsevier)"
+    position: "Reviewer"
+    startDate: "2024"
+    endDate: "2025"
+
   - organization: "Mississippi State University"
     position: "Secretary, Softball Cricket Club"
     startDate: "2024"
