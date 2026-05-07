@@ -1,0 +1,31 @@
+# Update these values from your Google Scholar profile
+# https://scholar.google.com/citations?user=YOUR_ID
+
+scholar_id: "YOUR_GOOGLE_SCHOLAR_ID"  # e.g., "abc123DEFHI"
+
+summary:
+  total_citations: 0       # Replace with your total citations
+  h_index: 0               # Replace with your h-index
+  i10_index: 0             # Replace with your i10-index
+  total_citations_since_2019: 0
+  h_index_since_2019: 0
+  i10_index_since_2019: 0
+
+# Citations per year — add/extend as needed
+citations_by_year:
+  - year: 2018
+    citations: 0
+  - year: 2019
+    citations: 0
+  - year: 2020
+    citations: 0
+  - year: 2021
+    citations: 0
+  - year: 2022
+    citations: 0
+  - year: 2023
+    citations: 0
+  - year: 2024
+    citations: 0
+  - year: 2025
+    citations: 0

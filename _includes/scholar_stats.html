@@ -1,0 +1,158 @@
+{% if site.data.citation_stats %}
+{% assign stats = site.data.citation_stats %}
+
+<div class="scholar-stats-container mt-4 mb-5">
+
+  <!-- Summary metrics table (mirrors Google Scholar layout) -->
+  <div class="scholar-metrics-table mb-4">
+    <table class="table table-sm table-borderless scholar-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="text-center">All</th>
+          <th class="text-center">Since {{ site.time | date: "%Y" | minus: 5 }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://scholar.google.com/citations?user={{ stats.scholar_id }}" target="_blank" rel="noopener noreferrer">Citations</a></td>
+          <td class="text-center fw-bold">{{ stats.summary.total_citations }}</td>
+          <td class="text-center fw-bold">{{ stats.summary.total_citations_since_2019 }}</td>
+        </tr>
+        <tr>
+          <td>h-index</td>
+          <td class="text-center fw-bold">{{ stats.summary.h_index }}</td>
+          <td class="text-center fw-bold">{{ stats.summary.h_index_since_2019 }}</td>
+        </tr>
+        <tr>
+          <td>i10-index</td>
+          <td class="text-center fw-bold">{{ stats.summary.i10_index }}</td>
+          <td class="text-center fw-bold">{{ stats.summary.i10_index_since_2019 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Citations per year bar chart -->
+  <div class="scholar-chart-wrapper">
+    <canvas id="citationsChart" height="120"></canvas>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  // Data injected from Jekyll
+  const years   = [{% for entry in stats.citations_by_year %}{{ entry.year }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  const counts  = [{% for entry in stats.citations_by_year %}{{ entry.citations }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+  function isDark() {
+    return document.documentElement.getAttribute('data-theme') === 'dark'
+      || window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  function getColors(dark) {
+    return {
+      bar:    dark ? 'rgba(100, 160, 255, 0.85)' : 'rgba(66, 133, 244, 0.80)',
+      hover:  dark ? 'rgba(140, 190, 255, 1)'    : 'rgba(26,  93, 204, 1)',
+      grid:   dark ? 'rgba(255,255,255,0.08)'     : 'rgba(0,0,0,0.07)',
+      text:   dark ? '#ccc'                       : '#555',
+    };
+  }
+
+  function buildChart() {
+    const ctx = document.getElementById('citationsChart');
+    if (!ctx) return;
+    const dark   = isDark();
+    const colors = getColors(dark);
+
+    if (window._scholarChart) {
+      window._scholarChart.destroy();
+    }
+
+    window._scholarChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: years,
+        datasets: [{
+          label: 'Citations',
+          data: counts,
+          backgroundColor: colors.bar,
+          hoverBackgroundColor: colors.hover,
+          borderRadius: 3,
+          borderSkipped: false,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: (items) => items[0].label,
+              label: (item)  => ` ${item.raw} citations`,
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { color: colors.text, font: { size: 12 } }
+          },
+          y: {
+            beginAtZero: true,
+            grid: { color: colors.grid },
+            ticks: {
+              color: colors.text,
+              font: { size: 12 },
+              precision: 0,
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Build once DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', buildChart);
+  } else {
+    buildChart();
+  }
+
+  // Rebuild on dark/light mode toggle (al-folio emits this event)
+  document.addEventListener('dark-mode-toggled', buildChart);
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildChart);
+})();
+</script>
+
+<style>
+.scholar-stats-container {
+  max-width: 520px;
+}
+.scholar-table th {
+  font-weight: 500;
+  color: var(--global-text-color-light, #888);
+  font-size: 0.85rem;
+  padding-bottom: 4px;
+}
+.scholar-table td {
+  font-size: 0.9rem;
+  padding: 3px 8px;
+  color: var(--global-text-color);
+}
+.scholar-table td:first-child {
+  color: var(--global-theme-color, #6c63ff);
+}
+.scholar-table td:first-child a {
+  color: inherit;
+  text-decoration: none;
+}
+.scholar-table td:first-child a:hover {
+  text-decoration: underline;
+}
+.scholar-chart-wrapper {
+  max-width: 500px;
+}
+</style>
+{% endif %}
