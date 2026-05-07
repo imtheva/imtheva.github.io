@@ -1,0 +1,313 @@
+<!-- _includes/scholar_citations.html
+     ─────────────────────────────────────────────────────────────────────────
+     Beautiful Google Scholar citation dashboard.
+     • Reads from _data/citations.json (auto-updated by GitHub Actions)
+     • Full light / dark mode support via CSS variables + prefers-color-scheme
+     • Animated bar chart for citations-per-year
+     • Per-paper horizontal bar list sorted by citations
+     • Works inside al-folio's existing Bootstrap layout
+
+     Usage — paste ONE line anywhere in _pages/publications.md:
+         {% include scholar_citations.html %}
+     ─────────────────────────────────────────────────────────────────────────
+-->
+
+{% assign c = site.data.citations %}
+
+<div class="scholar-dashboard" id="scholar-dashboard">
+
+  <!-- ── Header row ──────────────────────────────────────────────────── -->
+  <div class="sd-header">
+    <div class="sd-header-text">
+      <span class="sd-title">Citation metrics</span>
+      <span class="sd-updated">
+        Updated {{ c.updated }}
+        <a href="https://scholar.google.com/citations?user={{ c.scholar_id }}"
+           target="_blank" rel="noopener" class="sd-scholar-link"
+           aria-label="Open Google Scholar profile">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          Google Scholar
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <!-- ── Summary stat cards ───────────────────────────────────────────── -->
+  <div class="sd-stats">
+    <div class="sd-stat-card">
+      <span class="sd-stat-label">Total citations</span>
+      <span class="sd-stat-value">{{ c.total }}</span>
+      <span class="sd-stat-sub">All time</span>
+    </div>
+    <div class="sd-stat-card">
+      <span class="sd-stat-label">Since 2021</span>
+      <span class="sd-stat-value">{{ c.since_2021 }}</span>
+      <span class="sd-stat-sub">5-year window</span>
+    </div>
+    <div class="sd-stat-card">
+      <span class="sd-stat-label">h-index</span>
+      <span class="sd-stat-value">{{ c.h_index }}</span>
+      <span class="sd-stat-sub">{{ c.h_index_5y }} since 2021</span>
+    </div>
+    <div class="sd-stat-card">
+      <span class="sd-stat-label">i10-index</span>
+      <span class="sd-stat-value">{{ c.i10_index }}</span>
+      <span class="sd-stat-sub">{{ c.i10_index_5y }} since 2021</span>
+    </div>
+  </div>
+
+  <!-- ── Citations per year bar chart ─────────────────────────────────── -->
+  {% if c.cites_per_year %}
+  <div class="sd-section-label">Citations per year</div>
+  <div class="sd-year-chart" aria-label="Bar chart of citations per year" role="img">
+    {% assign max_year_cites = 1 %}
+    {% for pair in c.cites_per_year %}
+      {% assign v = pair[1] | plus: 0 %}
+      {% if v > max_year_cites %}{% assign max_year_cites = v %}{% endif %}
+    {% endfor %}
+
+    {% for pair in c.cites_per_year %}
+      {% assign yr  = pair[0] %}
+      {% assign cnt = pair[1] | plus: 0 %}
+      {% assign pct = cnt | times: 100 | divided_by: max_year_cites %}
+      <div class="sd-year-bar-group">
+        <span class="sd-year-count">{{ cnt }}</span>
+        <div class="sd-year-bar-wrap">
+          <div class="sd-year-bar" style="height: {{ pct }}%;"
+               data-value="{{ cnt }}" aria-label="{{ yr }}: {{ cnt }} citations"></div>
+        </div>
+        <span class="sd-year-label">{{ yr }}</span>
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- ── Per-paper citation list ──────────────────────────────────────── -->
+  {% if c.papers.size > 0 %}
+  {% assign max_paper_cites = 1 %}
+  {% for paper in c.papers %}
+    {% if paper.cites > max_paper_cites %}{% assign max_paper_cites = paper.cites %}{% endif %}
+  {% endfor %}
+
+  <div class="sd-section-label" style="margin-top:1.5rem;">Top cited papers</div>
+  <div class="sd-paper-list">
+    {% for paper in c.papers %}
+    {% if paper.cites > 0 %}
+    {% assign bar_pct = paper.cites | times: 100 | divided_by: max_paper_cites %}
+    <div class="sd-paper-row">
+      <div class="sd-paper-title" title="{{ paper.title }}">
+        {% if paper.scholar_id != "" %}
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ c.scholar_id }}&citation_for_view={{ paper.scholar_id }}"
+           target="_blank" rel="noopener">{{ paper.title | truncate: 72 }}</a>
+        {% else %}
+        {{ paper.title | truncate: 72 }}
+        {% endif %}
+      </div>
+      <span class="sd-paper-year">{{ paper.year }}</span>
+      <div class="sd-paper-bar-wrap" aria-hidden="true">
+        <div class="sd-paper-bar" style="width: {{ bar_pct }}%;"></div>
+      </div>
+      <span class="sd-paper-cites">{{ paper.cites }}</span>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</div><!-- /.scholar-dashboard -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     Styles — scoped to .scholar-dashboard, light + dark mode
+═══════════════════════════════════════════════════════════════════════ -->
+<style>
+/* ── Custom properties: light defaults ──────────────────────────────── */
+.scholar-dashboard {
+  --sd-bg:          #ffffff;
+  --sd-bg-card:     #f5f4f0;
+  --sd-bg-bar:      #e8e6e0;
+  --sd-accent:      #3266ad;
+  --sd-accent-soft: rgba(50, 102, 173, 0.12);
+  --sd-text-main:   #1a1a18;
+  --sd-text-muted:  #73726c;
+  --sd-text-faint:  #9a9991;
+  --sd-border:      rgba(0,0,0,0.09);
+  --sd-radius:      8px;
+  --sd-radius-lg:   12px;
+  font-family: inherit;
+}
+
+/* ── Dark mode overrides ─────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  .scholar-dashboard {
+    --sd-bg:          #1e1e1c;
+    --sd-bg-card:     #2a2a27;
+    --sd-bg-bar:      #38382f;
+    --sd-accent:      #6fa3e0;
+    --sd-accent-soft: rgba(111, 163, 224, 0.15);
+    --sd-text-main:   #e8e6de;
+    --sd-text-muted:  #a8a69e;
+    --sd-text-faint:  #6e6d68;
+    --sd-border:      rgba(255,255,255,0.08);
+  }
+}
+
+/* al-folio injects a data-theme attribute on <html> for its toggle */
+[data-theme="dark"] .scholar-dashboard {
+  --sd-bg:          #1e1e1c;
+  --sd-bg-card:     #2a2a27;
+  --sd-bg-bar:      #38382f;
+  --sd-accent:      #6fa3e0;
+  --sd-accent-soft: rgba(111, 163, 224, 0.15);
+  --sd-text-main:   #e8e6de;
+  --sd-text-muted:  #a8a69e;
+  --sd-text-faint:  #6e6d68;
+  --sd-border:      rgba(255,255,255,0.08);
+}
+
+/* ── Container ───────────────────────────────────────────────────────── */
+.scholar-dashboard {
+  background: var(--sd-bg);
+  border: 0.5px solid var(--sd-border);
+  border-radius: var(--sd-radius-lg);
+  padding: 1.5rem 1.75rem;
+  margin: 2rem 0;
+  max-width: 860px;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────── */
+.sd-header { display: flex; align-items: flex-start; margin-bottom: 1.25rem; }
+.sd-header-text { display: flex; flex-direction: column; gap: 2px; }
+.sd-title {
+  font-size: 15px; font-weight: 500;
+  color: var(--sd-text-main); letter-spacing: -0.01em;
+}
+.sd-updated {
+  font-size: 12px; color: var(--sd-text-faint);
+  display: flex; align-items: center; gap: 6px;
+}
+.sd-scholar-link {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 12px; color: var(--sd-accent);
+  text-decoration: none;
+}
+.sd-scholar-link:hover { text-decoration: underline; }
+
+/* ── Stat cards ──────────────────────────────────────────────────────── */
+.sd-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 1.75rem;
+}
+.sd-stat-card {
+  background: var(--sd-bg-card);
+  border-radius: var(--sd-radius);
+  padding: 0.85rem 1rem;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.sd-stat-label {
+  font-size: 11px; font-weight: 500; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--sd-text-faint);
+}
+.sd-stat-value {
+  font-size: 28px; font-weight: 500;
+  color: var(--sd-text-main); line-height: 1.1;
+}
+.sd-stat-sub { font-size: 11px; color: var(--sd-text-muted); }
+
+/* ── Section label ───────────────────────────────────────────────────── */
+.sd-section-label {
+  font-size: 11px; font-weight: 500; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--sd-text-faint);
+  margin-bottom: 0.75rem;
+}
+
+/* ── Year bar chart ──────────────────────────────────────────────────── */
+.sd-year-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 130px;
+  padding: 0 0 0 0;
+  margin-bottom: 0.25rem;
+}
+.sd-year-bar-group {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 4px;
+  flex: 1;
+}
+.sd-year-count {
+  font-size: 12px; font-weight: 500; color: var(--sd-text-muted);
+  line-height: 1;
+}
+.sd-year-bar-wrap {
+  width: 100%; flex: 1;
+  display: flex; align-items: flex-end;
+}
+.sd-year-bar {
+  width: 100%;
+  background: var(--sd-accent);
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+  transition: height 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  opacity: 0.88;
+}
+.sd-year-bar:hover { opacity: 1; }
+.sd-year-label {
+  font-size: 11px; color: var(--sd-text-faint);
+  white-space: nowrap;
+}
+
+/* ── Paper list ──────────────────────────────────────────────────────── */
+.sd-paper-list { display: flex; flex-direction: column; gap: 0; }
+.sd-paper-row {
+  display: grid;
+  grid-template-columns: 1fr auto 120px 28px;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 0.5px solid var(--sd-border);
+}
+.sd-paper-row:last-child { border-bottom: none; }
+.sd-paper-title {
+  font-size: 12px; color: var(--sd-text-muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  min-width: 0;
+}
+.sd-paper-title a {
+  color: var(--sd-text-muted); text-decoration: none;
+}
+.sd-paper-title a:hover { color: var(--sd-accent); text-decoration: underline; }
+.sd-paper-year {
+  font-size: 11px; color: var(--sd-text-faint);
+  background: var(--sd-bg-card);
+  padding: 2px 7px; border-radius: 20px;
+  white-space: nowrap;
+}
+.sd-paper-bar-wrap {
+  height: 6px; background: var(--sd-bg-bar);
+  border-radius: 3px; overflow: hidden;
+}
+.sd-paper-bar {
+  height: 100%; background: var(--sd-accent);
+  border-radius: 3px;
+  transition: width 0.7s ease;
+}
+.sd-paper-cites {
+  font-size: 13px; font-weight: 500;
+  color: var(--sd-text-main); text-align: right;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 540px) {
+  .scholar-dashboard { padding: 1rem; }
+  .sd-paper-row { grid-template-columns: 1fr auto 80px 24px; gap: 7px; }
+  .sd-stat-value { font-size: 22px; }
+}
+</style>
