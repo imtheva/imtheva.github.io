@@ -8,7 +8,7 @@ description: Publications including journal articles, conference papers, and boo
 nav: true
 nav_order: 2
 ---
-
+{% include scholar_citations.html %}
 {% include scholar_stats.html %}
 <!-- _pages/publications.md -->
 

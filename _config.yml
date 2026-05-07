@@ -257,6 +257,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 scholar:
   last_name: [Thayananthan]
   first_name: [Thevathayarajh]
+  scholar_userid: MpKhKEUAAAAJ
 
   style: apa
   locale: en
