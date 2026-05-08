@@ -1,0 +1,247 @@
+<!-- ================= MODERN SCHOLAR DASHBOARD ================= -->
+
+<div id="scholar-dash" class="scholar-dash">
+
+  <!-- Header -->
+  <div class="sd-topbar">
+    <div>
+      <div class="sd-heading">Citation Metrics</div>
+      <div class="sd-subheading">Google Scholar</div>
+    </div>
+    <button id="toggle-papers" class="sd-toggle">Show Top Papers</button>
+  </div>
+
+  <!-- Cards -->
+  <div class="sd-cards">
+    <div class="sd-card"><span>Total</span><b id="sd-total">0</b></div>
+    <div class="sd-card"><span>h-index</span><b id="sd-hindex">0</b></div>
+    <div class="sd-card"><span>i10</span><b id="sd-i10">0</b></div>
+    <div class="sd-card"><span>Papers</span><b id="sd-pubs">0</b></div>
+  </div>
+
+  <!-- Charts -->
+  <div class="sd-charts">
+    <div>
+      <div class="sd-section-title">Citations by Year</div>
+      <div id="sd-year-chart" class="sd-year-chart"></div>
+    </div>
+
+    <div>
+      <div class="sd-section-title">Citation Share</div>
+      <canvas id="sd-pie" height="160"></canvas>
+    </div>
+  </div>
+
+  <!-- Papers (collapsed) -->
+  <div id="sd-paper-wrap" class="collapsed">
+    <div class="sd-section-title">Top cited papers</div>
+    <div id="sd-papers"></div>
+  </div>
+
+</div>
+
+<style>
+/* ---------- THEME ---------- */
+.scholar-dash {
+  --bg: #ffffff;
+  --card: #f6f7fb;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+
+  /* Modern palette */
+  --accent: #4f46e5;     /* indigo */
+  --accent2: #06b6d4;    /* cyan */
+  --accent3: #10b981;    /* green */
+
+  --border: rgba(0,0,0,0.06);
+}
+
+[data-theme="dark"] .scholar-dash {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+
+  --accent: #818cf8;
+  --accent2: #22d3ee;
+  --accent3: #34d399;
+
+  --border: rgba(255,255,255,0.08);
+}
+
+/* ---------- LAYOUT ---------- */
+.scholar-dash {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  max-width: 900px;
+}
+
+.sd-topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sd-heading { font-weight: 600; }
+.sd-subheading { font-size: 12px; color: var(--muted); }
+
+.sd-toggle {
+  font-size: 12px;
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+}
+
+/* ---------- CARDS ---------- */
+.sd-cards {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.sd-card {
+  background: var(--card);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.sd-card span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.sd-card b {
+  display: block;
+  font-size: 24px;
+}
+
+/* ---------- CHARTS ---------- */
+.sd-charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.sd-year-chart {
+  display: flex;
+  align-items: flex-end;
+  height: 140px;
+  gap: 8px;
+}
+
+.sd-bar {
+  flex: 1;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, var(--accent), var(--accent2));
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: grow 0.7s ease forwards;
+}
+
+@keyframes grow { to { transform: scaleY(1); } }
+
+/* ---------- PAPERS ---------- */
+#sd-paper-wrap.collapsed { display: none; }
+
+.sd-paper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---------- TITLES ---------- */
+.sd-section-title {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+(function(){
+
+const DATA = {
+  total: {{ site.data.citations.total }},
+  h: {{ site.data.citations.h_index }},
+  i10: {{ site.data.citations.i10_index }},
+  years: {{ site.data.citations.cites_per_year | jsonify }},
+  papers: {{ site.data.citations.papers | jsonify }}
+};
+
+/* -------- CARDS -------- */
+document.getElementById("sd-total").textContent = DATA.total;
+document.getElementById("sd-hindex").textContent = DATA.h;
+document.getElementById("sd-i10").textContent = DATA.i10;
+document.getElementById("sd-pubs").textContent = DATA.papers.length;
+
+/* -------- BAR CHART -------- */
+const maxY = Math.max(...Object.values(DATA.years));
+const chart = document.getElementById("sd-year-chart");
+
+Object.entries(DATA.years).forEach(([year,val],i)=>{
+  const div = document.createElement("div");
+  div.className="sd-bar";
+  div.style.height = (val/maxY*100)+"%";
+  div.style.animationDelay = (i*0.1)+"s";
+  chart.appendChild(div);
+});
+
+/* -------- PIE CHART -------- */
+const top = DATA.papers.slice(0,5);
+
+new Chart(document.getElementById("sd-pie"), {
+  type: "doughnut",
+  data: {
+    labels: top.map(p=>p.title.slice(0,20)),
+    datasets: [{
+      data: top.map(p=>p.cites),
+      backgroundColor: [
+        "var(--accent)",
+        "var(--accent2)",
+        "var(--accent3)",
+        "#f59e0b",
+        "#ef4444"
+      ]
+    }]
+  },
+  options: {
+    plugins: { legend: { display:false } },
+    cutout: "65%"
+  }
+});
+
+/* -------- PAPERS -------- */
+const wrap = document.getElementById("sd-papers");
+
+DATA.papers
+.sort((a,b)=>b.cites-a.cites)
+.forEach(p=>{
+  const row = document.createElement("div");
+  row.className="sd-paper";
+  row.innerHTML = `<span>${p.title}</span><b>${p.cites}</b>`;
+  wrap.appendChild(row);
+});
+
+/* -------- TOGGLE -------- */
+const btn = document.getElementById("toggle-papers");
+const section = document.getElementById("sd-paper-wrap");
+
+btn.onclick = ()=>{
+  section.classList.toggle("collapsed");
+  btn.textContent = section.classList.contains("collapsed")
+    ? "Show Top Papers"
+    : "Hide Top Papers";
+};
+
+})();
+</script>
