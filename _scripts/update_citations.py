@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""_scripts/update_citations.py — run by GitHub Actions weekly."""
+"""
+_scripts/update_citations.py
+Fetches Google Scholar data and writes _data/citations.json.
+Run by GitHub Actions every Sunday. Also run manually anytime.
+"""
 
 import json, datetime
 from pathlib import Path
@@ -9,9 +13,22 @@ OUTPUT_PATH = Path("_data/citations.json")
 
 def main():
     from scholarly import scholarly
-    print(f"Fetching Scholar profile for {SCHOLAR_ID} …")
+    print(f"Fetching Scholar profile: {SCHOLAR_ID}")
+
     author = scholarly.search_author_id(SCHOLAR_ID)
     author = scholarly.fill(author, sections=["basics", "indices", "publications"])
+
+    # Build per-year dict from Scholar
+    cites_per_year = {str(k): v for k, v in author.get("cites_per_year", {}).items()}
+
+    # ── Always include the current year, even if Scholar hasn't
+    #    recorded any citations yet (Scholar lags by a few weeks)
+    current_year = str(datetime.date.today().year)
+    if current_year not in cites_per_year:
+        cites_per_year[current_year] = 0
+
+    # Sort by year ascending
+    cites_per_year = dict(sorted(cites_per_year.items()))
 
     papers = sorted([
         {
@@ -32,13 +49,13 @@ def main():
         "h_index_5y":     int(author.get("hindex5y",   0)),
         "i10_index":      int(author.get("i10index",   0)),
         "i10_index_5y":   int(author.get("i10index5y", 0)),
-        "cites_per_year": {str(k): v for k, v in author.get("cites_per_year", {}).items()},
+        "cites_per_year": cites_per_year,
         "papers":         papers,
     }
 
     OUTPUT_PATH.parent.mkdir(exist_ok=True)
     OUTPUT_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False))
-    print(f"Wrote {OUTPUT_PATH}  (total={data['total']}, h={data['h_index']})")
+    print(f"Done. total={data['total']}, h={data['h_index']}, years={list(cites_per_year.keys())}")
 
 if __name__ == "__main__":
     main()
