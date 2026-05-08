@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
+  },{id: "nav-publications",
+          title: "Publications",
+          description: "Publications including journal articles, conference papers, and book chapters, organized by category in reverse chronological order.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-blog",
           title: "Blog",
           description: "",
           section: "Navigation",
