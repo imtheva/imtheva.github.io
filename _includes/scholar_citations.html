@@ -37,11 +37,11 @@
     </div>
     <div class="sd-card">
       <span class="sd-card-label">h-index</span>
-      <span class="sd-card-value" id="sd-hindex">3</span>
+      <span class="sd-card-value" id="sd-hindex">—</span>
     </div>
     <div class="sd-card">
       <span class="sd-card-label">i10-index</span>
-      <span class="sd-card-value" id="sd-i10">1</span>
+      <span class="sd-card-value" id="sd-i10">—</span>
     </div>
     <div class="sd-card">
       <span class="sd-card-label">Publications</span>
@@ -526,29 +526,35 @@
 
   // ── Main ─────────────────────────────────────────────────────────
   function init() {
-    let papers = scrapeBadges();
-    let yearData, stats;
+    const DATA = {
+      total: {{ site.data.citations.total | default: 0 }},
+      h_index: {{ site.data.citations.h_index | default: 0 }},
+      i10_index: {{ site.data.citations.i10_index | default: 0 }},
+      cites_per_year: {{ site.data.citations.cites_per_year | jsonify }},
+      papers: {{ site.data.citations.papers | jsonify }},
+      updated: "{{ site.data.citations.updated }}"
+    };
 
-    if (papers.length > 0) {
-      stats    = computeStats(papers);
-      yearData = buildYearData(papers);
-      // If year data is sparse, supplement with fallback year totals
-      if (Object.keys(yearData).length < 2) {
-        yearData = FALLBACK.yearData;
-      }
-    } else {
-      // No badges found — use fallback data entirely
-      papers   = FALLBACK.papers;
-      yearData = FALLBACK.yearData;
-      stats    = computeStats(papers);
-    }
+    const papers = (DATA.papers || []).map(p => ({
+      title: p.title || "Untitled",
+      year: p.year || "",
+      cites: p.cites || p.citations || 0,
+      scholarId: p.scholar_id || p.scholarId || ""
+    }));
+
+    const yearData = DATA.cites_per_year || {};
+    const stats = {
+      total: DATA.total || 0,
+      hindex: DATA.h_index || 0,
+      i10: DATA.i10_index || 0
+    };
 
     render(papers, yearData, stats);
 
-    // Update footer timestamp
     const footer = document.getElementById('sd-footer');
-    const today = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    if (footer) footer.innerHTML = `Data sourced from badge counts on this page · ${today} · <a href="https://scholar.google.com/citations?user=${SCHOLAR_USER}" target="_blank" rel="noopener">scholar.google.com</a>`;
+    if (footer) {
+      footer.innerHTML = `Data sourced from _data/citations.json · Last updated ${DATA.updated || "unknown"} · <a href="https://scholar.google.com/citations?user=${SCHOLAR_USER}" target="_blank" rel="noopener">scholar.google.com</a>`;
+    }
   }
 
   // Run after DOM settles (badges may load late)
