@@ -1,6 +1,6 @@
 {
   "scholar_id": "MpKhKEUAAAAJ",
-  "updated": "2026-05-07",
+  "updated": "2026-05-08",
   "total": 36,
   "since_2021": 36,
   "h_index": 3,
@@ -10,7 +10,8 @@
   "cites_per_year": {
     "2023": 6,
     "2024": 14,
-    "2025": 16
+    "2025": 12,
+    "2026": 4
   },
   "papers": [
     {
@@ -26,7 +27,7 @@
       "scholar_id": "MpKhKEUAAAAJ:WF5omc3nYNoC"
     },
     {
-      "title": "Traffic sign recognition and auditory alert system for Sri Lankan drivers using deep-learning",
+      "title": "Traffic sign recognition and auditory alert system for Sri Lankan drivers",
       "year": "2024",
       "cites": 5,
       "scholar_id": "MpKhKEUAAAAJ:_FxGoFyzp5QC"
@@ -38,7 +39,7 @@
       "scholar_id": "MpKhKEUAAAAJ:zYLM7Y9cAGgC"
     },
     {
-      "title": "CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation",
+      "title": "CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo",
       "year": "2025",
       "cites": 3,
       "scholar_id": "MpKhKEUAAAAJ:hqOjcs7Dif8C"
