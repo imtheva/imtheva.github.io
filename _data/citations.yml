@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-27'
+  last_updated: '2026-05-10'
 papers:
   MpKhKEUAAAAJ:0EnyYjriUFMC:
     citations: 1
@@ -22,7 +22,7 @@ papers:
     title: Automating catfish cutting process using deep learning-based semantic segmentation
     year: '2023'
   MpKhKEUAAAAJ:Tyk-4Ss8FVUC:
-    citations: 0
+    citations: 1
     title: Leveraging Virtual Reality for Robot Manipulator Education
     year: '2023'
   MpKhKEUAAAAJ:UeHWp8X0CEIC:
