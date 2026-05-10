@@ -117,7 +117,7 @@
     <div class="scd-chart-box">
       <div class="scd-chart-title">
         <span>Citations by Year</span>
-        <!-- trend disabled: <span class="scd-trend" id="scd-trend"></span> -->
+        <!-- <span class="scd-trend" id="scd-trend"></span> -->
       </div>
       <div class="scd-bars" id="scd-bars">
         {% for pair in years %}
@@ -208,6 +208,7 @@
 
 <!-- ════════════════════ STYLES ════════════════════════════════ -->
 <style>
+  /* ── Light tokens ────────────────────────────────────────────── */
   .scd {
     --bg: #ffffff;
     --bg2: #f4f3ef;
@@ -222,6 +223,7 @@
     --shad: 0 1px 2px rgba(0, 0, 0, .04), 0 6px 24px rgba(0, 0, 0, .07);
     --r: 12px;
     --r2: 8px;
+    /* chart palette */
     --p1: #2a5bd7;
     --p2: #0ea8a8;
     --p3: #d97706;
@@ -229,6 +231,7 @@
     --p5: #dc2626;
   }
 
+  /* ── Dark — al-folio data-theme toggle ───────────────────────── */
   [data-theme="dark"] .scd {
     --bg: #141413;
     --bg2: #1e1e1c;
@@ -248,6 +251,7 @@
     --p5: #f87171;
   }
 
+  /* ── Dark — system preference ────────────────────────────────── */
   @media (prefers-color-scheme:dark) {
     .scd {
       --bg: #141413;
@@ -269,6 +273,7 @@
     }
   }
 
+  /* ── Container ───────────────────────────────────────────────── */
   .scd {
     background: var(--bg);
     border: 1px solid var(--bdr);
@@ -282,6 +287,7 @@
     transition: background .25s, border-color .25s, box-shadow .25s;
   }
 
+  /* ── Header ──────────────────────────────────────────────────── */
   .scd-head {
     display: flex;
     align-items: flex-start;
@@ -335,6 +341,7 @@
     text-decoration: none;
   }
 
+  /* ── Stat cards ──────────────────────────────────────────────── */
   .scd-cards {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -427,6 +434,7 @@
     border-radius: 0 0 var(--r2) var(--r2);
   }
 
+  /* ── Charts grid ─────────────────────────────────────────────── */
   .scd-charts {
     display: grid;
     grid-template-columns: 1fr 200px;
@@ -461,6 +469,14 @@
     margin-bottom: .75rem;
   }
 
+  .scd-trend {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  /* ── Bar chart ───────────────────────────────────────────────── */
   .scd-bars {
     display: flex;
     align-items: flex-end;
@@ -535,6 +551,7 @@
     color: var(--tx3);
   }
 
+  /* ── Donut chart ─────────────────────────────────────────────── */
   .scd-chart-box--donut {
     display: flex;
     flex-direction: column;
@@ -615,6 +632,7 @@
     font-variant-numeric: tabular-nums;
   }
 
+  /* ── Toggle button ───────────────────────────────────────────── */
   .scd-toggle-row {
     display: flex;
     justify-content: center;
@@ -650,6 +668,7 @@
     transform: rotate(180deg);
   }
 
+  /* ── Papers panel — CSS grid-rows accordion ──────────────────── */
   .scd-papers {
     display: grid;
     grid-template-rows: 0fr;
@@ -745,6 +764,7 @@
     }
   }
 
+  /* ── Footer ──────────────────────────────────────────────────── */
   .scd-footer {
     display: flex;
     flex-wrap: wrap;
@@ -773,10 +793,15 @@
 
 
 <!-- ════════════════════ SCRIPT ════════════════════════════════ -->
+<!--
+  Chart.js is only used for the donut. The bar chart is pure
+  HTML + CSS so it works even if Chart.js fails to load.
+-->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
 <script>
   (function () {
 
+    /* ── Count-up animation ────────────────────────────────────── */
     function countUp(el, ms) {
       if (!el) return;
       var target = parseInt(el.dataset.val, 10);
@@ -791,110 +816,149 @@
       })(performance.now());
     }
 
+    /* ── Read CSS custom property (for Chart.js) ───────────────── */
     function cv(name) {
       var el = document.getElementById('scd');
       return el ? getComputedStyle(el).getPropertyValue(name).trim() : '#888';
     }
 
-    var YEARS = JSON.parse('{{ years | jsonify }}' || '{}');
+    /* ── Year data baked in from Liquid ────────────────────────── */
+    var YEARS = JSON.parse('{{ years  | jsonify }}' || '{}');
     var PAPERS = JSON.parse('{{ papers | jsonify }}' || '[]');
-    var TOTAL = {{ total }
-  };
+    var TOTAL = parseInt(document.getElementById('scd-donut-num').textContent, 10) || 0;
 
-  function buildDonut() {
-    var canvas = document.getElementById('scd-donut');
-    var legendEl = document.getElementById('scd-legend');
-    if (!canvas || !window.Chart) return;
-    var top = PAPERS.filter(function (p) { return p.cites > 0; }).slice(0, 5);
-    var palette = ['--p1', '--p2', '--p3', '--p4', '--p5'].map(cv);
-    function trunc(s, n) { return s && s.length > n ? s.slice(0, n) + '…' : (s || ''); }
-    if (canvas._chart) { canvas._chart.destroy(); }
-    canvas._chart = new Chart(canvas, {
-      type: 'doughnut',
-      data: {
-        labels: top.map(function (p) { return trunc(p.title, 30); }),
-        datasets: [{ data: top.map(function (p) { return p.cites; }), backgroundColor: palette, borderWidth: 0, hoverOffset: 6 }]
-      },
-      options: {
-        responsive: false, cutout: '66%',
-        animation: { duration: 900 },
-        plugins: {
-          legend: { display: false },
-          tooltip: { callbacks: { label: function (ctx) { return ' ' + ctx.raw + ' citations'; } } }
+    /* ── Trend label ────────────────────────────────────────────── */
+    // var trendEl = document.getElementById('scd-trend');
+    // if (trendEl) {
+    //   var yrKeys = Object.keys(YEARS).sort();
+    //   if (yrKeys.length >= 2) {
+    //     var last = YEARS[yrKeys[yrKeys.length-1]] || 0;
+    //     var prev = YEARS[yrKeys[yrKeys.length-2]] || 0;
+    //     if (prev > 0) {
+    //       var pct = Math.round(((last - prev) / prev) * 100);
+    //       trendEl.textContent = (pct >= 0 ? '↑ ' : '↓ ') + Math.abs(pct) + '% vs ' + yrKeys[yrKeys.length-2];
+    //       trendEl.style.color = pct >= 0 ? '#16a34a' : '#dc2626';
+    //     }
+    //   }
+    // }
+
+    /* ── Build donut + legend ───────────────────────────────────── */
+    function buildDonut() {
+      var canvas = document.getElementById('scd-donut');
+      var legendEl = document.getElementById('scd-legend');
+      if (!canvas || !window.Chart) return;
+
+      var top = PAPERS.filter(function (p) { return p.cites > 0; }).slice(0, 5);
+      var palette = ['--p1', '--p2', '--p3', '--p4', '--p5'].map(cv);
+
+      function trunc(s, n) { return s && s.length > n ? s.slice(0, n) + '…' : (s || ''); }
+
+      // Destroy existing chart if theme re-render
+      if (canvas._chart) { canvas._chart.destroy(); }
+      canvas._chart = new Chart(canvas, {
+        type: 'doughnut',
+        data: {
+          labels: top.map(function (p) { return trunc(p.title, 30); }),
+          datasets: [{
+            data: top.map(function (p) { return p.cites; }),
+            backgroundColor: palette,
+            borderWidth: 0,
+            hoverOffset: 6
+          }]
+        },
+        options: {
+          responsive: false, cutout: '66%',
+          animation: { duration: 900 },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function (ctx) { return ' ' + ctx.raw + ' citations'; }
+              }
+            }
+          }
         }
-      }
-    });
-    if (legendEl) {
-      legendEl.innerHTML = top.map(function (p, i) {
-        return '<div class="scd-legend-item">'
-          + '<div class="scd-legend-dot" style="background:' + palette[i] + '"></div>'
-          + '<span class="scd-legend-lbl" title="' + p.title + '">' + trunc(p.title, 24) + '</span>'
-          + '<span class="scd-legend-n">' + p.cites + '</span>'
-          + '</div>';
-      }).join('');
-    }
-  }
-
-  function initToggle() {
-    var btn = document.getElementById('scd-toggle');
-    var panel = document.getElementById('scd-papers');
-    if (!btn || !panel) return;
-    btn.addEventListener('click', function () {
-      var open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      panel.setAttribute('aria-hidden', String(open));
-      var nodes = btn.childNodes;
-      for (var i = 0; i < nodes.length; i++) {
-        if (nodes[i].nodeType === 3) {
-          nodes[i].textContent = open ? ' Show top cited papers' : ' Hide top cited papers';
-          break;
-        }
-      }
-    });
-  }
-
-  function watchTheme() {
-    var last = document.documentElement.getAttribute('data-theme');
-    new MutationObserver(function () {
-      var cur = document.documentElement.getAttribute('data-theme');
-      if (cur !== last) { last = cur; buildDonut(); }
-    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-  }
-
-  function initObserver() {
-    if (!('IntersectionObserver' in window)) {
-      document.querySelectorAll('.scd-countup').forEach(function (el) { countUp(el, 1000); });
-      document.getElementById('scd-bars') && document.getElementById('scd-bars').classList.add('scd-go');
-      return;
-    }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        io.disconnect();
-        document.querySelectorAll('.scd-countup').forEach(function (el) { countUp(el, 900); });
-        var bars = document.getElementById('scd-bars');
-        if (bars) setTimeout(function () { bars.classList.add('scd-go'); }, 50);
       });
-    }, { threshold: 0.15 });
-    var dash = document.getElementById('scd');
-    if (dash) io.observe(dash);
-  }
 
-  function init() {
-    initObserver();
-    initToggle();
-    watchTheme();
-    (function waitChart(tries) {
-      if (window.Chart) buildDonut();
-      else if (tries < 40) setTimeout(function () { waitChart(tries + 1); }, 100);
-    })(0);
-  }
+      if (legendEl) {
+        legendEl.innerHTML = top.map(function (p, i) {
+          return '<div class="scd-legend-item">'
+            + '<div class="scd-legend-dot" style="background:' + palette[i] + '"></div>'
+            + '<span class="scd-legend-lbl" title="' + p.title + '">' + trunc(p.title, 24) + '</span>'
+            + '<span class="scd-legend-n">' + p.cites + '</span>'
+            + '</div>';
+        }).join('');
+      }
+    }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+    /* ── Toggle button ──────────────────────────────────────────── */
+    function initToggle() {
+      var btn = document.getElementById('scd-toggle');
+      var panel = document.getElementById('scd-papers');
+      if (!btn || !panel) return;
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        panel.setAttribute('aria-hidden', String(open));
+        btn.querySelector('.scd-toggle-btn') // update text node directly
+        // Just update the text node after the SVG
+        var nodes = btn.childNodes;
+        for (var i = 0; i < nodes.length; i++) {
+          if (nodes[i].nodeType === 3) {
+            nodes[i].textContent = open ? ' Show top cited papers' : ' Hide top cited papers';
+            break;
+          }
+        }
+      });
+    }
 
-}) ();
+    /* ── Watch al-folio's theme toggle & re-render donut ─────────
+       Chart.js reads colours at render time, not from CSS vars    */
+    function watchTheme() {
+      var last = document.documentElement.getAttribute('data-theme');
+      new MutationObserver(function () {
+        var cur = document.documentElement.getAttribute('data-theme');
+        if (cur !== last) { last = cur; buildDonut(); }
+      }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    }
+
+    /* ── IntersectionObserver: trigger count-up on scroll into view */
+    function initObserver() {
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.scd-countup').forEach(function (el) { countUp(el, 1000); });
+        document.getElementById('scd-bars') && document.getElementById('scd-bars').classList.add('scd-go');
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          io.disconnect();
+          document.querySelectorAll('.scd-countup').forEach(function (el) { countUp(el, 900); });
+          var bars = document.getElementById('scd-bars');
+          if (bars) setTimeout(function () { bars.classList.add('scd-go'); }, 50);
+        });
+      }, { threshold: 0.15 });
+      var dash = document.getElementById('scd');
+      if (dash) io.observe(dash);
+    }
+
+    /* ── Main init ──────────────────────────────────────────────── */
+    function init() {
+      initObserver();
+      initToggle();
+      watchTheme();
+      // Wait for Chart.js (loaded with defer)
+      (function waitChart(tries) {
+        if (window.Chart) buildDonut();
+        else if (tries < 40) setTimeout(function () { waitChart(tries + 1); }, 100);
+      })(0);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+
+  })();
 </script>
