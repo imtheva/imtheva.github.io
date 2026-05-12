@@ -38,7 +38,6 @@
 # #           git commit -m "chore: update scholar citations [skip ci]"
 # #           git push
 
-
 # name: Update Scholar Citations
 
 # on:
@@ -74,13 +73,12 @@
 #           git commit -m "Auto update citations" || echo "No changes"
 #           git push
 
-
 name: Update Scholar Citations
 
 on:
   schedule:
-    - cron: "0 4 * * 0"    # every Sunday at 04:00 UTC
-  workflow_dispatch:         # manual "Run workflow" button in Actions tab
+    - cron: "0 4 * * 0" # every Sunday at 04:00 UTC
+  workflow_dispatch: # manual "Run workflow" button in Actions tab
 
 permissions:
   contents: write

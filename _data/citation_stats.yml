@@ -1,12 +1,12 @@
 # Update these values from your Google Scholar profile
 # https://scholar.google.com/citations?user=YOUR_ID
 
-scholar_id: "MpKhKEUAAAAJ"  # e.g., "abc123DEFHI"
+scholar_id: "MpKhKEUAAAAJ" # e.g., "abc123DEFHI"
 
 summary:
-  total_citations: 0       # Replace with your total citations
-  h_index: 0               # Replace with your h-index
-  i10_index: 0             # Replace with your i10-index
+  total_citations: 0 # Replace with your total citations
+  h_index: 0 # Replace with your h-index
+  i10_index: 0 # Replace with your i10-index
   total_citations_since_2019: 0
   h_index_since_2019: 0
   i10_index_since_2019: 0

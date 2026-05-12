@@ -8,7 +8,7 @@
           {% assign venue = site.data.venues[entry.abbr] %}
 
           {%- assign venue_color_light = venue.color_light | default: venue.color -%}
-          {%- assign venue_color_dark  = venue.color_dark  | default: venue.color -%}
+          {%- assign venue_color_dark = venue.color_dark | default: venue.color -%}
 
           {%- capture venue_style -%}
             style="--venue-color-light: {{ venue_color_light }}; --venue-color-dark: {{ venue_color_dark }};"
