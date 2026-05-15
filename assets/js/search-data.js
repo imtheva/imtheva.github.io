@@ -109,22 +109,22 @@ ninja.data = [{
             window.location.href = "/blog/2025/MSc/";
           
         },
-      },{id: "post-just-a-moment",
+      },{id: "post-pdf-making-threads-in-solidworks",
         
-          title: 'Just a moment... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: '(PDF) Making Threads in SolidWorks <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "Making Threads in SolidWorks",
         section: "Posts",
         handler: () => {
           
             window.open("https://www.academia.edu/29809896/Making_Threads_in_SolidWorks", "_blank");
           
         },
-      },{id: "post-just-a-moment",
+      },{id: "post-pdf-measuring-pen-a-digital-device-to-measure-distance",
         
-          title: 'Just a moment... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: '(PDF) Measuring Pen – A digital device to measure distance <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "This is a new approach on the section of measurement. Today, most of the garment companies are producing lot of clothes. While producing clothes they have to face lot of problems. For an example time of delivery and accuracy in clothes size. A",
         section: "Posts",
         handler: () => {
           
