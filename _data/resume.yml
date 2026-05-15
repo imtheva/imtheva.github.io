@@ -194,12 +194,17 @@ professional:
       - "Managed laboratory operations and research infrastructure"
       - "Supported sensing, automation, and robotics research activities"
 
-  - name: "Mississippi State University & University of Georgia"
-    position: "Research Mentor"
+  - name: "University of Georgia"
+    position: "Undergraduate Research Mentor"
     startDate: "2024"
-    endDate: "2025"
-    summary: "Mentored undergraduate students and student workers in computer vision model development, data annotation workflows, prototype end-effector designs, and research project execution."
-
+    endDate: "Present"
+    summary: "Sensing and Automation in Agri-System (SAAS) Lab, College of Engineering."
+    highlights:
+      - "Mentored undergraduate researchers in computer vision, robotics, and precision agriculture projects"
+      - "Guided students in deep learning model development, data annotation, and experimental design"
+      - "Supervised student research activities, technical training, and project execution"
+      - "Supported prototype development for sensing and automation systems"
+      
   - name: "Mississippi State University"
     position: "Preparing Future Faculty Program Participant"
     startDate: "2024"
