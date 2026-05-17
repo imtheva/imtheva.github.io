@@ -1,6 +1,6 @@
 {
   "scholar_id": "MpKhKEUAAAAJ",
-  "updated": "2026-05-08",
+  "updated": "2026-05-17",
   "total": 38,
   "since_2021": 38,
   "h_index": 4,
@@ -8,10 +8,7 @@
   "i10_index": 1,
   "i10_index_5y": 1,
   "cites_per_year": {
-    "2023": 0,
-    "2024": 8,
-    "2025": 21,
-    "2026": 8
+    "2026": 0
   },
   "papers": [
     {
@@ -21,13 +18,13 @@
       "scholar_id": "MpKhKEUAAAAJ:YsMSGLbcyi4C"
     },
     {
-      "title": "Engineering Applications in Livestock Production",
+      "title": "Engineering applications in livestock production",
       "year": "2024",
       "cites": 8,
       "scholar_id": "MpKhKEUAAAAJ:WF5omc3nYNoC"
     },
     {
-      "title": "Traffic sign recognition and auditory alert system for Sri Lankan drivers",
+      "title": "Traffic sign recognition and auditory alert system for sri lankan drivers using deep-learning",
       "year": "2024",
       "cites": 5,
       "scholar_id": "MpKhKEUAAAAJ:_FxGoFyzp5QC"
@@ -39,7 +36,7 @@
       "scholar_id": "MpKhKEUAAAAJ:zYLM7Y9cAGgC"
     },
     {
-      "title": "CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo",
+      "title": "CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation",
       "year": "2025",
       "cites": 3,
       "scholar_id": "MpKhKEUAAAAJ:hqOjcs7Dif8C"
@@ -64,9 +61,39 @@
     },
     {
       "title": "A Digital Device to Measure Distance on Multiple Surfaces",
-      "year": "2029",
+      "year": "2019",
       "cites": 1,
       "scholar_id": "MpKhKEUAAAAJ:9yKSN-GCB0IC"
+    },
+    {
+      "title": "CottonSim: Development of an autonomous visual-guided robotic cotton-picking system in the Gazebo",
+      "year": "2025",
+      "cites": 0,
+      "scholar_id": "MpKhKEUAAAAJ:UebtZRa9Y70C"
+    },
+    {
+      "title": "Perception-enabled manipulator control for a robotic cotton picker with dual-side harvesting capability",
+      "year": "2025",
+      "cites": 0,
+      "scholar_id": "MpKhKEUAAAAJ:5nxA0vEk-isC"
+    },
+    {
+      "title": "Development of Tracking over Speed System Using IoT Technology for Vehicles",
+      "year": "2021",
+      "cites": 0,
+      "scholar_id": "MpKhKEUAAAAJ:UeHWp8X0CEIC"
+    },
+    {
+      "title": "A digital device to monitor the colour changes during fermentation stage of black tea processing",
+      "year": "2019",
+      "cites": 0,
+      "scholar_id": "MpKhKEUAAAAJ:roLk4NBRz8UC"
+    },
+    {
+      "title": "Development of a monitoring device for fermentation stage of black tea manufacturing",
+      "year": "2018",
+      "cites": 0,
+      "scholar_id": "MpKhKEUAAAAJ:8k81kl-MbHgC"
     }
   ]
 }
