@@ -290,6 +290,12 @@ professional:
     summary: "Completed formal training in higher education pedagogy."
 
 volunteer:
+  - organization: "Food and Energy Security (Wiley)"
+    position: "Reviewer"
+    startDate: "2026"
+    # endDate: "Present"
+
+
   - organization: "Computers and Electronics in Agriculture (Elsevier)"
     position: "Reviewer"
     startDate: "2024"
