@@ -1,56 +1,30 @@
 name: Update Scholar Citations
 
+# This workflow no longer tries to scrape Google Scholar from Actions —
+# GitHub Actions IPs are blocked by Google (returns "Sorry..." CAPTCHA page).
+#
+# HOW TO UPDATE CITATIONS:
+#   Run  python _scripts/run_locally.py  on your own machine,
+#   then  git add _data/citations.json && git commit -m "update citations" && git push
+#   GitHub Pages will rebuild automatically on push.
+#
+# This workflow is kept here only as a manual trigger to force a site rebuild
+# after you push citations.json from your local machine.
+
 on:
-  schedule:
-    - cron: "0 4 * * 0" # every Sunday at 04:00 UTC
-  workflow_dispatch: # manual trigger
+  workflow_dispatch: # manual "Run workflow" button in Actions tab
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  update-citations:
+  rebuild:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-          cache: pip
-
-      - name: Install dependencies
-        run: |
-          pip install requests playwright
-          playwright install chromium
-          playwright install-deps chromium
-
-      - name: Fetch citations
-        env:
-          SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
-        run: python _scripts/update_citations.py
-
-      # Upload debug snapshot so we can inspect what Scholar returned
-      # if parsing fails. Download from Actions run → Artifacts.
-      - name: Upload debug snapshot (if present)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: scholar-debug-html
-          path: _data/scholar_debug.html
-          if-no-files-found: ignore
-          retention-days: 3
-
-      - name: Commit if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/citations.json
-          git diff --cached --quiet \
-            && echo "No changes to commit." \
-            || (git commit -m "chore: update scholar citations [skip ci]" && git push)
+      - name: Trigger site rebuild
+        run: echo "Site will rebuild on the next push to main."
