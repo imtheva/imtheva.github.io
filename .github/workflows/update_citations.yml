@@ -1,30 +1,30 @@
-name: Update Scholar Citations
+# name: Update Scholar Citations
 
-# This workflow no longer tries to scrape Google Scholar from Actions —
-# GitHub Actions IPs are blocked by Google (returns "Sorry..." CAPTCHA page).
-#
-# HOW TO UPDATE CITATIONS:
-#   Run  python _scripts/run_locally.py  on your own machine,
-#   then  git add _data/citations.json && git commit -m "update citations" && git push
-#   GitHub Pages will rebuild automatically on push.
-#
-# This workflow is kept here only as a manual trigger to force a site rebuild
-# after you push citations.json from your local machine.
+# # This workflow no longer tries to scrape Google Scholar from Actions —
+# # GitHub Actions IPs are blocked by Google (returns "Sorry..." CAPTCHA page).
+# #
+# # HOW TO UPDATE CITATIONS:
+# #   Run  python _scripts/run_locally.py  on your own machine,
+# #   then  git add _data/citations.json && git commit -m "update citations" && git push
+# #   GitHub Pages will rebuild automatically on push.
+# #
+# # This workflow is kept here only as a manual trigger to force a site rebuild
+# # after you push citations.json from your local machine.
 
-on:
-  workflow_dispatch: # manual "Run workflow" button in Actions tab
+# on:
+#   workflow_dispatch: # manual "Run workflow" button in Actions tab
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# permissions:
+#   contents: read
+#   pages: write
+#   id-token: write
 
-jobs:
-  rebuild:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+# jobs:
+#   rebuild:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
 
-      - name: Trigger site rebuild
-        run: echo "Site will rebuild on the next push to main."
+#       - name: Trigger site rebuild
+#         run: echo "Site will rebuild on the next push to main."
