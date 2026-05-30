@@ -1,44 +1,39 @@
 <!-- ================================================================
   _includes/scholar_citations.html
   DATA SOURCE : _data/citations.json  (update by running:)
-               C:\ProgramData\anaconda3\python.exe _scripts/run_locally.py
+               python _scripts/update_citations.py
 ================================================================ -->
 
 {% assign c = site.data.citations %}
 
 {% if c == nil or c.total == nil %}
-<div style="border:1px dashed #e2e0d8;border-radius:10px;padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:13px;color:#6b6a65;font-family:inherit;">
+<div
+  style="border:1px dashed #e2e0d8;border-radius:10px;padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:13px;color:#6b6a65;font-family:inherit;">
   <strong style="color:#1a1a18;">⚠️ Citation dashboard: setup needed</strong><br><br>
   The file <code>_data/citations.json</code> is missing from your repository.
 </div>
 
 {% else %}
 
-{% assign total      = c.total           | plus: 0 %}
-{% assign since5     = c.since_2021      | plus: 0 %}
-{% assign hval       = c.h_index         | plus: 0 %}
-{% assign h5val      = c.h_index_5y      | plus: 0 %}
-{% assign i10val     = c.i10_index       | plus: 0 %}
-{% assign i105val    = c.i10_index_5y    | plus: 0 %}
-{% assign updated    = c.updated         | default: "" %}
-{% assign papers     = c.papers %}
-{% assign years      = c.cites_per_year %}
+{% assign total = c.total | plus: 0 %}
+{% assign since5 = c.since_2021 | plus: 0 %}
+{% assign hval = c.h_index | plus: 0 %}
+{% assign h5val = c.h_index_5y | plus: 0 %}
+{% assign i10val = c.i10_index | plus: 0 %}
+{% assign i105val = c.i10_index_5y | plus: 0 %}
+{% assign updated = c.updated | default: "" %}
+{% assign papers = c.papers %}
+{% assign years = c.cites_per_year %}
 
 {% assign max_c = 1 %}
 {% for p in papers %}
-  {% assign pc = p.cites | plus: 0 %}
-  {% if pc > max_c %}{% assign max_c = pc %}{% endif %}
-{% endfor %}
-
-{% assign max_y = 1 %}
-{% for pair in years %}
-  {% assign yv = pair[1] | plus: 0 %}
-  {% if yv > max_y %}{% assign max_y = yv %}{% endif %}
+{% assign pc = p.cites | plus: 0 %}
+{% if pc > max_c %}{% assign max_c = pc %}{% endif %}
 {% endfor %}
 
 {% assign cited_count = 0 %}
 {% for p in papers %}
-  {% if p.cites > 0 %}{% assign cited_count = cited_count | plus: 1 %}{% endif %}
+{% if p.cites > 0 %}{% assign cited_count = cited_count | plus: 1 %}{% endif %}
 {% endfor %}
 
 <div class="scd" id="scd" role="region" aria-label="Google Scholar citation metrics">
@@ -48,20 +43,23 @@
     <div class="scd-head-left">
       <div class="scd-badge">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 15.999 14.978 17.5 12 17.5c-2.977 0-5.548-1.501-6.758-3.731z"/>
-          <path d="M12 19.5c2.977 0 5.548-1.501 6.758-3.731L24 9.5 12 19.5 0 9.5l5.242 4.269C6.452 18 9.022 19.5 12 19.5z" opacity=".4"/>
+          <path
+            d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 15.999 14.978 17.5 12 17.5c-2.977 0-5.548-1.501-6.758-3.731z" />
+          <path
+            d="M12 19.5c2.977 0 5.548-1.501 6.758-3.731L24 9.5 12 19.5 0 9.5l5.242 4.269C6.452 18 9.022 19.5 12 19.5z"
+            opacity=".4" />
         </svg>
         Google Scholar
       </div>
       <div class="scd-name">Thevathayarajh Thayananthan</div>
     </div>
-    <a href="https://scholar.google.com/citations?user={{ c.scholar_id | default: 'MpKhKEUAAAAJ' }}"
-       target="_blank" rel="noopener" class="scd-extlink" aria-label="Open Google Scholar profile">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-           stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-        <polyline points="15 3 21 3 21 9"/>
-        <line x1="10" y1="14" x2="21" y2="3"/>
+    <a href="https://scholar.google.com/citations?user={{ c.scholar_id | default: 'MpKhKEUAAAAJ' }}" target="_blank"
+      rel="noopener" class="scd-extlink" aria-label="Open Google Scholar profile">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        <polyline points="15 3 21 3 21 9" />
+        <line x1="10" y1="14" x2="21" y2="3" />
       </svg>
       View profile
     </a>
@@ -97,29 +95,14 @@
   <!-- CHARTS — bar + donut side by side -->
   <div class="scd-charts">
 
-    <!-- Bar chart -->
+    <!-- Bar chart: JS rebuilds from data-years, showing only last 3 -->
     <div class="scd-chart-box">
       <div class="scd-chart-title">
-        <span>Citations by Year</span>
+        <span>Citations by Year (Last 3 Years)</span>
         <span class="scd-trend" id="scd-trend"></span>
       </div>
-      <div class="scd-bars" id="scd-bars">
-        {% for pair in years %}
-          {% assign yr  = pair[0] %}
-          {% assign cnt = pair[1] | plus: 0 %}
-          {% comment %}
-            FIX: Liquid integer division loses precision for small numbers.
-            Multiply by 1000 first, divide, then use JS to apply the real %.
-            We store the raw count as a data attribute and let JS size the bar.
-          {% endcomment %}
-          <div class="scd-bar-col" data-count="{{ cnt }}" data-year="{{ yr }}">
-            <span class="scd-bar-count">{{ cnt }}</span>
-            <div class="scd-bar-track">
-              <div class="scd-bar-fill" aria-label="{{ yr }}: {{ cnt }} citations"></div>
-            </div>
-            <span class="scd-bar-yr">{{ yr }}</span>
-          </div>
-        {% endfor %}
+      <div class="scd-bars" id="scd-bars" data-years="{{ years | jsonify | escape }}">
+        <!-- JS populates bar columns here -->
       </div>
     </div>
 
@@ -127,8 +110,7 @@
     <div class="scd-chart-box scd-chart-box--donut">
       <div class="scd-chart-title">Top Papers Share</div>
       <div class="scd-donut-wrap">
-        <canvas id="scd-donut" width="140" height="140"
-                aria-label="Donut chart of citation share by paper"></canvas>
+        <canvas id="scd-donut" width="140" height="140" aria-label="Donut chart of citation share by paper"></canvas>
         <div class="scd-donut-center">
           <span id="scd-donut-num">{{ total }}</span>
           <small>total</small>
@@ -141,12 +123,10 @@
 
   <!-- PAPERS TOGGLE -->
   <div class="scd-toggle-row">
-    <button class="scd-toggle-btn" id="scd-toggle"
-            aria-expanded="false" aria-controls="scd-papers">
-      <svg class="scd-chevron" width="13" height="13" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor" stroke-width="2.5"
-           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <polyline points="6 9 12 15 18 9"/>
+    <button class="scd-toggle-btn" id="scd-toggle" aria-expanded="false" aria-controls="scd-papers">
+      <svg class="scd-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="6 9 12 15 18 9" />
       </svg>
       Show top cited papers
     </button>
@@ -156,29 +136,29 @@
     <div class="scd-paper-inner">
       {% assign delay_i = 0 %}
       {% for p in papers %}
-        {% assign pc = p.cites | plus: 0 %}
-        {% if pc > 0 %}
-          {% assign wpct = pc | times: 100 | divided_by: max_c %}
-          {% assign dms  = delay_i | times: 55 | plus: 50 %}
-          <div class="scd-paper-row">
-            <div class="scd-paper-title">
-              {% if p.scholar_id and p.scholar_id != "" %}
-                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ c.scholar_id | default: 'MpKhKEUAAAAJ' }}&citation_for_view={{ p.scholar_id }}"
-                   target="_blank" rel="noopener" title="{{ p.title }}">
-                  {{ p.title | truncate: 74 }}
-                </a>
-              {% else %}
-                <span title="{{ p.title }}">{{ p.title | truncate: 74 }}</span>
-              {% endif %}
-            </div>
-            <span class="scd-paper-yr">{{ p.year }}</span>
-            <div class="scd-paper-track">
-              <div class="scd-paper-fill" style="--w:{{ wpct }}%; --d:{{ dms }}ms;"></div>
-            </div>
-            <span class="scd-paper-cites">{{ pc }}</span>
-          </div>
-          {% assign delay_i = delay_i | plus: 1 %}
-        {% endif %}
+      {% assign pc = p.cites | plus: 0 %}
+      {% if pc > 0 %}
+      {% assign wpct = pc | times: 100 | divided_by: max_c %}
+      {% assign dms = delay_i | times: 55 | plus: 50 %}
+      <div class="scd-paper-row">
+        <div class="scd-paper-title">
+          {% if p.scholar_id and p.scholar_id != "" %}
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ c.scholar_id | default: 'MpKhKEUAAAAJ' }}&citation_for_view={{ p.scholar_id }}"
+            target="_blank" rel="noopener" title="{{ p.title }}">
+            {{ p.title | truncate: 74 }}
+          </a>
+          {% else %}
+          <span title="{{ p.title }}">{{ p.title | truncate: 74 }}</span>
+          {% endif %}
+        </div>
+        <span class="scd-paper-yr">{{ p.year }}</span>
+        <div class="scd-paper-track">
+          <div class="scd-paper-fill" style="--w:{{ wpct }}%; --d:{{ dms }}ms;"></div>
+        </div>
+        <span class="scd-paper-cites">{{ pc }}</span>
+      </div>
+      {% assign delay_i = delay_i | plus: 1 %}
+      {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -186,13 +166,13 @@
   <!-- FOOTER -->
   <div class="scd-footer">
     {% if updated != "" %}
-      <span>Updated {{ updated }}</span>
-      <span class="scd-dot">·</span>
-    {% endif %}
-    <span>Run <code style="font-size:10px;">_scripts/run_locally.py</code> to refresh</span>
+    <span>Updated {{ updated }}</span>
     <span class="scd-dot">·</span>
-    <a href="https://scholar.google.com/citations?user={{ c.scholar_id | default: 'MpKhKEUAAAAJ' }}"
-       target="_blank" rel="noopener">scholar.google.com</a>
+    {% endif %}
+    <span>Run <code style="font-size:10px;">python _scripts/update_citations.py</code> to refresh</span>
+    <span class="scd-dot">·</span>
+    <a href="https://scholar.google.com/citations?user={{ c.scholar_id | default: 'MpKhKEUAAAAJ' }}" target="_blank"
+      rel="noopener">scholar.google.com</a>
   </div>
 
 </div><!-- /.scd -->
@@ -202,272 +182,756 @@
 
 <!-- ═══════════════════════ STYLES ═══════════════════════════════ -->
 <style>
-.scd {
-  --bg:   #ffffff; --bg2: #f4f3ef; --bg3: #eae8e2;
-  --tx:   #111110; --tx2: #5c5b57; --tx3: #9b9891;
-  --ac:   #2a5bd7;
-  --ac-s: rgba(42,91,215,.10);
-  --ac-g: rgba(42,91,215,.22);
-  --bdr:  rgba(0,0,0,.07);
-  --shad: 0 1px 2px rgba(0,0,0,.04), 0 6px 24px rgba(0,0,0,.07);
-  --r: 12px; --r2: 8px;
-  --p1:#2a5bd7; --p2:#0ea8a8; --p3:#d97706; --p4:#7c3aed; --p5:#dc2626;
-}
-[data-theme="dark"] .scd,
-@media (prefers-color-scheme:dark) { .scd {
-  --bg:#141413; --bg2:#1e1e1c; --bg3:#2a2927;
-  --tx:#ede9e1; --tx2:#a8a49c; --tx3:#65635d;
-  --ac:#7aadff; --ac-s:rgba(122,173,255,.12); --ac-g:rgba(122,173,255,.22);
-  --bdr:rgba(255,255,255,.07);
-  --shad:0 1px 2px rgba(0,0,0,.25),0 6px 24px rgba(0,0,0,.4);
-  --p1:#7aadff; --p2:#2dd4bf; --p3:#fbbf24; --p4:#a78bfa; --p5:#f87171;
-}}
-[data-theme="dark"] .scd {
-  --bg:#141413; --bg2:#1e1e1c; --bg3:#2a2927;
-  --tx:#ede9e1; --tx2:#a8a49c; --tx3:#65635d;
-  --ac:#7aadff; --ac-s:rgba(122,173,255,.12); --ac-g:rgba(122,173,255,.22);
-  --bdr:rgba(255,255,255,.07);
-  --shad:0 1px 2px rgba(0,0,0,.25),0 6px 24px rgba(0,0,0,.4);
-  --p1:#7aadff; --p2:#2dd4bf; --p3:#fbbf24; --p4:#a78bfa; --p5:#f87171;
-}
-.scd { background:var(--bg); border:1px solid var(--bdr); border-radius:var(--r); box-shadow:var(--shad); padding:clamp(1rem,3vw,1.75rem); margin:2rem 0 2.5rem; max-width:900px; color:var(--tx); font-family:"DM Sans","Helvetica Neue",sans-serif; transition:background .25s,border-color .25s,box-shadow .25s; }
-.scd-head { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; margin-bottom:1.25rem; flex-wrap:wrap; }
-.scd-head-left { display:flex; flex-direction:column; gap:3px; }
-.scd-badge { display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; color:var(--ac); letter-spacing:.03em; }
-.scd-name { font-size:15px; font-weight:600; color:var(--tx); letter-spacing:-.01em; }
-.scd-extlink { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:500; color:var(--ac); text-decoration:none; border:1px solid var(--bdr); border-radius:20px; padding:5px 14px; transition:background .15s,border-color .15s; flex-shrink:0; }
-.scd-extlink:hover { background:var(--ac-s); border-color:var(--ac); text-decoration:none; }
-.scd-cards { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:10px; margin-bottom:1.25rem; }
-@media(max-width:640px){ .scd-cards{ grid-template-columns:1fr 1fr; } }
-@media(max-width:360px){ .scd-cards{ grid-template-columns:1fr; } }
-.scd-card { background:var(--bg2); border:1px solid var(--bdr); border-radius:var(--r2); padding:.9rem 1rem .75rem; display:flex; flex-direction:column; gap:3px; position:relative; overflow:hidden; transition:background .25s; }
-.scd-card--primary { background:var(--ac-s); border-color:var(--ac-g); }
-.scd-card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:6px; flex-wrap:wrap; }
-.scd-lbl { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--tx3); }
-.scd-pill { font-size:10px; font-weight:600; color:var(--ac); background:var(--ac-s); border:1px solid var(--ac-g); border-radius:20px; padding:1px 8px; white-space:nowrap; }
-.scd-num { font-size:clamp(24px,4.5vw,34px); font-weight:700; color:var(--tx); line-height:1.05; letter-spacing:-.03em; font-variant-numeric:tabular-nums; }
-.scd-card--primary .scd-num { color:var(--ac); }
-.scd-sub { font-size:10.5px; color:var(--tx3); }
-.scd-accent-bar { position:absolute; bottom:0; left:0; right:0; height:2.5px; background:var(--ac); border-radius:0 0 var(--r2) var(--r2); }
-.scd-charts { display:grid; grid-template-columns:1fr 200px; gap:12px; margin-bottom:.75rem; align-items:start; }
-@media(max-width:580px){ .scd-charts{ grid-template-columns:1fr; } }
-.scd-chart-box { background:var(--bg2); border:1px solid var(--bdr); border-radius:var(--r2); padding:1rem 1.1rem .85rem; transition:background .25s; }
-.scd-chart-title { display:flex; align-items:center; justify-content:space-between; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--tx3); margin-bottom:.75rem; }
-.scd-trend { font-size:11px; font-weight:600; letter-spacing:0; text-transform:none; }
-.scd-bars { display:flex; align-items:flex-end; gap:10px; height:120px; }
-.scd-bar-col { flex:1; display:flex; flex-direction:column; align-items:center; gap:5px; height:100%; justify-content:flex-end; }
-.scd-bar-count { font-size:11px; font-weight:700; color:var(--tx2); font-variant-numeric:tabular-nums; line-height:1; }
-.scd-bar-track { width:100%; flex:1; display:flex; align-items:flex-end; overflow:hidden; border-radius:4px 4px 0 0; }
-.scd-bar-fill { width:100%; background:var(--ac); border-radius:5px 5px 0 0; min-height:4px; transform-origin:bottom; transform:scaleY(0); transition:background .25s; }
-.scd-bars.scd-go .scd-bar-fill { animation:scdUp .65s cubic-bezier(.34,1.4,.64,1) forwards; }
-.scd-bar-col:nth-child(2) .scd-bar-fill { animation-delay:.07s; }
-.scd-bar-col:nth-child(3) .scd-bar-fill { animation-delay:.14s; }
-.scd-bar-col:nth-child(4) .scd-bar-fill { animation-delay:.21s; }
-.scd-bar-col:nth-child(5) .scd-bar-fill { animation-delay:.28s; }
-@keyframes scdUp { to { transform:scaleY(1); } }
-.scd-bar-yr { font-size:10px; color:var(--tx3); }
-.scd-chart-box--donut { display:flex; flex-direction:column; align-items:center; }
-.scd-donut-wrap { position:relative; width:140px; height:140px; margin:0 auto .6rem; }
-#scd-donut { display:block; width:140px !important; height:140px !important; }
-.scd-donut-center { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; pointer-events:none; }
-.scd-donut-center span { display:block; font-size:22px; font-weight:700; color:var(--tx); letter-spacing:-.03em; font-variant-numeric:tabular-nums; }
-.scd-donut-center small { font-size:10px; color:var(--tx3); font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
-.scd-legend { width:100%; }
-.scd-legend-item { display:flex; align-items:center; gap:6px; font-size:10.5px; color:var(--tx2); padding:2px 0; }
-.scd-legend-dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
-.scd-legend-lbl { flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; }
-.scd-legend-n { font-weight:700; color:var(--tx); flex-shrink:0; font-variant-numeric:tabular-nums; }
-.scd-toggle-row { display:flex; justify-content:center; margin:.5rem 0; }
-.scd-toggle-btn { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:var(--tx2); background:none; border:1px solid var(--bdr); border-radius:20px; padding:7px 16px; cursor:pointer; transition:all .15s; }
-.scd-toggle-btn:hover { background:var(--bg2); color:var(--tx); border-color:var(--tx3); }
-.scd-chevron { transition:transform .3s cubic-bezier(.34,1.2,.64,1); }
-.scd-toggle-btn[aria-expanded="true"] .scd-chevron { transform:rotate(180deg); }
-.scd-papers { display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s ease; overflow:hidden; }
-.scd-papers[aria-hidden="false"] { grid-template-rows:1fr; }
-.scd-paper-inner { overflow:hidden; padding:0 0 .25rem; }
-.scd-paper-row { display:grid; grid-template-columns:1fr 46px 110px 30px; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid var(--bdr); }
-.scd-paper-row:last-child { border-bottom:none; }
-.scd-paper-title { font-size:12px; color:var(--tx2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; }
-.scd-paper-title a { color:inherit; text-decoration:none; }
-.scd-paper-title a:hover { color:var(--ac); }
-.scd-paper-yr { font-size:10.5px; color:var(--tx3); background:var(--bg3); border:1px solid var(--bdr); border-radius:20px; padding:2px 7px; text-align:center; font-variant-numeric:tabular-nums; }
-.scd-paper-track { height:4px; background:var(--bg3); border-radius:3px; overflow:hidden; }
-.scd-paper-fill { height:100%; background:var(--ac); border-radius:3px; width:0; animation:scdRight .6s cubic-bezier(.22,1,.36,1) both; animation-delay:var(--d,0ms); }
-@keyframes scdRight { to { width:var(--w,0%); } }
-.scd-paper-cites { font-size:13px; font-weight:700; color:var(--tx); text-align:right; font-variant-numeric:tabular-nums; }
-@media(max-width:480px){ .scd-paper-row{ grid-template-columns:1fr 38px 80px 26px; gap:7px; } }
-.scd-footer { display:flex; flex-wrap:wrap; align-items:center; gap:4px; margin-top:1rem; padding-top:.85rem; border-top:1px solid var(--bdr); font-size:10.5px; color:var(--tx3); }
-.scd-dot { opacity:.4; }
-.scd-footer a { color:var(--ac); text-decoration:none; }
-.scd-footer a:hover { text-decoration:underline; }
+  .scd {
+    --bg: #ffffff;
+    --bg2: #f4f3ef;
+    --bg3: #eae8e2;
+    --tx: #111110;
+    --tx2: #5c5b57;
+    --tx3: #9b9891;
+    --ac: #2a5bd7;
+    --ac-s: rgba(42, 91, 215, .10);
+    --ac-g: rgba(42, 91, 215, .22);
+    --bdr: rgba(0, 0, 0, .07);
+    --shad: 0 1px 2px rgba(0, 0, 0, .04), 0 6px 24px rgba(0, 0, 0, .07);
+    --r: 12px;
+    --r2: 8px;
+    --p1: #2a5bd7;
+    --p2: #0ea8a8;
+    --p3: #d97706;
+    --p4: #7c3aed;
+    --p5: #dc2626;
+  }
+
+  [data-theme="dark"] .scd {
+    --bg: #141413;
+    --bg2: #1e1e1c;
+    --bg3: #2a2927;
+    --tx: #ede9e1;
+    --tx2: #a8a49c;
+    --tx3: #65635d;
+    --ac: #7aadff;
+    --ac-s: rgba(122, 173, 255, .12);
+    --ac-g: rgba(122, 173, 255, .22);
+    --bdr: rgba(255, 255, 255, .07);
+    --shad: 0 1px 2px rgba(0, 0, 0, .25), 0 6px 24px rgba(0, 0, 0, .4);
+    --p1: #7aadff;
+    --p2: #2dd4bf;
+    --p3: #fbbf24;
+    --p4: #a78bfa;
+    --p5: #f87171;
+  }
+
+  @media (prefers-color-scheme:dark) {
+    .scd {
+      --bg: #141413;
+      --bg2: #1e1e1c;
+      --bg3: #2a2927;
+      --tx: #ede9e1;
+      --tx2: #a8a49c;
+      --tx3: #65635d;
+      --ac: #7aadff;
+      --ac-s: rgba(122, 173, 255, .12);
+      --ac-g: rgba(122, 173, 255, .22);
+      --bdr: rgba(255, 255, 255, .07);
+      --shad: 0 1px 2px rgba(0, 0, 0, .25), 0 6px 24px rgba(0, 0, 0, .4);
+      --p1: #7aadff;
+      --p2: #2dd4bf;
+      --p3: #fbbf24;
+      --p4: #a78bfa;
+      --p5: #f87171;
+    }
+  }
+
+  .scd {
+    background: var(--bg);
+    border: 1px solid var(--bdr);
+    border-radius: var(--r);
+    box-shadow: var(--shad);
+    padding: clamp(1rem, 3vw, 1.75rem);
+    margin: 2rem 0 2.5rem;
+    max-width: 900px;
+    color: var(--tx);
+    font-family: "DM Sans", "Helvetica Neue", sans-serif;
+    transition: background .25s, border-color .25s, box-shadow .25s;
+  }
+
+  .scd-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .scd-head-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .scd-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ac);
+    letter-spacing: .03em;
+  }
+
+  .scd-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--tx);
+    letter-spacing: -.01em;
+  }
+
+  .scd-extlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ac);
+    text-decoration: none;
+    border: 1px solid var(--bdr);
+    border-radius: 20px;
+    padding: 5px 14px;
+    transition: background .15s, border-color .15s;
+    flex-shrink: 0;
+  }
+
+  .scd-extlink:hover {
+    background: var(--ac-s);
+    border-color: var(--ac);
+    text-decoration: none;
+  }
+
+  .scd-cards {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+
+  @media(max-width:640px) {
+    .scd-cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media(max-width:360px) {
+    .scd-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .scd-card {
+    background: var(--bg2);
+    border: 1px solid var(--bdr);
+    border-radius: var(--r2);
+    padding: .9rem 1rem .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    overflow: hidden;
+    transition: background .25s;
+  }
+
+  .scd-card--primary {
+    background: var(--ac-s);
+    border-color: var(--ac-g);
+  }
+
+  .scd-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .scd-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--tx3);
+  }
+
+  .scd-pill {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--ac);
+    background: var(--ac-s);
+    border: 1px solid var(--ac-g);
+    border-radius: 20px;
+    padding: 1px 8px;
+    white-space: nowrap;
+  }
+
+  .scd-num {
+    font-size: clamp(24px, 4.5vw, 34px);
+    font-weight: 700;
+    color: var(--tx);
+    line-height: 1.05;
+    letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scd-card--primary .scd-num {
+    color: var(--ac);
+  }
+
+  .scd-sub {
+    font-size: 10.5px;
+    color: var(--tx3);
+  }
+
+  .scd-accent-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2.5px;
+    background: var(--ac);
+    border-radius: 0 0 var(--r2) var(--r2);
+  }
+
+  .scd-charts {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 12px;
+    margin-bottom: .75rem;
+    align-items: start;
+  }
+
+  @media(max-width:580px) {
+    .scd-charts {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .scd-chart-box {
+    background: var(--bg2);
+    border: 1px solid var(--bdr);
+    border-radius: var(--r2);
+    padding: 1rem 1.1rem .85rem;
+    transition: background .25s;
+  }
+
+  .scd-chart-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--tx3);
+    margin-bottom: .75rem;
+  }
+
+  .scd-trend {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .scd-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 120px;
+  }
+
+  .scd-bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .scd-bar-count {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--tx2);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .scd-bar-track {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+  }
+
+  .scd-bar-fill {
+    width: 100%;
+    height: 0;
+    background: var(--ac);
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: none;
+  }
+
+  .scd-bars.scd-go .scd-bar-fill {
+    height: var(--bar-h, 0%);
+    transition: height 0.65s cubic-bezier(0.34, 1.4, 0.64, 1);
+  }
+
+  .scd-bars.scd-go .scd-bar-col:nth-child(1) .scd-bar-fill {
+    transition-delay: 0s;
+  }
+
+  .scd-bars.scd-go .scd-bar-col:nth-child(2) .scd-bar-fill {
+    transition-delay: 0.08s;
+  }
+
+  .scd-bars.scd-go .scd-bar-col:nth-child(3) .scd-bar-fill {
+    transition-delay: 0.16s;
+  }
+
+  .scd-bar-yr {
+    font-size: 10px;
+    color: var(--tx3);
+  }
+
+  .scd-chart-box--donut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scd-donut-wrap {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto .6rem;
+  }
+
+  #scd-donut {
+    display: block;
+    width: 140px !important;
+    height: 140px !important;
+  }
+
+  .scd-donut-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .scd-donut-center span {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--tx);
+    letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scd-donut-center small {
+    font-size: 10px;
+    color: var(--tx3);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+
+  .scd-legend {
+    width: 100%;
+  }
+
+  .scd-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5px;
+    color: var(--tx2);
+    padding: 2px 0;
+  }
+
+  .scd-legend-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .scd-legend-lbl {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+
+  .scd-legend-n {
+    font-weight: 700;
+    color: var(--tx);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scd-toggle-row {
+    display: flex;
+    justify-content: center;
+    margin: .5rem 0;
+  }
+
+  .scd-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--tx2);
+    background: none;
+    border: 1px solid var(--bdr);
+    border-radius: 20px;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: all .15s;
+  }
+
+  .scd-toggle-btn:hover {
+    background: var(--bg2);
+    color: var(--tx);
+    border-color: var(--tx3);
+  }
+
+  .scd-chevron {
+    transition: transform .3s cubic-bezier(.34, 1.2, .64, 1);
+  }
+
+  .scd-toggle-btn[aria-expanded="true"] .scd-chevron {
+    transform: rotate(180deg);
+  }
+
+  .scd-papers {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .35s ease;
+    overflow: hidden;
+  }
+
+  .scd-papers[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+  }
+
+  .scd-paper-inner {
+    overflow: hidden;
+    padding: 0 0 .25rem;
+  }
+
+  .scd-paper-row {
+    display: grid;
+    grid-template-columns: 1fr 46px 110px 30px;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--bdr);
+  }
+
+  .scd-paper-row:last-child {
+    border-bottom: none;
+  }
+
+  .scd-paper-title {
+    font-size: 12px;
+    color: var(--tx2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+
+  .scd-paper-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .scd-paper-title a:hover {
+    color: var(--ac);
+  }
+
+  .scd-paper-yr {
+    font-size: 10.5px;
+    color: var(--tx3);
+    background: var(--bg3);
+    border: 1px solid var(--bdr);
+    border-radius: 20px;
+    padding: 2px 7px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scd-paper-track {
+    height: 4px;
+    background: var(--bg3);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .scd-paper-fill {
+    height: 100%;
+    background: var(--ac);
+    border-radius: 3px;
+    width: 0;
+    animation: scdRight .6s cubic-bezier(.22, 1, .36, 1) both;
+    animation-delay: var(--d, 0ms);
+  }
+
+  @keyframes scdRight {
+    to {
+      width: var(--w, 0%);
+    }
+  }
+
+  .scd-paper-cites {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--tx);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media(max-width:480px) {
+    .scd-paper-row {
+      grid-template-columns: 1fr 38px 80px 26px;
+      gap: 7px;
+    }
+  }
+
+  .scd-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    margin-top: 1rem;
+    padding-top: .85rem;
+    border-top: 1px solid var(--bdr);
+    font-size: 10.5px;
+    color: var(--tx3);
+  }
+
+  .scd-dot {
+    opacity: .4;
+  }
+
+  .scd-footer a {
+    color: var(--ac);
+    text-decoration: none;
+  }
+
+  .scd-footer a:hover {
+    text-decoration: underline;
+  }
 </style>
 
 
 <!-- ═══════════════════════ SCRIPT ════════════════════════════════ -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
 <script>
-(function(){
+  (function () {
 
-  /* Count-up animation */
-  function countUp(el, ms) {
-    if (!el) return;
-    var target = parseInt(el.dataset.val, 10);
-    if (isNaN(target)) return;
-    var t0 = null;
-    (function step(ts){
-      if (!t0) t0 = ts;
-      var prog = Math.min((ts - t0) / ms, 1);
-      el.textContent = Math.round((1 - Math.pow(1 - prog, 3)) * target);
-      if (prog < 1) requestAnimationFrame(step);
-      else el.textContent = target;
-    })(performance.now());
-  }
+    /* ── Read data from Jekyll/Liquid ── */
+    var YEARS = JSON.parse('{{ years  | jsonify }}' || '{}');
+    var PAPERS = JSON.parse('{{ papers | jsonify }}' || '[]');
 
-  /* CSS variable reader for Chart.js */
-  function cv(name) {
-    var el = document.getElementById('scd');
-    return el ? getComputedStyle(el).getPropertyValue(name).trim() : '#888';
-  }
-
-  /* Data baked in by Jekyll/Liquid */
-  var YEARS  = JSON.parse('{{ years  | jsonify }}' || '{}');
-  var PAPERS = JSON.parse('{{ papers | jsonify }}' || '[]');
-
-  /* ── FIX: size bar heights using JS so we avoid Liquid integer division ── */
-  function sizeBars() {
-    var cols = document.querySelectorAll('.scd-bar-col[data-count]');
-    if (!cols.length) return;
-    var max = 0;
-    cols.forEach(function(col){
-      var v = parseInt(col.dataset.count, 10) || 0;
-      if (v > max) max = v;
-    });
-    if (max === 0) max = 1;
-    cols.forEach(function(col){
-      var v    = parseInt(col.dataset.count, 10) || 0;
-      var pct  = Math.max((v / max) * 100, 4); /* min 4% so bar is visible */
-      var fill = col.querySelector('.scd-bar-fill');
-      if (fill) fill.style.height = pct.toFixed(1) + '%';
-    });
-  }
-
-  /* Trend label */
-  function buildTrend() {
-    var trendEl = document.getElementById('scd-trend');
-    if (!trendEl) return;
-    var yrKeys = Object.keys(YEARS).sort();
-    if (yrKeys.length >= 2) {
-      var last = YEARS[yrKeys[yrKeys.length - 1]] || 0;
-      var prev = YEARS[yrKeys[yrKeys.length - 2]] || 0;
-      if (prev > 0) {
-        var pct = Math.round(((last - prev) / prev) * 100);
-        trendEl.textContent = (pct >= 0 ? '↑ ' : '↓ ') + Math.abs(pct) + '% vs ' + yrKeys[yrKeys.length - 2];
-        trendEl.style.color = pct >= 0 ? '#16a34a' : '#dc2626';
-      }
+    /* ── Count-up animation ── */
+    function countUp(el, ms) {
+      if (!el) return;
+      var target = parseInt(el.dataset.val, 10);
+      if (isNaN(target)) return;
+      var t0 = null;
+      (function step(ts) {
+        if (!t0) t0 = ts;
+        var prog = Math.min((ts - t0) / ms, 1);
+        el.textContent = Math.round((1 - Math.pow(1 - prog, 3)) * target);
+        if (prog < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      })(performance.now());
     }
-  }
 
-  /* Donut chart */
-  function buildDonut() {
-    var canvas   = document.getElementById('scd-donut');
-    var legendEl = document.getElementById('scd-legend');
-    if (!canvas || !window.Chart) return;
-    var top     = PAPERS.filter(function(p){ return p.cites > 0; }).slice(0, 5);
-    var palette = ['--p1','--p2','--p3','--p4','--p5'].map(cv);
-    function trunc(s, n){ return s && s.length > n ? s.slice(0, n) + '…' : (s || ''); }
-    if (canvas._chart) canvas._chart.destroy();
-    canvas._chart = new Chart(canvas, {
-      type: 'doughnut',
-      data: {
-        labels: top.map(function(p){ return trunc(p.title, 30); }),
-        datasets: [{ data: top.map(function(p){ return p.cites; }), backgroundColor: palette, borderWidth: 0, hoverOffset: 6 }]
-      },
-      options: {
-        responsive: false, cutout: '66%',
-        animation: { duration: 900 },
-        plugins: {
-          legend: { display: false },
-          tooltip: { callbacks: { label: function(ctx){ return ' ' + ctx.raw + ' citations'; } } }
-        }
-      }
-    });
-    if (legendEl) {
-      legendEl.innerHTML = top.map(function(p, i){
-        return '<div class="scd-legend-item">'
-          + '<div class="scd-legend-dot" style="background:' + palette[i] + '"></div>'
-          + '<span class="scd-legend-lbl" title="' + p.title + '">' + trunc(p.title, 24) + '</span>'
-          + '<span class="scd-legend-n">' + p.cites + '</span>'
+    /* ── CSS variable reader for Chart.js ── */
+    function cv(name) {
+      var el = document.getElementById('scd');
+      return el ? getComputedStyle(el).getPropertyValue(name).trim() : '#888';
+    }
+
+    /* ── Build bar chart: last 3 years only, from YEARS object ── */
+    function sizeBars() {
+      var barsEl = document.getElementById('scd-bars');
+      if (!barsEl) return;
+
+      /* Sort year keys and take the last 3 */
+      var allKeys = Object.keys(YEARS).sort();
+      var last3 = allKeys.slice(-3);
+
+      /* Compute max for scaling */
+      var max = 0;
+      last3.forEach(function (yr) {
+        var v = parseInt(YEARS[yr], 10) || 0;
+        if (v > max) max = v;
+      });
+      if (max === 0) max = 1;
+
+      /* Build DOM */
+      barsEl.innerHTML = last3.map(function (yr) {
+        var v = parseInt(YEARS[yr], 10) || 0;
+        var pct = Math.max((v / max) * 100, v > 0 ? 4 : 2).toFixed(1) + '%';
+        return '<div class="scd-bar-col">'
+          + '<span class="scd-bar-count">' + v + '</span>'
+          + '<div class="scd-bar-track">'
+          + '<div class="scd-bar-fill" style="--bar-h:' + pct + '" aria-label="' + yr + ': ' + v + ' citations"></div>'
+          + '</div>'
+          + '<span class="scd-bar-yr">' + yr + '</span>'
           + '</div>';
       }).join('');
     }
-  }
 
-  /* Toggle */
-  function initToggle() {
-    var btn   = document.getElementById('scd-toggle');
-    var panel = document.getElementById('scd-papers');
-    if (!btn || !panel) return;
-    btn.addEventListener('click', function(){
-      var open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      panel.setAttribute('aria-hidden', String(open));
-      var nodes = btn.childNodes;
-      for (var i = 0; i < nodes.length; i++) {
-        if (nodes[i].nodeType === 3) {
-          nodes[i].textContent = open ? ' Show top cited papers' : ' Hide top cited papers';
-          break;
-        }
+    /* ── Trend label ── */
+    function buildTrend() {
+      var trendEl = document.getElementById('scd-trend');
+      if (!trendEl) return;
+      var yrKeys = Object.keys(YEARS).sort();
+      if (yrKeys.length >= 2) {
+        var last = YEARS[yrKeys[yrKeys.length - 1]] || 0;
+        var prev = YEARS[yrKeys[yrKeys.length - 2]] || 0;
+        // if (prev > 0) {
+        //   var pct = Math.round(((last - prev) / prev) * 100);
+        //   trendEl.textContent = (pct >= 0 ? '↑ ' : '↓ ') + Math.abs(pct) + '% vs ' + yrKeys[yrKeys.length - 2];
+        //   trendEl.style.color = pct >= 0 ? '#16a34a' : '#dc2626';
+        // }
       }
-    });
-  }
-
-  /* Re-render donut when al-folio dark toggle fires */
-  function watchTheme() {
-    var last = document.documentElement.getAttribute('data-theme');
-    new MutationObserver(function(){
-      var cur = document.documentElement.getAttribute('data-theme');
-      if (cur !== last) { last = cur; buildDonut(); }
-    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-  }
-
-  /* Trigger animations when dashboard scrolls into view */
-  function initObserver() {
-    sizeBars(); /* size bars immediately so layout is correct */
-    if (!('IntersectionObserver' in window)) {
-      document.querySelectorAll('.scd-countup').forEach(function(el){ countUp(el, 1000); });
-      var bars = document.getElementById('scd-bars');
-      if (bars) bars.classList.add('scd-go');
-      return;
     }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (!e.isIntersecting) return;
-        io.disconnect();
-        document.querySelectorAll('.scd-countup').forEach(function(el){ countUp(el, 900); });
-        var bars = document.getElementById('scd-bars');
-        if (bars) setTimeout(function(){ bars.classList.add('scd-go'); }, 50);
+
+    /* ── Donut chart ── */
+    function buildDonut() {
+      var canvas = document.getElementById('scd-donut');
+      var legendEl = document.getElementById('scd-legend');
+      if (!canvas || !window.Chart) return;
+      var top = PAPERS.filter(function (p) { return p.cites > 0; }).slice(0, 5);
+      var palette = ['--p1', '--p2', '--p3', '--p4', '--p5'].map(cv);
+      function trunc(s, n) { return s && s.length > n ? s.slice(0, n) + '…' : (s || ''); }
+      if (canvas._chart) canvas._chart.destroy();
+      canvas._chart = new Chart(canvas, {
+        type: 'doughnut',
+        data: {
+          labels: top.map(function (p) { return trunc(p.title, 30); }),
+          datasets: [{
+            data: top.map(function (p) { return p.cites; }),
+            backgroundColor: palette,
+            borderWidth: 0,
+            hoverOffset: 6
+          }]
+        },
+        options: {
+          responsive: false,
+          cutout: '66%',
+          animation: { duration: 900 },
+          plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { label: function (ctx) { return ' ' + ctx.raw + ' citations'; } } }
+          }
+        }
       });
-    }, { threshold: 0.15 });
-    var dash = document.getElementById('scd');
-    if (dash) io.observe(dash);
-  }
+      if (legendEl) {
+        legendEl.innerHTML = top.map(function (p, i) {
+          return '<div class="scd-legend-item">'
+            + '<div class="scd-legend-dot" style="background:' + palette[i] + '"></div>'
+            + '<span class="scd-legend-lbl" title="' + p.title + '">' + trunc(p.title, 24) + '</span>'
+            + '<span class="scd-legend-n">' + p.cites + '</span>'
+            + '</div>';
+        }).join('');
+      }
+    }
 
-  function init() {
-    buildTrend();
-    initObserver();
-    initToggle();
-    watchTheme();
-    (function waitChart(tries){
-      if (window.Chart) buildDonut();
-      else if (tries < 40) setTimeout(function(){ waitChart(tries + 1); }, 100);
-    })(0);
-  }
+    /* ── Toggle ── */
+    function initToggle() {
+      var btn = document.getElementById('scd-toggle');
+      var panel = document.getElementById('scd-papers');
+      if (!btn || !panel) return;
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        panel.setAttribute('aria-hidden', String(open));
+        var nodes = btn.childNodes;
+        for (var i = 0; i < nodes.length; i++) {
+          if (nodes[i].nodeType === 3) {
+            nodes[i].textContent = open ? ' Show top cited papers' : ' Hide top cited papers';
+            break;
+          }
+        }
+      });
+    }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+    /* ── Re-render donut on dark-mode toggle ── */
+    function watchTheme() {
+      var last = document.documentElement.getAttribute('data-theme');
+      new MutationObserver(function () {
+        var cur = document.documentElement.getAttribute('data-theme');
+        if (cur !== last) { last = cur; buildDonut(); }
+      }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    }
 
-})();
+    /* ── Animate on scroll into view ── */
+    function initObserver() {
+      sizeBars(); /* build bar DOM first */
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.scd-countup').forEach(function (el) { countUp(el, 1000); });
+        var bars = document.getElementById('scd-bars');
+        if (bars) bars.classList.add('scd-go');
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          io.disconnect();
+          document.querySelectorAll('.scd-countup').forEach(function (el) { countUp(el, 900); });
+          var bars = document.getElementById('scd-bars');
+          if (bars) setTimeout(function () { bars.classList.add('scd-go'); }, 60);
+        });
+      }, { threshold: 0.15 });
+      var dash = document.getElementById('scd');
+      if (dash) io.observe(dash);
+    }
+
+    function init() {
+      buildTrend();
+      initObserver();
+      initToggle();
+      watchTheme();
+      (function waitChart(tries) {
+        if (window.Chart) buildDonut();
+        else if (tries < 40) setTimeout(function () { waitChart(tries + 1); }, 100);
+      })(0);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+
+  })();
 </script>
