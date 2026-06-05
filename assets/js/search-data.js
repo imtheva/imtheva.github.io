@@ -204,6 +204,11 @@ ninja.data = [{
           description: "A cost-effective remote health monitoring solution designed to continuously assess non-critical patients while reducing hospital congestion—especially during emergencies such as the COVID-19 pandemic.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-cottonsim",
+          title: 'CottonSim',
+          description: "A cost-effective remote health monitoring solution...",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_CottonSimulation/";
             },},{
         id: 'social-blogger',
         title: 'Blogger',
