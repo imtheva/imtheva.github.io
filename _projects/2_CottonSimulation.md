@@ -7,4 +7,4 @@ importance: 1
 category: Project
 ---
 
-[View CottonSim Project Page](/CottonSim-ProjectSite/)
+<meta http-equiv="refresh" content="0; url=/CottonSim-ProjectSite/" />
