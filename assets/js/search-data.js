@@ -206,7 +206,7 @@ ninja.data = [{
               window.location.href = "/projects/1_project/";
             },},{id: "projects-cottonsim",
           title: 'CottonSim',
-          description: "A cost-effective remote health monitoring solution...",
+          description: "xxxx",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_CottonSimulation/";
             },},{
