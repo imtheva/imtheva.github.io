@@ -3,7 +3,7 @@ layout: page
 title: Medical Instrumentation System
 description: A cost-effective remote health monitoring solution designed to continuously assess non-critical patients while reducing hospital congestion—especially during emergencies such as the COVID-19 pandemic.
 img: assets/img/projects/project_1/Medical_IoT_1.png-s.jpg
-importance: 1
+importance: 3
 category: Project
 ---
 

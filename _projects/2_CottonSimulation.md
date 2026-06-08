@@ -4,7 +4,7 @@ title: CottonSim
 description:  This study proposes a lightweight, small-scale, vision-guided autonomous robotic cotton picker as an alternative in a simulation environment.  
 img: assets/img/projects/project_2/CottonSim.png
 importance: 1
-category: Project
+category: Research
 # redirect_to: /CottonSim-ProjectSite/
 ---
 

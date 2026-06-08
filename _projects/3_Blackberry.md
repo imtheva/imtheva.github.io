@@ -3,8 +3,8 @@ layout: page
 title: Blackberry Detection
 description:  This study focuses on developing computer vision and deep learning models to identify and classify blackberries by their ripeness stages.  
 img: assets/img/projects/project_3/4-YOLOv7base-255.jpg
-importance: 1
-category: Project
+importance: 2 
+category: Research
 # redirect_to: /Blackberry_ProjectSite/
 ---
 <div class="text-center mt-4">
