@@ -6,7 +6,7 @@ related_posts: false
 ---
 
 <a href="https://www.wcbi.com/mississippi-state-researchers-develop-prototype-to-advance-cotton-industry/" target="_blank" rel="noopener">
-WCBI: Mississippi State researchers develop prototype to advance cotton industry</a>
+🎥 **[Featured!]** WCBI: Mississippi State researchers develop prototype to advance cotton industry</a>
 
 <!-- ---
 layout: post

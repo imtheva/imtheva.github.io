@@ -16,7 +16,7 @@ education:
     studyType: "Reading - PhD"
     area: "Agriclutural Engineering"
     startDate: "2025"
-    endDate: "Present"
+    endDate: "9999"
     summary: "Autonomous robotic systems and computer vision for selective harvesting."
 
   - institution: "Mississippi State University"
@@ -35,7 +35,7 @@ education:
 
   - institution: "Uva Wellassa University of Sri Lanka"
     studyType: "BTech"
-    area: "Mechatronics"
+    area: "Science and Technology Specialized in Mechatronics"
     startDate: "2014"
     endDate: "2018"
     summary: "Science and Technology Specialized in Mechatronics"
@@ -43,23 +43,23 @@ education:
 work:
   - name: "Sensing & Automation in Agri-System (SAAS) Lab, University of Georgia"
     position: "Graduate Research Assistant"
-    startDate: "2025"
-    endDate: "Present"
+    startDate: "2023"
+    endDate: "9999"
     highlights:
       - "Vision guided autonomous cotton harvesting robot development"
       - "YOLO based detection and segmentation pipelines"
       - "UR5e manipulator and mobile robot integration"
       - "Simulation and real world field testing"
 
-  - name: "Sensing & Automation in Agri-System (SAAS) Lab, Mississippi State University"
-    position: "Graduate Research Assistant"
-    startDate: "2023"
-    endDate: "2025"
-    highlights:
-      - "Vision guided autonomous cotton harvesting robot development"
-      - "YOLO based detection and segmentation pipelines"
-      - "UR5e manipulator and mobile robot integration"
-      - "Simulation and real world field testing"
+  # - name: "Sensing & Automation in Agri-System (SAAS) Lab, Mississippi State University"
+  #   position: "Graduate Research Assistant"
+  #   startDate: "2023"
+  #   endDate: "2025"
+  #   highlights:
+  #     - "Vision guided autonomous cotton harvesting robot development"
+  #     - "YOLO based detection and segmentation pipelines"
+  #     - "UR5e manipulator and mobile robot integration"
+  #     - "Simulation and real world field testing"
 
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
     position: "Graduate Teaching Assistant"
@@ -72,22 +72,22 @@ work:
     position: "Lecturer (Probationary)"
     startDate: "2019"
     endDate: "2023"
-    highlights:
-      - Performed researches and conducted classes
+    # highlights:
+    #   - Performed researches and conducted classes
 
   - name: "Faculty of Applied Sciences, Uva Wellassa University of Sri Lanka"
     position: "Demonstrator (Temporary)"
     startDate: "2018"
     endDate: "2019"
-    highlights:
-      - Performed researches and conducted lab classes
+    # highlights:
+    #   - Performed researches and conducted lab classes
 
   - name: "Innovation Department, MAS Intimates (Pvt) Ltd"
     position: "Intern at Research and Development)"
     startDate: "2017"
     endDate: "2018"
-    highlights:
-      - Performed researches and supported innovation at the textile manufacturing
+    # highlights:
+    #   - Performed researches and supported innovation at the textile manufacturing
 
 awards:
 
@@ -103,7 +103,7 @@ awards:
 
   - title: "SEC Emerging Scholar"
     awarder: "Mississippi State University"
-    date: "2023 to 2024"
+    date: "2023"
     summary: "Represented Mississippi State University in the SEC Emerging Scholar Program."
 
   - title: "TAGGS Scholarship"
@@ -134,7 +134,7 @@ awards:
 projects:
   - name: "PhD Research in Robotics and Computer Vision"
     startDate: "2023"
-    endDate: "Present"
+    endDate: "9999"
     description: "Ongoing doctoral research focused on autonomous robotic systems and computer vision applications in agriculture and food processing."
     highlights:
       - "Boll orientation aware cotton picking robot for field environments"
@@ -188,60 +188,60 @@ professional:
   - name: "Mississippi State University & University of Georgia"
     position: "Lab Manager"
     startDate: "2024"
-    endDate: "Present"
+    endDate: "9999"
     summary: "Sensing and Automation in Agri-System (SAAS) Lab, Department of Agricultural and Biological Engineering."
-    highlights:
-      - "Managed laboratory operations and research infrastructure"
-      - "Supported sensing, automation, and robotics research activities"
+    # highlights:
+    #   - "Managed laboratory operations and research infrastructure"
+    #   - "Supported sensing, automation, and robotics research activities"
 
   - name: "University of Georgia"
     position: "Undergraduate Research Mentor"
     startDate: "2024"
-    endDate: "Present"
+    endDate: "9999"
     summary: "Sensing and Automation in Agri-System (SAAS) Lab, College of Engineering."
-    highlights:
-      - "Mentored undergraduate researchers in computer vision, robotics, and precision agriculture projects"
-      - "Guided students in deep learning model development, data annotation, and experimental design"
-      - "Supervised student research activities, technical training, and project execution"
-      - "Supported prototype development for sensing and automation systems"
+    # highlights:
+    #   - "Mentored undergraduate researchers in computer vision, robotics, and precision agriculture projects"
+    #   - "Guided students in deep learning model development, data annotation, and experimental design"
+    #   - "Supervised student research activities, technical training, and project execution"
+    #   - "Supported prototype development for sensing and automation systems"
       
   - name: "Mississippi State University"
     position: "Preparing Future Faculty Program Participant"
     startDate: "2024"
-    endDate: "2024"
-    summary: "Completed professional development program for future academic faculty."
+    endDate: "2025"
+    # summary: "Completed professional development program for future academic faculty."
 
   - name: "Mississippi State University"
     position: "Certified Teaching Assistant (Level 2 of 3)"
     startDate: "2024"
     endDate: "2024"
-    summary: "Advanced teaching assistant certification for instructional excellence."
+    # summary: "Advanced teaching assistant certification for instructional excellence."
 
   - name: "Uva Wellassa University"
     position: "Psychological Counselor"
     startDate: "2022"
     endDate: "2023"
     summary: "Faculty of Applied Sciences."
-    highlights:
-      - "Provided counseling support to undergraduate students"
+    # highlights:
+    #   - "Provided counseling support to undergraduate students"
 
   - name: "Uva Wellassa University"
     position: "Student Mentor"
     startDate: "2019"
     endDate: "2023"
-    summary: "Academic mentoring and student guidance."
+    # summary: "Academic mentoring and student guidance."
 
   - name: "Uva Wellassa University"
     position: "Academic Sub Warden"
     startDate: "2019"
     endDate: "2023"
-    summary: "Administrative and student residential management responsibilities."
+    # summary: "Administrative and student residential management responsibilities."
 
   - name: "Uva Wellassa University"
     position: "Coordinator, Short Course in Robotics and Arduino Programming"
     startDate: "2019"
     endDate: "2023"
-    summary: "Organized and coordinated short courses in robotics and embedded systems."
+    # summary: "Organized and coordinated short courses in robotics and embedded systems."
 
   - name: "Uva Wellassa University"
     position: "Track Coordinator"
@@ -253,19 +253,19 @@ professional:
     position: "Faculty Development Project Member (AHEAD Project)"
     startDate: "2019"
     endDate: "2022"
-    summary: "Member of Activity 02 under the AHEAD Faculty Development Project."
+    # summary: "Member of Activity 02 under the AHEAD Faculty Development Project."
 
   - name: "Uva Wellassa University"
     position: "Program Review and SER Group Member"
     startDate: "2022"
     endDate: "2023"
-    summary: "Participated in academic program review and self evaluation report preparation."
+    # summary: "Participated in academic program review and self evaluation report preparation."
 
   - name: "Uva Wellassa University"
     position: "Panel Member, Curriculum Revision Stakeholder Meeting"
     startDate: "2020"
     endDate: "2020"
-    summary: "Contributed to curriculum revision discussions."
+    # summary: "Contributed to curriculum revision discussions."
 
   - name: "Uva Wellassa University"
     position: "Panel Member, International Research Conference"
@@ -281,19 +281,19 @@ professional:
     position: "Organizing Committee Member, Convocation"
     startDate: "2020"
     endDate: "2020"
-    summary: "Convocation 2019 organization activities."
+    # summary: "Convocation 2019 organization activities."
 
   - name: "Staff Development Centre"
     position: "Certificate Course in Teaching in Higher Education"
     startDate: "2019"
     endDate: "2019"
-    summary: "Completed formal training in higher education pedagogy."
+    # summary: "Completed formal training in higher education pedagogy."
 
 volunteer:
   - organization: "Food and Energy Security (Wiley)"
     position: "Reviewer"
     startDate: "2026"
-    # endDate: "Present"
+    endDate: "2026"
 
 
   - organization: "Computers and Electronics in Agriculture (Elsevier)"
@@ -305,61 +305,61 @@ volunteer:
     position: "Secretary"
     startDate: "2024"
     endDate: "2025"
-    summary: "Administrative and organizational support for the Softball Cricket Club."
+    # summary: "Administrative and organizational support for the Softball Cricket Club."
 
   - organization: "Softball Cricket Club at Mississippi State University"
     position: "Social Secretary"
     startDate: "2023"
     endDate: "2024"
-    summary: "Organized social activities and supported club operations."
+    # summary: "Organized social activities and supported club operations."
 
   - organization: "Sri Lankan Association, Mississippi State University"
     position: "Webmaster"
     startDate: "2023"
     endDate: "2024"
-    summary: "Maintained and updated the association website and digital content."
+    # summary: "Maintained and updated the association website and digital content."
 
   - organization: "IEEE Robotics and Automation Society Chapter, Uva Wellassa University"
     position: "Faculty Advisor"
     startDate: "2021"
     endDate: "2023"
-    summary: "Provided academic guidance and mentorship for IEEE RAS student activities."
+    # summary: "Provided academic guidance and mentorship for IEEE RAS student activities."
 
   - organization: "International Research Conference, Uva Wellassa University"
     position: "Reviewer"
     startDate: "2021"
     endDate: "2022"
-    summary: "Reviewed research submissions for the annual international research conference."
+    # summary: "Reviewed research submissions for the annual international research conference."
 
   - organization: "International Conference on Advancements in Computing, Sri Lanka Institute of Information Technology"
     position: "Reviewer"
     startDate: "2021"
     endDate: "2021"
-    summary: "Reviewed research papers for the 2nd International Conference on Advancements in Computing."
+    # summary: "Reviewed research papers for the 2nd International Conference on Advancements in Computing."
 
   - organization: "Uva Wellassa University"
     position: "Volunteer Workshop Instructor"
     startDate: "2018"
     endDate: "2018"
-    summary: "Conducted workshops on engineering machinery for school children."
+    # summary: "Conducted workshops on engineering machinery for school children."
 
   - organization: "IEEE Student Branch, Uva Wellassa University"
     position: "Member"
     startDate: "2016"
     endDate: "2018"
-    summary: "Active member of the IEEE student branch."
+    # summary: "Active member of the IEEE student branch."
 
   - organization: "Uva Wellassa University Students Association"
     position: "Volunteer Teaching Instructor"
     startDate: "2014"
     endDate: "2016"
-    summary: "Delivered seminars for school ordinary level students."
+    # summary: "Delivered seminars for school ordinary level students."
 
   - organization: "English Union, Kokuvil Hindu College, Sri Lanka"
     position: "Secretary"
     startDate: "2010"
     endDate: "2010"
-    summary: "Served as secretary of the school English Union."
+    # summary: "Served as secretary of the school English Union."
 
 languages:
   - language: "English"

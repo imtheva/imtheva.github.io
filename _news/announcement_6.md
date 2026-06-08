@@ -6,5 +6,5 @@ related_posts: false
 ---
 
 <a href="https://drive.google.com/file/d/195D2IltqJIMasFkdfChXs89tpoNugnbl/view" target="_blank" rel="noopener">
-MSU ABE Newsletter: Awards – Thevathayarajh Thayananthan
+🏆 **[Award!]** MSU ABE Newsletter: Awards – Thevathayarajh Thayananthan
 </a>.

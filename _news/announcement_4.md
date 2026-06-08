@@ -6,5 +6,5 @@ related_posts: false
 ---
 
 <a href="https://issuu.com/gradmarketing/docs/newsletter_-_ragged/40" target="_blank" rel="noopener">
-MSU The Graduate School Newsletter: Awards – Thevathayarajh Thayananthan
+🏆 **[Award!]** MSU The Graduate School Newsletter: Awards – Thevathayarajh Thayananthan
 </a>

@@ -2,6 +2,35 @@
 # path should be from site root (no leading slash is fine, but keep consistent)
 # Example image location: assets/img/gallery/2025/field_test_01.jpg
 
+
+- year: 2026
+  path: assets/img/gallery/2026/1.jpeg
+  section: "3MT Competition - IIPA Retreat 2026"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "3MT Competition"
+
+
+- year: 2026
+  path: assets/img/gallery/2026/2.jpg
+  section: "3MT Competition - IIPA Retreat 2026"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "3MT Competition 2"
+
+- year: 2026
+  path: assets/img/gallery/2026/3.jpg
+  section: "3MT Competition - IIPA Retreat 2026"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "3MT Competition 3"
+
+
+- year: 2025
+  path: assets/img/gallery/2025/UGAEng.png
+  section: "UGA Orientation"
+  # caption: "UGA/Tifton field test - Husky + UR5e setup"
+  alt: "UGAOrientation"
+
+
+
 - year: 2025
   path: assets/img/gallery/2025/Field_test.JPG
   section: "Field test – 2025 (Tifton)"
