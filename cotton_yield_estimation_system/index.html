@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cotton Yield — Service Unavailable</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #0a0f0d;
+    --bg-glow: radial-gradient(circle at 30% 20%, rgba(26,92,74,0.35), transparent 60%);
+    --card-bg: #121815;
+    --card-border: #23302b;
+    --text-primary: #f2f4f3;
+    --text-secondary: #9aa8a2;
+    --accent: #1fae82;
+    --accent-soft: rgba(31,174,130,0.15);
+    --mono: 'Courier New', monospace;
+  }
+
+  [data-theme="light"] {
+    --bg: #f4f6f5;
+    --bg-glow: radial-gradient(circle at 30% 20%, rgba(31,174,130,0.10), transparent 60%);
+    --card-bg: #ffffff;
+    --card-border: #dde4e1;
+    --text-primary: #10201a;
+    --text-secondary: #5b6b64;
+    --accent: #1a8f6b;
+    --accent-soft: rgba(26,143,107,0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg-glow), var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 480px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 40px 36px;
+    text-align: center;
+  }
+
+  .badge {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .badge svg { width: 28px; height: 28px; stroke: var(--accent); }
+
+  h1 {
+    font-size: 20px;
+    margin: 0 0 6px;
+    letter-spacing: 0.3px;
+  }
+
+  .sub {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin: 0 0 28px;
+  }
+
+  .status-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    background: var(--accent-soft);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    padding: 6px 16px;
+    margin-bottom: 24px;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #e2593c;
+    box-shadow: 0 0 8px #e2593c;
+  }
+
+  p.msg {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0 0 30px;
+  }
+
+  .contact {
+    border-top: 1px solid var(--card-border);
+    padding-top: 22px;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+  }
+
+  .contact strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: 14.5px;
+    margin-bottom: 4px;
+  }
+
+  .contact a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .contact a:hover { text-decoration: underline; }
+
+  .contact-note {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0 0 14px;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .theme-toggle svg { width: 18px; height: 18px; stroke: currentColor; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/>
+      <circle cx="12" cy="9" r="2.5"/>
+    </svg>
+  </div>
+
+  <h1>Cotton Yield</h1>
+  <p class="sub">Defoliation Support System</p>
+
+  <div class="status-line"><span class="dot"></span> Service Unavailable</div>
+
+  <p class="msg">
+    The Cotton Yield Estimation and Defoliation Decision Support System is
+    temporarily down. If you are seeing this page, reach out and we'll look into it.
+    
+    <!-- We're working to restore it as soon -->
+    <!-- as possible — please check back shortly. -->
+  </p>
+
+  <div class="contact">
+    <p class="contact-note">Contact</p>
+    <strong>Thevathayarajh Thayananthan</strong>
+    <a href="mailto:theva@uga.edu">theva@uga.edu</a>
+  </div>
+</div>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+  <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"/>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+  </svg>
+</button>
+
+<script>
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  let current = localStorage.getItem('cy-theme') || (prefersLight ? 'light' : 'dark');
+  root.setAttribute('data-theme', current);
+
+  toggle.addEventListener('click', function () {
+    current = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', current);
+    localStorage.setItem('cy-theme', current);
+  });
+</script>
+
+</body>
+</html>
