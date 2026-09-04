@@ -90,7 +90,6 @@ work:
     #   - Performed researches and supported innovation at the textile manufacturing
 
 awards:
-
   - title: "3rd Place in the Three Minute Thesis (3MT) Competition"
     awarder: "Institute for Integrative Precision Agriculture (IIPA), University of Georgia"
     date: "2026"
@@ -204,7 +203,7 @@ professional:
     #   - "Guided students in deep learning model development, data annotation, and experimental design"
     #   - "Supervised student research activities, technical training, and project execution"
     #   - "Supported prototype development for sensing and automation systems"
-      
+
   - name: "Mississippi State University"
     position: "Preparing Future Faculty Program Participant"
     startDate: "2024"
@@ -294,7 +293,6 @@ volunteer:
     position: "Reviewer"
     startDate: "2026"
     endDate: "2026"
-
 
   - organization: "Computers and Electronics in Agriculture (Elsevier)"
     position: "Reviewer"

@@ -132,7 +132,6 @@ awards:
     date: "2023"
     summary: "For 'Multi-ripeness level blackberry detection using YOLOv7 for soft robotic harvesting'."
 
-
 teaching:
   - name: "Uva Wellassa University of Sri Lanka"
     position: "Instructor of Record — 8 undergraduate courses"
@@ -217,7 +216,6 @@ projects:
       - "Virtual reality for robot manipulator education (IEEE MERCon 2023)"
       - "Sinhala printed-text recognition for postal automation"
       - "Automatic billing system for a Sri Lankan pastry shop"
-
 
 professional:
   - name: "Sensing and Automation in Agri-Systems (SAAS) Lab"

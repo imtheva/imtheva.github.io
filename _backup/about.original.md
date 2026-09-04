@@ -35,7 +35,8 @@ My research interests include autonomous field robots, computer vision, sensor-b
 
 I am a Graduate Research Assistant in the School of Environmental, Civil, Agricultural, and Mechanical Engineering at the University of Georgia, where I work with **Dr. [Xin Zhang](https://sites.google.com/view/xin-zhang-lab/home?authuser=0)** on agricultural robotics, automation, and intelligent sensing technologies that support sustainable farming. My research integrates machine vision, robotic manipulation, and real-world field experimentation to develop practical systems that improve farm efficiency and reduce manual labor.
 
-Previously, I worked as a Graduate Research Assistant in the Department of Agricultural and Biological Engineering at Mississippi State University. My research interests include autonomous field robots, computer vision, sensor-based decision systems, and robotic end-effectors for selective harvesting. 
+Previously, I worked as a Graduate Research Assistant in the Department of Agricultural and Biological Engineering at Mississippi State University. My research interests include autonomous field robots, computer vision, sensor-based decision systems, and robotic end-effectors for selective harvesting.
+
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->
 
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->

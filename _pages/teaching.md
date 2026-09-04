@@ -39,12 +39,12 @@ nav_order: 6
 Science and Technology to develop course modules and lesson plans for a new degree
 program:
 
-| Course | Title |
-| --- | --- |
-| MEC 111-2 | Computer Programming I |
-| MEC 212-2 | Computer Programming II |
-| MEC 232-2 | Embedded Systems |
-| MEC 233-2 | Embedded Systems Design |
-| MEC 331-2 | IoT Development |
-| MEC 361-2 | Computer Vision |
+| Course    | Title                           |
+| --------- | ------------------------------- |
+| MEC 111-2 | Computer Programming I          |
+| MEC 212-2 | Computer Programming II         |
+| MEC 232-2 | Embedded Systems                |
+| MEC 233-2 | Embedded Systems Design         |
+| MEC 331-2 | IoT Development                 |
+| MEC 361-2 | Computer Vision                 |
 | MEC 362-2 | Transducers and Instrumentation |
