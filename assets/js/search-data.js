@@ -30,9 +30,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "",
+        },{id: "nav-curriculum-vitae",
+          title: "Curriculum Vitae",
+          description: "Download the full CV as a PDF using the icon above. Last updated September 2026.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -153,17 +153,6 @@ ninja.data = [{
             window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
-      },{id: "post-a-distill-style-blog-post",
-        
-          title: "a distill-style blog post",
-        
-        description: "an example of a distill-style blog post and main elements",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2021/distill/";
-          
-        },
       },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
@@ -187,8 +176,8 @@ ninja.data = [{
           section: "News",},{id: "news-award-msu-abe-newsletter-awards-thevathayarajh-thayananthan",
           title: '🏆 [Award!] MSU ABE Newsletter: Awards – Thevathayarajh Thayananthan .',
           description: "",
-          section: "News",},{id: "news-farm-featured-flavor-agriculture-technology-advancements-revolutionize-mississippi-ag-industry",
-          title: 'Farm 🎥 [Featured!] Flavor: Agriculture Technology Advancements Revolutionize Mississippi Ag Industry',
+          section: "News",},{id: "news-featured-farm-flavor-agriculture-technology-advancements-revolutionize-mississippi-ag-industry",
+          title: '🎥 [Featured!] Farm Flavor: Agriculture Technology Advancements Revolutionize Mississippi Ag Industry',
           description: "",
           section: "News",},{id: "news-new-paper-perception-enabled-manipulator-control-for-a-robotic-cotton-picker-with-dual-side-harvesting-capability",
           title: '📄 [New Paper!] Perception-enabled manipulator control for a robotic cotton picker with dual-side...',
@@ -235,14 +224,14 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/cv/", "_blank");
+          window.open("/assets/pdf/Thayananthan_CV.pdf", "_blank");
         },
       },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%74%68%65%76%61%31%39%39%33@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%74%68%65%76%61@%75%67%61.%65%64%75", "_blank");
         },
       },{
         id: 'social-github',
