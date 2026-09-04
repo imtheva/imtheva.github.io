@@ -3,7 +3,7 @@ layout: about
 title: About
 permalink: /
 subtitle: >
-  Ph.D. Candidate, <a href='https://engineering.uga.edu/schools/ecam/'>School of Environmental, Civil, Agricultural and Mechanical Engineering</a>,
+  <strong>Ph.D. Candidate</strong>, <a href='https://engineering.uga.edu/schools/ecam/'>School of Environmental, Civil, Agricultural and Mechanical Engineering</a>,
   <a href='https://engineering.uga.edu/'>College of Engineering</a>,
   <a href='https://www.uga.edu/'>University of Georgia</a> ·
   <a href='https://sites.google.com/view/xin-zhang-lab/home'>SAAS Lab</a>

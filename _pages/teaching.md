@@ -32,3 +32,19 @@ nav_order: 6
 | SCT 462-2     | Intelligent Systems                             | 02    | 2019, 2020, 2021, 2022 | Science and Technology |
 | SCT 408-2     | Industrial Electronics                          | 02    | 2020, 2021             | Science and Technology |
 | SCT 319-2     | Maintenance, Production, and Project Management | 02    | 2021, 2022             | Science and Technology |
+
+## Curriculum Development
+
+**BSc in Mechatronics, Uva Wellassa University** (2019). Invited by the Department of
+Science and Technology to develop course modules and lesson plans for a new degree
+program:
+
+| Course | Title |
+| --- | --- |
+| MEC 111-2 | Computer Programming I |
+| MEC 212-2 | Computer Programming II |
+| MEC 232-2 | Embedded Systems |
+| MEC 233-2 | Embedded Systems Design |
+| MEC 331-2 | IoT Development |
+| MEC 361-2 | Computer Vision |
+| MEC 362-2 | Transducers and Instrumentation |

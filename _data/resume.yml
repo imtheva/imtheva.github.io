@@ -86,10 +86,52 @@ work:
     startDate: "2018"
     endDate: "2019"
 
-  - name: "Research & Innovation Department, MAS Intimates (Pvt) Ltd"
+  - name: "Research & Innovation Department, MAS Intimates (Unichela Pvt Ltd, Vidiyal Division)"
     position: "Research and Development Intern"
     startDate: "2017"
     endDate: "2018"
+    highlights:
+      - "PLC-based finished-goods scanner and garment folder systems"
+      - "Arduino-based chiller-off SMS alert system"
+      - "Pedal-less and automated sewing systems"
+      - "Waist-band cutter and mark-elimination systems for mesh and elastic attachment"
+
+awards:
+  - title: "3rd Place, Three Minute Thesis (3MT) Competition"
+    awarder: "Institute for Integrative Precision Agriculture (IIPA), University of Georgia"
+    date: "2026"
+    summary: "Third place at the IIPA Retreat; includes a $500 conference travel award."
+
+  - title: "CENGR Graduate Student Travel Grant"
+    awarder: "College of Engineering, University of Georgia"
+    date: "2026"
+    summary: "Travel support for the ASABE Annual International Meeting, Indianapolis, Indiana."
+
+  - title: "Hall of Fame Awardee"
+    awarder: "The Graduate School, Mississippi State University"
+    date: "2025"
+    summary: "College of Engineering honoree."
+
+  - title: "TAGGS Travel Scholarship"
+    awarder: "The Graduate School, Mississippi State University"
+    date: "2024"
+    summary: "Travel scholarship for the ASABE Annual International Meeting."
+
+  - title: "AG2PI Travel Award"
+    awarder: "Agricultural Genome to Phenome Initiative (AG2PI)"
+    date: "2024"
+    summary: "Travel award for the ASABE Annual International Meeting."
+
+  - title: "SEC Emerging Scholar"
+    awarder: "Southeastern Conference / Mississippi State University"
+    date: "2023"
+    summary: "Selected to represent Mississippi State University in the SEC Emerging Scholars Program (2023–2024)."
+
+  - title: "Best Paper Award"
+    awarder: "SPIE — Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping VIII"
+    date: "2023"
+    summary: "For 'Multi-ripeness level blackberry detection using YOLOv7 for soft robotic harvesting'."
+
 
 teaching:
   - name: "Uva Wellassa University of Sri Lanka"
@@ -111,8 +153,23 @@ teaching:
     startDate: "2024"
     endDate: "2024"
 
-  - name: "Robotics and Mechatronics · Computer Vision for Agricultural and Biological Systems · Embedded Systems and Instrumentation · Machine Learning Applications in Agriculture · Sensors and Bioinstrumentation"
-    position: "Courses prepared to teach"
+  - name: "BSc in Science and Technology in Mechatronics, Uva Wellassa University"
+    position: "New Course Development — 7 modules"
+    startDate: "2019"
+    endDate: "2019"
+    highlights:
+      - "Designed seven new course modules and lesson plans for the programme's curriculum revision"
+      - "MEC 361-2 Computer Vision; MEC 331-2 IoT Development; MEC 232-2 Embedded Systems; MEC 233-2 Embedded Systems Design"
+      - "MEC 111-2 and MEC 212-2 Computer Programming I & II; MEC 362-2 Transducers and Instrumentation"
+
+  - name: "BSc in Mechatronics programme, Uva Wellassa University"
+    position: "Curriculum Development — 7 course modules"
+    startDate: "2019"
+    endDate: "2019"
+    highlights:
+      - "Developed course modules and lesson plans for a new BSc degree programme"
+      - "MEC 361-2 Computer Vision; MEC 331-2 IoT Development; MEC 232-2 and MEC 233-2 Embedded Systems and Embedded Systems Design"
+      - "MEC 111-2 and MEC 212-2 Computer Programming I and II; MEC 362-2 Transducers and Instrumentation"
 
 publications:
   - name: "Publications"
@@ -161,41 +218,6 @@ projects:
       - "Sinhala printed-text recognition for postal automation"
       - "Automatic billing system for a Sri Lankan pastry shop"
 
-awards:
-  - title: "3rd Place, Three Minute Thesis (3MT) Competition"
-    awarder: "Institute for Integrative Precision Agriculture (IIPA), University of Georgia"
-    date: "2026"
-    summary: "Third place at the IIPA Retreat; includes a $500 conference travel award."
-
-  - title: "CENGR Graduate Student Travel Grant"
-    awarder: "College of Engineering, University of Georgia"
-    date: "2026"
-    summary: "Travel support for the ASABE Annual International Meeting, Indianapolis, Indiana."
-
-  - title: "Hall of Fame Awardee"
-    awarder: "The Graduate School, Mississippi State University"
-    date: "2025"
-    summary: "College of Engineering honoree."
-
-  - title: "TAGGS Travel Scholarship"
-    awarder: "The Graduate School, Mississippi State University"
-    date: "2024"
-    summary: "Travel scholarship for the ASABE Annual International Meeting."
-
-  - title: "AG2PI Travel Award"
-    awarder: "Agricultural Genome to Phenome Initiative (AG2PI)"
-    date: "2024"
-    summary: "Travel award for the ASABE Annual International Meeting."
-
-  - title: "SEC Emerging Scholar"
-    awarder: "Southeastern Conference / Mississippi State University"
-    date: "2023"
-    summary: "Selected to represent Mississippi State University in the SEC Emerging Scholars Program (2023–2024)."
-
-  - title: "Best Paper Award"
-    awarder: "SPIE — Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping VIII"
-    date: "2023"
-    summary: "For 'Multi-ripeness level blackberry detection using YOLOv7 for soft robotic harvesting'."
 
 professional:
   - name: "Sensing and Automation in Agri-Systems (SAAS) Lab"
@@ -239,7 +261,7 @@ professional:
   - name: "Uva Wellassa University"
     position: "Faculty Development Project Member (AHEAD Project, Activity 02)"
     startDate: "2019"
-    endDate: "2022"
+    endDate: "2020"
 
   - name: "Uva Wellassa University"
     position: "Coordinator, Short Course in Robotics and Arduino Programming"
@@ -280,6 +302,30 @@ professional:
     position: "Organizing Committee Member, Convocation"
     startDate: "2020"
     endDate: "2020"
+
+  - name: "Faculty of Applied Sciences, Uva Wellassa University"
+    position: "Member, Faculty Board"
+    startDate: "2022"
+    endDate: "2023"
+    summary: "Appointed by the Dean under S.48(1A)(c) of the Universities Act No. 16 of 1978; three-year term, curtailed on departure for doctoral study."
+
+  - name: "Faculty of Applied Sciences, Uva Wellassa University"
+    position: "Subject Coordinator, BGE 121-2 Ethics and Law Basics"
+    startDate: "2022"
+    endDate: "2023"
+    summary: "Coordinated a cross-faculty course delivered to three faculties: scheduling with visiting resource persons, online delivery for up to 500 students, assessment and results submission."
+
+  - name: "Faculty of Applied Sciences, Uva Wellassa University"
+    position: "Member, Graduate Employability Survey (AHEAD ELTA-ELSE Faculty Development Plan)"
+    startDate: "2022"
+    endDate: "2023"
+    summary: "Appointed by the Dean to conduct the faculty-wide graduate employability survey informing the final AHEAD project report."
+
+  - name: "Faculty of Applied Sciences, Uva Wellassa University"
+    position: "Co-author, Postgraduate Admissions Survey"
+    startDate: "2020"
+    endDate: "2020"
+    summary: "Prepared a survey of postgraduate admission pathways followed by UWU graduates; presented to and acknowledged by the Faculty Board (119th meeting)."
 
 volunteer:
   - organization: "Computers and Electronics in Agriculture (Elsevier)"
@@ -359,20 +405,6 @@ certificates:
     date: "2025"
     issuer: "University of Georgia"
     icon: "fa-solid fa-id-card"
-
-skills:
-  - name: "Programming"
-    icon: "fa-solid fa-code"
-    keywords: ["Python", "C++", "MATLAB", "Git"]
-  - name: "Deep Learning"
-    icon: "fa-solid fa-brain"
-    keywords: ["PyTorch", "TensorFlow/Keras", "YOLO (v5–v12)", "Instance segmentation", "Semantic segmentation"]
-  - name: "Robotics & Vision"
-    icon: "fa-solid fa-robot"
-    keywords: ["ROS 1 / ROS 2", "Gazebo", "OpenCV", "RGB-D and stereo perception", "UR5e manipulator control", "GPS and map-based navigation"]
-  - name: "Hardware"
-    icon: "fa-solid fa-microchip"
-    keywords: ["Arduino", "PLC", "Embedded systems", "IoT sensor platforms"]
 
 languages:
   - language: "English"

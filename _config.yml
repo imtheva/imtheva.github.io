@@ -165,6 +165,9 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - bin/
+  - _backup/
+  - Projects/
+  - blogs/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile
@@ -194,7 +197,7 @@ plugins:
   - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
-  - jekyll-jupyter-notebook
+  # - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
@@ -202,7 +205,7 @@ plugins:
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-tabs
-  - jekyll-terser
+  # - jekyll-terser
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
@@ -222,8 +225,9 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+  compress_javascript: false
+  minify_js: false
+  exclude: ["robots.txt", "assets/js/*.js", "assets/js/**/*.js"]
 
 # -----------------------------------------------------------------------------
 # Terser

@@ -1,34 +1,40 @@
 {
   "scholar_id": "MpKhKEUAAAAJ",
-  "updated": "2026-05-29",
-  "total": 39,
-  "since_2021": 39,
+  "updated": "2026-09-04",
+  "total": 47,
+  "since_2021": 47,
   "h_index": 4,
   "h_index_5y": 4,
   "i10_index": 1,
   "i10_index_5y": 1,
   "cites_per_year": {
-    "2024": 8,
-    "2025": 21,
-    "2026": 9
+    "2024": 7,
+    "2025": 22,
+    "2026": 17
   },
   "papers": [
     {
       "title": "Computer vision in livestock management and production",
       "year": "2024",
-      "cites": 14,
+      "cites": 15,
       "scholar_id": "MpKhKEUAAAAJ:YsMSGLbcyi4C"
+    },
+    {
+      "title": "CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation",
+      "year": "2025",
+      "cites": 8,
+      "scholar_id": "MpKhKEUAAAAJ:hqOjcs7Dif8C"
     },
     {
       "title": "Engineering applications in livestock production",
       "year": "2024",
-      "cites": 8,
+      "cites": 7,
       "scholar_id": "MpKhKEUAAAAJ:WF5omc3nYNoC"
     },
     {
       "title": "Traffic sign recognition and auditory alert system for sri lankan drivers using deep-learning",
       "year": "2024",
-      "cites": 5,
+      "cites": 6,
       "scholar_id": "MpKhKEUAAAAJ:_FxGoFyzp5QC"
     },
     {
@@ -38,25 +44,19 @@
       "scholar_id": "MpKhKEUAAAAJ:zYLM7Y9cAGgC"
     },
     {
-      "title": "CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation",
-      "year": "2025",
-      "cites": 3,
-      "scholar_id": "MpKhKEUAAAAJ:hqOjcs7Dif8C"
-    },
-    {
       "title": "Automating catfish cutting process using deep learning-based semantic segmentation",
       "year": "2023",
-      "cites": 2,
+      "cites": 3,
       "scholar_id": "MpKhKEUAAAAJ:IjCSPb-OGe4C"
     },
     {
       "title": "In-Field Multi-Ripeness Blackberry Detection for Soft Robotic Harvesting",
       "year": "2025",
-      "cites": 1,
+      "cites": 2,
       "scholar_id": "MpKhKEUAAAAJ:0EnyYjriUFMC"
     },
     {
-      "title": "Leveraging Virtual Reality for Robot Manipulator Education",
+      "title": "Leveraging virtual reality for robot manipulator education",
       "year": "2023",
       "cites": 1,
       "scholar_id": "MpKhKEUAAAAJ:Tyk-4Ss8FVUC"
