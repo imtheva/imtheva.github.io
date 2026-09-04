@@ -2,16 +2,20 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://sites.google.com/view/xin-zhang-lab/home?authuser=0'>Graduate Research Assistant</a>. <a href='https://engineering.uga.edu/schools/ecam/'>Environmental, Civil, Agriculutral and Mechanical Engineering</a>, <a href='https://engineering.uga.edu/'>College of Engineering</a>, <a href='https://www.uga.edu/'>University of Georgia</a>
+subtitle: >
+  Ph.D. Candidate, <a href='https://engineering.uga.edu/schools/ecam/'>School of Environmental, Civil, Agricultural and Mechanical Engineering</a>,
+  <a href='https://engineering.uga.edu/'>College of Engineering</a>,
+  <a href='https://www.uga.edu/'>University of Georgia</a> ·
+  <a href='https://sites.google.com/view/xin-zhang-lab/home'>SAAS Lab</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>110 Riverbend RD</p>
     <p>Riverbend Research Lab North, 001E</p>
-    <p>Athens, GA 30605</p>
+    <p>110 Riverbend Rd, Athens, GA 30605</p>
+    <p><a href="mailto:theva@uga.edu">theva@uga.edu</a></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,17 +31,17 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<!-- I am a Graduate Research Assistant in the School of Environmental, Civil, Agricultural, and Mechanical Engineering at the University of Georgia, where I work on agricultural robotics, automation, and intelligent sensing technologies to support sustainable farming. My research combines machine vision, robotic manipulation, and real-world field experiments to create practical systems that improve farm efficiency and reduce manual labor.
+I build **robots that can see well enough to harvest**. I am a Ph.D. candidate in Agricultural Engineering at the University of Georgia, working with **Dr. [Xin Zhang](https://sites.google.com/view/xin-zhang-lab/home)** in the Sensing and Automation in Agri-Systems (SAAS) Lab, where I develop vision-guided autonomous systems for specialty-crop harvesting and food processing — from simulation through field deployment.
 
-Previously, I worked as a Graduate Research Assistant in the Department of Agricultural and Biological Engineering at Mississippi State University. During this time, I developed a strong foundation in agricultural engineering, precision agriculture, and applied research methods. These experiences shaped my interest in building engineering solutions that can be tested and used in real agricultural environments.
+**I am currently searching for new positions.** My [CV]({{ '/cv/' | relative_url }}) is available here, and I am happy to discuss opportunities in agricultural robotics, computer vision, and autonomous field systems.
 
-My research interests include autonomous field robots, computer vision, sensor-based decision systems, and robotic end-effectors for selective harvesting. I am especially interested in developing systems that are reliable in outdoor conditions and can be adopted by farmers to improve productivity and sustainability. -->
+#### Research
 
-I am a Graduate Research Assistant in the School of Environmental, Civil, Agricultural, and Mechanical Engineering at the University of Georgia, where I work with **Dr. [Xin Zhang](https://sites.google.com/view/xin-zhang-lab/home?authuser=0)** on agricultural robotics, automation, and intelligent sensing technologies that support sustainable farming. My research integrates machine vision, robotic manipulation, and real-world field experimentation to develop practical systems that improve farm efficiency and reduce manual labor.
+- **Autonomous selective harvesting.** I designed and open-sourced [CottonSim](https://github.com/imtheva/CottonSim), a ROS/Gazebo simulator and vision-guided navigation stack for a lightweight robotic cotton picker built on a Clearpath Husky. The perception module reached 85.2% mAP, and the system completed autonomous field traversal at a 100% rate under GPS guidance and 96.7% under map-based guidance.
+- **Perception for delicate produce.** I built a multi-ripeness blackberry detection pipeline for soft robotic harvesting, benchmarking nine YOLO architectures across a two-season, 1,086-image field dataset acquired in commercial orchards.
+- **Manipulation.** I develop boll orientation-aware manipulator control for a UR5e with dual-side harvesting capability, using stereo perception to plan approaches around occluded and awkwardly oriented targets.
+- **Food-processing automation.** With the USDA-ARS, I applied semantic segmentation to automate the catfish cutting process, reaching 89.2% mIoU with SegFormer-B5.
 
-Previously, I worked as a Graduate Research Assistant in the Department of Agricultural and Biological Engineering at Mississippi State University. My research interests include autonomous field robots, computer vision, sensor-based decision systems, and robotic end-effectors for selective harvesting. 
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->
+Previously I was a Graduate Research Assistant in the Department of Agricultural and Biological Engineering at Mississippi State University, and before that Lecturer (Probationary) at Uva Wellassa University in Sri Lanka, where I was instructor of record for eight undergraduate courses in electronics, embedded systems, and intelligent systems.
 
-<!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
-
-<!-- Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+Please [get in touch](mailto:theva@uga.edu) if you would like to talk about agricultural robotics, field perception, or collaboration.

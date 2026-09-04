@@ -1,0 +1,90 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Thevathayarajh Thayananthan
+    - name: Position
+      value: Ph.D. Student & Graduate Research Assistant
+    - name: Affiliation
+      value: University of Georgia (UGA)
+    - name: Research Areas
+      value: Robotics, Computer Vision, Autonomous Systems, Agricultural Engineering
+    - name: Languages
+      value: Tamil,English, Sinhala
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD in Engineering
+      institution: University of Georgia, Athens, GA, USA
+      year: "2025 - Present"
+      description:
+        - "Autonomous robotic systems for selective cotton harvesting"
+        - "Deep learning based perception for agricultural robotics"
+        - "Mobile manipulation and stereo vision integration"
+
+    - title: Engineering Degree
+      institution: University of Jaffna, Sri Lanka
+      year: "2016 - 2021"
+      description:
+        - "Robotics, control systems, and automation fundamentals"
+        - "Undergraduate projects in sensing and automation"
+
+- title: work
+  type: time_table
+  contents:
+    - title: Graduate Research Assistant
+      institution: Xin Zhang Lab, University of Georgia
+      year: "2022 - Present"
+      description:
+        - "Vision guided autonomous cotton picking robot development"
+        - "YOLO based object detection and segmentation pipelines"
+        - "UR5e manipulator and mobile robot integration"
+        - "Simulation and real world field testing"
+
+    - title: Teaching Assistant
+      institution: University of Georgia
+      year: "2023 - Present"
+      description:
+        - "Assisted undergraduate and graduate engineering courses"
+        - "Lab support, grading, and student mentoring"
+
+- title: Open Source Projects
+  type: time_table
+  contents:
+    - title: "<a href='https://github.com/imtheva'>Public Datasets and Robotics Code Collection</a>"
+      year: "2023 - Present"
+      description: "Publicly available datasets and open source code for computer vision, robotics, and engineering research"
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: "2024"
+      items:
+        - "Graduate Research Support, University of Georgia"
+        - "Conference Travel Support"
+    - year: "2023"
+      items:
+        - "Departmental Academic Recognition"
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Robotics
+      items:
+        - "Mobile manipulation"
+        - "End effector design"
+        - "Field robotics"
+    - title: Computer Vision
+      items:
+        - "Object detection and segmentation"
+        - "Stereo vision and 3D perception"
+    - title: Autonomous Systems
+      items:
+        - "Multi sensor fusion"
+        - "Simulation to real transfer"
+
+- title: Other Interests
+  type: list
+  contents:
+    - "Hobbies: Technology blogging, photography, travel, fitness"

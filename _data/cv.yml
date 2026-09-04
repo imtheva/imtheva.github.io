@@ -1,90 +1,60 @@
+# _data/cv.yml
+#
+# NOTE: This file is ONLY a fallback. _layouts/cv.liquid renders _data/resume.yml
+# whenever it exists, so this file is not currently displayed. The previous
+# version of it contained incorrect biographical data (a degree from the
+# University of Jaffna, 2016-2021) that would have been published verbatim if
+# resume.yml were ever removed or failed to parse.
+#
+# The safest action is to DELETE _data/cv.yml entirely. If you prefer to keep a
+# fallback, this corrected minimal version is safe to publish.
+
 - title: General Information
   type: map
   contents:
     - name: Full Name
       value: Thevathayarajh Thayananthan
     - name: Position
-      value: Ph.D. Student & Graduate Research Assistant
+      value: Ph.D. Candidate, Agricultural Engineering
     - name: Affiliation
-      value: University of Georgia (UGA)
+      value: School of Environmental, Civil, Agricultural and Mechanical Engineering, University of Georgia
+    - name: ORCID
+      value: 0009-0007-2576-4348
     - name: Research Areas
-      value: Robotics, Computer Vision, Autonomous Systems, Agricultural Engineering
+      value: Agricultural robotics, computer vision, autonomous field systems, precision agriculture
     - name: Languages
-      value: Tamil,English, Sinhala
+      value: English, Tamil, Sinhala
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Engineering
+    - title: Ph.D. in Agricultural Engineering
       institution: University of Georgia, Athens, GA, USA
       year: "2025 - Present"
       description:
+        - "Advisor: Dr. Xin Zhang"
         - "Autonomous robotic systems for selective cotton harvesting"
-        - "Deep learning based perception for agricultural robotics"
-        - "Mobile manipulation and stereo vision integration"
+        - "Deep learning perception for agricultural robotics"
 
-    - title: Engineering Degree
-      institution: University of Jaffna, Sri Lanka
-      year: "2016 - 2021"
+    - title: Ph.D. coursework and research (transferred to UGA)
+      institution: Mississippi State University, MS, USA
+      year: "2023 - 2025"
       description:
-        - "Robotics, control systems, and automation fundamentals"
-        - "Undergraduate projects in sensing and automation"
+        - "Agricultural and Biological Engineering"
 
-- title: work
-  type: time_table
-  contents:
-    - title: Graduate Research Assistant
-      institution: Xin Zhang Lab, University of Georgia
-      year: "2022 - Present"
+    - title: M.Sc. in Electrical and Electronics Engineering
+      institution: University of Peradeniya, Sri Lanka
+      year: "2019 - 2022"
       description:
-        - "Vision guided autonomous cotton picking robot development"
-        - "YOLO based object detection and segmentation pipelines"
-        - "UR5e manipulator and mobile robot integration"
-        - "Simulation and real world field testing"
+        - "Control and instrumentation; IoT-based medical instrumentation"
 
-    - title: Teaching Assistant
-      institution: University of Georgia
-      year: "2023 - Present"
+    - title: B.Tech. in Science and Technology (Mechatronics)
+      institution: Uva Wellassa University, Sri Lanka
+      year: "2014 - 2018"
       description:
-        - "Assisted undergraduate and graduate engineering courses"
-        - "Lab support, grading, and student mentoring"
+        - "Thesis: monitoring device for the fermentation stage of black tea manufacturing"
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: "<a href='https://github.com/imtheva'>Public Datasets and Robotics Code Collection</a>"
-      year: "2023 - Present"
-      description: "Publicly available datasets and open source code for computer vision, robotics, and engineering research"
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: "2024"
-      items:
-        - "Graduate Research Support, University of Georgia"
-        - "Conference Travel Support"
-    - year: "2023"
-      items:
-        - "Departmental Academic Recognition"
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Robotics
-      items:
-        - "Mobile manipulation"
-        - "End effector design"
-        - "Field robotics"
-    - title: Computer Vision
-      items:
-        - "Object detection and segmentation"
-        - "Stereo vision and 3D perception"
-    - title: Autonomous Systems
-      items:
-        - "Multi sensor fusion"
-        - "Simulation to real transfer"
-
-- title: Other Interests
+- title: Full CV
   type: list
   contents:
-    - "Hobbies: Technology blogging, photography, travel, fitness"
+    - "The complete CV is rendered from <code>_data/resume.yml</code>. A PDF is available from the download icon at the top of this page."
