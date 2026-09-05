@@ -52,9 +52,9 @@ work:
     startDate: "2025"
     endDate: "9999"
     highlights:
-      - "Boll orientation-aware robotic cotton picker for in-field selective harvesting"
+      - "Robotic cotton picker for in-field selective harvesting"
       - "Perception-driven UR5e manipulator control with dual ZED 2i stereo cameras"
-      - "Extending the CottonSim platform toward simulation-to-field transfer"
+      # - "Extending the CottonSim platform toward simulation-to-field transfer"
 
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
     position: "Graduate Research Assistant"
@@ -64,8 +64,7 @@ work:
       - "Built and open-sourced CottonSim: a ROS/Gazebo simulator and vision-guided navigation stack for autonomous cotton picking (100% GPS-guided field-traversal completion; 96.7% map-based)"
       - "Multi-ripeness blackberry detection for soft robotic harvesting; benchmarked nine YOLO architectures on a two-season, 1,086-image field dataset"
       - "Deep learning semantic segmentation for automated catfish processing, with USDA-ARS"
-      - "Named inventor on a university technology disclosure for the autonomous vision-guided cotton picker"
-
+      
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
     position: "Graduate Teaching Assistant"
     startDate: "2024"
@@ -79,7 +78,7 @@ work:
     endDate: "2023"
     highlights:
       - "Instructor of record for eight undergraduate courses in electronics, embedded systems, and intelligent systems"
-      - "Supervised TODO undergraduate final-year research projects, resulting in TODO peer-reviewed conference papers"
+      - "Supervised 15 undergraduate final-year research projects, resulting in 4 peer-reviewed conference papers"
 
   - name: "Faculty of Applied Sciences, Uva Wellassa University of Sri Lanka"
     position: "Demonstrator (Temporary)"
@@ -152,7 +151,7 @@ teaching:
     startDate: "2024"
     endDate: "2024"
 
-  - name: "BSc in Science and Technology in Mechatronics, Uva Wellassa University"
+  - name: "BSc in Mechatronics, Uva Wellassa University"
     position: "New Course Development — 7 modules"
     startDate: "2019"
     endDate: "2019"
@@ -160,15 +159,6 @@ teaching:
       - "Designed seven new course modules and lesson plans for the programme's curriculum revision"
       - "MEC 361-2 Computer Vision; MEC 331-2 IoT Development; MEC 232-2 Embedded Systems; MEC 233-2 Embedded Systems Design"
       - "MEC 111-2 and MEC 212-2 Computer Programming I & II; MEC 362-2 Transducers and Instrumentation"
-
-  - name: "BSc in Mechatronics programme, Uva Wellassa University"
-    position: "Curriculum Development — 7 course modules"
-    startDate: "2019"
-    endDate: "2019"
-    highlights:
-      - "Developed course modules and lesson plans for a new BSc degree programme"
-      - "MEC 361-2 Computer Vision; MEC 331-2 IoT Development; MEC 232-2 and MEC 233-2 Embedded Systems and Embedded Systems Design"
-      - "MEC 111-2 and MEC 212-2 Computer Programming I and II; MEC 362-2 Transducers and Instrumentation"
 
 publications:
   - name: "Publications"
@@ -184,8 +174,7 @@ publications:
   - name: "ORCID 0009-0007-2576-4348"
     publisher: "ORCID"
     url: "https://orcid.org/0009-0007-2576-4348"
-    summary: "Persistent identifier. Earlier work appears under the name Thevathayarajh, T."
-
+    
 projects:
   - name: "Robotic cotton harvesting (Ph.D. research)"
     startDate: "2023"
@@ -194,7 +183,7 @@ projects:
     highlights:
       - "CottonSim: open-source ROS/Gazebo simulator and virtual cotton farm for autonomous navigation testing"
       - "Cotton-Eye perception module using RGB-D sensing and YOLOv8n-seg instance segmentation (85.2% mAP)"
-      - "Boll orientation-aware manipulator control for dual-side selective picking on a UR5e"
+      - "Manipulator control for dual-side selective picking on a UR5e"
       - "Technology disclosure filed with the MSU Innovation Platform (2025)"
 
   - name: "Perception for specialty crops and food processing"
@@ -218,6 +207,33 @@ projects:
       - "Automatic billing system for a Sri Lankan pastry shop"
 
 professional:
+
+  - name: "Elsevier Researcher Academy"
+    position: "Peer Review Certification — 3 courses, 14 hours"
+    startDate: "2026"
+    endDate: "2026"
+    summary: "Fundamentals of Peer Review; Certified Peer Reviewer Course; Becoming a Peer Reviewer."
+
+  - name: "NVIDIA Deep Learning Institute"
+    position: "Certificate of Competency — Fundamentals of Deep Learning"
+    startDate: "2023"
+    endDate: "2023"
+
+  - name: "Staff Development Centre, Uva Wellassa University"
+    position: "Psychological Counselling Program — 40 hours (World Bank AHEAD Project)"
+    startDate: "2021"
+    endDate: "2022"
+
+  - name: "Uva Wellassa University"
+    position: "Workshop — Writing Manuscripts and Proposals for Research Grants"
+    startDate: "2020"
+    endDate: "2020"
+
+  - name: "Uva Wellassa University"
+    position: "Workshop — Online Teaching Tools and Methods for Effective Teaching and Assessment"
+    startDate: "2020"
+    endDate: "2020"
+
   - name: "Sensing and Automation in Agri-Systems (SAAS) Lab"
     position: "Lab Manager"
     startDate: "2024"
@@ -225,11 +241,10 @@ professional:
     summary: "Mississippi State University (2024–2025); University of Georgia (2025–present)."
 
   - name: "Sensing and Automation in Agri-Systems (SAAS) Lab"
-    position: "Undergraduate Research Mentor"
+    position: "Undergraduate Research Mentor — 5 students"
     startDate: "2024"
     endDate: "9999"
-    summary: "Mentoring undergraduate researchers in computer vision, robotics, and precision agriculture."
-    # TODO: list mentees by name, project, and dates — this is high-value for faculty searches
+    summary: "Mentored five undergraduate researchers across Mississippi State University and the University of Georgia, including a visiting SUROE summer researcher from Trevecca Nazarene University. One ongoing."
 
   - name: "Mississippi State University"
     position: "Preparing Future Faculty Program"

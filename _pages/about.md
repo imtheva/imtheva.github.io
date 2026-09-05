@@ -39,7 +39,7 @@ I build **robots that can see well enough to harvest**. I am a Ph.D. candidate i
 
 - **Autonomous selective harvesting.** I designed and open-sourced [CottonSim](https://github.com/imtheva/CottonSim), a ROS/Gazebo simulator and vision-guided navigation stack for a lightweight robotic cotton picker built on a Clearpath Husky. The perception module reached 85.2% mAP, and the system completed autonomous field traversal at a 100% rate under GPS guidance and 96.7% under map-based guidance.
 - **Perception for delicate produce.** I built a multi-ripeness blackberry detection pipeline for soft robotic harvesting, benchmarking nine YOLO architectures across a two-season, 1,086-image field dataset acquired in commercial orchards.
-- **Manipulation.** I develop boll orientation-aware manipulator control for a UR5e with dual-side harvesting capability, using stereo perception to plan approaches around occluded and awkwardly oriented targets.
+- **Manipulation.** I develop perception-driven manipulator control for a UR5e with dual-side harvesting capability, using stereo vision to plan approaches around occluded targets.
 - **Food-processing automation.** With the USDA-ARS, I applied semantic segmentation to automate the catfish cutting process, reaching 89.2% mIoU with SegFormer-B5.
 
 Previously I was a Graduate Research Assistant in the Department of Agricultural and Biological Engineering at Mississippi State University, and before that Lecturer (Probationary) at Uva Wellassa University in Sri Lanka, where I was instructor of record for eight undergraduate courses in electronics, embedded systems, and intelligent systems.

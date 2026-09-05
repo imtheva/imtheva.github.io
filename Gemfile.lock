@@ -69,11 +69,15 @@ GEM
       loofah (>= 2.3.1, < 3)
       sax-machine (>= 1.0, < 2)
     ffi (1.17.4)
+    ffi (1.17.4-arm64-darwin)
     ffi (1.17.4-x64-mingw-ucrt)
     forwardable (1.4.0)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
     google-protobuf (4.35.1)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.35.1-arm64-darwin)
       bigdecimal
       rake (~> 13.3)
     google-protobuf (4.35.1-x64-mingw-ucrt)
@@ -201,6 +205,8 @@ GEM
     sass-embedded (1.102.0)
       google-protobuf (~> 4.31)
       rake (>= 13)
+    sass-embedded (1.102.0-arm64-darwin)
+      google-protobuf (~> 4.31)
     sass-embedded (1.102.0-x64-mingw-ucrt)
       google-protobuf (~> 4.31)
     sax-machine (1.3.2)
@@ -223,6 +229,7 @@ GEM
     webrick (1.9.2)
 
 PLATFORMS
+  arm64-darwin-25
   x64-mingw-ucrt
   x86_64-linux
 
