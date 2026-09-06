@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-teaching",
+          title: "Teaching",
+          description: "Instructor of record, course development, laboratory instruction, and research mentoring.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
         },{id: "nav-curriculum-vitae",
           title: "Curriculum Vitae",
           description: "Download the full CV as a PDF using the icon above. Last updated September 2026.",
