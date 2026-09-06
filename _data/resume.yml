@@ -160,6 +160,17 @@ teaching:
       - "MEC 361-2 Computer Vision; MEC 331-2 IoT Development; MEC 232-2 Embedded Systems; MEC 233-2 Embedded Systems Design"
       - "MEC 111-2 and MEC 212-2 Computer Programming I & II; MEC 362-2 Transducers and Instrumentation"
 
+  - name: "Uva Wellassa University"
+    position: "Subject Coordinator — BGE 121-2 Ethics and Law Basics"
+    startDate: "2022"
+    endDate: "2023"
+    highlights:
+      - "Cross-faculty course delivered to three faculties; online delivery for up to 500 students"
+      - "Coordinated visiting resource persons, assessment, and results submission"
+
+  - name: "Introduction to Robotics and Mechatronics · Computer Vision for Agricultural and Biological Systems · Artificial Intelligence for Agricultural and Biological Engineering · Deep Learning for Agricultural Robotics and Autonomous Systems (graduate) · IoT and Embedded Systems for Smart Agriculture · Sensors and Bioinstrumentation · Machine Learning Applications in Agriculture · Agricultural Automation and Precision Agriculture · Intelligent Systems"
+    position: "Courses Prepared to Teach"
+
 publications:
   - name: "Publications"
     publisher: "This website"
@@ -175,6 +186,64 @@ publications:
     publisher: "ORCID"
     url: "https://orcid.org/0009-0007-2576-4348"
     
+presentations:
+  - name: "ASABE Annual International Meeting, Indianapolis, IN"
+    position: "Develop and evaluate a simplified end-effector for robotic selective cotton harvesting"
+    startDate: "2026"
+    endDate: "2026"
+
+  - name: "UGA Institute for Integrative Precision Agriculture Spring Retreat, Griffin, GA"
+    position: "Harvesting cotton before it's too late: a smarter robotic approach"
+    startDate: "2026"
+    endDate: "2026"
+    summary: "Third Place, Three Minute Thesis oral presentation."
+
+  - name: "8th IFAC Conference on Sensing, Control and Automation Technologies for Agriculture (AGRICONTROL 2025), Davis, CA"
+    position: "Perception-enabled manipulator control for a robotic cotton picker with dual-side harvesting capability"
+    startDate: "2025"
+    endDate: "2025"
+
+  - name: "AI in Agriculture and Natural Resources Conference, Starkville, MS"
+    position: "Cotton-SAM: AI-driven cotton boll localization for autonomous picking using YOLO and SAM integration"
+    startDate: "2025"
+    endDate: "2025"
+
+  - name: "Graduate Student Research Symposium, Mississippi State University"
+    position: "Cotton boll localization system to enable autonomous cotton picking using YOLO and SAM"
+    startDate: "2024"
+    endDate: "2024"
+
+  - name: "ASABE Annual International Meeting, Anaheim, CA"
+    position: "Development of a cotton boll detection system to enhance autonomous picking using YOLOv8 and SAM"
+    startDate: "2024"
+    endDate: "2024"
+
+  - name: "ASABE Annual International Meeting, Anaheim, CA "
+    position: "Computer vision-enabled autonomous robotic navigation system for cotton farms in a Gazebo simulation environment"
+    startDate: "2024"
+    endDate: "2024"
+
+  - name: "Mississippi Agriculture Consortium, Mississippi State University"
+    position: "Which is better cotton picker? (Three Minute Thesis)"
+    startDate: "2024"
+    endDate: "2024"
+
+  - name: "Mississippi Academy of Sciences 5th Summer Science & Engineering Symposium"
+    position: "Catfish cutting automation through computer vision and deep learning"
+    startDate: "2023"
+    endDate: "2023"
+
+  - name: "SPIE Defense + Commercial Sensing, Orlando, FL"
+    position: "Automating catfish cutting process using deep learning-based semantic segmentation"
+    startDate: "2023"
+    endDate: "2023"
+
+  - name: "SPIE Defense + Commercial Sensing, Orlando, FL "
+    position: "Multi-ripeness level blackberry detection using YOLOv7 for soft robotic harvesting"
+    startDate: "2023"
+    endDate: "2023"
+    summary: "Best Paper Award — Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping VIII session."
+
 projects:
   - name: "Robotic cotton harvesting (Ph.D. research)"
     startDate: "2023"
@@ -252,7 +321,7 @@ professional:
     endDate: "2025"
 
   - name: "Mississippi State University"
-    position: "Certified Teaching Assistant (Level 2 of 3)"
+    position: "Certified Teaching Assistant (Level 2/3)"
     startDate: "2024"
     endDate: "2024"
 
@@ -279,7 +348,7 @@ professional:
   - name: "Uva Wellassa University"
     position: "Coordinator, Short Course in Robotics and Arduino Programming"
     startDate: "2019"
-    endDate: "2023"
+    endDate: "2022"
 
   - name: "Uva Wellassa University"
     position: "Student Mentor"
@@ -341,6 +410,12 @@ professional:
     summary: "Prepared a survey of postgraduate admission pathways followed by UWU graduates; presented to and acknowledged by the Faculty Board (119th meeting)."
 
 volunteer:
+  - organization: "Endeavors: Mississippi State Undergraduate Research Journal (ISSN 3071-012X)"
+    position: "Associate Editor — Engineering / Computer Science"
+    startDate: "2024"
+    endDate: "2025"
+    summary: "Inaugural editorial board of MSU's first peer-reviewed undergraduate research journal; double-blind peer review of engineering and computer science submissions for Volume 1."
+
   - organization: "Computers and Electronics in Agriculture (Elsevier)"
     position: "Journal Reviewer — 6 reviews completed"
     startDate: "2024"

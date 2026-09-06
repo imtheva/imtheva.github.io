@@ -96,6 +96,8 @@ layout: default
                   Research Appointments
                 {% when 'teaching' -%}
                   Teaching
+                {% when 'presentations' -%}
+                  Conference Presentations
                 {% when 'professional' -%}
                   Service, Mentoring &amp; Professional Development
                 {% when 'volunteer' -%}
@@ -118,6 +120,8 @@ layout: default
                 {% when 'work' %}
                   {% include resume/work.liquid %}
                 {% when 'teaching' %}
+                  {% include resume/work.liquid %}
+                {% when 'presentations' %}
                   {% include resume/work.liquid %}
                 {% when 'professional' %}
                   {% include resume/professional_experience.liquid %}
