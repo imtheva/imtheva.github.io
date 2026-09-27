@@ -251,6 +251,15 @@ def main():
 
     soup, js_year_data = fetch_page()
 
+    # Stop before writing if Scholar blocked us (CAPTCHA) or the profile didn't load
+    page_text = soup.get_text(" ", strip=True).lower()
+    if ("unusual traffic" in page_text or "captcha" in page_text
+            or not soup.select("td.gsc_rsb_std")):
+        print("\n❌  Google Scholar blocked the request (CAPTCHA) or the profile did not load.")
+        print(f"   {OUTPUT_PATH} was NOT changed. Try again later or from another network.")
+        print("   See _data/scholar_debug.html for what Scholar returned.")
+        sys.exit(1)
+
     print("\nScraping summary indices…")
     summary = scrape_summary(soup)
     print(f"  total={summary['total']}  h={summary['h_index']}  i10={summary['i10_index']}")
@@ -274,6 +283,11 @@ def main():
         "cites_per_year": cites_per_year,
         "papers":         papers,
     }
+
+    if data["total"] == 0 and not papers:
+        print("\n❌  Scraped zero citations and zero papers — refusing to overwrite.")
+        print(f"   {OUTPUT_PATH} was NOT changed.")
+        sys.exit(1)
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False))

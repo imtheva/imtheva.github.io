@@ -51,13 +51,6 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/news/";
               },
-            },{id: "dropdown-teaching",
-              title: "Teaching",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/teaching/";
-              },
             },{id: "dropdown-repositories",
               title: "Repositories",
               description: "",
@@ -206,6 +199,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-milestone-passed-my-comprehensive-examination-and-advanced-to-ph-d-candidacy-in-agricultural-engineering-at-the-university-of-georgia",
           title: '🎓 [Milestone!] Passed my comprehensive examination and advanced to Ph.D. candidacy in Agricultural...',
+          description: "",
+          section: "News",},{id: "news-new-preprint-selective-cotton-boll-localization-for-robotic-harvesting-evaluation-of-deep-learning-vision-models-under-field-conditions",
+          title: '📄 [New Preprint!] Selective Cotton Boll Localization for Robotic Harvesting: Evaluation of Deep...',
           description: "",
           section: "News",},{id: "projects-medical-instrumentation-system",
           title: 'Medical Instrumentation System',
