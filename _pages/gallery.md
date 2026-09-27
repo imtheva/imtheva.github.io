@@ -14,6 +14,7 @@ Data source: \_data/gallery.yml
 Each item:
 
 - year: 2025
+  month: 8   # 1–12; sections are ordered latest month first
   section: "Field test – Tifton"
   path: assets/img/gallery/2025/field_test_01.jpg
   caption: "UGA/Tifton field test – Husky + UR5e setup"
@@ -41,8 +42,8 @@ Each item:
           <div class="gallery-year-block">
             <a href="#y{{ y }}" class="gallery-year-link">{{ y }}</a>
 
-            {%- assign year_items_for_nav = site.data.gallery | where: "year", y -%}
-            {%- assign sections_for_nav = year_items_for_nav | map: "section" | compact | uniq | sort -%}
+            {%- assign year_items_for_nav = site.data.gallery | where: "year", y | sort: "month", "first" | reverse -%}
+            {%- assign sections_for_nav = year_items_for_nav | map: "section" | compact | uniq -%}
             {%- if sections_for_nav.size == 0 -%}
               {%- assign sections_for_nav = "Other" | split: "," -%}
             {%- endif -%}
@@ -67,8 +68,10 @@ Each item:
       <h2 class="category">{{ y }}</h2>
 
       {% assign year_items = site.data.gallery | where: "year", y %}
-      {% assign sections_raw = year_items | map: "section" | compact %}
-      {% assign sections = sections_raw | uniq | sort %}
+      {%- comment -%} Sections ordered by month (latest first); entries without a month go last {%- endcomment -%}
+      {% assign year_items_by_month = year_items | sort: "month", "first" | reverse %}
+      {% assign sections_raw = year_items_by_month | map: "section" | compact %}
+      {% assign sections = sections_raw | uniq %}
       {%- if sections.size == 0 -%}
         {% assign sections = "Other" | split: "," %}
       {%- endif -%}

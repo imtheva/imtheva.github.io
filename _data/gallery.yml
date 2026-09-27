@@ -3,18 +3,39 @@
 # Example image location: assets/img/gallery/2025/field_test_01.jpg
 
 - year: 2026
+  month: 7
+  path: assets/img/gallery/2026/ASABE_2026/ASABE2026_1.jpg
+  section: "ASABE Annual International Meeting 2026 (Indianapolis)"
+  alt: "ASABE AIM 2026 1"
+
+- year: 2026
+  month: 7
+  path: assets/img/gallery/2026/ASABE_2026/ASABE2026_3.jpg
+  section: "ASABE Annual International Meeting 2026 (Indianapolis)"
+  alt: "ASABE AIM 2026 3"
+
+- year: 2026
+  month: 7
+  path: assets/img/gallery/2026/ASABE_2026/ASABE2026_4.jpg
+  section: "ASABE Annual International Meeting 2026 (Indianapolis)"
+  alt: "ASABE AIM 2026 4"
+
+- year: 2026
+  month: 3
   path: assets/img/gallery/2026/1.jpeg
   section: "3MT Competition - IIPA Retreat 2026"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "3MT Competition"
 
 - year: 2026
+  month: 3
   path: assets/img/gallery/2026/2.jpg
   section: "3MT Competition - IIPA Retreat 2026"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"
   alt: "3MT Competition 2"
 
 - year: 2026
+  month: 3
   path: assets/img/gallery/2026/3.jpg
   section: "3MT Competition - IIPA Retreat 2026"
   # caption: "UGA/Tifton field test - Husky + UR5e setup"

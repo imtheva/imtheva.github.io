@@ -16,6 +16,9 @@ basics:
     - network: "GitHub"
       username: "imtheva"
       url: "https://github.com/imtheva"
+    - network: "LinkedIn"
+      username: "imtheva"
+      url: "https://www.linkedin.com/in/imtheva"
 
 education:
   - institution: "University of Georgia (UGA)"
@@ -23,11 +26,11 @@ education:
     area: "Agricultural Engineering"
     startDate: "2025"
     endDate: "9999"
-    summary: "Advisor: Dr. Xin Zhang. Dissertation: TODO — working title. Expected graduation: TODO (e.g. May 2027)."
+    summary: "Advisor: Dr. Xin Zhang. Advanced to candidacy August 2026; expected graduation May 2027. Dissertation proposal: Design, Development, Integration and Field Evaluation of a Robotic Cotton Picker."
 
   - institution: "Mississippi State University"
     studyType: "Ph.D. coursework and research (transferred to UGA with advisor)"
-    area: "Agricultural and Biological Engineering"
+    area: "Biosystems Engineering"
     startDate: "2023"
     endDate: "2025"
     summary: "Vision-guided robotic cotton harvesting; deep learning for produce and food-processing perception."
@@ -37,10 +40,10 @@ education:
     area: "Electrical and Electronics Engineering"
     startDate: "2019"
     endDate: "2022"
-    summary: "Control and instrumentation. Thesis: IoT-based medical instrumentation."
+    summary: "Project: IoT-based medical instrumentation for remote patient monitoring."
 
   - institution: "Uva Wellassa University of Sri Lanka"
-    studyType: "B.Tech."
+    studyType: "B.Tech. (Hons.)"
     area: "Science and Technology (Mechatronics)"
     startDate: "2014"
     endDate: "2018"
@@ -52,8 +55,10 @@ work:
     startDate: "2025"
     endDate: "9999"
     highlights:
-      - "Robotic cotton picker for in-field selective harvesting"
-      - "Perception-driven UR5e manipulator control with dual ZED 2i stereo cameras"
+      - "Perception-driven manipulator control in ROS and Python for a dual-side robotic cotton picker, integrating two ZED2i stereo cameras, a UR5e manipulator, and a custom end-effector"
+      - "Benchmarked 34 detection and segmentation models (30 YOLO variants v8–v26 and four RF-DETR variants) on a 1,252-image, four-class annotated field dataset"
+      - "Built CottonID, a full-stack web application (Next.js, FastAPI, SQLite) that converts field imagery into boll counts, yield estimates, and defoliation-timing recommendations for growers"
+      - "Manage equipment, operations, data infrastructure, and safety for a three-researcher agricultural robotics laboratory"
       # - "Extending the CottonSim platform toward simulation-to-field transfer"
 
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
@@ -63,7 +68,8 @@ work:
     highlights:
       - "Built and open-sourced CottonSim: a ROS/Gazebo simulator and vision-guided navigation stack for autonomous cotton picking (100% GPS-guided field-traversal completion; 96.7% map-based)"
       - "Multi-ripeness blackberry detection for soft robotic harvesting; benchmarked nine YOLO architectures on a two-season, 1,086-image field dataset"
-      - "Deep learning semantic segmentation for automated catfish processing, with USDA-ARS"
+      - "Deep learning semantic segmentation for automated catfish processing, with USDA-ARS (SegFormer-B5: 89.2% mIoU)"
+      - "Named as an inventor on a university technology disclosure for an autonomous vision-guided cotton-harvesting system"
       
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
     position: "Graduate Teaching Assistant"
@@ -73,17 +79,22 @@ work:
       - "ABE 4423 / ABE 6423 — Bioinstrumentation II (laboratory instructor)"
 
   - name: "Faculty of Applied Sciences, Uva Wellassa University of Sri Lanka"
-    position: "Lecturer (Probationary)"
+    position: "Lecturer (Full-time)"
     startDate: "2019"
-    endDate: "2023"
+    endDate: "2022"
     highlights:
       - "Instructor of record for eight undergraduate courses in electronics, embedded systems, and intelligent systems"
-      - "Supervised 15 undergraduate final-year research projects, resulting in 4 peer-reviewed conference papers"
+      - "Designed curricula for seven new courses for the B.Sc. in Mechatronics curriculum revision, including Computer Vision and IoT Development"
+      - "Elected member of the Faculty Board; subject coordinator for a cross-faculty course serving three faculties"
+      - "Supervised 15 undergraduate final-year research projects, twelve of which produced peer-reviewed conference papers"
 
   - name: "Faculty of Applied Sciences, Uva Wellassa University of Sri Lanka"
     position: "Demonstrator (Temporary)"
     startDate: "2018"
     endDate: "2019"
+    highlights:
+      - "Led undergraduate laboratory and practical sessions in electronics, instrumentation, and workshop practice"
+      - "Maintained teaching laboratory equipment and assisted with demonstrations, practical assessments, and student project supervision"
 
   - name: "Research & Innovation Department, MAS Intimates (Unichela Pvt Ltd, Vidiyal Division)"
     position: "Research and Development Intern"
@@ -133,9 +144,9 @@ awards:
 
 teaching:
   - name: "Uva Wellassa University of Sri Lanka"
-    position: "Instructor of Record — 8 undergraduate courses"
+    position: "Instructor of Record — 8 undergraduate courses (18 credit hours)"
     startDate: "2019"
-    endDate: "2023"
+    endDate: "2022"
     highlights:
       - "SCT 364-2 Embedded Systems (2019, 2020, 2021, 2022)"
       - "SCT 462-2 Intelligent Systems (2019, 2020, 2021, 2022)"
@@ -163,7 +174,7 @@ teaching:
   - name: "Uva Wellassa University"
     position: "Subject Coordinator — BGE 121-2 Ethics and Law Basics"
     startDate: "2022"
-    endDate: "2023"
+    endDate: "2022"
     highlights:
       - "Cross-faculty course delivered to three faculties; online delivery for up to 500 students"
       - "Coordinated visiting resource persons, assessment, and results submission"
@@ -244,6 +255,11 @@ presentations:
     endDate: "2023"
     summary: "Best Paper Award — Autonomous Air and Ground Sensing Systems for Agricultural Optimization and Phenotyping VIII session."
 
+  - name: "2nd International Research Symposium, Uva Wellassa University, Badulla, Sri Lanka"
+    position: "Development of a monitoring device for the fermentation stage of black tea manufacturing"
+    startDate: "2018"
+    endDate: "2018"
+
 projects:
   - name: "Robotic cotton harvesting (Ph.D. research)"
     startDate: "2023"
@@ -253,7 +269,18 @@ projects:
       - "CottonSim: open-source ROS/Gazebo simulator and virtual cotton farm for autonomous navigation testing"
       - "Cotton-Eye perception module using RGB-D sensing and YOLOv8n-seg instance segmentation (85.2% mAP)"
       - "Manipulator control for dual-side selective picking on a UR5e"
-      - "Technology disclosure filed with the MSU Innovation Platform (2025)"
+      - "Selective cotton boll localization: benchmarked detection and segmentation models under field conditions, validated on a robotic manipulator (arXiv:2609.19592)"
+      - "Technology disclosure filed with the MSU Office of Technology Management (2025); co-inventor with Dr. Xin Zhang"
+
+  - name: "Research software and data"
+    startDate: "2023"
+    endDate: "9999"
+    description: "Open tools and datasets released from the SAAS Lab research."
+    highlights:
+      - "CottonID (2026): web application for cotton boll detection, yield estimation, and defoliation-timing decision support (Next.js, FastAPI, RF-DETR/YOLO)"
+      - "CottonSim (2025): open-source ROS/Gazebo simulator and vision-guided navigation stack — github.com/imtheva/CottonSim"
+      - "Multi-Ripeness Blackberry (2025): detection models and annotated field dataset (1,086 images, three ripeness classes) — github.com/Zhanglab-abe/Multi-Ripeness_Blackberry"
+      - "Catfish-Segment (2023): semantic segmentation models for automated catfish processing — github.com/Zhanglab-abe/Catfish-Segment"
 
   - name: "Perception for specialty crops and food processing"
     startDate: "2022"
@@ -265,8 +292,8 @@ projects:
 
   - name: "Undergraduate research supervised at Uva Wellassa University"
     startDate: "2019"
-    endDate: "2023"
-    description: "Final-year and applied research projects supervised as Lecturer (Probationary), several of which resulted in peer-reviewed conference papers."
+    endDate: "2022"
+    description: "Final-year and applied research projects supervised as Lecturer; twelve of the 15 projects resulted in peer-reviewed conference papers."
     highlights:
       - "Traffic sign recognition and auditory alert system for Sri Lankan drivers (IEEE SCSE 2024)"
       - "Automated image capture for the zebrafish embryo toxicity model"
@@ -331,7 +358,7 @@ professional:
     endDate: "2019"
 
   - name: "Uva Wellassa University"
-    position: "Program Review and Self-Evaluation Report (SER) Group Member"
+    position: "Program Review and Self-Evaluation Report (SER) Group Member (groups 3, 4, and 8)"
     startDate: "2022"
     endDate: "2023"
 
@@ -382,8 +409,8 @@ professional:
 
   - name: "Uva Wellassa University"
     position: "Organizing Committee Member, Convocation"
-    startDate: "2020"
-    endDate: "2020"
+    startDate: "2019"
+    endDate: "2019"
 
   - name: "Faculty of Applied Sciences, Uva Wellassa University"
     position: "Member, Faculty Board"
@@ -457,9 +484,14 @@ volunteer:
     endDate: "2023"
 
   - organization: "Softball Cricket Club, Mississippi State University"
+    position: "Secretary"
+    startDate: "2024"
+    endDate: "2025"
+
+  - organization: "Softball Cricket Club, Mississippi State University"
     position: "Social Secretary"
     startDate: "2023"
-    endDate: "2025"
+    endDate: "2024"
 
   - organization: "Sri Lankan Association, Mississippi State University"
     position: "Webmaster"
@@ -470,6 +502,11 @@ volunteer:
     position: "Workshop Instructor — Engineering Machinery Workshop for School Students"
     startDate: "2018"
     endDate: "2018"
+
+  - organization: "Department of Science & Technology, Uva Wellassa University"
+    position: "Organizing Committee — UWU Robot Battles"
+    startDate: "2016"
+    endDate: "2016"
 
   - organization: "IEEE Student Branch, Uva Wellassa University"
     position: "Member"
@@ -493,6 +530,20 @@ certificates:
     date: "2025"
     issuer: "University of Georgia"
     icon: "fa-solid fa-id-card"
+
+skills:
+  - name: "Programming"
+    icon: "fa-solid fa-code"
+    keywords: ["Python", "C++", "MATLAB"]
+  - name: "Deep Learning"
+    icon: "fa-solid fa-brain"
+    keywords: ["PyTorch", "TensorFlow/Keras", "YOLO (v5–v26), RF-DETR, SegFormer", "Instance and semantic segmentation", "Dataset design and annotation"]
+  - name: "Robotics and Perception"
+    icon: "fa-solid fa-robot"
+    keywords: ["ROS, Gazebo, OpenCV", "RGB-D and stereo vision (ZED2i, RealSense)", "UR5e manipulator control", "Clearpath Husky; GPS and map-based navigation; SLAM"]
+  - name: "Hardware and Embedded"
+    icon: "fa-solid fa-microchip"
+    keywords: ["Arduino, PLC, microcontrollers", "IoT sensor networks", "Instrumentation design"]
 
 languages:
   - language: "English"

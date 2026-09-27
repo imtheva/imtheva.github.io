@@ -10,9 +10,9 @@ nav_order: 4
 
 ## Instructor of Record
 
-**Uva Wellassa University of Sri Lanka** — Department of Science and Technology, Faculty of Applied Sciences. Lecturer (Probationary), 2019–2023.
+**Uva Wellassa University of Sri Lanka** — Department of Science and Technology, Faculty of Applied Sciences. Lecturer (Full-time), March 2019 – December 2022.
 
-Sole instructor for eight undergraduate courses across four academic years: lectures, laboratory design, assessment, and grading.
+Sole instructor for eight undergraduate courses (18 credit hours) across four academic years: lectures, laboratory design, assessment, and grading.
 
 | Course    | Title                                           | Credits | Semesters              |
 | --------- | ----------------------------------------------- | ------- | ---------------------- |
@@ -45,7 +45,7 @@ Sole instructor for eight undergraduate courses across four academic years: lect
 
 ## Course Coordination and Laboratory Instruction
 
-- **Subject Coordinator**, BGE 121-2 Ethics and Law Basics, Uva Wellassa University (2022–2023). Cross-faculty course delivered to three faculties; coordinated visiting resource persons, online delivery for up to 500 students, assessment, and results submission.
+- **Subject Coordinator**, BGE 121-2 Ethics and Law Basics, Uva Wellassa University (2022). Cross-faculty course delivered to three faculties; coordinated visiting resource persons, online delivery for up to 500 students, assessment, and results submission.
 - **Graduate Teaching Assistant**, ABE 4423 / ABE 6423 Bioinstrumentation II, Mississippi State University (Spring 2024). Laboratory instructor with Dr. Xin Zhang. Certified Teaching Assistant, Level 2/3.
 - **Coordinator**, Short Course in Robotics and Arduino Programming, Centre for Open and Distance Learning, Uva Wellassa University (2019–2022). Appointed by the Vice Chancellor; responsible for curriculum, timetabling, certification, and course budget.
 
@@ -55,7 +55,7 @@ Sole instructor for eight undergraduate courses across four academic years: lect
 
 **Undergraduate researchers**, Sensing and Automation in Agri-Systems (SAAS) Lab, 2024–present. Five students mentored to date across Mississippi State University and the University of Georgia, including a visiting summer researcher through UGA's [SUROE](https://engineering.uga.edu/research/undergraduate-research-opportunities/suroe/) program. Topics include computer vision for the robotic cotton picker, end-effector task design, and actuation design for a plant surgical robot.
 
-**Undergraduate final-year research projects**, Uva Wellassa University, 2019–2023. Supervised 15 projects; twelve produced peer-reviewed conference papers. Selected topics:
+**Undergraduate final-year research projects**, Uva Wellassa University, 2019–2022. Supervised 15 projects; twelve produced peer-reviewed conference papers. Selected topics:
 
 - Traffic sign recognition and auditory alert system for Sri Lankan drivers using deep learning — *IEEE SCSE 2024*
 - Leveraging virtual reality for robot manipulator education — *IEEE MERCon 2023*

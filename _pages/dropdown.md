@@ -10,8 +10,8 @@ children:
   - title: News
     permalink: /news/
   - title: divider
-  - title: Teaching
-    permalink: /teaching/
+  # - title: Teaching
+  #   permalink: /teaching/
   - title: divider
   - title: Repositories
     permalink: /repositories/
