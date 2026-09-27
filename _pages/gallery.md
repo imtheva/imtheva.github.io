@@ -14,7 +14,7 @@ Data source: \_data/gallery.yml
 Each item:
 
 - year: 2025
-  month: 8   # 1–12; sections are ordered latest month first
+  month: 8 # 1–12; sections are ordered latest month first
   section: "Field test – Tifton"
   path: assets/img/gallery/2025/field_test_01.jpg
   caption: "UGA/Tifton field test – Husky + UR5e setup"

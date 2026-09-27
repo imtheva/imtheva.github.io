@@ -31,15 +31,15 @@ Sole instructor for eight undergraduate courses (18 credit hours) across four ac
 
 **BSc in Mechatronics curriculum revision**, Department of Science and Technology, Uva Wellassa University (2019). Invited by the department to design seven new course modules and their lesson plans.
 
-| Course    | Title                             |
-| --------- | --------------------------------- |
-| MEC 361-2 | Computer Vision                   |
-| MEC 331-2 | IoT Development                   |
-| MEC 232-2 | Embedded Systems                  |
-| MEC 233-2 | Embedded Systems Design           |
-| MEC 362-2 | Transducers and Instrumentation   |
-| MEC 111-2 | Computer Programming I            |
-| MEC 212-2 | Computer Programming II           |
+| Course    | Title                           |
+| --------- | ------------------------------- |
+| MEC 361-2 | Computer Vision                 |
+| MEC 331-2 | IoT Development                 |
+| MEC 232-2 | Embedded Systems                |
+| MEC 233-2 | Embedded Systems Design         |
+| MEC 362-2 | Transducers and Instrumentation |
+| MEC 111-2 | Computer Programming I          |
+| MEC 212-2 | Computer Programming II         |
 
 ---
 
@@ -57,8 +57,8 @@ Sole instructor for eight undergraduate courses (18 credit hours) across four ac
 
 **Undergraduate final-year research projects**, Uva Wellassa University, 2019–2022. Supervised 15 projects; twelve produced peer-reviewed conference papers. Selected topics:
 
-- Traffic sign recognition and auditory alert system for Sri Lankan drivers using deep learning — *IEEE SCSE 2024*
-- Leveraging virtual reality for robot manipulator education — *IEEE MERCon 2023*
+- Traffic sign recognition and auditory alert system for Sri Lankan drivers using deep learning — _IEEE SCSE 2024_
+- Leveraging virtual reality for robot manipulator education — _IEEE MERCon 2023_
 - Automated image capture for the zebrafish embryo toxicity model
 - Development of an IoT-based automated colony counter
 - Recognition of Sinhala machine-printed text for postal address interpretation

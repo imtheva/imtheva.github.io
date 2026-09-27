@@ -70,7 +70,7 @@ work:
       - "Multi-ripeness blackberry detection for soft robotic harvesting; benchmarked nine YOLO architectures on a two-season, 1,086-image field dataset"
       - "Deep learning semantic segmentation for automated catfish processing, with USDA-ARS (SegFormer-B5: 89.2% mIoU)"
       - "Named as an inventor on a university technology disclosure for an autonomous vision-guided cotton-harvesting system"
-      
+
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
     position: "Graduate Teaching Assistant"
     startDate: "2024"
@@ -196,7 +196,7 @@ publications:
   - name: "ORCID 0009-0007-2576-4348"
     publisher: "ORCID"
     url: "https://orcid.org/0009-0007-2576-4348"
-    
+
 presentations:
   - name: "ASABE Annual International Meeting, Indianapolis, IN"
     position: "Develop and evaluate a simplified end-effector for robotic selective cotton harvesting"
@@ -303,7 +303,6 @@ projects:
       - "Automatic billing system for a Sri Lankan pastry shop"
 
 professional:
-
   - name: "Elsevier Researcher Academy"
     position: "Peer Review Certification — 3 courses, 14 hours"
     startDate: "2026"
@@ -537,10 +536,17 @@ skills:
     keywords: ["Python", "C++", "MATLAB"]
   - name: "Deep Learning"
     icon: "fa-solid fa-brain"
-    keywords: ["PyTorch", "TensorFlow/Keras", "YOLO (v5–v26), RF-DETR, SegFormer", "Instance and semantic segmentation", "Dataset design and annotation"]
+    keywords:
+      ["PyTorch", "TensorFlow/Keras", "YOLO (v5–v26), RF-DETR, SegFormer", "Instance and semantic segmentation", "Dataset design and annotation"]
   - name: "Robotics and Perception"
     icon: "fa-solid fa-robot"
-    keywords: ["ROS, Gazebo, OpenCV", "RGB-D and stereo vision (ZED2i, RealSense)", "UR5e manipulator control", "Clearpath Husky; GPS and map-based navigation; SLAM"]
+    keywords:
+      [
+        "ROS, Gazebo, OpenCV",
+        "RGB-D and stereo vision (ZED2i, RealSense)",
+        "UR5e manipulator control",
+        "Clearpath Husky; GPS and map-based navigation; SLAM",
+      ]
   - name: "Hardware and Embedded"
     icon: "fa-solid fa-microchip"
     keywords: ["Arduino, PLC, microcontrollers", "IoT sensor networks", "Instrumentation design"]

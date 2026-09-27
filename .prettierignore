@@ -28,3 +28,6 @@ assets/pdf/
 
 # Files we don't want Prettier to touch
 *.bib
+
+_to_delete/
+_data/scholar_debug.html
