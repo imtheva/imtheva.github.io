@@ -1,15 +1,15 @@
 {
   "scholar_id": "MpKhKEUAAAAJ",
-  "updated": "2026-09-04",
-  "total": 47,
-  "since_2021": 47,
+  "updated": "2026-09-27",
+  "total": 41,
+  "since_2021": 41,
   "h_index": 4,
   "h_index_5y": 4,
   "i10_index": 1,
   "i10_index_5y": 1,
   "cites_per_year": {
-    "2024": 7,
-    "2025": 22,
+    "2024": 6,
+    "2025": 17,
     "2026": 17
   },
   "papers": [
@@ -22,14 +22,8 @@
     {
       "title": "CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation",
       "year": "2025",
-      "cites": 8,
+      "cites": 9,
       "scholar_id": "MpKhKEUAAAAJ:hqOjcs7Dif8C"
-    },
-    {
-      "title": "Engineering applications in livestock production",
-      "year": "2024",
-      "cites": 7,
-      "scholar_id": "MpKhKEUAAAAJ:WF5omc3nYNoC"
     },
     {
       "title": "Traffic sign recognition and auditory alert system for sri lankan drivers using deep-learning",

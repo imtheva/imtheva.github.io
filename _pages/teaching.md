@@ -53,7 +53,7 @@ Sole instructor for eight undergraduate courses (18 credit hours) across four ac
 
 ## Research Mentoring
 
-**Undergraduate researchers**, Sensing and Automation in Agri-Systems (SAAS) Lab, 2024–present. Five students mentored to date across Mississippi State University and the University of Georgia, including a visiting summer researcher through UGA's [SUROE](https://engineering.uga.edu/research/undergraduate-research-opportunities/suroe/) program. Topics include computer vision for the robotic cotton picker, end-effector task design, and actuation design for a plant surgical robot.
+**Undergraduate and visiting researchers**, Sensing and Automation in Agri-Systems (SAAS) Lab, 2024–present. Six students mentored to date across Mississippi State University and the University of Georgia, including a Harper Adams University (UK) exchange student hosted by MSU's Agricultural Autonomy Institute and a visiting summer researcher through UGA's [SUROE](https://engineering.uga.edu/research/undergraduate-research-opportunities/suroe/) program. Topics include computer vision for the robotic cotton picker, a UR5e base platform for the Husky mobile robot, end-effector task design, and actuation design for a plant surgical robot.
 
 **Undergraduate final-year research projects**, Uva Wellassa University, 2019–2022. Supervised 15 projects; twelve produced peer-reviewed conference papers. Selected topics:
 

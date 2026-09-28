@@ -1,7 +1,7 @@
 basics:
   name: "Thevathayarajh Thayananthan"
   label: "Ph.D. Candidate, Agricultural Engineering — University of Georgia"
-  summary: "Agricultural robotics and computer vision. I build vision-guided autonomous systems for selective harvesting and food processing, from simulation through field deployment. Currently searching for new positions."
+  summary: "AI-enabled autonomous systems for agriculture: computer vision, multimodal sensing, 3D localization, field navigation, and robotic manipulation for selective harvesting and precision crop operations — from ROS/Gazebo simulation to integrated hardware and field deployment. Currently searching for new positions."
   location:
     city: "Athens"
     region: "GA"
@@ -55,10 +55,10 @@ work:
     startDate: "2025"
     endDate: "9999"
     highlights:
-      - "Perception-driven manipulator control in ROS and Python for a dual-side robotic cotton picker, integrating two ZED2i stereo cameras, a UR5e manipulator, and a custom end-effector"
-      - "Benchmarked 34 detection and segmentation models (30 YOLO variants v8–v26 and four RF-DETR variants) on a 1,252-image, four-class annotated field dataset"
-      - "Built CottonID, a full-stack web application (Next.js, FastAPI, SQLite) that converts field imagery into boll counts, yield estimates, and defoliation-timing recommendations for growers"
-      - "Manage equipment, operations, data infrastructure, and safety for a three-researcher agricultural robotics laboratory"
+      - "Perception-driven manipulator control in ROS and Python for a dual-side robotic cotton picker; completed field testing with one ZED 2i stereo camera, a UR5e manipulator, and a custom end-effector, and developed a two-camera control pipeline for dual-side harvesting"
+      - "Benchmarking 33 YOLO variants (v8–v13) and several segmentation models on a 1,008-image, four-class annotated field dataset"
+      - "Developed CottonID, a full-stack web application (Next.js, FastAPI, SQLite) that generates boll counts, yield estimates, and defoliation-timing recommendations; currently improving its perception models"
+      - "Manage equipment, operations, data infrastructure, and safety within the SAAS Lab"
       # - "Extending the CottonSim platform toward simulation-to-field transfer"
 
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
@@ -68,7 +68,7 @@ work:
     highlights:
       - "Built and open-sourced CottonSim: a ROS/Gazebo simulator and vision-guided navigation stack for autonomous cotton picking (100% GPS-guided field-traversal completion; 96.7% map-based)"
       - "Multi-ripeness blackberry detection for soft robotic harvesting; benchmarked nine YOLO architectures on a two-season, 1,086-image field dataset"
-      - "Deep learning semantic segmentation for automated catfish processing, with USDA-ARS (SegFormer-B5: 89.2% mIoU)"
+      - "Deep learning semantic segmentation for automated bladeless catfish cutting (SegFormer-B5: 89.2% mIoU, 94.6% mean pixel accuracy)"
       - "Named as an inventor on a university technology disclosure for an autonomous vision-guided cotton-harvesting system"
 
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
@@ -85,8 +85,7 @@ work:
     highlights:
       - "Instructor of record for eight undergraduate courses in electronics, embedded systems, and intelligent systems"
       - "Designed curricula for seven new courses for the B.Sc. in Mechatronics curriculum revision, including Computer Vision and IoT Development"
-      - "Elected member of the Faculty Board; subject coordinator for a cross-faculty course serving three faculties"
-      - "Supervised 15 undergraduate final-year research projects, twelve of which produced peer-reviewed conference papers"
+      - "Supervised 15 undergraduate final-year research projects, twelve of which produced peer-reviewed conference abstracts/papers"
 
   - name: "Faculty of Applied Sciences, Uva Wellassa University of Sri Lanka"
     position: "Demonstrator (Temporary)"
@@ -280,6 +279,7 @@ projects:
       - "CottonID (2026): web application for cotton boll detection, yield estimation, and defoliation-timing decision support (Next.js, FastAPI, RF-DETR/YOLO)"
       - "CottonSim (2025): open-source ROS/Gazebo simulator and vision-guided navigation stack — github.com/imtheva/CottonSim"
       - "Multi-Ripeness Blackberry (2025): detection models and annotated field dataset (1,086 images, three ripeness classes) — github.com/Zhanglab-abe/Multi-Ripeness_Blackberry"
+      - "CottonBoll Harvest (2026): code and trained models for the selective cotton boll localization manuscript; repository private during review, public release planned on publication"
       - "Catfish-Segment (2023): semantic segmentation models for automated catfish processing — github.com/Zhanglab-abe/Catfish-Segment"
 
   - name: "Perception for specialty crops and food processing"
@@ -336,10 +336,10 @@ professional:
     summary: "Mississippi State University (2024–2025); University of Georgia (2025–present)."
 
   - name: "Sensing and Automation in Agri-Systems (SAAS) Lab"
-    position: "Undergraduate Research Mentor — 5 students"
+    position: "Undergraduate and Visiting Researcher Mentor — 6 students"
     startDate: "2024"
     endDate: "9999"
-    summary: "Mentored five undergraduate researchers across Mississippi State University and the University of Georgia, including a visiting SUROE summer researcher from Trevecca Nazarene University. One ongoing."
+    summary: "Mentored six undergraduate and visiting researchers across Mississippi State University and the University of Georgia, including a visiting SUROE summer researcher from Trevecca Nazarene University and a Harper Adams University (UK) exchange student. One ongoing."
 
   - name: "Mississippi State University"
     position: "Preparing Future Faculty Program"
@@ -462,6 +462,11 @@ volunteer:
     startDate: "2026"
     endDate: "2026"
 
+  - organization: "Frontiers in Plant Science (Frontiers)"
+    position: "Journal Reviewer — 1 review completed"
+    startDate: "2026"
+    endDate: "2026"
+
   - organization: "Journal of Atmospheric and Solar-Terrestrial Physics (Elsevier)"
     position: "Journal Reviewer — 1 review completed"
     startDate: "2026"
@@ -506,6 +511,12 @@ volunteer:
     position: "Organizing Committee — UWU Robot Battles"
     startDate: "2016"
     endDate: "2016"
+
+  - organization: "G.C.E. Ordinary Level Seminar Series, Uva Wellassa University"
+    position: "Volunteer Mathematics Instructor"
+    startDate: "2014"
+    endDate: "2017"
+    summary: "Conducted mathematics seminars for students at resource-constrained schools to improve examination preparedness, pass rates, and interest in mathematics."
 
   - organization: "IEEE Student Branch, Uva Wellassa University"
     position: "Member"
