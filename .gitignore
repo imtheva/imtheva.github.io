@@ -18,3 +18,10 @@ _to_delete/
 
 # Annotated CV source (local only)
 output/Thayananthan_CV_Original.tex
+output/*.aux
+output/*.log
+output/*.out
+output/*.fls
+output/*.fdb_latexmk
+output/*.synctex.gz
+output/*.pdf

@@ -15,6 +15,7 @@ on:
       - "**.liquid"
       - "**/*.md"
       - "**.yml"
+      - "output/*.tex"
       - "Gemfile"
       - "Gemfile.lock"
       - "!.github/workflows/axe.yml"
@@ -44,6 +45,7 @@ on:
       - "**.liquid"
       - "**/*.md"
       - "**.yml"
+      - "output/*.tex"
       - "Gemfile"
       - "Gemfile.lock"
       - "!.github/workflows/axe.yml"
@@ -88,6 +90,13 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Compile CV 📄
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Thayananthan_CV.tex
+          working_directory: output
+      - name: Use compiled CV for the download link
+        run: cp output/Thayananthan_CV.pdf assets/pdf/Thayananthan_CV.pdf
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
