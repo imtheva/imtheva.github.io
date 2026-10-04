@@ -1,26 +1,3 @@
-%==============================================================
-% Curriculum Vitae -- Thevathayarajh Thayananthan
-% Built for faculty, postdoctoral, and research scientist applications.
-%
-% HYPERLINK POLICY (ATS-safe):
-%   Every link uses the readable identifier as its anchor text, e.g.
-%       \href{https://www.linkedin.com/in/imtheva}{linkedin.com/in/imtheva}
-%   NOT \href{...}{LinkedIn}. Parsers read the PDF text layer, so the
-%   visible characters must still carry the address. Links are black,
-%   so the document looks and prints identically to the plain version.
-%
-% >>> VERIFY THE MONTHS IN ALL DATE RANGES. <<<
-% Months documented from certificates/appointment letters:
-%   MAS Intimates internship .......... Sep 2017 -- Feb 2018
-%   AHEAD Project Activity 02 ......... from 5 Mar 2019 (one-year term)
-%   Robotics short course ............. from 1 Nov 2019
-%   Faculty Board ..................... from 13 Sep 2022
-%   BGE 121-2 subject coordinator ..... from 20 Sep 2022
-%   Employability survey .............. from 9 Nov 2022
-% All other months below are best-guess placeholders -- confirm each
-% against your transcripts, offer letters, and appointment records.
-%==============================================================
-
 \documentclass[10pt, letterpaper]{article}
 
 \usepackage[utf8]{inputenc}
@@ -50,10 +27,6 @@
     footskip=0.8cm,
 ]{geometry}
 
-% All emphasis is now plain bold black. The \textbfr macro is kept only so
-% that existing markup keeps working; it no longer applies color.
-\newcommand{\textbfr}[1]{\textbf{#1}}
-
 \usepackage[
     pdftitle={Thevathayarajh Thayananthan -- Curriculum Vitae},
     pdfauthor={Thevathayarajh Thayananthan},
@@ -68,7 +41,6 @@
     \usepackage{lmodern}
 \fi
 
-% Shorthand: clickable repository path rendered in typewriter face.
 \newcommand{\repo}[1]{\href{https://#1}{\texttt{#1}}}
 
 \AtBeginEnvironment{adjustwidth}{\partopsep0pt}
@@ -103,8 +75,6 @@
 
 \renewcommand\labelitemi{$\circ$}
 
-% Give TeX a little slack so long technical terms and URLs never overrun
-% the right margin.
 \setlength{\emergencystretch}{2em}
 \hyphenpenalty=1000
 
@@ -158,14 +128,8 @@
                     topsep=0.08cm, parsep=0.08cm, partopsep=0pt, itemsep=0pt]
 }{\end{enumerate}}
 
-\let\hrefWithoutArrow\href
-
-%==============================================================
 \begin{document}
 
-%--------------------------------------------------------------
-% HEADER -- name, then contact details stacked and centered.
-%--------------------------------------------------------------
 \begin{center}
     {\fontsize{16pt}{18pt}\selectfont\bfseries Thevathayarajh Thayananthan}
 
@@ -182,7 +146,6 @@
 
 \vspace{0.25cm}
 
-%--------------------------------------------------------------
 \section{RESEARCH FOCUS}
 \vspace{0.06cm}
 \begin{onecolentry}
@@ -195,7 +158,6 @@
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{EDUCATION}
 \vspace{0.08cm}
 
@@ -230,7 +192,6 @@
     \vspace{0.08cm}
 \end{twocolentry}
 
-%--------------------------------------------------------------
 \section{RESEARCH APPOINTMENTS}
 \vspace{0.08cm}
 
@@ -303,7 +264,6 @@
     \vspace{0.08cm}
 \end{twocolentry}
 
-%--------------------------------------------------------------
 \section{ACADEMIC APPOINTMENTS}
 \vspace{0.08cm}
 
@@ -313,7 +273,6 @@
     Uva Wellassa University of Sri Lanka
     \begin{highlights}
         \item Instructor of record for eight distinct undergraduate courses totaling 18 credit hours across four academic years (see Teaching)
-              % TODO: typical class size, e.g. "class sizes of 30-60 students".
 
         \item Designed curricula for seven new undergraduate courses for the
               B.Sc.\ in Mechatronics curriculum revision, including Computer
@@ -341,7 +300,6 @@
     \vspace{0.08cm}
 \end{twocolentry}
 
-%--------------------------------------------------------------
 \section{PUBLICATIONS}
 \vspace{0.04cm}
 \begin{onecolentry}
@@ -354,13 +312,13 @@
 \subsection{Peer-Reviewed Journal Articles}
 \begin{onecolentry}
 \begin{pubsJ}
-    \item \textbfr{Thayananthan, T.}, Zhang, X.$^{*}$, Huang, Y., Chen, J.,
+    \item \textbf{Thayananthan, T.}, Zhang, X.$^{*}$, Huang, Y., Chen, J.,
     Wijewardane, N.K., Martins, V.S., Chesser, G.D., and Goodin, C.T. (2025).
     CottonSim: A vision-guided autonomous robotic system for cotton harvesting in
     Gazebo simulation. \emph{Computers and Electronics in Agriculture}, 239, 110963.
     \url{https://doi.org/10.1016/j.compag.2025.110963}
 
-    \item \textbfr{Thayananthan, T.}, Zhang, X.$^{*}$, Harjono, J., Huang, Y., Liu, W.,
+    \item \textbf{Thayananthan, T.}, Zhang, X.$^{*}$, Harjono, J., Huang, Y., Liu, W.,
     McWhirt, A.L., Threlfall, R.T., and Chen, Y. (2025). In-field multi-ripeness
     blackberry detection for soft robotic harvesting. \emph{Journal of the ASABE},
     68(6), 1073--1089. \url{https://doi.org/10.13031/ja.16300}
@@ -371,7 +329,7 @@
 \subsection{Book Chapters}
 \begin{onecolentry}
 \begin{pubsB}
-    \item Gunaratnam, A., \textbfr{Thayananthan, T.}, Thangathurai, K., and
+    \item Gunaratnam, A., \textbf{Thayananthan, T.}, Thangathurai, K., and
     Abhiram, B. (2024). Computer vision in livestock management and production.
     In \emph{Engineering Applications in Livestock Production}, pp.~93--128.
     Academic Press. \url{https://doi.org/10.1016/B978-0-323-98385-3.00002-5}
@@ -382,7 +340,7 @@
 \subsection{Peer-Reviewed Conference Proceedings}
 \begin{onecolentry}
 \begin{pubsC}
-    \item \textbfr{Thayananthan, T.} and Zhang, X.$^{*}$ (2025).
+    \item \textbf{Thayananthan, T.} and Zhang, X.$^{*}$ (2025).
     Perception-enabled manipulator control for a robotic cotton picker with
     dual-side harvesting capability. \emph{IFAC-PapersOnLine}, 59(23), 332--337.
     (8th IFAC Conference on Sensing, Control and Automation Technologies for
@@ -390,30 +348,30 @@
     \url{https://doi.org/10.1016/j.ifacol.2025.11.809}
 
     \item Vimalambikaipakan, G., Amarasinghe, C., Rajapaksha, T.,
-    \textbfr{Thayananthan, T.}, and Mariyathas, J. (2024).
+    \textbf{Thayananthan, T.}, and Mariyathas, J. (2024).
     Traffic sign recognition and auditory alert system for Sri Lankan drivers using
     deep learning. In \emph{Proc.\ International Research Conference on Smart
     Computing and Systems Engineering (SCSE)}, 7, 1--5. IEEE.
     \url{https://doi.org/10.1109/SCSE61872.2024.10550615}
 
-    \item \textbfr{Thayananthan, T.}, Zhang, X.$^{*}$, Liu, W., Yao, T., Huang, Y.,
+    \item \textbf{Thayananthan, T.}, Zhang, X.$^{*}$, Liu, W., Yao, T., Huang, Y.,
     Wijewardane, N.K., and Lu, Y. (2023). Automating catfish cutting process using
     deep learning-based semantic segmentation. In \emph{Sensing for Agriculture and
     Food Quality and Safety XV}, 12545, 103--116. SPIE.
     \url{https://doi.org/10.1117/12.2663370}
 
-    \item Zhang, X.$^{*}$, \textbfr{Thayananthan, T.}, Usman, M., Liu, W., and Chen, Y.
+    \item Zhang, X.$^{*}$, \textbf{Thayananthan, T.}, Usman, M., Liu, W., and Chen, Y.
     (2023). Multi-ripeness level blackberry detection using YOLOv7 for soft robotic
     harvesting. In \emph{Autonomous Air and Ground Sensing Systems for Agricultural
     Optimization and Phenotyping VIII}, 12539, 85--96. SPIE.
     \textbf{Best Paper Award.} \url{https://doi.org/10.1117/12.2663367}
 
-    \item Yapa, A., Ratnayake, K., Premarathna, C.P., and \textbfr{Thayananthan, T.}
+    \item Yapa, A., Ratnayake, K., Premarathna, C.P., and \textbf{Thayananthan, T.}
     (2023). Leveraging virtual reality for robot manipulator education. In
     \emph{Proc.\ Moratuwa Engineering Research Conference (MERCon)}, 544--549. IEEE.
     \url{https://doi.org/10.1109/MERCon60487.2023.10355455}
 
-    \item \textbfr{Thayananthan, T.}, Wanniarachchi, D.D.C., and Kumari, K.W.S.N.
+    \item \textbf{Thayananthan, T.}, Wanniarachchi, D.D.C., and Kumari, K.W.S.N.
     (2019). A digital device to monitor the colour changes during the fermentation
     stage of black tea processing. In \emph{Proc.\ International Conference on Recent
     Advances in Computer Science and Engineering (IC-RACE)}, 75--79.
@@ -424,18 +382,18 @@
 \subsection{Preprints and Manuscripts in Preparation or Review}
 \begin{onecolentry}
 \begin{pubsS}
-    \item \textbfr{Thayananthan, T.}, Zhang, X.$^{*}$, Laddusinghe Badu, I.,
+    \item \textbf{Thayananthan, T.}, Zhang, X.$^{*}$, Laddusinghe Badu, I.,
     Harjono, J., Rains, G.C., Li, B., Bastos, L.M., Wijewardane, N.K., and
     Martins, V.S. (2026). Selective cotton boll localization for robotic harvesting:
     evaluation of deep learning vision models under field conditions.
     \emph{arXiv preprint} arXiv:2609.19592. Under preparation for journal
     submission. \url{https://arxiv.org/abs/2609.19592}
 
-    \item \textbfr{Thayananthan, T.} and Zhang, X. Toward fully autonomous cotton
+    \item \textbf{Thayananthan, T.} and Zhang, X. Toward fully autonomous cotton
     harvesting robots: a systematic review of perception, navigation, path planning,
     and harvesting mechanisms. \emph{Under internal review} (2026).
 
-    \item \textbfr{Thayananthan, T.} and Zhang, X. Field integration and evaluation of
+    \item \textbf{Thayananthan, T.} and Zhang, X. Field integration and evaluation of
     an autonomous robotic cotton picker. \emph{In preparation} (2026).
 \end{pubsS}
 \end{onecolentry}
@@ -444,63 +402,63 @@
 \subsection{Supervised Undergraduate Research --- Conference Abstracts/Papers}
 \begin{onecolentry}
 \begin{pubsU}
-    \item Ahamed, M.M.R., Amarasinghe, C., \textbfr{Thayananthan, T.},
+    \item Ahamed, M.M.R., Amarasinghe, C., \textbf{Thayananthan, T.},
     De Silva, D.S.P.P.G., De Zoysa, K., and De Silva, D.P.N. (2023). Development of
     automated image capturing for zebrafish embryo toxicity model.
     \emph{Proc.\ International Research Conference, Uva Wellassa University}.
 
-    \item Geerthana, V., \textbfr{Thayananthan, T.}, Amarasinghe, A.R.P.C.C.J.,
+    \item Geerthana, V., \textbf{Thayananthan, T.}, Amarasinghe, A.R.P.C.C.J.,
     Janotheepan, M., and Lakmali, R.M.T. (2023). Deep learning-based traffic sign
     recognition and auditory alert system for Sri Lankan drivers.
     \emph{Proc.\ International Research Conference, Uva Wellassa University}.
 
     \item Liyadipita, L.A.M.G.S.K., Amarasingha, A.R.P.C.C.J.,
-    \textbfr{Thayananthan, T.}, and Bandara, T.U.K.S. (2023). IoT-based patient
+    \textbf{Thayananthan, T.}, and Bandara, T.U.K.S. (2023). IoT-based patient
     monitoring system for Sri Lanka. \emph{Proc.\ International Research Conference,
     Uva Wellassa University}.
 
-    \item Jayawardhana, D.G.H., \textbfr{Thayananthan, T.}, Ekanayake, R.M.T.C.B.,
+    \item Jayawardhana, D.G.H., \textbf{Thayananthan, T.}, Ekanayake, R.M.T.C.B.,
     and Senanayake, D.D.B. (2022). Automatic billing system for a Sri Lankan pastry
     shop. \emph{Proc.\ International Research Conference, Uva Wellassa University}.
 
-    \item Alwis, D.M.G.P., \textbfr{Thayananthan, T.}, Ekanayake, R.M.T.C.B., and
+    \item Alwis, D.M.G.P., \textbf{Thayananthan, T.}, Ekanayake, R.M.T.C.B., and
     Senanayake, D.D.B. (2022). Motorbike assistance tool using image processing
     techniques. \emph{Proc.\ International Research Conference, Uva Wellassa
     University}.
 
-    \item Sampath, W.P.A.C., \textbfr{Thayananthan, T.}, Prematilake, M., and
+    \item Sampath, W.P.A.C., \textbf{Thayananthan, T.}, Prematilake, M., and
     Ekanayake, R.M.T.C.B. (2022). Development of an IoT-based automated colony
     counter. \emph{Proc.\ International Research Conference, Uva Wellassa
     University}.
 
-    \item Arawa, A.M.P.R.B., \textbfr{Thayananthan, T.}, Mehendran, Y., and
+    \item Arawa, A.M.P.R.B., \textbf{Thayananthan, T.}, Mehendran, Y., and
     Senanayake, D.B.B. (2022). Recognition of Sinhala machine-printed text for
     postal address interpretation and postal automation.
     \emph{Proc.\ International Research Conference, Uva Wellassa University}.
 
     \item Dissanayaka, D.M.K.C., Vidanapathirana, A.C., and
-    \textbfr{Thayananthan, T.} (2022). Remote monitoring and controlling of an
+    \textbf{Thayananthan, T.} (2022). Remote monitoring and controlling of an
     automobile system using NodeMCU. \emph{Proc.\ International Research Conference,
     Uva Wellassa University}.
 
     \item Gayashan, S.A.V., Vidanapathirana, A.C., Ekanayake, R.M.T.C.B., and
-    \textbfr{Thayananthan, T.} (2022). Development of a wind turbine system for
+    \textbf{Thayananthan, T.} (2022). Development of a wind turbine system for
     electric and hybrid carts. \emph{Proc.\ International Research Conference,
     Uva Wellassa University}.
 
-    \item Srikaran, K. and \textbfr{Thayananthan, T.} (2021). Development of an
+    \item Srikaran, K. and \textbf{Thayananthan, T.} (2021). Development of an
     IoT-based tree-cutting warning system in forests. \emph{Proc.\ 3rd South Asia
     Conference on Interdisciplinary Research}, 14.
 
-    \item Danijal, T.J. and \textbfr{Thayananthan, T.} (2021). Development of a
+    \item Danijal, T.J. and \textbf{Thayananthan, T.} (2021). Development of a
     tracking over-speed system using IoT technology for vehicles.
     \emph{Proc.\ International Research Conference, Uva Wellassa University}, 139.
 
-    \item Senanayake, D.D.B., Kumari, K.W.S.N., and \textbfr{Thayananthan, T.}
+    \item Senanayake, D.D.B., Kumari, K.W.S.N., and \textbf{Thayananthan, T.}
     (2020). Active and passive safety system for differently abled people and adults.
     \emph{Proc.\ International Research Conference, Uva Wellassa University}, 195.
 
-    \item \textbfr{Thayananthan, T.}, Amarasinghe, A.R.P.C.C.J., and
+    \item \textbf{Thayananthan, T.}, Amarasinghe, A.R.P.C.C.J., and
     Ekanayake, R.M.T.C.B. (2019). A digital device to measure distance on multiple
     surfaces. \emph{Proc.\ International Research Conference, Uva Wellassa
     University}, 504.
@@ -508,61 +466,60 @@
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{CONFERENCE PRESENTATIONS}
 \vspace{0.08cm}
 \begin{onecolentry}
 \begin{pres}
-    \item \textbfr{Thayananthan, T.} (2026, July). Develop and evaluate a simplified
+    \item \textbf{Thayananthan, T.} (2026, July). Develop and evaluate a simplified
     end-effector for robotic selective cotton harvesting. ASABE Annual International
     Meeting, Indianapolis, IN, USA.
 
-    \item \textbfr{Thayananthan, T.} (2026, March). Harvesting cotton before it's too
+    \item \textbf{Thayananthan, T.} (2026, March). Harvesting cotton before it's too
     late: a smarter robotic approach. UGA Institute for Integrative Precision
     Agriculture Spring Retreat, Griffin, GA, USA.
     \textbf{Third Place, Three Minute Thesis oral presentation.}
 
-    \item \textbfr{Thayananthan, T.} (2025, August). Perception-enabled manipulator
+    \item \textbf{Thayananthan, T.} (2025, August). Perception-enabled manipulator
     control for a robotic cotton picker with dual-side harvesting capability.
     8th IFAC Conference on Sensing, Control and Automation Technologies for
     Agriculture (AGRICONTROL 2025), Davis, CA, USA.
 
-    \item \textbfr{Thayananthan, T.} (2025, April). Cotton-SAM: AI-driven cotton boll
+    \item \textbf{Thayananthan, T.} (2025, April). Cotton-SAM: AI-driven cotton boll
     localization for autonomous picking using YOLO and SAM integration.
     AI in Agriculture and Natural Resources Conference, Starkville, MS, USA.
 
-    \item \textbfr{Thayananthan, T.} (2024, October). Cotton boll localization system
+    \item \textbf{Thayananthan, T.} (2024, October). Cotton boll localization system
     to enable autonomous cotton picking using YOLO and SAM. Graduate Student Research
     Symposium, Mississippi State University, Mississippi State, MS, USA.
 
-    \item \textbfr{Thayananthan, T.} (2024, July). Development of a cotton boll
+    \item \textbf{Thayananthan, T.} (2024, July). Development of a cotton boll
     detection system to enhance autonomous picking using YOLOv8 and SAM.
     ASABE Annual International Meeting, Anaheim, CA, USA.
 
-    \item \textbfr{Thayananthan, T.} (2024, July). Computer vision-enabled autonomous
+    \item \textbf{Thayananthan, T.} (2024, July). Computer vision-enabled autonomous
     robotic navigation system for cotton farms in a Gazebo simulation environment.
     ASABE Annual International Meeting, Anaheim, CA, USA.
 
-    \item \textbfr{Thayananthan, T.} (2024, March). Which is better cotton picker?
+    \item \textbf{Thayananthan, T.} (2024, March). Which is better cotton picker?
     Three Minute Thesis presentation, Mississippi Agriculture Consortium,
     Mississippi State University, Starkville, MS, USA.
 
-    \item \textbfr{Thayananthan, T.} (2023, July). Catfish cutting automation through
+    \item \textbf{Thayananthan, T.} (2023, July). Catfish cutting automation through
     computer vision and deep learning. Mississippi Academy of Sciences 5th Summer
     Science \& Engineering Symposium, Mississippi State, MS, USA.
 
-    \item \textbfr{Thayananthan, T.} (2023, May). Automating catfish cutting process
+    \item \textbf{Thayananthan, T.} (2023, May). Automating catfish cutting process
     using deep learning-based semantic segmentation. \emph{Sensing for Agriculture
     and Food Quality and Safety XV} session, SPIE Defense + Commercial Sensing,
     Orlando, FL, USA.
 
-    \item \textbfr{Thayananthan, T.} (2023, May). Multi-ripeness level blackberry
+    \item \textbf{Thayananthan, T.} (2023, May). Multi-ripeness level blackberry
     detection using YOLOv7 for soft robotic harvesting. \emph{Autonomous Air and
     Ground Sensing Systems for Agricultural Optimization and Phenotyping VIII}
     session, SPIE Defense + Commercial Sensing, Orlando, FL, USA.
     \textbf{Best Paper Award.}
 
-    \item \textbfr{Thayananthan, T.} (2018, February). Development of a monitoring
+    \item \textbf{Thayananthan, T.} (2018, February). Development of a monitoring
     device for the fermentation stage of black tea manufacturing.
     \emph{Mechanical Engineering and Mechatronics} session, 2nd International
     Research Symposium, Uva Wellassa University, Badulla, Sri Lanka.
@@ -570,7 +527,6 @@
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{HONORS AND AWARDS}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -589,7 +545,6 @@
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{FUNDING AND INTELLECTUAL PROPERTY}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -621,7 +576,6 @@
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{TEACHING EXPERIENCE}
 \vspace{0.08cm}
 
@@ -686,7 +640,6 @@ laboratory design, assessment, and grading.
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{MENTORING AND ADVISING}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -738,7 +691,6 @@ laboratory design, assessment, and grading.
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{PROFESSIONAL SERVICE}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -785,7 +737,6 @@ laboratory design, assessment, and grading.
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{INSTITUTIONAL SERVICE AND GOVERNANCE}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -817,7 +768,6 @@ laboratory design, assessment, and grading.
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{OUTREACH AND COMMUNITY ENGAGEMENT}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -842,7 +792,6 @@ laboratory design, assessment, and grading.
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{PROFESSIONAL DEVELOPMENT}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -868,7 +817,6 @@ laboratory design, assessment, and grading.
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{TECHNICAL SKILLS}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -883,7 +831,6 @@ laboratory design, assessment, and grading.
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{PROFESSIONAL MEMBERSHIPS}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -900,7 +847,6 @@ laboratory design, assessment, and grading.
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{RESEARCH SOFTWARE AND DATA}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -908,7 +854,6 @@ laboratory design, assessment, and grading.
         \item \textbf{CottonID} (2026) --- web application for cotton boll detection,
               yield estimation, and defoliation-timing decision support
               (Next.js, FastAPI, RF-DETR/YOLO).
-              % TODO: add a public link or repository if available
         \item \textbf{CottonBoll Harvest} (2026) --- supplementary code, trained-model
               resources, and supporting materials for the manuscript
               \emph{Selective Cotton Boll Localization for Robotic Harvesting:
@@ -928,7 +873,6 @@ laboratory design, assessment, and grading.
 \end{onecolentry}
 \vspace{0.18cm}
 
-%--------------------------------------------------------------
 \section{MEDIA COVERAGE}
 \vspace{0.08cm}
 \begin{onecolentry}
@@ -948,24 +892,5 @@ laboratory design, assessment, and grading.
     \end{highlights}
 \end{onecolentry}
 \vspace{0.18cm}
-
-%--------------------------------------------------------------
-% \section{REFERENCES}
-% -------------------------------------------------------------------------
-% REFERENCES SECTION -- COMMENTED OUT.
-% Uncomment and fill in before submitting. For faculty applications, naming
-% 3-5 referees with full contact details is the convention.
-%
-% \vspace{0.08cm}
-% \begin{onecolentry}
-% \begin{tabular}{@{}p{8.2cm} p{8.2cm}@{}}
-% \textbf{Dr.\ Xin Zhang} & \textbf{Name} \\
-% Ph.D.\ Advisor; Rank & Title \\
-% School of Environmental, Civil, Agricultural & Department \\
-% \& Mechanical Engineering & Institution \\
-% University of Georgia & email \\
-% email \textbar{} phone & phone \\
-% \end{tabular}
-% \end{onecolentry}
 
 \end{document}

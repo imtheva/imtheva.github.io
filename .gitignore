@@ -15,3 +15,6 @@ vendor
 
 # Local scratch
 _to_delete/
+
+# Annotated CV source (local only)
+output/Thayananthan_CV_Original.tex
