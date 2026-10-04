@@ -1,0 +1,969 @@
+%==============================================================
+% Curriculum Vitae -- Thevathayarajh Thayananthan
+% Built for faculty, postdoctoral, and research scientist applications.
+%
+% HYPERLINK POLICY (ATS-safe):
+%   Every link uses the readable identifier as its anchor text, e.g.
+%       \href{https://www.linkedin.com/in/imtheva}{linkedin.com/in/imtheva}
+%   NOT \href{...}{LinkedIn}. Parsers read the PDF text layer, so the
+%   visible characters must still carry the address. Links are black,
+%   so the document looks and prints identically to the plain version.
+%
+% >>> VERIFY THE MONTHS IN ALL DATE RANGES. <<<
+% Months documented from certificates/appointment letters:
+%   MAS Intimates internship .......... Sep 2017 -- Feb 2018
+%   AHEAD Project Activity 02 ......... from 5 Mar 2019 (one-year term)
+%   Robotics short course ............. from 1 Nov 2019
+%   Faculty Board ..................... from 13 Sep 2022
+%   BGE 121-2 subject coordinator ..... from 20 Sep 2022
+%   Employability survey .............. from 9 Nov 2022
+% All other months below are best-guess placeholders -- confirm each
+% against your transcripts, offer letters, and appointment records.
+%==============================================================
+
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{etoolbox}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{calc}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\usepackage[
+    ignoreheadfoot,
+    top=1.7cm,
+    bottom=1.7cm,
+    left=1.9cm,
+    right=1.9cm,
+    footskip=0.8cm,
+]{geometry}
+
+% All emphasis is now plain bold black. The \textbfr macro is kept only so
+% that existing markup keeps working; it no longer applies color.
+\newcommand{\textbfr}[1]{\textbf{#1}}
+
+\usepackage[
+    pdftitle={Thevathayarajh Thayananthan -- Curriculum Vitae},
+    pdfauthor={Thevathayarajh Thayananthan},
+    pdfsubject={Curriculum Vitae},
+    colorlinks=true, urlcolor=black, linkcolor=black, citecolor=black
+]{hyperref}
+\usepackage{bookmark}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage{lmodern}
+\fi
+
+% Shorthand: clickable repository path rendered in typewriter face.
+\newcommand{\repo}[1]{\href{https://#1}{\texttt{#1}}}
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{%
+  \begin{minipage}[t]{\textwidth}
+    \centering
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lll}
+      \small Updated October 2026 &
+      \small Thayananthan, Thevathayarajh &
+      \small\textit{Page \thepage{} of \pageref*{LastPage}}
+    \end{tabular*}
+  \end{minipage}%
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\titleformat{\section}
+  {\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}
+  [\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.30cm}{0.18cm}
+
+\titleformat{\subsection}
+  {\needspace{3\baselineskip}\bfseries\normalsize}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{0.18cm}{0.08cm}
+
+\renewcommand\labelitemi{$\circ$}
+
+% Give TeX a little slack so long technical terms and URLs never overrun
+% the right margin.
+\setlength{\emergencystretch}{2em}
+\hyphenpenalty=1000
+
+\newenvironment{highlights}{%
+    \begin{itemize}[topsep=0.08cm, parsep=0.08cm, partopsep=0pt,
+                    itemsep=0pt, leftmargin=0.4cm + 10pt]
+}{\end{itemize}}
+
+\newenvironment{onecolentry}{%
+    \begin{adjustwidth}{0.2cm}{0.2cm}
+}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[2][]{%
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.2cm}
+    \begin{paracol}{2}
+}{%
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{pubsJ}{%
+  \begin{enumerate}[label={[J\arabic*]}, leftmargin=1.15cm, labelsep=0.2cm,
+                    topsep=0.08cm, parsep=0.08cm, partopsep=0pt, itemsep=0pt]
+}{\end{enumerate}}
+
+\newenvironment{pubsB}{%
+  \begin{enumerate}[label={[B\arabic*]}, leftmargin=1.15cm, labelsep=0.2cm,
+                    topsep=0.08cm, parsep=0.08cm, partopsep=0pt, itemsep=0pt]
+}{\end{enumerate}}
+
+\newenvironment{pubsC}{%
+  \begin{enumerate}[label={[C\arabic*]}, leftmargin=1.15cm, labelsep=0.2cm,
+                    topsep=0.08cm, parsep=0.08cm, partopsep=0pt, itemsep=0pt]
+}{\end{enumerate}}
+
+\newenvironment{pubsS}{%
+  \begin{enumerate}[label={[S\arabic*]}, leftmargin=1.15cm, labelsep=0.2cm,
+                    topsep=0.08cm, parsep=0.08cm, partopsep=0pt, itemsep=0pt]
+}{\end{enumerate}}
+
+\newenvironment{pubsU}{%
+  \begin{enumerate}[label={[U\arabic*]}, leftmargin=1.15cm, labelsep=0.2cm,
+                    topsep=0.08cm, parsep=0.08cm, partopsep=0pt, itemsep=0pt]
+}{\end{enumerate}}
+
+\newenvironment{pres}{%
+  \begin{enumerate}[label={[P\arabic*]}, leftmargin=1.15cm, labelsep=0.2cm,
+                    topsep=0.08cm, parsep=0.08cm, partopsep=0pt, itemsep=0pt]
+}{\end{enumerate}}
+
+\let\hrefWithoutArrow\href
+
+%==============================================================
+\begin{document}
+
+%--------------------------------------------------------------
+% HEADER -- name, then contact details stacked and centered.
+%--------------------------------------------------------------
+\begin{center}
+    {\fontsize{16pt}{18pt}\selectfont\bfseries Thevathayarajh Thayananthan}
+
+    \vspace{0.18cm}
+
+    Riverbend Research Lab North, Room 001E, 110 Riverbend Road, Athens, GA 30605 \\
+    +1 662 370 6844 \\
+    \href{mailto:theva@uga.edu}{theva@uga.edu} \\
+    \href{https://imtheva.github.io}{imtheva.github.io} \textbar{}
+    \href{https://www.linkedin.com/in/imtheva}{linkedin.com/in/imtheva} \textbar{}
+    \href{https://orcid.org/0009-0007-2576-4348}{ORCID 0009-0007-2576-4348} \textbar{}
+    \href{https://scholar.google.com/citations?user=MpKhKEUAAAAJ}{Google Scholar}
+\end{center}
+
+\vspace{0.25cm}
+
+%--------------------------------------------------------------
+\section{RESEARCH FOCUS}
+\vspace{0.06cm}
+\begin{onecolentry}
+    Research focuses on AI-enabled autonomous systems for agriculture, integrating
+    computer vision, multimodal sensing, 3D localization, autonomous field navigation,
+    and robotic manipulation for selective harvesting and precision crop operations.
+    Develops complete perception-to-action robotic systems, from ROS and Gazebo
+    simulation to integrated hardware and field deployment, to advance reliable,
+    practical, and affordable agricultural automation.
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{EDUCATION}
+\vspace{0.08cm}
+
+\begin{twocolentry}{Aug 2025 -- Present}
+    \textbf{Ph.D., Agricultural Engineering} \\
+    University of Georgia, Athens, GA, USA \\
+    Advanced to candidacy August 2026; \textbf{Expected graduation May 2027} \\
+    Dissertation Proposal: \emph{Design, Development, Integration and Field Evaluation of a
+    Robotic Cotton Picker}
+    \vspace{0.12cm}
+\end{twocolentry}
+
+\begin{twocolentry}{Jan 2023 -- Jul 2025}
+    \textbf{Doctoral coursework and research, Biosystems Engineering} \\
+    Mississippi State University, Mississippi State, MS, USA \\
+    Program transferred to the University of Georgia with advisor
+    \vspace{0.12cm}
+\end{twocolentry}
+
+\begin{twocolentry}{Jan 2019 -- Jul 2022}
+    \textbf{M.Sc., Electrical and Electronics Engineering} \\
+    University of Peradeniya, Sri Lanka \\
+    Project: IoT-based medical instrumentation for remote patient monitoring
+    \vspace{0.12cm}
+\end{twocolentry}
+
+\begin{twocolentry}{Apr 2014 -- Jan 2018}
+    \textbf{B.Tech.\ (Hons.), Science and Technology --- Mechatronics} \\
+    Uva Wellassa University of Sri Lanka, Badulla, Sri Lanka \\
+    Dissertation: \emph{Development of a monitoring device for the fermentation stage of
+    black tea manufacturing}
+    \vspace{0.08cm}
+\end{twocolentry}
+
+%--------------------------------------------------------------
+\section{RESEARCH APPOINTMENTS}
+\vspace{0.08cm}
+
+\begin{twocolentry}{Aug 2025 -- Present}
+    \textbf{Graduate Research Assistant} \\
+    Sensing and Automation in Agri-Systems (SAAS) Lab, School of Environmental,
+    Civil, Agricultural \& Mechanical Engineering, University of Georgia
+    \begin{highlights}
+        \item Develop perception-driven manipulator control in ROS and Python for a
+              dual-side robotic cotton picker. Completed field testing with one
+              ZED~2i stereo camera, a UR5e manipulator, and a custom end-effector,
+              and developed a two-camera control pipeline for dual-side harvesting.
+
+        \item Benchmark 33 YOLO variants (v8--v13) and several segmentation models on
+              a 1{,}008-image, four-class annotated field dataset, comparing mAP and
+              inference speed on matched test splits.
+
+        \item Developed \textbf{CottonID}, a full-stack web application using Next.js,
+              FastAPI, and SQLite to generate boll counts, yield estimates, and
+              defoliation-timing recommendations. Currently improving the underlying
+              perception models; deployed through Cloudflare Tunnel for
+              demonstrations.
+
+        \item Manage equipment, operations, data infrastructure, and safety within the
+              Sensing \& Automation in Agri-Systems (SAAS) Lab.
+    \end{highlights}
+    \vspace{0.12cm}
+\end{twocolentry}
+
+\begin{twocolentry}{Jan 2023 -- Jul 2025}
+    \textbf{Graduate Research Assistant} \\
+    Department of Agricultural and Biological Engineering,
+    Mississippi State University
+    \begin{highlights}
+        \item Designed and open-sourced \textbf{CottonSim}, a ROS/Gazebo simulation
+              environment integrating a virtual cotton farm, boll perception, and
+              vision-guided navigation. The Cotton-Eye module (YOLOv8n-seg) reached
+              85.2\% mAP, 88.9\% recall, and 93.0\% precision; navigation achieved
+              100\% GPS-guided and 96.7\% map-based traversal success within
+              0.25~m~[J1].
+
+        \item Developed an in-field multi-ripeness blackberry-detection pipeline for
+              soft robotic harvesting from 1{,}086 images; benchmarking nine YOLO
+              architectures, where YOLOv7-base produced 91.1\% mAP overall, 92.4\%
+              for ripe berries, and 12.6~ms inference per
+              $1024 \times 1024$ image~[J2].
+
+        \item Developed a semantic-segmentation pipeline for automating bladeless
+              catfish cutting, benchmarking five architectures across five classes on
+              396 images; SegFormer-B5 reached 89.2\% mIoU and 94.6\% mean pixel
+              accuracy~[C3].
+
+        \item Named as an inventor on a university technology disclosure for an
+              autonomous vision-guided cotton-harvesting system.
+    \end{highlights}
+    \vspace{0.12cm}
+\end{twocolentry}
+
+\begin{twocolentry}{Sep 2017 -- Feb 2018}
+    \textbf{Research and Development Intern} \\
+    Research \& Innovation Department, MAS Intimates
+    (Unichela Pvt.\ Ltd., Vidiyal Division), Sri Lanka
+    \begin{highlights}
+        \item Contributed to seven industrial-automation projects in garment
+              manufacturing, including PLC-based finished-goods scanning and garment
+              folding, an Arduino-based chiller-shutdown SMS alert system,
+              pedal-free and automated sewing, and waistband cutting with mark
+              elimination.
+    \end{highlights}
+    \vspace{0.08cm}
+\end{twocolentry}
+
+%--------------------------------------------------------------
+\section{ACADEMIC APPOINTMENTS}
+\vspace{0.08cm}
+
+\begin{twocolentry}{Mar 2019 -- Dec 2022}
+    \textbf{Lecturer (Full-time)} \\
+    Department of Science and Technology, Faculty of Applied Sciences,
+    Uva Wellassa University of Sri Lanka
+    \begin{highlights}
+        \item Instructor of record for eight distinct undergraduate courses totaling 18 credit hours across four academic years (see Teaching)
+              % TODO: typical class size, e.g. "class sizes of 30-60 students".
+
+        \item Designed curricula for seven new undergraduate courses for the
+              B.Sc.\ in Mechatronics curriculum revision, including Computer
+              Vision and IoT Development.
+
+        \item Supervised 15 undergraduate final-year research projects, twelve of
+              which produced peer-reviewed conference abstracts/papers~[U1]--[U12].
+    \end{highlights}
+    \vspace{0.12cm}
+\end{twocolentry}
+
+\begin{twocolentry}{Mar 2018 -- Mar 2019}
+    \textbf{Demonstrator (Temporary)} \\
+    Department of Science and Technology, Faculty of Applied Sciences,
+    Uva Wellassa University of Sri Lanka
+    \begin{highlights}
+        \item Led undergraduate laboratory and practical sessions in electronics,
+              instrumentation, and workshop practice, supervising groups of
+              students in the lab class and grading laboratory reports.
+
+        \item Maintained teaching laboratory equipment and assisted faculty with
+              demonstrations, practical assessments, and student project
+              supervision.
+    \end{highlights}
+    \vspace{0.08cm}
+\end{twocolentry}
+
+%--------------------------------------------------------------
+\section{PUBLICATIONS}
+\vspace{0.04cm}
+\begin{onecolentry}
+    {\footnotesize Name in \textbf{bold}; $^{*}$corresponding author.
+    Earlier work appears under the name \textbf{Thevathayarajh, T.}
+    Citations: 41 \textbar{} h-index: 4 (Google Scholar).\par}
+\end{onecolentry}
+\vspace{0.12cm}
+
+\subsection{Peer-Reviewed Journal Articles}
+\begin{onecolentry}
+\begin{pubsJ}
+    \item \textbfr{Thayananthan, T.}, Zhang, X.$^{*}$, Huang, Y., Chen, J.,
+    Wijewardane, N.K., Martins, V.S., Chesser, G.D., and Goodin, C.T. (2025).
+    CottonSim: A vision-guided autonomous robotic system for cotton harvesting in
+    Gazebo simulation. \emph{Computers and Electronics in Agriculture}, 239, 110963.
+    \url{https://doi.org/10.1016/j.compag.2025.110963}
+
+    \item \textbfr{Thayananthan, T.}, Zhang, X.$^{*}$, Harjono, J., Huang, Y., Liu, W.,
+    McWhirt, A.L., Threlfall, R.T., and Chen, Y. (2025). In-field multi-ripeness
+    blackberry detection for soft robotic harvesting. \emph{Journal of the ASABE},
+    68(6), 1073--1089. \url{https://doi.org/10.13031/ja.16300}
+\end{pubsJ}
+\end{onecolentry}
+\vspace{0.12cm}
+
+\subsection{Book Chapters}
+\begin{onecolentry}
+\begin{pubsB}
+    \item Gunaratnam, A., \textbfr{Thayananthan, T.}, Thangathurai, K., and
+    Abhiram, B. (2024). Computer vision in livestock management and production.
+    In \emph{Engineering Applications in Livestock Production}, pp.~93--128.
+    Academic Press. \url{https://doi.org/10.1016/B978-0-323-98385-3.00002-5}
+\end{pubsB}
+\end{onecolentry}
+\vspace{0.12cm}
+
+\subsection{Peer-Reviewed Conference Proceedings}
+\begin{onecolentry}
+\begin{pubsC}
+    \item \textbfr{Thayananthan, T.} and Zhang, X.$^{*}$ (2025).
+    Perception-enabled manipulator control for a robotic cotton picker with
+    dual-side harvesting capability. \emph{IFAC-PapersOnLine}, 59(23), 332--337.
+    (8th IFAC Conference on Sensing, Control and Automation Technologies for
+    Agriculture, AGRICONTROL 2025, UC Davis, CA, USA.)
+    \url{https://doi.org/10.1016/j.ifacol.2025.11.809}
+
+    \item Vimalambikaipakan, G., Amarasinghe, C., Rajapaksha, T.,
+    \textbfr{Thayananthan, T.}, and Mariyathas, J. (2024).
+    Traffic sign recognition and auditory alert system for Sri Lankan drivers using
+    deep learning. In \emph{Proc.\ International Research Conference on Smart
+    Computing and Systems Engineering (SCSE)}, 7, 1--5. IEEE.
+    \url{https://doi.org/10.1109/SCSE61872.2024.10550615}
+
+    \item \textbfr{Thayananthan, T.}, Zhang, X.$^{*}$, Liu, W., Yao, T., Huang, Y.,
+    Wijewardane, N.K., and Lu, Y. (2023). Automating catfish cutting process using
+    deep learning-based semantic segmentation. In \emph{Sensing for Agriculture and
+    Food Quality and Safety XV}, 12545, 103--116. SPIE.
+    \url{https://doi.org/10.1117/12.2663370}
+
+    \item Zhang, X.$^{*}$, \textbfr{Thayananthan, T.}, Usman, M., Liu, W., and Chen, Y.
+    (2023). Multi-ripeness level blackberry detection using YOLOv7 for soft robotic
+    harvesting. In \emph{Autonomous Air and Ground Sensing Systems for Agricultural
+    Optimization and Phenotyping VIII}, 12539, 85--96. SPIE.
+    \textbf{Best Paper Award.} \url{https://doi.org/10.1117/12.2663367}
+
+    \item Yapa, A., Ratnayake, K., Premarathna, C.P., and \textbfr{Thayananthan, T.}
+    (2023). Leveraging virtual reality for robot manipulator education. In
+    \emph{Proc.\ Moratuwa Engineering Research Conference (MERCon)}, 544--549. IEEE.
+    \url{https://doi.org/10.1109/MERCon60487.2023.10355455}
+
+    \item \textbfr{Thayananthan, T.}, Wanniarachchi, D.D.C., and Kumari, K.W.S.N.
+    (2019). A digital device to monitor the colour changes during the fermentation
+    stage of black tea processing. In \emph{Proc.\ International Conference on Recent
+    Advances in Computer Science and Engineering (IC-RACE)}, 75--79.
+\end{pubsC}
+\end{onecolentry}
+\vspace{0.12cm}
+
+\subsection{Preprints and Manuscripts in Preparation or Review}
+\begin{onecolentry}
+\begin{pubsS}
+    \item \textbfr{Thayananthan, T.}, Zhang, X.$^{*}$, Laddusinghe Badu, I.,
+    Harjono, J., Rains, G.C., Li, B., Bastos, L.M., Wijewardane, N.K., and
+    Martins, V.S. (2026). Selective cotton boll localization for robotic harvesting:
+    evaluation of deep learning vision models under field conditions.
+    \emph{arXiv preprint} arXiv:2609.19592. Under preparation for journal
+    submission. \url{https://arxiv.org/abs/2609.19592}
+
+    \item \textbfr{Thayananthan, T.} and Zhang, X. Toward fully autonomous cotton
+    harvesting robots: a systematic review of perception, navigation, path planning,
+    and harvesting mechanisms. \emph{Under internal review} (2026).
+
+    \item \textbfr{Thayananthan, T.} and Zhang, X. Field integration and evaluation of
+    an autonomous robotic cotton picker. \emph{In preparation} (2026).
+\end{pubsS}
+\end{onecolentry}
+\vspace{0.12cm}
+
+\subsection{Supervised Undergraduate Research --- Conference Abstracts/Papers}
+\begin{onecolentry}
+\begin{pubsU}
+    \item Ahamed, M.M.R., Amarasinghe, C., \textbfr{Thayananthan, T.},
+    De Silva, D.S.P.P.G., De Zoysa, K., and De Silva, D.P.N. (2023). Development of
+    automated image capturing for zebrafish embryo toxicity model.
+    \emph{Proc.\ International Research Conference, Uva Wellassa University}.
+
+    \item Geerthana, V., \textbfr{Thayananthan, T.}, Amarasinghe, A.R.P.C.C.J.,
+    Janotheepan, M., and Lakmali, R.M.T. (2023). Deep learning-based traffic sign
+    recognition and auditory alert system for Sri Lankan drivers.
+    \emph{Proc.\ International Research Conference, Uva Wellassa University}.
+
+    \item Liyadipita, L.A.M.G.S.K., Amarasingha, A.R.P.C.C.J.,
+    \textbfr{Thayananthan, T.}, and Bandara, T.U.K.S. (2023). IoT-based patient
+    monitoring system for Sri Lanka. \emph{Proc.\ International Research Conference,
+    Uva Wellassa University}.
+
+    \item Jayawardhana, D.G.H., \textbfr{Thayananthan, T.}, Ekanayake, R.M.T.C.B.,
+    and Senanayake, D.D.B. (2022). Automatic billing system for a Sri Lankan pastry
+    shop. \emph{Proc.\ International Research Conference, Uva Wellassa University}.
+
+    \item Alwis, D.M.G.P., \textbfr{Thayananthan, T.}, Ekanayake, R.M.T.C.B., and
+    Senanayake, D.D.B. (2022). Motorbike assistance tool using image processing
+    techniques. \emph{Proc.\ International Research Conference, Uva Wellassa
+    University}.
+
+    \item Sampath, W.P.A.C., \textbfr{Thayananthan, T.}, Prematilake, M., and
+    Ekanayake, R.M.T.C.B. (2022). Development of an IoT-based automated colony
+    counter. \emph{Proc.\ International Research Conference, Uva Wellassa
+    University}.
+
+    \item Arawa, A.M.P.R.B., \textbfr{Thayananthan, T.}, Mehendran, Y., and
+    Senanayake, D.B.B. (2022). Recognition of Sinhala machine-printed text for
+    postal address interpretation and postal automation.
+    \emph{Proc.\ International Research Conference, Uva Wellassa University}.
+
+    \item Dissanayaka, D.M.K.C., Vidanapathirana, A.C., and
+    \textbfr{Thayananthan, T.} (2022). Remote monitoring and controlling of an
+    automobile system using NodeMCU. \emph{Proc.\ International Research Conference,
+    Uva Wellassa University}.
+
+    \item Gayashan, S.A.V., Vidanapathirana, A.C., Ekanayake, R.M.T.C.B., and
+    \textbfr{Thayananthan, T.} (2022). Development of a wind turbine system for
+    electric and hybrid carts. \emph{Proc.\ International Research Conference,
+    Uva Wellassa University}.
+
+    \item Srikaran, K. and \textbfr{Thayananthan, T.} (2021). Development of an
+    IoT-based tree-cutting warning system in forests. \emph{Proc.\ 3rd South Asia
+    Conference on Interdisciplinary Research}, 14.
+
+    \item Danijal, T.J. and \textbfr{Thayananthan, T.} (2021). Development of a
+    tracking over-speed system using IoT technology for vehicles.
+    \emph{Proc.\ International Research Conference, Uva Wellassa University}, 139.
+
+    \item Senanayake, D.D.B., Kumari, K.W.S.N., and \textbfr{Thayananthan, T.}
+    (2020). Active and passive safety system for differently abled people and adults.
+    \emph{Proc.\ International Research Conference, Uva Wellassa University}, 195.
+
+    \item \textbfr{Thayananthan, T.}, Amarasinghe, A.R.P.C.C.J., and
+    Ekanayake, R.M.T.C.B. (2019). A digital device to measure distance on multiple
+    surfaces. \emph{Proc.\ International Research Conference, Uva Wellassa
+    University}, 504.
+\end{pubsU}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{CONFERENCE PRESENTATIONS}
+\vspace{0.08cm}
+\begin{onecolentry}
+\begin{pres}
+    \item \textbfr{Thayananthan, T.} (2026, July). Develop and evaluate a simplified
+    end-effector for robotic selective cotton harvesting. ASABE Annual International
+    Meeting, Indianapolis, IN, USA.
+
+    \item \textbfr{Thayananthan, T.} (2026, March). Harvesting cotton before it's too
+    late: a smarter robotic approach. UGA Institute for Integrative Precision
+    Agriculture Spring Retreat, Griffin, GA, USA.
+    \textbf{Third Place, Three Minute Thesis oral presentation.}
+
+    \item \textbfr{Thayananthan, T.} (2025, August). Perception-enabled manipulator
+    control for a robotic cotton picker with dual-side harvesting capability.
+    8th IFAC Conference on Sensing, Control and Automation Technologies for
+    Agriculture (AGRICONTROL 2025), Davis, CA, USA.
+
+    \item \textbfr{Thayananthan, T.} (2025, April). Cotton-SAM: AI-driven cotton boll
+    localization for autonomous picking using YOLO and SAM integration.
+    AI in Agriculture and Natural Resources Conference, Starkville, MS, USA.
+
+    \item \textbfr{Thayananthan, T.} (2024, October). Cotton boll localization system
+    to enable autonomous cotton picking using YOLO and SAM. Graduate Student Research
+    Symposium, Mississippi State University, Mississippi State, MS, USA.
+
+    \item \textbfr{Thayananthan, T.} (2024, July). Development of a cotton boll
+    detection system to enhance autonomous picking using YOLOv8 and SAM.
+    ASABE Annual International Meeting, Anaheim, CA, USA.
+
+    \item \textbfr{Thayananthan, T.} (2024, July). Computer vision-enabled autonomous
+    robotic navigation system for cotton farms in a Gazebo simulation environment.
+    ASABE Annual International Meeting, Anaheim, CA, USA.
+
+    \item \textbfr{Thayananthan, T.} (2024, March). Which is better cotton picker?
+    Three Minute Thesis presentation, Mississippi Agriculture Consortium,
+    Mississippi State University, Starkville, MS, USA.
+
+    \item \textbfr{Thayananthan, T.} (2023, July). Catfish cutting automation through
+    computer vision and deep learning. Mississippi Academy of Sciences 5th Summer
+    Science \& Engineering Symposium, Mississippi State, MS, USA.
+
+    \item \textbfr{Thayananthan, T.} (2023, May). Automating catfish cutting process
+    using deep learning-based semantic segmentation. \emph{Sensing for Agriculture
+    and Food Quality and Safety XV} session, SPIE Defense + Commercial Sensing,
+    Orlando, FL, USA.
+
+    \item \textbfr{Thayananthan, T.} (2023, May). Multi-ripeness level blackberry
+    detection using YOLOv7 for soft robotic harvesting. \emph{Autonomous Air and
+    Ground Sensing Systems for Agricultural Optimization and Phenotyping VIII}
+    session, SPIE Defense + Commercial Sensing, Orlando, FL, USA.
+    \textbf{Best Paper Award.}
+
+    \item \textbfr{Thayananthan, T.} (2018, February). Development of a monitoring
+    device for the fermentation stage of black tea manufacturing.
+    \emph{Mechanical Engineering and Mechatronics} session, 2nd International
+    Research Symposium, Uva Wellassa University, Badulla, Sri Lanka.
+\end{pres}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{HONORS AND AWARDS}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Third Place, Three Minute Thesis (3MT) Competition} ---
+              Institute for Integrative Precision Agriculture Retreat, University of
+              Georgia (2026). Includes a \$500 conference travel award.
+        \item \textbf{Hall of Fame Awardee}, College of Engineering ---
+              The Graduate School, Mississippi State University (2025)
+        \item \textbf{SEC Emerging Scholar} --- Selected to represent Mississippi
+              State University in the Southeastern Conference Emerging Scholars
+              Program (2023--2024)
+        \item \textbf{Best Paper Award} --- Autonomous Air and Ground Sensing Systems
+              for Agricultural Optimization and Phenotyping VIII, SPIE (2023)
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{FUNDING AND INTELLECTUAL PROPERTY}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \textbf{Intellectual Property}
+    \begin{highlights}
+        \item \textbf{Technology Disclosure} --- ``Design and development of an
+              autonomous vision-guided cotton picker for selective and targeted
+              robotic picking.'' Mississippi State University Office of Technology
+              Management (2025). Co-inventor with Dr.\ Xin Zhang.
+              \\ \href{https://msstate-innovations.technologypublisher.com/technology/58899}{\texttt{msstate-innovations.technologypublisher.com/technology/58899}}
+    \end{highlights}
+    \vspace{0.10cm}
+    \textbf{Competitive Travel Awards}
+    \begin{highlights}
+        \item CENGR Graduate Student Travel Grant, College of Engineering,
+              University of Georgia (2026) --- \$735
+        \item IIPA 3MT Conference Travel Award, University of Georgia (2026) --- \$500
+        \item TAGGS Travel Scholarship, The Graduate School, Mississippi State
+              University (2024) --- \$700
+        \item AG2PI Travel Award, Agricultural Genome to Phenome Initiative
+              (2024) --- \$1{,}500
+    \end{highlights}
+    \vspace{0.10cm}
+    \textbf{Proposal Experience}
+    \begin{highlights}
+        \item Southern SARE Graduate Student Grant (2024) --- \$22{,}000;
+              submitted, not funded.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{TEACHING EXPERIENCE}
+\vspace{0.08cm}
+
+\subsection{Instructor of Record --- Uva Wellassa University of Sri Lanka (Mar 2019 -- Dec 2022)}
+\begin{onecolentry}
+Sole instructor for eight undergraduate courses (18 credit hours total): lectures,
+laboratory design, assessment, and grading.
+\begin{highlights}
+    \item \textbf{SCT 364-2 Embedded Systems} (2 credits) --- 2019, 2020, 2021, 2022
+    \item \textbf{SCT 462-2 Intelligent Systems} (2 credits) --- 2019, 2020, 2021, 2022
+    \item \textbf{SCT 319-2 Maintenance, Production, and Project Management}
+          (2 credits) --- 2021, 2022
+    \item \textbf{SCT 363-2 Electrical Systems} (2 credits) --- 2020, 2021
+    \item \textbf{SCT 408-2 Industrial Electronics} (2 credits) --- 2020, 2021
+    \item \textbf{SCT 362-3 Digital and Analog Electronics} (3 credits) --- 2020
+    \item \textbf{SCT 373-2 Electric Power and Machines} (2 credits) --- 2019
+    \item \textbf{SCT 142-3 Engineering Workshop} (3 credits) --- 2019
+\end{highlights}
+\end{onecolentry}
+\vspace{0.14cm}
+
+\subsection{Course Development}
+\begin{onecolentry}
+    \textbf{BSc Mechatronics curriculum revision}, Department of Science and
+    Technology, Uva Wellassa University (2019). Invited by the department to design
+    seven new course modules and their lesson plans:
+    \begin{highlights}
+        \item MEC 361-2 Computer Vision
+        \item MEC 331-2 IoT Development
+        \item MEC 232-2 Embedded Systems
+        \item MEC 233-2 Embedded Systems Design
+        \item MEC 362-2 Transducers and Instrumentation
+        \item MEC 111-2 Computer Programming I
+        \item MEC 212-2 Computer Programming II
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.14cm}
+
+\subsection{Course Coordination and Laboratory Instruction}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Graduate Teaching Assistant}, ABE 4423/6423 Bioinstrumentation~II,
+              Mississippi State University (Spring 2024). Laboratory instructor with
+              Dr.\ Xin Zhang. Certified Teaching Assistant, Level~2/3.
+        \item \textbf{Subject Coordinator}, BGE 121-2 Ethics and Law Basics,
+              Uva Wellassa University (2022). Cross-faculty course delivered to three
+              faculties; coordinated visiting resource persons, assessment, and
+              results submission.
+        \item \textbf{Coordinator}, Short Course in Robotics and Arduino Programming,
+              Centre for Open and Distance Learning, Uva Wellassa University
+              (2019--2022). Appointed by the Vice Chancellor; responsible for
+              curriculum, timetabling, certification, and course budget.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.14cm}
+
+\subsection{Courses Prepared to Teach}
+\begin{onecolentry}
+    Computer Vision for Agricultural and Biological Systems; Artificial Intelligence
+    for Agricultural and Biological Engineering; Machine Learning Applications in
+    Agriculture; Agricultural Automation and Precision Agriculture.
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{MENTORING AND ADVISING}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \textbf{Undergraduate and Visiting Researchers} --- six students mentored, Sensing
+    and Automation in Agri-Systems (SAAS) Lab (2024 -- Present)
+    \begin{highlights}
+        \item \textbf{Isadora Goncalves} (Aug 2026 -- present) --- School of Electrical
+              \& Computer Engineering, University of Georgia. End-effector task design
+              for a robotics competition platform.
+        \item \textbf{Jap Ja Mun Pan} (May -- Jul 2026) --- Electrical \& Computer
+              Engineering, Trevecca Nazarene University; visiting researcher through
+              the Summer Undergraduate Research Opportunities in Engineering (SUROE)
+              program, University of Georgia. Actuation design for a plant surgical
+              robot.
+        \item \textbf{Madison Mateyko} (Nov -- Dec 2025) --- School of Environmental,
+              Civil, Agricultural \& Mechanical Engineering, University of Georgia.
+              Computer vision for the robotic cotton picker.
+        \item \textbf{Riley Gebke} (Mar -- May 2025) --- Department of Agricultural \&
+              Biological Engineering, Mississippi State University. Computer vision
+              for the robotic cotton picker.
+        \item \textbf{Mary J. Echelberry} (Oct -- Dec 2024) --- Department of
+              Agricultural \& Biological Engineering, Mississippi State University.
+              Computer vision for the robotic cotton picker.
+        \item \textbf{Kelly Bilington} (Apr 2024) --- Harper Adams University, United
+              Kingdom; graduate student worker through the Mississippi State
+              University--Harper Adams University Student Exchange Program, hosted by
+              the Agricultural Autonomy Institute. Development of a UR5e manipulator
+              base platform for integration with a Husky A200 mobile robot.
+    \end{highlights}
+    \vspace{0.12cm}
+
+    \textbf{Undergraduate Final-Year Research Projects} --- Uva Wellassa University
+    (Mar 2019 -- Dec 2022). Supervised 15 projects; twelve produced peer-reviewed
+    conference abstracts~[U1]--[U12]. Topics spanned computer vision, deep learning,
+    IoT systems, and mechatronic design, including traffic sign recognition,
+    zebrafish embryo toxicity imaging, automated microbial colony counting, Sinhala
+    postal-address OCR, and vehicle safety systems.
+    \vspace{0.12cm}
+
+    \textbf{Student Support Roles} --- Uva Wellassa University
+    \begin{highlights}
+        \item \textbf{Student Counselor}, Faculty of Applied Sciences (2022--2023).
+              Completed a 40-hour Psychological Counselling Program.
+        \item \textbf{Academic Sub-Warden}, University residence halls (2019--2023).
+              Residential academic support and student welfare.
+        \item \textbf{Student Mentor}, Faculty of Applied Sciences (2019--2023).
+              Academic guidance for undergraduate students.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{PROFESSIONAL SERVICE}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \textbf{Editorial Board Service}
+    \begin{highlights}
+        \item \textbf{Associate Editor, Computer Science and Engineering} ---
+              \emph{Endeavors: Mississippi State Undergraduate Research Journal}
+              (ISSN 3071-012X), Mississippi State University (2024--2025).
+              Inaugural editorial board of MSU's first peer-reviewed undergraduate
+              research journal; conducted double-blind peer review of engineering
+              and computer science submissions for Volume~1.
+              \\ \href{https://scholarsjunction.msstate.edu/endeavors/}{\texttt{scholarsjunction.msstate.edu/endeavors}}
+    \end{highlights}
+    \vspace{0.10cm}
+    \textbf{Journal Peer Review} --- 14 completed reviews across seven journals
+    \begin{highlights}
+        \item \emph{Computers and Electronics in Agriculture}, Elsevier
+              (6 reviews; 2024--present)
+        \item \emph{The International Journal of Robotics Research}, SAGE
+              (1 review; 2026)
+        \item \emph{Journal of Food Composition and Analysis}, Elsevier (2 reviews; 2026)
+        \item \emph{Frontiers in Plant Science}, Frontiers (2 reviews; 2026)
+        \item \emph{Food and Energy Security}, Wiley (1 review; 2026)
+        \item \emph{Food and Humanity}, Elsevier (1 review; 2026)
+        \item \emph{Journal of Atmospheric and Solar-Terrestrial Physics}, Elsevier
+              (1 review; 2026)
+    \end{highlights}
+    \vspace{0.10cm}
+    \textbf{Conference Service}
+    \begin{highlights}
+        \item Track Coordinator, Engineering and Technology track, International
+              Research Conference, Uva Wellassa University (2022)
+        \item Reviewer, International Research Conference, Uva Wellassa University
+              (2021--2022)
+        \item Reviewer, 2nd International Conference on Advancements in Computing,
+              Sri Lanka Institute of Information Technology (2021)
+        \item Session Panel Member, International Research Conference,
+              Uva Wellassa University (2020)
+        \item Organizing Committee Member, International Research Conference,
+              Uva Wellassa University (2019, 2020)
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{INSTITUTIONAL SERVICE AND GOVERNANCE}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Lab Manager}, SAAS Lab --- Mississippi State University
+              (2024--2025); University of Georgia (2025--present)
+        \item \textbf{Member, Faculty Board}, Faculty of Applied Sciences,
+              Uva Wellassa University (2022--2023). Appointed by the Dean under
+              S.48(1A)(c) of the Universities Act No.~16 of 1978. The Faculty Board is
+              the governing academic body for curricula, examinations, and policy.
+              Three-year term, curtailed on departure for doctoral study.
+        \item \textbf{Member}, Program Review and Self-Evaluation Report (SER) groups
+              3, 4, and 8, Uva Wellassa University (2022--2023)
+        \item \textbf{Member}, Graduate Employability Survey team, AHEAD ELTA-ELSE
+              Faculty Development Plan, Uva Wellassa University (2022--2023).
+              Appointed by the Dean; data informed the final AHEAD project report.
+        \item \textbf{Faculty Advisor}, IEEE Robotics and Automation Society Student
+              Chapter, Uva Wellassa University (2021--2023)
+        \item \textbf{Panel Member}, Stakeholder Meeting for the BSc Mechatronics
+              Curriculum Revision, Uva Wellassa University (2020)
+        \item \textbf{Co-author}, Survey of Postgraduate Admission Pathways followed by
+              UWU graduates (2020)
+        \item \textbf{Member (Activity 02)}, AHEAD Project --- Revising the Curricula
+              of Existing Degree Programmes to Meet Local and International Demands,
+              Uva Wellassa University (2019--2020)
+        \item \textbf{Organizing Committee Member}, Convocation, Uva Wellassa
+              University (2019)
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{OUTREACH AND COMMUNITY ENGAGEMENT}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Secretary}, Softball Cricket Club, Mississippi State University
+              (2024--2025)
+        \item \textbf{Social Secretary}, Softball Cricket Club, Mississippi State
+              University (2023--2024)
+        \item \textbf{Webmaster}, Sri Lankan Association, Mississippi State University
+              (2023--2024)
+        \item \textbf{Workshop Instructor}, Engineering Machinery Workshop for School
+              Students, Uva Wellassa University (2018)
+        \item \textbf{Organizing Committee}, UWU Robot Battles, Department of Science
+              \& Technology, Uva Wellassa University (2016)
+        \item \textbf{Volunteer Mathematics Instructor}, G.C.E. Ordinary Level (O/L)
+              Seminar Series, Uva Wellassa University, Sri Lanka (2014--2017).
+              Conducted mathematics seminars for students at resource-constrained
+              schools with limited access to supplemental educational support, with
+              the goal of improving examination preparedness, pass rates, and student
+              interest in mathematics.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{PROFESSIONAL DEVELOPMENT}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Peer Review Certification} --- Elsevier Researcher Academy
+              (2026): Fundamentals of Peer Review; Certified Peer Reviewer Course;
+              Becoming a Peer Reviewer (14 hours total)
+        \item \textbf{Preparing Future Faculty Program}, Mississippi State University
+              (2024--2025)
+        \item \textbf{Certified Teaching Assistant, Level 2/3}, Mississippi State
+              University (2024)
+        \item \textbf{Fundamentals of Deep Learning}, Certificate of Competency,
+              NVIDIA Deep Learning Institute (2023)
+        \item \textbf{Psychological Counselling Program} (40 hours), Staff Development
+              Centre, Uva Wellassa University / World Bank AHEAD Project (2021--2022)
+        \item \textbf{Workshop: Writing Manuscripts and Proposals for Research Grants},
+              AHEAD ELTA-ELSE Faculty Development Plan, Uva Wellassa University (2020)
+        \item \textbf{Workshop: Online Teaching Tools and Methods for Effective
+              Teaching and Assessment}, Uva Wellassa University (2020)
+        \item \textbf{Certificate Course in Teaching in Higher Education},
+              Staff Development Centre, Uva Wellassa University (2019)
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{TECHNICAL SKILLS}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \textbf{Programming:} Python, C++, MATLAB \\
+    \textbf{Deep learning:} PyTorch, TensorFlow/Keras, YOLO (v5--v26), SegFormer,
+    instance and semantic segmentation, dataset design and annotation \\
+    \textbf{Robotics and perception:} ROS, Gazebo, OpenCV, RGB-D and stereo
+    vision (ZED 2i, RealSense), UR5e manipulator control, Clearpath Husky,
+    GPS and map-based autonomous navigation, SLAM \\
+    \textbf{Hardware and embedded:} Arduino, PLC, microcontroller systems,
+    IoT sensor networks, instrumentation design
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{PROFESSIONAL MEMBERSHIPS}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Integrative Precision Agriculture Student Club (IPAC),
+              University of Georgia, since 2025
+        \item American Society of Agricultural and Biological Engineers (ASABE),
+              Graduate Student Member, since 2024
+        \item SPIE --- the International Society for Optics and Photonics,
+              Student Member, since 2023
+        \item Institute of Electrical and Electronics Engineers (IEEE),
+              Graduate Student Member, since 2020
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{RESEARCH SOFTWARE AND DATA}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{CottonID} (2026) --- web application for cotton boll detection,
+              yield estimation, and defoliation-timing decision support
+              (Next.js, FastAPI, RF-DETR/YOLO).
+              % TODO: add a public link or repository if available
+        \item \textbf{CottonBoll Harvest} (2026) --- supplementary code, trained-model
+              resources, and supporting materials for the manuscript
+              \emph{Selective Cotton Boll Localization for Robotic Harvesting:
+              Evaluation of Deep Learning Vision Models under Field Conditions}.
+              Repository private during manuscript preparation. Public release planned upon publication.
+              \\ \repo{github.com/imtheva/CottonBoll\_Harvest}
+        \item \textbf{CottonSim} (2025) --- open-source ROS/Gazebo simulator, virtual
+              cotton farm, and vision-guided navigation stack for autonomous cotton
+              picking. \\ \repo{github.com/imtheva/CottonSim}
+        \item \textbf{Multi-Ripeness Blackberry} (2025) --- detection models and
+              annotated field dataset (1{,}086 images, three ripeness classes, two
+              seasons). \\ \repo{github.com/Zhanglab-abe/Multi-Ripeness\_Blackberry}
+        \item \textbf{Catfish-Segment} (2023) --- semantic segmentation models for
+              automated catfish processing.
+              \\ \repo{github.com/Zhanglab-abe/Catfish-Segment}
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+\section{MEDIA COVERAGE}
+\vspace{0.08cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \href{https://msstate-innovations.technologypublisher.com/technology/58899}{MSU
+              Innovations}, ``Design and development of an autonomous vision-guided
+              cotton picker for selective and targeted robotic picking''
+              (October 2025)
+        \item \href{https://farmflavor.com/mississippi/mississippi-technology/agriculture-technology-advancements-revolutionize-mississippi-ag-industry/}{Farm
+              Flavor}, ``Agriculture technology advancements revolutionize
+              Mississippi ag industry'' (November 2024)
+        \item \href{https://www.wcbi.com/mississippi-state-researchers-develop-prototype-to-advance-cotton-industry/}{WCBI
+              News}, ``Mississippi State researchers develop prototype to advance
+              cotton industry'' (November 2023)
+        \item \href{https://issuu.com/gradmarketing/docs/newsletter_-_ragged/40}{MSU
+              Graduate School Newsletter}, award announcement (October 2023)
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.18cm}
+
+%--------------------------------------------------------------
+% \section{REFERENCES}
+% -------------------------------------------------------------------------
+% REFERENCES SECTION -- COMMENTED OUT.
+% Uncomment and fill in before submitting. For faculty applications, naming
+% 3-5 referees with full contact details is the convention.
+%
+% \vspace{0.08cm}
+% \begin{onecolentry}
+% \begin{tabular}{@{}p{8.2cm} p{8.2cm}@{}}
+% \textbf{Dr.\ Xin Zhang} & \textbf{Name} \\
+% Ph.D.\ Advisor; Rank & Title \\
+% School of Environmental, Civil, Agricultural & Department \\
+% \& Mechanical Engineering & Institution \\
+% University of Georgia & email \\
+% email \textbar{} phone & phone \\
+% \end{tabular}
+% \end{onecolentry}
+
+\end{document}
