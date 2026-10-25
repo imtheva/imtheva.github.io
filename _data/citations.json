@@ -18,85 +18,136 @@
       "title": "Computer vision in livestock management and production",
       "year": "2024",
       "cites": 16,
-      "scholar_id": "MpKhKEUAAAAJ:YsMSGLbcyi4C"
+      "scholar_id": "MpKhKEUAAAAJ:YsMSGLbcyi4C",
+      "category": "Computer Vision",
+      "cites_by_year": {
+        "2024": 5,
+        "2025": 7,
+        "2026": 4
+      }
     },
     {
       "title": "CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation",
       "year": "2025",
       "cites": 9,
-      "scholar_id": "MpKhKEUAAAAJ:hqOjcs7Dif8C"
+      "scholar_id": "MpKhKEUAAAAJ:hqOjcs7Dif8C",
+      "category": "Agricultural Robotics",
+      "cites_by_year": {
+        "2026": 9
+      }
     },
     {
       "title": "Traffic sign recognition and auditory alert system for sri lankan drivers using deep-learning",
       "year": "2024",
       "cites": 6,
-      "scholar_id": "MpKhKEUAAAAJ:_FxGoFyzp5QC"
+      "scholar_id": "MpKhKEUAAAAJ:_FxGoFyzp5QC",
+      "category": "Computer Vision",
+      "cites_by_year": {
+        "2024": 1,
+        "2025": 4,
+        "2026": 1
+      }
     },
     {
       "title": "Multi-ripeness level blackberry detection using YOLOv7 for soft robotic harvesting",
       "year": "2023",
       "cites": 4,
-      "scholar_id": "MpKhKEUAAAAJ:zYLM7Y9cAGgC"
+      "scholar_id": "MpKhKEUAAAAJ:zYLM7Y9cAGgC",
+      "category": "Computer Vision",
+      "cites_by_year": {
+        "2024": 1,
+        "2025": 3
+      }
     },
     {
       "title": "Automating catfish cutting process using deep learning-based semantic segmentation",
       "year": "2023",
       "cites": 3,
-      "scholar_id": "MpKhKEUAAAAJ:IjCSPb-OGe4C"
+      "scholar_id": "MpKhKEUAAAAJ:IjCSPb-OGe4C",
+      "category": "Computer Vision",
+      "cites_by_year": {
+        "2025": 2,
+        "2026": 1
+      }
     },
     {
       "title": "In-Field Multi-Ripeness Blackberry Detection for Soft Robotic Harvesting",
       "year": "2025",
       "cites": 2,
-      "scholar_id": "MpKhKEUAAAAJ:0EnyYjriUFMC"
+      "scholar_id": "MpKhKEUAAAAJ:0EnyYjriUFMC",
+      "category": "Computer Vision",
+      "cites_by_year": {
+        "2025": 1,
+        "2026": 1
+      }
     },
     {
       "title": "Leveraging virtual reality for robot manipulator education",
       "year": "2023",
       "cites": 1,
-      "scholar_id": "MpKhKEUAAAAJ:Tyk-4Ss8FVUC"
+      "scholar_id": "MpKhKEUAAAAJ:Tyk-4Ss8FVUC",
+      "category": "Robotics",
+      "cites_by_year": {
+        "2026": 1
+      }
     },
     {
       "title": "A Digital Device to Measure Distance on Multiple Surfaces",
       "year": "2019",
       "cites": 1,
-      "scholar_id": "MpKhKEUAAAAJ:9yKSN-GCB0IC"
+      "scholar_id": "MpKhKEUAAAAJ:9yKSN-GCB0IC",
+      "category": "Other",
+      "cites_by_year": {
+        "2021": 1
+      }
     },
     {
       "title": "Selective Cotton Boll Localization for Robotic Harvesting: Evaluation of Deep Learning Vision Models Under Field Conditions",
       "year": "2026",
       "cites": 0,
-      "scholar_id": "MpKhKEUAAAAJ:HDshCWvjkbEC"
+      "scholar_id": "MpKhKEUAAAAJ:HDshCWvjkbEC",
+      "category": "Computer Vision",
+      "cites_by_year": {}
     },
     {
       "title": "CottonSim: Development of an autonomous visual-guided robotic cotton-picking system in the Gazebo",
       "year": "2025",
       "cites": 0,
-      "scholar_id": "MpKhKEUAAAAJ:UebtZRa9Y70C"
+      "scholar_id": "MpKhKEUAAAAJ:UebtZRa9Y70C",
+      "category": "Agricultural Robotics",
+      "cites_by_year": {}
     },
     {
       "title": "Perception-enabled manipulator control for a robotic cotton picker with dual-side harvesting capability",
       "year": "2025",
       "cites": 0,
-      "scholar_id": "MpKhKEUAAAAJ:5nxA0vEk-isC"
+      "scholar_id": "MpKhKEUAAAAJ:5nxA0vEk-isC",
+      "category": "Agricultural Robotics",
+      "cites_by_year": {}
     },
     {
       "title": "Development of Tracking over Speed System Using IoT Technology for Vehicles",
       "year": "2021",
       "cites": 0,
-      "scholar_id": "MpKhKEUAAAAJ:UeHWp8X0CEIC"
+      "scholar_id": "MpKhKEUAAAAJ:UeHWp8X0CEIC",
+      "category": "Other",
+      "cites_by_year": {}
     },
     {
       "title": "A digital device to monitor the colour changes during fermentation stage of black tea processing",
       "year": "2019",
       "cites": 0,
-      "scholar_id": "MpKhKEUAAAAJ:roLk4NBRz8UC"
+      "scholar_id": "MpKhKEUAAAAJ:roLk4NBRz8UC",
+      "category": "Other",
+      "cites_by_year": {}
     },
     {
       "title": "Development of a monitoring device for fermentation stage of black tea manufacturing",
       "year": "2018",
       "cites": 0,
-      "scholar_id": "MpKhKEUAAAAJ:8k81kl-MbHgC"
+      "scholar_id": "MpKhKEUAAAAJ:8k81kl-MbHgC",
+      "category": "Other",
+      "cites_by_year": {}
     }
   ]
 }

@@ -23,6 +23,7 @@
 {% assign updated_year = c.updated | slice: 0, 4 | plus: 0 %}
 {% if updated_year > ymax %}{% assign ymax = updated_year %}{% endif %}
 
+{% assign cats = "Computer Vision|Agricultural Robotics|Robotics|Other" | split: "|" %}
 {% assign top_max = papers.first.cites | plus: 0 %}
 {% if top_max < 1 %}{% assign top_max = 1 %}{% endif %}
 
@@ -67,12 +68,40 @@
           {% assign h = v | times: 100 | divided_by: vmax %}
           <div class="scd-bar">
             <span class="scd-bar-track">
-              <span class="scd-bar-fill" style="height: {{ h }}%"><span class="scd-bar-n">{{ v }}</span></span>
+              <span class="scd-bar-fill{% if v == 0 %} scd-bar-empty{% endif %}" style="height: {{ h }}%">
+                <span class="scd-bar-n">{{ v }}</span>
+                <span class="scd-bar-stack">
+                  {% if v > 0 %}
+                    {% for cat in cats %}
+                      {% assign cv = 0 %}
+                      {% for p in papers %}
+                        {% if p.category == cat %}
+                          {% assign pv = p.cites_by_year[key] | default: 0 | plus: 0 %}
+                          {% assign cv = cv | plus: pv %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if cv > 0 %}
+                        {% assign sh = cv | times: 100.0 | divided_by: v %}
+                        <span class="scd-seg scd-cat-{{ cat | slugify }}" style="height: {{ sh }}%" title="{{ y }} · {{ cat }}: {{ cv }}"></span>
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                </span>
+              </span>
             </span>
             <span class="scd-bar-y">{{ y }}</span>
           </div>
         {% endfor %}
       </div>
+      <ul class="scd-legend">
+        {% for cat in cats %}
+          {% assign ct = 0 %}
+          {% for p in papers %}{% if p.category == cat %}{% assign ct = ct | plus: p.cites %}{% endif %}{% endfor %}
+          {% if ct > 0 %}
+            <li><span class="scd-dot scd-cat-{{ cat | slugify }}"></span>{{ cat }} <b>{{ ct }}</b></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
     </div>
 
     <div class="scd-panel">
@@ -85,7 +114,7 @@
             <li>
               <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ sid }}&citation_for_view={{ p.scholar_id }}"
                 target="_blank" rel="noopener" title="{{ p.title | escape }}">{{ p.title }}</a>
-              <span class="scd-top-meter"><span style="width: {{ w }}%"></span></span>
+              <span class="scd-top-meter"><span class="scd-cat-{{ p.category | default: 'Other' | slugify }}" style="width: {{ w }}%" title="{{ p.category | default: 'Other' }}"></span></span>
               <span class="scd-top-n">{{ p.cites }}</span>
             </li>
             {% assign shown = shown | plus: 1 %}
@@ -101,6 +130,10 @@
     --scd-accent: #1a73e8;
     --scd-tile: rgba(0, 0, 0, 0.035);
     --scd-track: rgba(0, 0, 0, 0.08);
+    --scd-cv: #1e9e5a;
+    --scd-agro: #b7860b;
+    --scd-rob: #3367d6;
+    --scd-other: #9aa0a6;
     color: var(--global-text-color);
     border: 1px solid var(--global-divider-color);
     border-radius: 12px;
@@ -111,6 +144,10 @@
     --scd-accent: #8ab4f8;
     --scd-tile: rgba(255, 255, 255, 0.05);
     --scd-track: rgba(255, 255, 255, 0.12);
+    --scd-cv: #5cdb95;
+    --scd-agro: #e8c547;
+    --scd-rob: #7aa2ff;
+    --scd-other: #80868b;
   }
   .scd-head {
     display: flex;
@@ -211,8 +248,50 @@
     width: 100%;
     max-width: 36px;
     min-height: 2px;
-    background: var(--scd-accent);
+  }
+  .scd-bar-empty {
+    background: var(--scd-track);
+    border-radius: 2px;
+  }
+  .scd-bar-stack {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1px;
+    height: 100%;
     border-radius: 4px 4px 0 0;
+    overflow: hidden;
+  }
+  .scd-seg {
+    display: block;
+    flex-shrink: 0;
+  }
+  .scd-cat-computer-vision { background: var(--scd-cv); }
+  .scd-cat-agricultural-robotics { background: var(--scd-agro); }
+  .scd-cat-robotics { background: var(--scd-rob); }
+  .scd-cat-other { background: var(--scd-other); }
+  .scd-legend {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    padding: 0;
+    margin: 0.75rem 0 0;
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
+  }
+  .scd-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .scd-legend b {
+    color: var(--global-text-color);
+    font-weight: 600;
+  }
+  .scd-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
   }
   .scd-bar-n {
     position: absolute;
@@ -266,7 +345,6 @@
   .scd-top-meter span {
     display: block;
     height: 100%;
-    background: var(--scd-accent);
     border-radius: 3px;
   }
   .scd-top-n {
