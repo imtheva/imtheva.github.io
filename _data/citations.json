@@ -1,14 +1,15 @@
 {
   "scholar_id": "MpKhKEUAAAAJ",
-  "updated": "2026-09-27",
-  "total": 41,
-  "since_2021": 41,
+  "updated": "2026-10-24",
+  "total": 42,
+  "since_2021": 42,
   "h_index": 4,
   "h_index_5y": 4,
   "i10_index": 1,
   "i10_index_5y": 1,
   "cites_per_year": {
-    "2024": 6,
+    "2021": 1,
+    "2024": 7,
     "2025": 17,
     "2026": 17
   },
@@ -16,7 +17,7 @@
     {
       "title": "Computer vision in livestock management and production",
       "year": "2024",
-      "cites": 15,
+      "cites": 16,
       "scholar_id": "MpKhKEUAAAAJ:YsMSGLbcyi4C"
     },
     {
@@ -60,6 +61,12 @@
       "year": "2019",
       "cites": 1,
       "scholar_id": "MpKhKEUAAAAJ:9yKSN-GCB0IC"
+    },
+    {
+      "title": "Selective Cotton Boll Localization for Robotic Harvesting: Evaluation of Deep Learning Vision Models Under Field Conditions",
+      "year": "2026",
+      "cites": 0,
+      "scholar_id": "MpKhKEUAAAAJ:HDshCWvjkbEC"
     },
     {
       "title": "CottonSim: Development of an autonomous visual-guided robotic cotton-picking system in the Gazebo",
