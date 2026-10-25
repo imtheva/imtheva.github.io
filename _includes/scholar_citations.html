@@ -1,937 +1,301 @@
-<!-- ================================================================
-  _includes/scholar_citations.html
-  DATA SOURCE : _data/citations.json  (update by running:)
-               python _scripts/update_citations.py
-================================================================ -->
-
 {% assign c = site.data.citations %}
-
-{% if c == nil or c.total == nil %}
-<div
-  style="border:1px dashed #e2e0d8;border-radius:10px;padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:13px;color:#6b6a65;font-family:inherit;">
-  <strong style="color:#1a1a18;">⚠️ Citation dashboard: setup needed</strong><br><br>
-  The file <code>_data/citations.json</code> is missing from your repository.
-</div>
-
-{% else %}
+{% if c and c.total %}
 
 {% assign total = c.total | plus: 0 %}
-{% assign since5 = c.since_2021 | plus: 0 %}
-{% assign hval = c.h_index | plus: 0 %}
-{% assign h5val = c.h_index_5y | plus: 0 %}
-{% assign i10val = c.i10_index | plus: 0 %}
-{% assign i105val = c.i10_index_5y | plus: 0 %}
-{% assign updated = c.updated | default: "" %}
-{% assign papers = c.papers %}
+{% assign since = c.since_2021 | plus: 0 %}
 {% assign years = c.cites_per_year %}
+{% assign papers = c.papers | sort: "cites" | reverse %}
+{% assign sid = c.scholar_id | default: site.scholar_userid %}
 
-{% assign max_c = 1 %}
-{% for p in papers %}
-{% assign pc = p.cites | plus: 0 %}
-{% if pc > max_c %}{% assign max_c = pc %}{% endif %}
+{% assign cited = 0 %}
+{% for p in papers %}{% if p.cites > 0 %}{% assign cited = cited | plus: 1 %}{% endif %}{% endfor %}
+
+{% assign ymin = 9999 %}
+{% assign ymax = 0 %}
+{% assign vmax = 1 %}
+{% for pair in years %}
+  {% assign y = pair[0] | plus: 0 %}
+  {% assign v = pair[1] | plus: 0 %}
+  {% if y < ymin %}{% assign ymin = y %}{% endif %}
+  {% if y > ymax %}{% assign ymax = y %}{% endif %}
+  {% if v > vmax %}{% assign vmax = v %}{% endif %}
 {% endfor %}
+{% assign updated_year = c.updated | slice: 0, 4 | plus: 0 %}
+{% if updated_year > ymax %}{% assign ymax = updated_year %}{% endif %}
 
-{% assign cited_count = 0 %}
-{% for p in papers %}
-{% if p.cites > 0 %}{% assign cited_count = cited_count | plus: 1 %}{% endif %}
-{% endfor %}
+{% assign top_max = papers.first.cites | plus: 0 %}
+{% if top_max < 1 %}{% assign top_max = 1 %}{% endif %}
 
-<div class="scd" id="scd" role="region" aria-label="Google Scholar citation metrics">
-
-  <!-- HEADER -->
-  <div class="scd-head">
-    <div class="scd-head-left">
-      <div class="scd-badge">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path
-            d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 15.999 14.978 17.5 12 17.5c-2.977 0-5.548-1.501-6.758-3.731z" />
-          <path
-            d="M12 19.5c2.977 0 5.548-1.501 6.758-3.731L24 9.5 12 19.5 0 9.5l5.242 4.269C6.452 18 9.022 19.5 12 19.5z"
-            opacity=".4" />
-        </svg>
-        Google Scholar
-      </div>
-      <div class="scd-name">Thevathayarajh Thayananthan</div>
+<section class="scd" aria-label="Citation metrics from Google Scholar">
+  <header class="scd-head">
+    <div>
+      <h2 class="scd-title">Citation metrics</h2>
+      <p class="scd-source">Google Scholar · updated {{ c.updated | date: "%b %-d, %Y" }}</p>
     </div>
-    <a href="https://scholar.google.com/citations?user={{ c.scholar_id | default: 'MpKhKEUAAAAJ' }}" target="_blank"
-      rel="noopener" class="scd-extlink" aria-label="Open Google Scholar profile">
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-        <polyline points="15 3 21 3 21 9" />
-        <line x1="10" y1="14" x2="21" y2="3" />
-      </svg>
-      View profile
+    <a class="scd-link" href="https://scholar.google.com/citations?user={{ sid }}" target="_blank" rel="noopener">
+      View profile <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
     </a>
-  </div>
+  </header>
 
-  <!-- STAT CARDS -->
-  <div class="scd-cards">
-    <div class="scd-card scd-card--primary">
-      <div class="scd-card-top">
-        <span class="scd-lbl">Total Citations</span>
-        <span class="scd-pill">+{{ since5 }} since 2021</span>
-      </div>
-      <div class="scd-num scd-countup" data-val="{{ total }}">{{ total }}</div>
-      <div class="scd-accent-bar"></div>
+  <dl class="scd-stats">
+    <div class="scd-stat">
+      <dt>Citations</dt>
+      <dd>{{ total }}</dd>
+      {% if since != total %}<span class="scd-note">{{ since }} since 2021</span>{% endif %}
     </div>
-    <div class="scd-card">
-      <span class="scd-lbl">h-index</span>
-      <div class="scd-num scd-countup" data-val="{{ hval }}">{{ hval }}</div>
-      <span class="scd-sub">{{ h5val }} since 2021</span>
+    <div class="scd-stat">
+      <dt>h-index</dt>
+      <dd>{{ c.h_index }}</dd>
     </div>
-    <div class="scd-card">
-      <span class="scd-lbl">i10-index</span>
-      <div class="scd-num scd-countup" data-val="{{ i10val }}">{{ i10val }}</div>
-      <span class="scd-sub">{{ i105val }} since 2021</span>
+    <div class="scd-stat">
+      <dt>i10-index</dt>
+      <dd>{{ c.i10_index }}</dd>
     </div>
-    <div class="scd-card">
-      <span class="scd-lbl">Publications</span>
-      <div class="scd-num scd-countup" data-val="{{ cited_count }}">{{ cited_count }}</div>
-      <span class="scd-sub">with citations</span>
+    <div class="scd-stat">
+      <dt>Cited works</dt>
+      <dd>{{ cited }}<span class="scd-of"> / {{ papers.size }}</span></dd>
     </div>
-  </div>
+  </dl>
 
-  <!-- CHARTS — bar + donut side by side -->
-  <div class="scd-charts">
-
-    <!-- Bar chart: JS rebuilds from data-years, showing only last 3 -->
-    <div class="scd-chart-box">
-      <div class="scd-chart-title">
-        <span>Citations by Year (Last 3 Years)</span>
-        <span class="scd-trend" id="scd-trend"></span>
-      </div>
-      <div class="scd-bars" id="scd-bars" data-years="{{ years | jsonify | escape }}">
-        <!-- JS populates bar columns here -->
+  <div class="scd-body">
+    <div class="scd-panel">
+      <h3 class="scd-panel-title">Citations per year</h3>
+      <div class="scd-bars" role="img" aria-label="Citations per year from {{ ymin }} to {{ ymax }}">
+        {% for y in (ymin..ymax) %}
+          {% assign key = y | append: "" %}
+          {% assign v = years[key] | default: 0 | plus: 0 %}
+          {% assign h = v | times: 100 | divided_by: vmax %}
+          <div class="scd-bar">
+            <span class="scd-bar-track">
+              <span class="scd-bar-fill" style="height: {{ h }}%"><span class="scd-bar-n">{{ v }}</span></span>
+            </span>
+            <span class="scd-bar-y">{{ y }}</span>
+          </div>
+        {% endfor %}
       </div>
     </div>
 
-    <!-- Donut chart -->
-    <div class="scd-chart-box scd-chart-box--donut">
-      <div class="scd-chart-title">Top Papers Share</div>
-      <div class="scd-donut-wrap">
-        <canvas id="scd-donut" width="140" height="140" aria-label="Donut chart of citation share by paper"></canvas>
-        <div class="scd-donut-center">
-          <span id="scd-donut-num">{{ total }}</span>
-          <small>total</small>
-        </div>
-      </div>
-      <div class="scd-legend" id="scd-legend"></div>
-    </div>
-
-  </div><!-- /.scd-charts -->
-
-  <!-- PAPERS TOGGLE -->
-  <div class="scd-toggle-row">
-    <button class="scd-toggle-btn" id="scd-toggle" aria-expanded="false" aria-controls="scd-papers">
-      <svg class="scd-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
-      Show top cited papers
-    </button>
-  </div>
-
-  <div class="scd-papers" id="scd-papers" aria-hidden="true">
-    <div class="scd-paper-inner">
-      {% assign delay_i = 0 %}
-      {% for p in papers %}
-      {% assign pc = p.cites | plus: 0 %}
-      {% if pc > 0 %}
-      {% assign wpct = pc | times: 100 | divided_by: max_c %}
-      {% assign dms = delay_i | times: 55 | plus: 50 %}
-      <div class="scd-paper-row">
-        <div class="scd-paper-title">
-          {% if p.scholar_id and p.scholar_id != "" %}
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ c.scholar_id | default: 'MpKhKEUAAAAJ' }}&citation_for_view={{ p.scholar_id }}"
-            target="_blank" rel="noopener" title="{{ p.title }}">
-            {{ p.title | truncate: 74 }}
-          </a>
-          {% else %}
-          <span title="{{ p.title }}">{{ p.title | truncate: 74 }}</span>
+    <div class="scd-panel">
+      <h3 class="scd-panel-title">Most cited</h3>
+      <ol class="scd-top">
+        {% assign shown = 0 %}
+        {% for p in papers %}
+          {% if p.cites > 0 and shown < 5 %}
+            {% assign w = p.cites | times: 100 | divided_by: top_max %}
+            <li>
+              <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ sid }}&citation_for_view={{ p.scholar_id }}"
+                target="_blank" rel="noopener" title="{{ p.title | escape }}">{{ p.title }}</a>
+              <span class="scd-top-meter"><span style="width: {{ w }}%"></span></span>
+              <span class="scd-top-n">{{ p.cites }}</span>
+            </li>
+            {% assign shown = shown | plus: 1 %}
           {% endif %}
-        </div>
-        <span class="scd-paper-yr">{{ p.year }}</span>
-        <div class="scd-paper-track">
-          <div class="scd-paper-fill" style="--w:{{ wpct }}%; --d:{{ dms }}ms;"></div>
-        </div>
-        <span class="scd-paper-cites">{{ pc }}</span>
-      </div>
-      {% assign delay_i = delay_i | plus: 1 %}
-      {% endif %}
-      {% endfor %}
+        {% endfor %}
+      </ol>
     </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <div class="scd-footer">
-    {% if updated != "" %}
-    <span>Updated {{ updated }}</span>
-    <span class="scd-dot">·</span>
-    {% endif %}
-    <!-- <span>Run <code style="font-size:10px;">python _scripts/run_locally.py</code> to refresh</span>
-    <span class="scd-dot">·</span>
-    <a href="https://scholar.google.com/citations?user={{ c.scholar_id | default: 'MpKhKEUAAAAJ' }}" target="_blank"
-      rel="noopener">scholar.google.com</a> -->
-  </div>
-
-</div><!-- /.scd -->
-
-{% endif %}
-
-
-<!-- ═══════════════════════ STYLES ═══════════════════════════════ -->
 <style>
   .scd {
-    --bg: #ffffff;
-    --bg2: #f4f3ef;
-    --bg3: #eae8e2;
-    --tx: #111110;
-    --tx2: #5c5b57;
-    --tx3: #9b9891;
-    --ac: #2a5bd7;
-    --ac-s: rgba(42, 91, 215, .10);
-    --ac-g: rgba(42, 91, 215, .22);
-    --bdr: rgba(0, 0, 0, .07);
-    --shad: 0 1px 2px rgba(0, 0, 0, .04), 0 6px 24px rgba(0, 0, 0, .07);
-    --r: 12px;
-    --r2: 8px;
-    --p1: #2a5bd7;
-    --p2: #0ea8a8;
-    --p3: #d97706;
-    --p4: #7c3aed;
-    --p5: #dc2626;
+    --scd-accent: #1a73e8;
+    --scd-tile: rgba(0, 0, 0, 0.035);
+    --scd-track: rgba(0, 0, 0, 0.08);
+    color: var(--global-text-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem 1.5rem;
+    margin: 1.5rem 0 2.5rem;
   }
-
-  [data-theme="dark"] .scd {
-    --bg: #141413;
-    --bg2: #1e1e1c;
-    --bg3: #2a2927;
-    --tx: #ede9e1;
-    --tx2: #a8a49c;
-    --tx3: #65635d;
-    --ac: #7aadff;
-    --ac-s: rgba(122, 173, 255, .12);
-    --ac-g: rgba(122, 173, 255, .22);
-    --bdr: rgba(255, 255, 255, .07);
-    --shad: 0 1px 2px rgba(0, 0, 0, .25), 0 6px 24px rgba(0, 0, 0, .4);
-    --p1: #7aadff;
-    --p2: #2dd4bf;
-    --p3: #fbbf24;
-    --p4: #a78bfa;
-    --p5: #f87171;
+  html[data-theme="dark"] .scd {
+    --scd-accent: #8ab4f8;
+    --scd-tile: rgba(255, 255, 255, 0.05);
+    --scd-track: rgba(255, 255, 255, 0.12);
   }
-
-  @media (prefers-color-scheme:dark) {
-    .scd {
-      --bg: #141413;
-      --bg2: #1e1e1c;
-      --bg3: #2a2927;
-      --tx: #ede9e1;
-      --tx2: #a8a49c;
-      --tx3: #65635d;
-      --ac: #7aadff;
-      --ac-s: rgba(122, 173, 255, .12);
-      --ac-g: rgba(122, 173, 255, .22);
-      --bdr: rgba(255, 255, 255, .07);
-      --shad: 0 1px 2px rgba(0, 0, 0, .25), 0 6px 24px rgba(0, 0, 0, .4);
-      --p1: #7aadff;
-      --p2: #2dd4bf;
-      --p3: #fbbf24;
-      --p4: #a78bfa;
-      --p5: #f87171;
-    }
-  }
-
-  .scd {
-    background: var(--bg);
-    border: 1px solid var(--bdr);
-    border-radius: var(--r);
-    box-shadow: var(--shad);
-    padding: clamp(1rem, 3vw, 1.75rem);
-    margin: 2rem 0 2.5rem;
-    max-width: 900px;
-    color: var(--tx);
-    font-family: "DM Sans", "Helvetica Neue", sans-serif;
-    transition: background .25s, border-color .25s, box-shadow .25s;
-  }
-
   .scd-head {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 1.25rem;
-    flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
-
-  .scd-head-left {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  .scd-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--ac);
-    letter-spacing: .03em;
-  }
-
-  .scd-name {
-    font-size: 15px;
+  .scd-title {
+    font-size: 1.15rem;
     font-weight: 600;
-    color: var(--tx);
-    letter-spacing: -.01em;
+    margin: 0;
   }
-
-  .scd-extlink {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--ac);
-    text-decoration: none;
-    border: 1px solid var(--bdr);
-    border-radius: 20px;
-    padding: 5px 14px;
-    transition: background .15s, border-color .15s;
-    flex-shrink: 0;
+  .scd-source {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    margin: 0.15rem 0 0;
   }
-
-  .scd-extlink:hover {
-    background: var(--ac-s);
-    border-color: var(--ac);
-    text-decoration: none;
-  }
-
-  .scd-cards {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 1.25rem;
-  }
-
-  @media(max-width:640px) {
-    .scd-cards {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media(max-width:360px) {
-    .scd-cards {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .scd-card {
-    background: var(--bg2);
-    border: 1px solid var(--bdr);
-    border-radius: var(--r2);
-    padding: .9rem 1rem .75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    position: relative;
-    overflow: hidden;
-    transition: background .25s;
-  }
-
-  .scd-card--primary {
-    background: var(--ac-s);
-    border-color: var(--ac-g);
-  }
-
-  .scd-card-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-
-  .scd-lbl {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: var(--tx3);
-  }
-
-  .scd-pill {
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--ac);
-    background: var(--ac-s);
-    border: 1px solid var(--ac-g);
-    border-radius: 20px;
-    padding: 1px 8px;
+  .scd-link {
+    font-size: 0.85rem;
     white-space: nowrap;
+    color: var(--scd-accent) !important;
   }
-
-  .scd-num {
-    font-size: clamp(24px, 4.5vw, 34px);
-    font-weight: 700;
-    color: var(--tx);
-    line-height: 1.05;
-    letter-spacing: -.03em;
+  .scd-link i {
+    font-size: 0.7rem;
+    margin-left: 2px;
+  }
+  .scd-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin: 0 0 1.25rem;
+  }
+  .scd-stat {
+    background: var(--scd-tile);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+  }
+  .scd-stat dt {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--global-text-color-light);
+  }
+  .scd-stat dd {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0.1rem 0 0;
     font-variant-numeric: tabular-nums;
   }
-
-  .scd-card--primary .scd-num {
-    color: var(--ac);
+  .scd-stat:first-child dd {
+    color: var(--scd-accent);
   }
-
-  .scd-sub {
-    font-size: 10.5px;
-    color: var(--tx3);
+  .scd-of {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--global-text-color-light);
   }
-
-  .scd-accent-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2.5px;
-    background: var(--ac);
-    border-radius: 0 0 var(--r2) var(--r2);
+  .scd-note {
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
   }
-
-  .scd-charts {
+  .scd-body {
     display: grid;
-    grid-template-columns: 1fr 200px;
-    gap: 12px;
-    margin-bottom: .75rem;
-    align-items: start;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 1.5rem;
   }
-
-  @media(max-width:580px) {
-    .scd-charts {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .scd-chart-box {
-    background: var(--bg2);
-    border: 1px solid var(--bdr);
-    border-radius: var(--r2);
-    padding: 1rem 1.1rem .85rem;
-    transition: background .25s;
-  }
-
-  .scd-chart-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: var(--tx3);
-    margin-bottom: .75rem;
-  }
-
-  .scd-trend {
-    font-size: 11px;
+  .scd-panel-title {
+    font-size: 0.8rem;
     font-weight: 600;
-    letter-spacing: 0;
-    text-transform: none;
+    color: var(--global-text-color-light);
+    margin: 0 0 0.75rem;
   }
-
   .scd-bars {
     display: flex;
-    align-items: flex-end;
-    gap: 10px;
-    height: 120px;
-  }
-
-  .scd-bar-col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    height: 100%;
-    justify-content: flex-end;
-  }
-
-  .scd-bar-count {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--tx2);
-    font-variant-numeric: tabular-nums;
-    line-height: 1;
-  }
-
-  .scd-bar-track {
-    width: 100%;
-    flex: 1;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    border-radius: 4px 4px 0 0;
-    position: relative;
-  }
-
-  .scd-bar-fill {
-    width: 100%;
-    height: 0;
-    background: var(--ac);
-    border-radius: 5px 5px 0 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: none;
-  }
-
-  .scd-bars.scd-go .scd-bar-fill {
-    height: var(--bar-h, 0%);
-    transition: height 0.65s cubic-bezier(0.34, 1.4, 0.64, 1);
-  }
-
-  .scd-bars.scd-go .scd-bar-col:nth-child(1) .scd-bar-fill {
-    transition-delay: 0s;
-  }
-
-  .scd-bars.scd-go .scd-bar-col:nth-child(2) .scd-bar-fill {
-    transition-delay: 0.08s;
-  }
-
-  .scd-bars.scd-go .scd-bar-col:nth-child(3) .scd-bar-fill {
-    transition-delay: 0.16s;
-  }
-
-  .scd-bar-yr {
-    font-size: 10px;
-    color: var(--tx3);
-  }
-
-  .scd-chart-box--donut {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .scd-donut-wrap {
-    position: relative;
-    width: 140px;
-    height: 140px;
-    margin: 0 auto .6rem;
-  }
-
-  #scd-donut {
-    display: block;
-    width: 140px !important;
-    height: 140px !important;
-  }
-
-  .scd-donut-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    pointer-events: none;
-  }
-
-  .scd-donut-center span {
-    display: block;
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--tx);
-    letter-spacing: -.03em;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .scd-donut-center small {
-    font-size: 10px;
-    color: var(--tx3);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-  }
-
-  .scd-legend {
-    width: 100%;
-  }
-
-  .scd-legend-item {
-    display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 6px;
-    font-size: 10.5px;
-    color: var(--tx2);
-    padding: 2px 0;
+    height: 150px;
   }
-
-  .scd-legend-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .scd-legend-lbl {
+  .scd-bar {
     flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-width: 0;
   }
-
-  .scd-legend-n {
-    font-weight: 700;
-    color: var(--tx);
-    flex-shrink: 0;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .scd-toggle-row {
+  .scd-bar-track {
+    flex: 1;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: .5rem 0;
+    align-items: flex-end;
+    padding-top: 18px;
   }
-
-  .scd-toggle-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
+  .scd-bar-fill {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 36px;
+    min-height: 2px;
+    background: var(--scd-accent);
+    border-radius: 4px 4px 0 0;
+  }
+  .scd-bar-n {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 3px;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: var(--tx2);
-    background: none;
-    border: 1px solid var(--bdr);
-    border-radius: 20px;
-    padding: 7px 16px;
-    cursor: pointer;
-    transition: all .15s;
+    color: var(--global-text-color);
+    font-variant-numeric: tabular-nums;
   }
-
-  .scd-toggle-btn:hover {
-    background: var(--bg2);
-    color: var(--tx);
-    border-color: var(--tx3);
+  .scd-bar-y {
+    font-size: 0.72rem;
+    color: var(--global-text-color-light);
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
   }
-
-  .scd-chevron {
-    transition: transform .3s cubic-bezier(.34, 1.2, .64, 1);
+  .scd-top {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-
-  .scd-toggle-btn[aria-expanded="true"] .scd-chevron {
-    transform: rotate(180deg);
-  }
-
-  .scd-papers {
+  .scd-top li {
     display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows .35s ease;
-    overflow: hidden;
-  }
-
-  .scd-papers[aria-hidden="false"] {
-    grid-template-rows: 1fr;
-  }
-
-  .scd-paper-inner {
-    overflow: hidden;
-    padding: 0 0 .25rem;
-  }
-
-  .scd-paper-row {
-    display: grid;
-    grid-template-columns: 1fr 46px 110px 30px;
+    grid-template-columns: 1fr 70px 24px;
     align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--bdr);
+    gap: 0.6rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    font-size: 0.82rem;
   }
-
-  .scd-paper-row:last-child {
-    border-bottom: none;
+  .scd-top li:last-child {
+    border-bottom: 0;
   }
-
-  .scd-paper-title {
-    font-size: 12px;
-    color: var(--tx2);
-    white-space: nowrap;
+  .scd-top a {
+    color: var(--global-text-color) !important;
     overflow: hidden;
     text-overflow: ellipsis;
-    min-width: 0;
+    white-space: nowrap;
   }
-
-  .scd-paper-title a {
-    color: inherit;
-    text-decoration: none;
+  .scd-top a:hover {
+    color: var(--scd-accent) !important;
   }
-
-  .scd-paper-title a:hover {
-    color: var(--ac);
-  }
-
-  .scd-paper-yr {
-    font-size: 10.5px;
-    color: var(--tx3);
-    background: var(--bg3);
-    border: 1px solid var(--bdr);
-    border-radius: 20px;
-    padding: 2px 7px;
-    text-align: center;
-    font-variant-numeric: tabular-nums;
-  }
-
-  .scd-paper-track {
-    height: 4px;
-    background: var(--bg3);
+  .scd-top-meter {
+    height: 5px;
+    background: var(--scd-track);
     border-radius: 3px;
     overflow: hidden;
   }
-
-  .scd-paper-fill {
+  .scd-top-meter span {
+    display: block;
     height: 100%;
-    background: var(--ac);
+    background: var(--scd-accent);
     border-radius: 3px;
-    width: 0;
-    animation: scdRight .6s cubic-bezier(.22, 1, .36, 1) both;
-    animation-delay: var(--d, 0ms);
   }
-
-  @keyframes scdRight {
-    to {
-      width: var(--w, 0%);
-    }
-  }
-
-  .scd-paper-cites {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--tx);
+  .scd-top-n {
     text-align: right;
+    font-weight: 600;
     font-variant-numeric: tabular-nums;
   }
-
-  @media(max-width:480px) {
-    .scd-paper-row {
-      grid-template-columns: 1fr 38px 80px 26px;
-      gap: 7px;
+  @media (max-width: 720px) {
+    .scd-body {
+      grid-template-columns: 1fr;
     }
   }
-
-  .scd-footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4px;
-    margin-top: 1rem;
-    padding-top: .85rem;
-    border-top: 1px solid var(--bdr);
-    font-size: 10.5px;
-    color: var(--tx3);
-  }
-
-  .scd-dot {
-    opacity: .4;
-  }
-
-  .scd-footer a {
-    color: var(--ac);
-    text-decoration: none;
-  }
-
-  .scd-footer a:hover {
-    text-decoration: underline;
+  @media (max-width: 576px) {
+    .scd {
+      padding: 1rem;
+    }
+    .scd-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .scd-top li {
+      grid-template-columns: 1fr 48px 22px;
+    }
+    .scd-top a {
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
   }
 </style>
 
-
-<!-- ═══════════════════════ SCRIPT ════════════════════════════════ -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
-<script>
-  (function () {
-
-    /* ── Read data from Jekyll/Liquid ── */
-    var YEARS = JSON.parse('{{ years  | jsonify }}' || '{}');
-    var PAPERS = JSON.parse('{{ papers | jsonify }}' || '[]');
-
-    /* ── Count-up animation ── */
-    function countUp(el, ms) {
-      if (!el) return;
-      var target = parseInt(el.dataset.val, 10);
-      if (isNaN(target)) return;
-      var t0 = null;
-      (function step(ts) {
-        if (!t0) t0 = ts;
-        var prog = Math.min((ts - t0) / ms, 1);
-        el.textContent = Math.round((1 - Math.pow(1 - prog, 3)) * target);
-        if (prog < 1) requestAnimationFrame(step);
-        else el.textContent = target;
-      })(performance.now());
-    }
-
-    /* ── CSS variable reader for Chart.js ── */
-    function cv(name) {
-      var el = document.getElementById('scd');
-      return el ? getComputedStyle(el).getPropertyValue(name).trim() : '#888';
-    }
-
-    /* ── Build bar chart: last 3 years only, from YEARS object ── */
-    function sizeBars() {
-      var barsEl = document.getElementById('scd-bars');
-      if (!barsEl) return;
-
-      /* Sort year keys and take the last 3 */
-      var allKeys = Object.keys(YEARS).sort();
-      var last3 = allKeys.slice(-3);
-
-      /* Compute max for scaling */
-      var max = 0;
-      last3.forEach(function (yr) {
-        var v = parseInt(YEARS[yr], 10) || 0;
-        if (v > max) max = v;
-      });
-      if (max === 0) max = 1;
-
-      /* Build DOM */
-      barsEl.innerHTML = last3.map(function (yr) {
-        var v = parseInt(YEARS[yr], 10) || 0;
-        var pct = Math.max((v / max) * 100, v > 0 ? 4 : 2).toFixed(1) + '%';
-        return '<div class="scd-bar-col">'
-          + '<span class="scd-bar-count">' + v + '</span>'
-          + '<div class="scd-bar-track">'
-          + '<div class="scd-bar-fill" style="--bar-h:' + pct + '" aria-label="' + yr + ': ' + v + ' citations"></div>'
-          + '</div>'
-          + '<span class="scd-bar-yr">' + yr + '</span>'
-          + '</div>';
-      }).join('');
-    }
-
-    /* ── Trend label ── */
-    function buildTrend() {
-      var trendEl = document.getElementById('scd-trend');
-      if (!trendEl) return;
-      var yrKeys = Object.keys(YEARS).sort();
-      if (yrKeys.length >= 2) {
-        var last = YEARS[yrKeys[yrKeys.length - 1]] || 0;
-        var prev = YEARS[yrKeys[yrKeys.length - 2]] || 0;
-        // if (prev > 0) {
-        //   var pct = Math.round(((last - prev) / prev) * 100);
-        //   trendEl.textContent = (pct >= 0 ? '↑ ' : '↓ ') + Math.abs(pct) + '% vs ' + yrKeys[yrKeys.length - 2];
-        //   trendEl.style.color = pct >= 0 ? '#16a34a' : '#dc2626';
-        // }
-      }
-    }
-
-    /* ── Donut chart ── */
-    function buildDonut() {
-      var canvas = document.getElementById('scd-donut');
-      var legendEl = document.getElementById('scd-legend');
-      if (!canvas || !window.Chart) return;
-      var top = PAPERS.filter(function (p) { return p.cites > 0; }).slice(0, 5);
-      var palette = ['--p1', '--p2', '--p3', '--p4', '--p5'].map(cv);
-      function trunc(s, n) { return s && s.length > n ? s.slice(0, n) + '…' : (s || ''); }
-      if (canvas._chart) canvas._chart.destroy();
-      canvas._chart = new Chart(canvas, {
-        type: 'doughnut',
-        data: {
-          labels: top.map(function (p) { return trunc(p.title, 30); }),
-          datasets: [{
-            data: top.map(function (p) { return p.cites; }),
-            backgroundColor: palette,
-            borderWidth: 0,
-            hoverOffset: 6
-          }]
-        },
-        options: {
-          responsive: false,
-          cutout: '66%',
-          animation: { duration: 900 },
-          plugins: {
-            legend: { display: false },
-            tooltip: { callbacks: { label: function (ctx) { return ' ' + ctx.raw + ' citations'; } } }
-          }
-        }
-      });
-      if (legendEl) {
-        legendEl.innerHTML = top.map(function (p, i) {
-          return '<div class="scd-legend-item">'
-            + '<div class="scd-legend-dot" style="background:' + palette[i] + '"></div>'
-            + '<span class="scd-legend-lbl" title="' + p.title + '">' + trunc(p.title, 24) + '</span>'
-            + '<span class="scd-legend-n">' + p.cites + '</span>'
-            + '</div>';
-        }).join('');
-      }
-    }
-
-    /* ── Toggle ── */
-    function initToggle() {
-      var btn = document.getElementById('scd-toggle');
-      var panel = document.getElementById('scd-papers');
-      if (!btn || !panel) return;
-      btn.addEventListener('click', function () {
-        var open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        panel.setAttribute('aria-hidden', String(open));
-        var nodes = btn.childNodes;
-        for (var i = 0; i < nodes.length; i++) {
-          if (nodes[i].nodeType === 3) {
-            nodes[i].textContent = open ? ' Show top cited papers' : ' Hide top cited papers';
-            break;
-          }
-        }
-      });
-    }
-
-    /* ── Re-render donut on dark-mode toggle ── */
-    function watchTheme() {
-      var last = document.documentElement.getAttribute('data-theme');
-      new MutationObserver(function () {
-        var cur = document.documentElement.getAttribute('data-theme');
-        if (cur !== last) { last = cur; buildDonut(); }
-      }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    }
-
-    /* ── Animate on scroll into view ── */
-    function initObserver() {
-      sizeBars(); /* build bar DOM first */
-      if (!('IntersectionObserver' in window)) {
-        document.querySelectorAll('.scd-countup').forEach(function (el) { countUp(el, 1000); });
-        var bars = document.getElementById('scd-bars');
-        if (bars) bars.classList.add('scd-go');
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          io.disconnect();
-          document.querySelectorAll('.scd-countup').forEach(function (el) { countUp(el, 900); });
-          var bars = document.getElementById('scd-bars');
-          if (bars) setTimeout(function () { bars.classList.add('scd-go'); }, 60);
-        });
-      }, { threshold: 0.15 });
-      var dash = document.getElementById('scd');
-      if (dash) io.observe(dash);
-    }
-
-    function init() {
-      buildTrend();
-      initObserver();
-      initToggle();
-      watchTheme();
-      (function waitChart(tries) {
-        if (window.Chart) buildDonut();
-        else if (tries < 40) setTimeout(function () { waitChart(tries + 1); }, 100);
-      })(0);
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
-
-  })();
-</script>
+{% endif %}
