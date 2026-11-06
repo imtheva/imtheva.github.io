@@ -6,7 +6,7 @@ description: A collection of past and current research and projects.
 nav: true
 nav_order: 3
 social: true # includes social icons at the bottom of the page
-display_categories: [Project, Research]
+display_categories: [Research, Project]
 horizontal: false
 ---
 
