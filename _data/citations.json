@@ -1,17 +1,17 @@
 {
   "scholar_id": "MpKhKEUAAAAJ",
-  "updated": "2026-10-24",
-  "total": 42,
-  "since_2021": 42,
+  "updated": "2026-11-11",
+  "total": 43,
+  "since_2021": 43,
   "h_index": 4,
   "h_index_5y": 4,
-  "i10_index": 1,
-  "i10_index_5y": 1,
+  "i10_index": 2,
+  "i10_index_5y": 2,
   "cites_per_year": {
     "2021": 1,
     "2024": 7,
     "2025": 17,
-    "2026": 17
+    "2026": 18
   },
   "papers": [
     {
@@ -29,11 +29,11 @@
     {
       "title": "CottonSim: A vision-guided autonomous robotic system for cotton harvesting in Gazebo simulation",
       "year": "2025",
-      "cites": 9,
+      "cites": 10,
       "scholar_id": "MpKhKEUAAAAJ:hqOjcs7Dif8C",
       "category": "Agricultural Robotics",
       "cites_by_year": {
-        "2026": 9
+        "2026": 10
       }
     },
     {
