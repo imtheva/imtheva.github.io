@@ -97,6 +97,24 @@ jobs:
           working_directory: output
       - name: Use compiled CV for the download link
         run: cp output/Thayananthan_CV.pdf assets/pdf/Thayananthan_CV.pdf
+      - name: Setup ImageMagick 🖼️
+        uses: mfinelli/setup-imagemagick@v8
+        with:
+          install-libfuse2: false
+      - name: Unpack ImageMagick (no FUSE or apt needed)
+        run: |
+          cd "$RUNNER_TEMP"
+          "$(command -v magick)" --appimage-extract >/dev/null
+          IM="$RUNNER_TEMP/squashfs-root/AppRun"
+          BIN="$RUNNER_TEMP/im-bin"
+          mkdir -p "$BIN"
+          printf '#!/bin/sh\nexec "%s" "$@"\n' "$IM" > "$BIN/magick"
+          for t in convert identify mogrify; do
+            printf '#!/bin/sh\nexec "%s" %s "$@"\n' "$IM" "$t" > "$BIN/$t"
+          done
+          chmod +x "$BIN"/*
+          echo "$BIN" >> "$GITHUB_PATH"
+          "$BIN/magick" -version
       - name: Install and Build 🔧
         run: |
           if ! command -v magick >/dev/null && ! command -v convert >/dev/null; then
