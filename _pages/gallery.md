@@ -89,28 +89,30 @@ Each item:
           <a class="anchor" id="y{{ y }}-{{ sid }}"></a>
           <h3 class="mt-3 mb-2">{{ s }}</h3>
 
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-4">
+          <div class="gallery-justified" data-gallery-justified>
             {%- for item in section_items -%}
               {%- assign img_path = item.path -%}
               {%- assign caption = item.caption | default: "" -%}
               {%- assign alt = item.alt | default: caption | default: "Gallery image" -%}
+              {%- assign w = item.width | default: 4 -%}
+              {%- assign h = item.height | default: 3 -%}
+              {%- assign ar = w | times: 1.0 | divided_by: h | round: 4 -%}
 
-              <div class="col">
-                <div class="gallery-tile">
-                  <a class="gallery-link" href="{{ img_path | relative_url }}" target="_blank" rel="noopener">
-                    <img
-                      class="gallery-img"
-                      src="{{ img_path | relative_url }}"
-                      alt="{{ alt }}"
-                      loading="lazy"
-                    />
-                  </a>
+              <figure class="gallery-tile gj-item" style="--ar: {{ ar }}">
+                <a class="gallery-link" href="{{ img_path | relative_url }}" target="_blank" rel="noopener">
+                  <img
+                    class="gallery-img"
+                    src="{{ img_path | relative_url }}"
+                    alt="{{ alt }}"
+                    {% if item.width %}width="{{ item.width }}" height="{{ item.height }}"{% endif %}
+                    loading="lazy"
+                  />
+                </a>
 
-                  {%- if caption != "" -%}
-                    <div class="gallery-caption">{{ caption }}</div>
-                  {%- endif -%}
-                </div>
-              </div>
+                {%- if caption != "" -%}
+                  <figcaption class="gallery-caption">{{ caption }}</figcaption>
+                {%- endif -%}
+              </figure>
             {%- endfor -%}
           </div>
         {%- endif -%}
@@ -119,3 +121,81 @@ Each item:
 
   </main>
 </div>
+
+<script>
+  // Justified gallery: every row fills the width, all photos in a row share one height,
+  // and each photo keeps its own aspect ratio (no cropping of portraits or landscapes).
+  (function () {
+    var GAP = 12;
+
+    // Split aspect ratios into k rows with sums as even as possible (linear partition).
+    function partition(ar, k) {
+      var n = ar.length;
+      if (k >= n) return ar.map(function () { return 1; });
+      var pre = [0];
+      for (var i = 0; i < n; i++) pre.push(pre[i] + ar[i]);
+      var target = pre[n] / k, INF = 1e18, dp = [], cut = [];
+      for (var r = 0; r <= k; r++) { dp.push(new Array(n + 1).fill(INF)); cut.push(new Array(n + 1).fill(0)); }
+      dp[0][0] = 0;
+      for (r = 1; r <= k; r++)
+        for (var j = r; j <= n; j++)
+          for (i = r - 1; i < j; i++) {
+            var d = pre[j] - pre[i] - target, c = dp[r - 1][i] + d * d;
+            if (c < dp[r][j]) { dp[r][j] = c; cut[r][j] = i; }
+          }
+      var rows = [], end = n;
+      for (r = k; r > 0; r--) { rows.unshift(end - cut[r][end]); end = cut[r][end]; }
+      return rows;
+    }
+
+    function layout(sec) {
+      var items = Array.prototype.slice.call(sec.querySelectorAll(".gj-item"));
+      var W = Math.floor(sec.getBoundingClientRect().width);
+      if (!items.length || !W) return;
+      var small = W < 576;
+      var targetH = small ? 150 : 230, minH = small ? 120 : 140, maxH = small ? 280 : 360;
+      var ar = items.map(function (el) { return parseFloat(el.style.getPropertyValue("--ar")) || 1.3333; });
+      var total = ar.reduce(function (a, b) { return a + b; }, 0);
+      var k = Math.min(items.length, Math.max(1, Math.round((total * targetH) / W)));
+      // Add rows if photos would get too short (e.g. several photos on a phone).
+      while (k < items.length && (W - GAP * (items.length / k - 1)) / (total / k) < minH) k++;
+      var idx = 0;
+      partition(ar, k).forEach(function (len) {
+        var rowAr = ar.slice(idx, idx + len);
+        var sum = rowAr.reduce(function (a, b) { return a + b; }, 0);
+        var avail = W - GAP * (len - 1);
+        var h = Math.min(avail / sum, maxH);
+        var used = 0;
+        rowAr.forEach(function (a, t) {
+          var el = items[idx + t];
+          var w = t === len - 1 && h < maxH ? avail - used : Math.floor(a * h);
+          used += w;
+          el.style.width = w + "px";
+          el.style.marginRight = "";
+          el.querySelector(".gallery-img").style.height = Math.round(h) + "px";
+          // A capped (short) row: pad the end so the next photo starts a new row.
+          if (t === len - 1 && h >= maxH) el.style.marginRight = Math.max(0, avail - used) + "px";
+        });
+        idx += len;
+      });
+      sec.classList.add("gj-ready");
+    }
+
+    function init() {
+      var secs = document.querySelectorAll("[data-gallery-justified]");
+      Array.prototype.forEach.call(secs, function (sec) {
+        layout(sec);
+        if (window.ResizeObserver) {
+          var lastW = 0;
+          new ResizeObserver(function () {
+            var w = Math.floor(sec.getBoundingClientRect().width);
+            if (w !== lastW) { lastW = w; layout(sec); }
+          }).observe(sec);
+        }
+      });
+    }
+
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+    else init();
+  })();
+</script>

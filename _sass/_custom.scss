@@ -26,11 +26,42 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* Justified gallery rows: tiles keep their own aspect ratio and share a row height.
+   The script in _pages/gallery.md sets exact sizes; this flex fallback is used before it runs. */
+.gallery-justified {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 1.75rem;
+}
+
+.gallery-justified .gj-item {
+  margin: 0;
+  flex: var(--ar, 1.333) 1 calc(var(--ar, 1.333) * 200px);
+  max-width: calc(var(--ar, 1.333) * 400px);
+}
+
+.gallery-justified.gj-ready .gj-item {
+  flex: 0 0 auto;
+  max-width: none;
+}
+
 .gallery-img {
   width: 100%;
-  height: 240px;
+  height: auto;
+  aspect-ratio: var(--ar, 4 / 3);
   object-fit: cover;
   display: block;
+  transition: transform 0.25s ease;
+}
+
+.gallery-link {
+  display: block;
+  overflow: hidden;
+}
+
+.gallery-link:hover .gallery-img {
+  transform: scale(1.03);
 }
 
 .gallery-caption {
@@ -40,13 +71,13 @@
   line-height: 1.35;
 }
 
-/* Gallery surgical overrides */
+/* Gallery overrides (beat the theme's .projects img rules) */
 .projects img.gallery-img {
   width: 100% !important;
-  height: 240px !important;
+  max-width: 100% !important;
   object-fit: cover !important;
   display: block !important;
-  max-width: 100% !important;
+  margin: 0 !important;
 }
 
 .gallery-layout {
