@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  13 NOV 2026 04:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  16 NOV 2026 02:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -554,43 +554,43 @@ File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 181.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-46.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+31.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-246.
+331.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 246.
+(Font)              <10> on input line 331.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 246.
+(Font)              <7> on input line 331.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 246.
+(Font)              <5> on input line 331.
  [1
 
 {/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive
 /texdir/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/opt/texlive/texdir/texmf-dist
 /fonts/enc/dvips/lm/lm-mathsy.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 352.
+(Font)              <8> on input line 458.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 352.
+(Font)              <6> on input line 458.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 354.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 460.
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-365.
+471.
  (/opt/texlive/texdir/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 [2{/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}] [3]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-89.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
+95.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -607,11 +607,11 @@ L3 programming layer <2026-09-09>
 Here is how much of TeX's memory you used:
  12668 strings out of 467050
  199987 string characters out of 5408429
- 667682 words of memory out of 5000000
+ 668682 words of memory out of 5000000
  41800 multiletter control sequences out of 15000+600000
  673494 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,17n,84p,1072b,903s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,17n,84p,1072b,776s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/texliv
 e/texdir/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/texlive/texdir/texmf
 -dist/fonts/type1/public/lm/lmbx8.pfb></opt/texlive/texdir/texmf-dist/fonts/typ
@@ -623,7 +623,7 @@ type1/public/lm/lmsy10.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/l
 m/lmsy6.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></o
 pt/texlive/texdir/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></opt/texlive/texd
 ir/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Thayananthan_CV.pdf (8 pages, 290172 bytes).
+Output written on Thayananthan_CV.pdf (8 pages, 290896 bytes).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
  265 compressed objects within 3 object streams
