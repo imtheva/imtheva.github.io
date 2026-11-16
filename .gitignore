@@ -25,3 +25,6 @@ output/*.fls
 output/*.fdb_latexmk
 output/*.synctex.gz
 output/*.pdf
+
+# Private CV versions (local only, never pushed)
+_private_cv/

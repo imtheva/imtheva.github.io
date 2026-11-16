@@ -1,7 +1,7 @@
 basics:
   name: "Thevathayarajh Thayananthan"
   label: "Ph.D. Candidate, Agricultural Engineering — University of Georgia"
-  summary: "AI-enabled autonomous systems for agriculture: computer vision, multimodal sensing, 3D localization, field navigation, and robotic manipulation for selective harvesting and precision crop operations — from ROS/Gazebo simulation to integrated hardware and field deployment. Currently searching for new positions."
+  summary: "AI-enabled autonomous systems for agriculture: computer vision, multimodal sensing, 3D localization, field navigation, and robotic manipulation for selective harvesting and precision crop operations — from ROS/Gazebo simulation to integrated hardware and field deployment. Brings nearly five years of university teaching experience, including four years as a full-time lecturer teaching eight undergraduate courses and supervising 15 undergraduate research projects, and nearly four years of graduate research in agricultural robotics and computer vision at Mississippi State University and the University of Georgia. Currently searching for new positions."
   location:
     city: "Athens"
     region: "GA"
@@ -55,10 +55,10 @@ work:
     startDate: "2025"
     endDate: "9999"
     highlights:
-      - "Perception-driven manipulator control in ROS and Python for a dual-side robotic cotton picker; completed field testing with one ZED 2i stereo camera, a UR5e manipulator, and a custom end-effector, and developed a two-camera control pipeline for dual-side harvesting"
-      - "Benchmarking 33 YOLO variants (v8–v13) and several segmentation models on a 1,008-image, four-class annotated field dataset"
-      - "Developed CottonID, a full-stack web application (Next.js, FastAPI, SQLite) that generates boll counts, yield estimates, and defoliation-timing recommendations; currently improving its perception models"
-      - "Manage equipment, operations, data infrastructure, and safety within the SAAS Lab"
+      - "Develop perception-driven manipulator control in ROS and Python to automate cotton picking from both sides of a row; completed field testing with a single ZED 2i stereo camera, a UR5e manipulator, and a custom end-effector, and developed a two-camera control pipeline for dual-side harvesting"
+      - "Benchmark 33 YOLO variants (v8–v13) and several segmentation models on a 1,008-image, four-class annotated field dataset to inform model selection for robotic harvesting"
+      - "Developed CottonID, a full-stack web application (Next.js, FastAPI, SQLite) to support cotton-management decisions through boll counts, yield estimates, and defoliation-timing recommendations; currently improving its perception models"
+      - "Manage equipment, operations, data infrastructure, and safety within the SAAS Lab to support field experiments and reliable data collection"
       # - "Extending the CottonSim platform toward simulation-to-field transfer"
 
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
@@ -66,10 +66,10 @@ work:
     startDate: "2023"
     endDate: "2025"
     highlights:
-      - "Built and open-sourced CottonSim: a ROS/Gazebo simulator and vision-guided navigation stack for autonomous cotton picking (100% GPS-guided field-traversal completion; 96.7% map-based)"
-      - "Multi-ripeness blackberry detection for soft robotic harvesting; benchmarked nine YOLO architectures on a two-season, 1,086-image field dataset"
-      - "Deep learning semantic segmentation for automated bladeless catfish cutting (SegFormer-B5: 89.2% mIoU, 94.6% mean pixel accuracy)"
-      - "Named as an inventor on a university technology disclosure for an autonomous vision-guided cotton-harvesting system"
+      - "Designed and open-sourced CottonSim, a ROS/Gazebo simulation environment to evaluate autonomous cotton-harvesting methods (100% GPS-guided and 96.7% map-based field-traversal success)"
+      - "Developed an in-field blackberry-detection pipeline from 1,086 images to distinguish ripeness for selective soft robotic harvesting; benchmarked nine YOLO architectures"
+      - "Developed a semantic-segmentation pipeline to support automated bladeless catfish cutting (SegFormer-B5: 89.2% mIoU, 94.6% mean pixel accuracy)"
+      - "Named as an inventor on a university technology disclosure for a vision-guided system intended to automate cotton harvesting"
 
   - name: "Department of Agricultural and Biological Engineering, Mississippi State University"
     position: "Graduate Teaching Assistant"
@@ -83,12 +83,13 @@ work:
     startDate: "2019"
     endDate: "2022"
     highlights:
-      - "Instructor of record for eight undergraduate courses in electronics, embedded systems, and intelligent systems"
-      - "Designed curricula for seven new courses for the B.Sc. in Mechatronics curriculum revision, including Computer Vision and IoT Development"
+      - "Instructor of record for eight undergraduate courses (18 credit hours total) over four academic years, with class sizes of up to 50 students"
+      - "Designed curricula for seven new undergraduate courses, including Computer Vision and IoT Development, to support the university's launch of its B.Sc. (Hons.) in Mechatronics degree program"
+      - "Contributed to curriculum review and revision for the existing B.Tech. (Hons.) in Science and Technology (Mechatronics specialization) as part of the five-year review cycle required by the University Grants Commission"
       - "Supervised 15 undergraduate final-year research projects, twelve of which produced peer-reviewed conference abstracts/papers"
 
   - name: "Faculty of Applied Sciences, Uva Wellassa University of Sri Lanka"
-    position: "Demonstrator (Temporary)"
+    position: "Demonstrator (Fixed-term)"
     startDate: "2018"
     endDate: "2019"
     highlights:
@@ -100,6 +101,7 @@ work:
     startDate: "2017"
     endDate: "2018"
     highlights:
+      - "Contributed to seven garment-manufacturing automation projects to reduce manual production steps and improve equipment monitoring, including:"
       - "PLC-based finished-goods scanner and garment folder systems"
       - "Arduino-based chiller-off SMS alert system"
       - "Pedal-less and automated sewing systems"
@@ -179,7 +181,7 @@ teaching:
       - "Coordinated visiting resource persons, assessment, and results submission"
 
   - name: "Introduction to Robotics and Mechatronics · Computer Vision for Agricultural and Biological Systems · Artificial Intelligence for Agricultural and Biological Engineering · Deep Learning for Agricultural Robotics and Autonomous Systems (graduate) · IoT and Embedded Systems for Smart Agriculture · Sensors and Bioinstrumentation · Machine Learning Applications in Agriculture · Agricultural Automation and Precision Agriculture · Intelligent Systems"
-    position: "Courses Prepared to Teach"
+    position: "Areas Prepared to Teach"
 
 publications:
   - name: "Publications"
