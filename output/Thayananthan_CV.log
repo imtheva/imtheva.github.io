@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  23 NOV 2026 02:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  25 NOV 2026 04:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -542,55 +542,55 @@ LaTeX Font Info:    ... okay on input line 168.
 
 Package hyperref Info: Link coloring ON on input line 168.
 LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 1
-81.
+82.
 (/opt/texlive/texdir/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-181.
+182.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 181.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 182.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-31.
+32.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-331.
+332.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 331.
+(Font)              <10> on input line 332.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 331.
+(Font)              <7> on input line 332.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 331.
+(Font)              <5> on input line 332.
  [1
 
 {/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive
 /texdir/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/opt/texlive/texdir/texmf-dist
 /fonts/enc/dvips/lm/lm-mathsy.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 462.
+(Font)              <8> on input line 463.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 462.
+(Font)              <6> on input line 463.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 464.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 465.
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-475.
+476.
  (/opt/texlive/texdir/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 [2{/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}] [3]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
-99.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
+00.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -623,7 +623,7 @@ type1/public/lm/lmsy10.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/l
 m/lmsy6.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></o
 pt/texlive/texdir/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></opt/texlive/texd
 ir/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Thayananthan_CV.pdf (8 pages, 290938 bytes).
+Output written on Thayananthan_CV.pdf (8 pages, 290957 bytes).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
  265 compressed objects within 3 object streams
